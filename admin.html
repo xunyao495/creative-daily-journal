@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - 文创每日手账</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-white: #ffffff;
+            --warm-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --soft-gray: #e9ecef;
+            --accent-gold: #d4af37;
+            --soft-gold: #f4e4a6;
+            --text-dark: #2c3e50;
+            --text-medium: #5a6c7d;
+            --text-light: #8896a0;
+            --border-light: #e8e9ea;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 2px 20px var(--shadow-light);
+        }
+        
+        .admin-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-light);
+            border-radius: 16px;
+        }
+        
+        .admin-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-gold);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .table-row:hover {
+            background-color: var(--soft-gray);
+        }
+        
+        .btn-primary {
+            background: var(--accent-gold);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #c19b2e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        }
+        
+        .text-white {
+            color: var(--text-dark) !important;
+        }
+        
+        .text-gray-300 {
+            color: var(--text-medium) !important;
+        }
+        
+        .text-gray-400 {
+            color: var(--text-light) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                    <span class="ml-2 text-text-medium">后台管理</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">返回网站</a>
+                        <button onclick="logout()" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">退出登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Dashboard Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="admin-card p-6 text-center fade-in">
+                    <div class="text-3xl font-bold gradient-text mb-2">156</div>
+                    <p class="text-text-medium">总文章数</p>
+                </div>
+                <div class="admin-card p-6 text-center fade-in" style="animation-delay: 0.1s;">
+                    <div class="text-3xl font-bold gradient-text mb-2">23</div>
+                    <p class="text-text-medium">本月新增</p>
+                </div>
+                <div class="admin-card p-6 text-center fade-in" style="animation-delay: 0.2s;">
+                    <div class="text-3xl font-bold gradient-text mb-2">8.9K</div>
+                    <p class="text-text-medium">总访问量</p>
+                </div>
+                <div class="admin-card p-6 text-center fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-3xl font-bold gradient-text mb-2">156%</div>
+                    <p class="text-text-medium">同比增长</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-between items-center mb-8 fade-in" style="animation-delay: 0.4s;">
+                <h2 class="text-2xl font-bold text-text-dark">文章管理</h2>
+                <div class="flex space-x-4">
+                    <button onclick="exportData()" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+                        导出数据
+                    </button>
+                    <button onclick="showAddModal()" class="btn-primary px-4 py-2 rounded-lg">
+                        新增文章
+                    </button>
+                </div>
+            </div>
+
+            <!-- Articles Table -->
+            <div class="admin-card p-6 fade-in" style="animation-delay: 0.5s;">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold text-text-dark">文章列表</h3>
+                    <div class="flex items-center space-x-4">
+                        <select class="px-3 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold">
+                            <option>全部分类</option>
+                            <option>政策</option>
+                            <option>数字艺术</option>
+                            <option>文创产品</option>
+                            <option>投资</option>
+                            <option>趋势</option>
+                        </select>
+                        <input type="text" placeholder="搜索文章..." class="px-3 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold">
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-border-light">
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">ID</th>
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">标题</th>
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">分类</th>
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">发布时间</th>
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">状态</th>
+                                <th class="text-left py-3 px-4 font-semibold text-text-dark">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="articles-table">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex justify-between items-center mt-6">
+                    <p class="text-text-medium text-sm">显示 1-10 条，共 156 条记录</p>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 border border-border-light rounded hover:bg-gray-100 transition-colors">上一页</button>
+                        <button class="px-3 py-1 bg-accent-gold text-white rounded">1</button>
+                        <button class="px-3 py-1 border border-border-light rounded hover:bg-gray-100 transition-colors">2</button>
+                        <button class="px-3 py-1 border border-border-light rounded hover:bg-gray-100 transition-colors">3</button>
+                        <button class="px-3 py-1 border border-border-light rounded hover:bg-gray-100 transition-colors">下一页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Article Modal -->
+    <div id="article-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="modal-title" class="text-2xl font-bold text-text-dark">新增文章</h3>
+                <button onclick="closeModal()" class="text-text-light hover:text-text-dark">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <form id="article-form">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-text-dark mb-2">文章标题</label>
+                        <input type="text" id="article-title" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-text-dark mb-2">文章摘要</label>
+                        <textarea id="article-summary" rows="3" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required></textarea>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-text-dark mb-2">分类</label>
+                            <select id="article-category" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                                <option value="">选择分类</option>
+                                <option value="policy">政策</option>
+                                <option value="digital">数字艺术</option>
+                                <option value="products">文创产品</option>
+                                <option value="investment">投资</option>
+                                <option value="trends">趋势</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-text-dark mb-2">阅读时间</label>
+                            <input type="text" id="article-read-time" placeholder="5分钟" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-text-dark mb-2">标签</label>
+                        <input type="text" id="article-tags" placeholder="多个标签用逗号分隔" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-text-dark mb-2">图片来源</label>
+                        <input type="text" id="article-image" placeholder="图片URL地址" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-text-dark mb-2">数据来源</label>
+                        <input type="text" id="article-source" placeholder="数据来源机构" class="w-full px-4 py-2 border border-border-light rounded-lg focus:outline-none focus:border-accent-gold" required>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end space-x-4 mt-8">
+                    <button type="button" onclick="closeModal()" class="px-6 py-2 border border-border-light rounded-lg hover:bg-gray-100 transition-colors">
+                        取消
+                    </button>
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-lg">
+                        保存
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">文创每日手账</h3>
+                    <p class="text-gray-300 mb-4">每天十分钟，一起学习文创市场动态</p>
+                    <p class="text-sm text-gray-400">© 2025 鳞迹文化创意有限公司 版权所有</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">管理后台</h4>
+                    <div class="space-y-2 text-gray-300 text-sm">
+                        <p>• 文章管理</p>
+                        <p>• 数据统计</p>
+                        <p>• 内容发布</p>
+                        <p>• 系统设置</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">技术支持</h4>
+                    <p class="text-gray-300 text-sm">如有技术问题，请联系开发团队</p>
+                    <p class="text-gray-400 text-sm mt-2">admin@mistoraworld.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 示例文章数据
+        let articles = [
+            {
+                id: 1,
+                title: "文化产业投融资市场回暖，上半年投融资额激增88.9%",
+                category: "policy",
+                date: "2025-09-25",
+                status: "已发布",
+                readTime: "5分钟",
+                source: "中国文化产业协会"
+            },
+            {
+                id: 2,
+                title: "数字艺术市场突破千亿美元，AI驱动创作新纪元",
+                category: "digital",
+                date: "2025-09-24",
+                status: "已发布",
+                readTime: "8分钟",
+                source: "ArtTech研究院"
+            },
+            {
+                id: 3,
+                title: "毛绒绒风席卷全国，情绪价值驱动文创消费新趋势",
+                category: "products",
+                date: "2025-09-23",
+                status: "已发布",
+                readTime: "6分钟",
+                source: "消费趋势报告"
+            }
+        ];
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', function() {
+            renderArticlesTable();
+            initializeForm();
+        });
+
+        // 渲染文章表格
+        function renderArticlesTable() {
+            const tbody = document.getElementById('articles-table');
+            tbody.innerHTML = '';
+            
+            articles.forEach(article => {
+                const row = document.createElement('tr');
+                row.className = 'table-row border-b border-border-light';
+                row.innerHTML = `
+                    <td class="py-3 px-4 text-text-medium">${article.id}</td>
+                    <td class="py-3 px-4 text-text-dark font-medium">${article.title}</td>
+                    <td class="py-3 px-4">
+                        <span class="px-2 py-1 bg-soft-gold text-accent-gold rounded-full text-xs font-medium">
+                            ${getCategoryName(article.category)}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4 text-text-medium">${article.date}</td>
+                    <td class="py-3 px-4">
+                        <span class="px-2 py-1 bg-green-100 text-green-600 rounded-full text-xs font-medium">
+                            ${article.status}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex space-x-2">
+                            <button onclick="editArticle(${article.id})" class="text-accent-gold hover:text-yellow-600 text-sm font-medium">
+                                编辑
+                            </button>
+                            <button onclick="deleteArticle(${article.id})" class="text-red-500 hover:text-red-700 text-sm font-medium">
+                                删除
+                            </button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // 获取分类名称
+        function getCategoryName(category) {
+            const categoryMap = {
+                'policy': '政策',
+                'digital': '数字艺术',
+                'products': '文创产品',
+                'investment': '投资',
+                'trends': '趋势'
+            };
+            return categoryMap[category] || category;
+        }
+
+        // 显示添加模态框
+        function showAddModal() {
+            document.getElementById('modal-title').textContent = '新增文章';
+            document.getElementById('article-form').reset();
+            document.getElementById('article-modal').classList.remove('hidden');
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('article-modal').classList.add('hidden');
+        }
+
+        // 编辑文章
+        function editArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (article) {
+                document.getElementById('modal-title').textContent = '编辑文章';
+                document.getElementById('article-title').value = article.title;
+                document.getElementById('article-category').value = article.category;
+                document.getElementById('article-read-time').value = article.readTime;
+                document.getElementById('article-source').value = article.source;
+                document.getElementById('article-modal').classList.remove('hidden');
+            }
+        }
+
+        // 删除文章
+        function deleteArticle(id) {
+            if (confirm('确定要删除这篇文章吗？')) {
+                articles = articles.filter(a => a.id !== id);
+                renderArticlesTable();
+                showMessage('文章删除成功', 'success');
+            }
+        }
+
+        // 初始化表单
+        function initializeForm() {
+            document.getElementById('article-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    title: document.getElementById('article-title').value,
+                    category: document.getElementById('article-category').value,
+                    readTime: document.getElementById('article-read-time').value,
+                    tags: document.getElementById('article-tags').value,
+                    image: document.getElementById('article-image').value,
+                    source: document.getElementById('article-source').value,
+                    summary: document.getElementById('article-summary').value,
+                    date: new Date().toISOString().split('T')[0],
+                    status: '已发布'
+                };
+                
+                // 模拟保存操作
+                const newId = Math.max(...articles.map(a => a.id)) + 1;
+                articles.push({
+                    id: newId,
+                    ...formData
+                });
+                
+                renderArticlesTable();
+                closeModal();
+                showMessage('文章保存成功', 'success');
+            });
+        }
+
+        // 显示消息
+        function showMessage(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `fixed top-20 right-4 px-6 py-3 rounded-lg text-white z-50 ${
+                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            }`;
+            messageDiv.textContent = message;
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 3000);
+        }
+
+        // 导出数据
+        function exportData() {
+            const dataStr = JSON.stringify(articles, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '文创新闻数据.json';
+            link.click();
+            showMessage('数据导出成功', 'success');
+        }
+
+        // 退出登录
+        function logout() {
+            if (confirm('确定要退出登录吗？')) {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>

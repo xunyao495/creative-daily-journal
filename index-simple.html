@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文创每日手账 - 简化版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-white: #ffffff;
+            --warm-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --soft-gray: #e9ecef;
+            --accent-gold: #d4af37;
+            --soft-gold: #f4e4a6;
+            --text-dark: #2c3e50;
+            --text-medium: #5a6c7d;
+            --text-light: #8896a0;
+            --border-light: #e8e9ea;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        .news-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-light);
+            border-radius: 16px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-gold);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 2px 20px var(--shadow-light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-text-dark hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                        <a href="news.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                        <a href="trends.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">趋势分析</a>
+                        <a href="about.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">
+                文创每日手账
+            </h1>
+            <p class="text-xl text-text-medium mb-8">
+                每天十分钟，一起学习文创市场动态
+            </p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">最新文创动态</h2>
+            
+            <!-- News Grid -->
+            <div class="news-grid" id="news-grid">
+                <!-- 新闻将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">文创每日手账</h3>
+                    <p class="text-text-medium mb-4">每天十分钟，一起学习文创市场动态</p>
+                    <p class="text-sm text-text-light">© 2025 鳞迹文化创意有限公司 版权所有</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-text-dark">联系我们</h4>
+                    <div class="space-y-2 text-text-medium">
+                        <p>📞 18210095234</p>
+                        <p>📍 北京市东城区环球贸易大厦A座3层</p>
+                        <p>📧 mistoraworld@163.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-text-dark">关注我们</h4>
+                    <p class="text-text-medium text-sm">获取最新文创资讯和市场动态</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简化的新闻数据
+        const newsData = [
+            {
+                id: 1,
+                title: "文化产业投融资市场回暖，上半年投融资额激增88.9%",
+                summary: "2025年上半年文化产业投融资增速显著提升，文化科技融合领域成为投资重点，AI+文化项目占比超过40%。",
+                category: "policy",
+                image: "https://picsum.photos/seed/news1/400/300.jpg",
+                date: "2025-09-25",
+                readTime: "5分钟",
+                tags: ["投融资", "文化科技", "政策"],
+                source: "中国文化产业协会",
+                originalUrl: "https://example.com/news/culture-investment-2025"
+            },
+            {
+                id: 2,
+                title: "数字艺术市场突破千亿美元，AI驱动创作新纪元",
+                summary: "全球数字艺术市场规模持续扩大，人工智能技术重塑创意表达边界，算法艺术成为新趋势。",
+                category: "digital",
+                image: "https://picsum.photos/seed/news2/400/300.jpg",
+                date: "2025-09-24",
+                readTime: "8分钟",
+                tags: ["数字艺术", "AI", "创作"],
+                source: "ArtTech研究院",
+                originalUrl: "https://example.com/news/digital-art-ai-2025"
+            },
+            {
+                id: 3,
+                title: "毛绒绒风席卷全国，情绪价值驱动文创消费新趋势",
+                summary: "年轻人更愿意为情绪价值买单，文创产品成为文化旅游新标配，互动体验成为关键。",
+                category: "products",
+                image: "https://picsum.photos/seed/news3/400/300.jpg",
+                date: "2025-09-23",
+                readTime: "6分钟",
+                tags: ["文创产品", "消费升级", "情绪价值"],
+                source: "消费趋势报告",
+                originalUrl: "https://example.com/news/emotional-value-trend"
+            },
+            {
+                id: 4,
+                title: "成都发布数字文创产业政策，签约金额逾30亿元",
+                summary: "成都市推出四大专项政策，打造数字文创三高地三中心，多个重点项目现场签约。",
+                category: "investment",
+                image: "https://picsum.photos/seed/news4/400/300.jpg",
+                date: "2025-09-22",
+                readTime: "7分钟",
+                tags: ["成都", "数字文创", "政策"],
+                source: "成都市文产办",
+                originalUrl: "https://example.com/news/chengdu-cultural-policy"
+            },
+            {
+                id: 5,
+                title: "博物馆文创产品销售额增长20倍，带动就业超万人",
+                summary: "河南博物院文创产品种类从102款增至2000多款，销售额从200多万增长到4000多万元。",
+                category: "products",
+                image: "https://picsum.photos/seed/news5/400/300.jpg",
+                date: "2025-09-21",
+                readTime: "4分钟",
+                tags: ["博物馆", "文创产品", "就业"],
+                source: "河南博物院",
+                originalUrl: "https://example.com/news/museum-products-growth"
+            },
+            {
+                id: 6,
+                title: "低空经济+文旅融合发展，催生文化产业新增长点",
+                summary: "2024年成为低空经济元年，无人机+文旅、通用航空+旅游等新业态快速发展。",
+                category: "trends",
+                image: "https://picsum.photos/seed/news6/400/300.jpg",
+                date: "2025-09-20",
+                readTime: "9分钟",
+                tags: ["低空经济", "文旅融合", "新业态"],
+                source: "文旅产业观察",
+                originalUrl: "https://example.com/news/low-altitude-tourism"
+            }
+        ];
+
+        // 简化的渲染函数
+        function renderNewsItems(newsItems) {
+            const newsGrid = document.getElementById('news-grid');
+            if (!newsGrid) {
+                console.error('找不到新闻网格容器');
+                return;
+            }
+
+            console.log('开始渲染新闻，数量：', newsItems.length);
+            
+            newsGrid.innerHTML = newsItems.map(item => `
+                <div class="news-card" onclick="window.open('${item.originalUrl}', '_blank')">
+                    <div class="relative mb-4">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover rounded-lg">
+                        <div class="absolute top-3 right-3 bg-white bg-opacity-90 px-2 py-1 rounded-full text-xs font-medium text-text-dark">
+                            ${item.readTime}
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-text-dark line-clamp-2">${item.title}</h3>
+                    <p class="text-text-medium mb-4 line-clamp-3">${item.summary}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${item.tags.map(tag => `
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium">
+                                ${tag}
+                            </span>
+                        `).join('')}
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-text-light">${item.date}</span>
+                        <span class="text-text-light">来源: ${item.source}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            console.log('新闻渲染完成');
+        }
+
+        // 页面加载完成后渲染
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM加载完成，开始渲染新闻');
+            renderNewsItems(newsData);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 鳞迹文化创意</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-white: #ffffff;
+            --warm-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --soft-gray: #e9ecef;
+            --accent-gold: #d4af37;
+            --soft-gold: #f4e4a6;
+            --text-dark: #2c3e50;
+            --text-medium: #5a6c7d;
+            --text-light: #8896a0;
+            --border-light: #e8e9ea;
+            --shadow-light: rgba(0, 0, 0, 0.08);
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 2px 20px var(--shadow-light);
+        }
+        
+        .value-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-light);
+            border-radius: 20px;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-gold);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 8px 24px var(--shadow-light);
+            border-radius: 20px;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .story-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);
+        }
+        
+        .business-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+            border-radius: 16px;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.15);
+            border-color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                        <a href="news.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                        <a href="trends.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">趋势分析</a>
+                        <a href="about.html" class="text-text-dark hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">关于我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6 fade-in">
+                鳞迹文化创意
+            </h1>
+            <p class="text-xl text-text-medium mb-8 fade-in stagger-1">
+                传承文化脉络，连接传统与现代的美学桥梁
+            </p>
+        </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 story-section">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold mb-6 text-text-dark">我们是谁？—— 鳞迹文化创意</h2>
+                    <div class="space-y-6 text-text-medium leading-relaxed">
+                        <p class="text-lg">
+                            <span class="bg-soft-gold text-accent-gold px-2 py-1 rounded font-medium">鳞迹</span>
+                            二字，源自鱼传尺素的古典浪漫。敦煌曲子词《破阵子》中月断妆楼相忆苦，鱼雁山川鳞迹疏，和愁封去书的名句，让鳞迹与鱼雁一同成为书信的雅称，承载着跨越山海的情感与价值传递。
+                        </p>
+                        <p>
+                            而今，我们以鳞迹为名，既延续这份连接的初心，更立志在文创领域，搭建起传统与现代、本土与世界的文化桥梁。
+                        </p>
+                        <p>
+                            我们始终锚定非遗产业化 + 文创数字化核心赛道。一方面沉心打磨自有非遗品牌——从登门走访老匠人、深挖濒临失传的独家技艺，到用现代设计重构产品形态、以数字化手段拓宽传播边界，更通过技艺的数字化开发与实体化改良，让非遗跳出文化符号的框架，变成人人可触摸、可使用的生活美学产品。
+                        </p>
+                    </div>
+                </div>
+                <div class="fade-in stagger-2">
+                    <img src="https://picsum.photos/seed/brand-story/600/400.jpg" alt="鳞迹文化创意" class="w-full rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Business -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">我们的核心业务</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="business-card p-8 fade-in stagger-1 floating-animation">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">🏺</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">自研非遗品牌</h3>
+                    <p class="text-text-medium text-center leading-relaxed">
+                        深挖传统技艺，开展技艺数字化开发与实体化改良，研发并推广非遗美学产品，让非遗变成人人可触摸的生活美学。
+                    </p>
+                </div>
+                
+                <div class="business-card p-8 fade-in stagger-2 floating-animation" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">🛠️</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创全链服务</h3>
+                    <p class="text-text-medium text-center leading-relaxed">
+                        提供数字文创开发、版权代理等专业服务，助力从业者与企业高效落地项目，为行业发展赋能。
+                    </p>
+                </div>
+                
+                <div class="business-card p-8 fade-in stagger-3 floating-animation" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">📚</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创资讯服务</h3>
+                    <p class="text-text-medium text-center leading-relaxed">
+                        运营「文创每日学习手账」内容社区，链接文创爱好者，共享行业知识与灵感，构建用户-内容-品牌的生态闭环。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Philosophy -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">品牌理念</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="value-card p-8 text-center fade-in floating-animation">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">专注非遗</h3>
+                    <p class="text-text-medium leading-relaxed">
+                        致力于非遗产业化，通过数字化手段让传统技艺焕发新生，打造世界性文化美学品牌。
+                    </p>
+                </div>
+                
+                <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">🌉</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">连接古今</h3>
+                    <p class="text-text-medium leading-relaxed">
+                        搭建传统与现代、本土与世界的文化桥梁，让传统文化在当代生活中找到新的表达方式。
+                    </p>
+                </div>
+                
+                <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl">🤝</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">共创生态</h3>
+                    <p class="text-text-medium leading-relaxed">
+                        构建开放的行业生态，与文创从业者、爱好者共同成长，推动整个文创产业的健康发展。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">联系我们</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="fade-in stagger-1">
+                    <div class="contact-form p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-text-dark">联系信息</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📞</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-text-dark">电话</p>
+                                    <p class="text-text-medium">18210095234</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📍</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-text-dark">地址</p>
+                                    <p class="text-text-medium">北京市东城区环球贸易大厦A座3层</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white text-xl">📧</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-text-dark">邮箱</p>
+                                    <p class="text-text-medium">mistoraworld@163.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in stagger-2">
+                    <div class="contact-form p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-text-dark">商务合作</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
+                                    <span class="mr-2">🤝</span>
+                                    非遗品牌合作
+                                </h4>
+                                <p class="text-text-medium text-sm">传统技艺现代化开发、产品联名设计</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
+                                    <span class="mr-2">💼</span>
+                                    企业服务
+                                </h4>
+                                <p class="text-text-medium text-sm">文创项目咨询、数字化解决方案、版权服务</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
+                                    <span class="mr-2">🌐</span>
+                                    媒体合作
+                                </h4>
+                                <p class="text-text-medium text-sm">内容共创、品牌推广、活动策划</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">鳞迹文化创意</h3>
+                    <p class="text-text-medium mb-4">传承文化脉络，连接传统与现代的美学桥梁</p>
+                    <p class="text-sm text-text-light">© 2025 鳞迹文化创意有限公司 版权所有</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-text-dark">核心业务</h4>
+                    <div class="space-y-2 text-text-medium text-sm">
+                        <p>• 自研非遗品牌</p>
+                        <p>• 文创全链服务</p>
+                        <p>• 文创资讯服务</p>
+                        <p>• 技艺数字化开发</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-text-dark">联系信息</h4>
+                    <div class="space-y-2 text-text-medium text-sm">
+                        <p>📞 18210095234</p>
+                        <p>📍 北京市东城区环球贸易大厦A座3层</p>
+                        <p>📧 mistoraworld@163.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化动画
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAnimations();
+        });
+
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>

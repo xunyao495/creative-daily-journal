@@ -131,123 +131,45 @@
     </footer>
 
     <script>
-        // 简化的新闻数据
-        const newsData = [
-            {
-                id: 1,
-                title: "文化产业投融资市场回暖，上半年投融资额激增88.9%",
-                summary: "2025年上半年文化产业投融资增速显著提升，文化科技融合领域成为投资重点，AI+文化项目占比超过40%。",
-                category: "policy",
-                image: "https://picsum.photos/seed/news1/400/300.jpg",
-                date: "2025-09-25",
-                readTime: "5分钟",
-                tags: ["投融资", "文化科技", "政策"],
-                source: "中国文化产业协会",
-                originalUrl: "https://example.com/news/culture-investment-2025"
-            },
-            {
-                id: 2,
-                title: "数字艺术市场突破千亿美元，AI驱动创作新纪元",
-                summary: "全球数字艺术市场规模持续扩大，人工智能技术重塑创意表达边界，算法艺术成为新趋势。",
-                category: "digital",
-                image: "https://picsum.photos/seed/news2/400/300.jpg",
-                date: "2025-09-24",
-                readTime: "8分钟",
-                tags: ["数字艺术", "AI", "创作"],
-                source: "ArtTech研究院",
-                originalUrl: "https://example.com/news/digital-art-ai-2025"
-            },
-            {
-                id: 3,
-                title: "毛绒绒风席卷全国，情绪价值驱动文创消费新趋势",
-                summary: "年轻人更愿意为情绪价值买单，文创产品成为文化旅游新标配，互动体验成为关键。",
-                category: "products",
-                image: "https://picsum.photos/seed/news3/400/300.jpg",
-                date: "2025-09-23",
-                readTime: "6分钟",
-                tags: ["文创产品", "消费升级", "情绪价值"],
-                source: "消费趋势报告",
-                originalUrl: "https://example.com/news/emotional-value-trend"
-            },
-            {
-                id: 4,
-                title: "成都发布数字文创产业政策，签约金额逾30亿元",
-                summary: "成都市推出四大专项政策，打造数字文创三高地三中心，多个重点项目现场签约。",
-                category: "investment",
-                image: "https://picsum.photos/seed/news4/400/300.jpg",
-                date: "2025-09-22",
-                readTime: "7分钟",
-                tags: ["成都", "数字文创", "政策"],
-                source: "成都市文产办",
-                originalUrl: "https://example.com/news/chengdu-cultural-policy"
-            },
-            {
-                id: 5,
-                title: "博物馆文创产品销售额增长20倍，带动就业超万人",
-                summary: "河南博物院文创产品种类从102款增至2000多款，销售额从200多万增长到4000多万元。",
-                category: "products",
-                image: "https://picsum.photos/seed/news5/400/300.jpg",
-                date: "2025-09-21",
-                readTime: "4分钟",
-                tags: ["博物馆", "文创产品", "就业"],
-                source: "河南博物院",
-                originalUrl: "https://example.com/news/museum-products-growth"
-            },
-            {
-                id: 6,
-                title: "低空经济+文旅融合发展，催生文化产业新增长点",
-                summary: "2024年成为低空经济元年，无人机+文旅、通用航空+旅游等新业态快速发展。",
-                category: "trends",
-                image: "https://picsum.photos/seed/news6/400/300.jpg",
-                date: "2025-09-20",
-                readTime: "9分钟",
-                tags: ["低空经济", "文旅融合", "新业态"],
-                source: "文旅产业观察",
-                originalUrl: "https://example.com/news/low-altitude-tourism"
-            }
-        ];
-
-        // 简化的渲染函数
-        function renderNewsItems(newsItems) {
-            const newsGrid = document.getElementById('news-grid');
-            if (!newsGrid) {
-                console.error('找不到新闻网格容器');
-                return;
-            }
-
-            console.log('开始渲染新闻，数量：', newsItems.length);
-            
-            newsGrid.innerHTML = newsItems.map(item => `
-                <div class="news-card" onclick="window.open('${item.originalUrl}', '_blank')">
-                    <div class="relative mb-4">
-                        <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover rounded-lg">
-                        <div class="absolute top-3 right-3 bg-white bg-opacity-90 px-2 py-1 rounded-full text-xs font-medium text-gray-800">
-                            ${item.readTime}
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800 line-clamp-2">${item.title}</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">${item.summary}</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        ${item.tags.map(tag => `
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">
-                                ${tag}
-                            </span>
-                        `).join('')}
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="text-gray-500">${item.date}</span>
-                        <span class="text-gray-500">来源: ${item.source}</span>
-                    </div>
-                </div>
-            `).join('');
-
-            console.log('新闻渲染完成');
-        }
-
-        // 页面加载完成后渲染
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM加载完成，开始渲染新闻');
-            renderNewsItems(newsData);
+            fetch('/data/posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    const newsGrid = document.getElementById('news-grid');
+                    if (!newsGrid) {
+                        console.error('找不到新闻网格容器');
+                        return;
+                    }
+
+                    newsGrid.innerHTML = posts.map(post => `
+                        <div class="news-card" onclick="window.open('${post.originalUrl}', '_blank')">
+                            <div class="relative mb-4">
+                                <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute top-3 right-3 bg-white bg-opacity-90 px-2 py-1 rounded-full text-xs font-medium text-gray-800">
+                                    ${post.readTime}
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 line-clamp-2">${post.title}</h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">${post.summary}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${post.tags.map(tag => `
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">
+                                        ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-500">${post.date}</span>
+                                <span class="text-gray-500">来源: ${post.source}</span>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    console.log('新闻渲染完成');
+                })
+                .catch(error => {
+                    console.error('Error loading posts:', error);
+                });
         });
     </script>
 </body>

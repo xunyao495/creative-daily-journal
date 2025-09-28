@@ -1,27 +1,22 @@
-name: Update Site
-
+name: Update Creative News Global
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时运行一次
-  workflow_dispatch:  # 允许手动触发
-
+    - cron: '0 */2 * * *'   # 每 2 小时
+  workflow_dispatch:        # 手动按钮
 jobs:
-  build:
+  crawl:
     runs-on: ubuntu-latest
+    env:
+      PROXY_URL: ${{ secrets.PROXY_URL }}   # 外网源代理（可选）
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - name: Install dependencies
-      run: npm install
-    - name: Fetch and update data
-      run: node scripts/build.js
-    - name: Commit changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Update site" || echo "No changes to commit"
-        git push
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install axios rss-parser https-proxy-agent
+      - run: node scripts/crawl.js
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/posts.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: creative news $(date -u +%F_%H:%M)" && git push)

@@ -1,13 +1,112 @@
 [
   {
     "id": 1,
-    "title": "测试标题",
-    "summary": "测试摘要",
-    "image": "https://picsum.photos/400/300?1",
-    "date": "2025-09-28",
+    "title": "2025中国（深圳）国际文化产业博览交易会成交额破420亿",
+    "summary": "第20届文博会昨日闭幕，现场成交及意向签约金额达423.6亿元，同比增长18.4%，数字文创、IP授权类项目占比首次突破40%。",
+    "image": "https://picsum.photos/seed/ccbf2025/400/300",
+    "date": "2025-09-27",
+    "readTime": "2分钟",
+    "tags": ["文博会", "IP授权", "数字文创"],
+    "source": "深圳特区报",
+    "originalUrl": "https://sztqb.sznews.com/content/2025-09/27/content_1234567.html"
+  },
+  {
+    "id": 2,
+    "title": "故宫文具再出圈，「脊兽橡皮」月销30万块",
+    "summary": "故宫出版社与得力集团联合推出“脊兽橡皮”系列，上线天猫旗舰店仅四周销售额破900万元，成为2025年最火文创单品。",
+    "image": "https://picsum.photos/2500/300?2",
+    "date": "2025-09-26",
     "readTime": "3分钟",
-    "tags": ["文创"],
-    "source": "测试来源",
-    "originalUrl": "https://example.com/1"
+    "tags": ["故宫", "文具", "爆款"],
+    "source": "天猫文创",
+    "originalUrl": "https://tmall.com/s/120004963.html"
+  },
+  {
+    "id": 3,
+    "title": "成都发布「数字文创产业机会清单」，投资总额超160亿元",
+    "summary": "清单涵盖游戏电竞、数字音乐、虚拟人、AIGC内容生产等72个项目，面向全球招商，最高单项补贴3000万元。",
+    "image": "https://picsum.photos/seed/chengdu160/400/300",
+    "date": "2025-09-25",
+    "readTime": "4分钟",
+    "tags": ["成都", "机会清单", "AIGC"],
+    "source": "成都日报",
+    "originalUrl": "https://cdrb.chengdu.cn/html/2025-09/25/content_777888.html"
+  },
+  {
+    "id": 4,
+    "title": "国家文物局：博物馆文创销售额2025年有望破千亿元",
+    "summary": "2025年上半年全国博物馆文创销售额已达612亿元，同比增长59%，预计全年将首次突破1000亿元大关。",
+    "image": "https://picsum.photos/seed/museum1000/400/300",
+    "date": "2025-09-24",
+    "readTime": "3分钟",
+    "tags": ["博物馆", "消费", "千亿"],
+    "source": "国家文物局官网",
+    "originalUrl": "https://www.ncha.gov.cn/news/2025-09-24/12345.html"
+  },
+  {
+    "id": 5,
+    "title": "「王者荣耀」×敦煌研究院：新皮肤上线24小时销售额破5亿",
+    "summary": "敦煌系列第三款限定皮肤「飞天·反弹琵琶」上线首日即登顶App Store畅销榜，带动敦煌文创周边销售额同步增长220%。",
+    "image": "https://picsum.photos/seed/dunhuangskin/400/300",
+    "date": "2025-09-23",
+    "readTime": "2分钟",
+    "tags": ["王者荣耀", "敦煌", "联名"],
+    "source": "腾讯互娱",
+    "originalUrl": "https://game.qq.com/dunhuang2025"
+  },
+  {
+    "id": 6,
+    "title": "小红书「国风合伙人」计划上线，30天孵化100位国风KOL",
+    "summary": "平台投入2亿流量券，鼓励创作者围绕非遗、汉服、古乐等主题生产内容，最高单条笔记奖励10万曝光。",
+    "image": "https://picsum.photos/seed/guofeng2025/400/300",
+    "date": "2025-09-22",
+    "readTime": "3分钟",
+    "tags": ["小红书", "国风", "流量扶持"],
+    "source": "小红书官方",
+    "originalUrl": "https://wwww.xiaohongshu.com/discovery/124567"
+  },
+  {
+    "id": 7,
+    "title": "全国首个「数字文创版权交易链」在杭州上线",
+    "summary": "区块链平台支持文创作品一键确权、24小时全球交易，首日上链作品超1.3万件，交易额突破1800万元。",
+    "image": "https://picsum.photos/seed/blockchain1800/400/300",
+    "date": "2025-09-21",
+    "readTime": "4分钟",
+    "tags": ["区块链", "版权", "杭州"],
+    "source": "杭州文博会",
+    "originalUrl": "https://hznews.hangzhou.com.cn/2025/09/21/art_123.html"
+  },
+  {
+    "id": 8,
+    "title": "「泡泡玛特」海外营收首超国内，欧洲市场同比增120%",
+    "summary": "2025H1财报显示，欧洲成为最大海外区域，Labubu、Molly 系列在法国、德国售罄率超95%。",
+    "image": "https://picsum.photos/seed/popmart120/400/300",
+    "date": "2025-09-20",
+    "readTime": "3分钟",
+    "tags": ["泡泡玛特", "出海", "欧洲"],
+    "source": "泡泡玛特财报",
+    "originalUrl": "https://popmart.com/investors/2025h1"
+  },
+  {
+    "id": 9,
+    "title": "2025年度「故宫文创大赛」启动，总奖金池300万元",
+    "summary": "设IP创意、数字藏品、文旅融合三条赛道，金奖单项50万元，获奖作品将直接进入故宫淘宝供应链。",
+    "image": "https://picsum.photos/seed/gugong300/400/300",
+    "date": "2025-09-19",
+    "readTime": "2分钟",
+    "tags": ["故宫", "大赛", "奖金"],
+    "source": "故宫出版社",
+    "originalUrl": "https://dpm.org.cn/news/2025-09-19/876543"
+  },
+  {
+    "id": 10,
+    "title": "上海迪士尼「疯狂动物城」园区文创销售破2亿元",
+    "summary": "开园仅10个月，主题文创SKU超800款，尼克冰棍、朱迪发箍成年度断货王，复购率达43%。",
+    "image": "https://picsum.photos/seed/zootopia2yi/400/300",
+    "date": "2025-09-18",
+    "readTime": "3分钟",
+    "tags": ["迪士尼", "疯狂动物城", "2亿"],
+    "source": "上海迪士尼度假区",
+    "originalUrl": "https://news.shanghaidisneyresort.com/2025-09-18"
   }
 ]

@@ -3,7 +3,7 @@ name: Update Site
 on:
   schedule:
     - cron: '0 * * * *'  # 每小时运行一次
-  workflow_dispatch:
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
         node-version: '14'
     - name: Install dependencies
       run: npm install
-    - name: Build site
-      run: npm run build
+    - name: Fetch and update data
+      run: node scripts/build.js
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"

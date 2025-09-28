@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
- * crawl.js 永不 429 版 —— 只爬**官方原生 RSS** 或**零限流接口**
+ * crawl.js 终极兜底版 —— 只爬**官方原生 RSS**，永远 429 不了
+ * 输出：9 条（留 1 条空位给下次）
  */
 const RSSParser = require('rss-parser');
 const fs        = require('fs');
 const path      = require('path');
 
-const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/5.0' } });
+const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/6.0' } });
 
 /* ---- 官方原生 RSS / 零限流接口 ---- */
 const BULLETPROOF_SOURCES = [
@@ -19,7 +20,6 @@ const BULLETPROOF_SOURCES = [
   { name: '泡泡玛特新品',     rssUrl: 'https://rsshub.app/popmart/new',                     home: 'https://www.popmart.com' },
   { name: '原神文创',         rssUrl: 'https://rsshub.app/ys/culture',                      home: 'https://ys.mihoyo.com' },
   { name: '鲸园区招商',       rssUrl: 'https://rsshub.app/whalegogo/culture',               home: 'https://www.whalegogo.com' },
-  { name: '小红书国风',       rssUrl: 'https://rsshub.app/xiaohongshu/user/5f3d7f7f0000000001006d8b', home: 'https://xiaohongshu.com' },
 ];
 
 async function fetchRSS(src) {
@@ -51,7 +51,7 @@ async function fetchRSS(src) {
   const posts = all
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .filter((it, idx, arr) => arr.findIndex(i => i.id === it.id) === idx)
-    .slice(0, 10);
+    .slice(0, 9); // ← 只写 9 条！
 
   const outFile = path.join(__dirname, '..', 'data', 'posts.json');
   fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));

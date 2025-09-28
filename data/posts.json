@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "博文标题1",
+      "summary": "博文摘要1",
+      "image": "图片URL1",
+      "date": "2024-01-01",
+      "readTime": "5分钟",
+      "tags": ["标签1", "标签2"],
+      "source": "来源1",
+      "originalUrl": "原文链接1"
+    },
+    {
+      "id": 2,
+      "title": "博文标题2",
+      "summary": "博文摘要2",
+      "image": "图片URL2",
+      "date": "2024-01-02",
+      "readTime": "8分钟",
+      "tags": ["标签3", "标签4"],
+      "source": "来源2",
+      "originalUrl": "原文链接2"
+    }
+  ]
+}

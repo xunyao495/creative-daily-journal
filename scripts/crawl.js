@@ -7,7 +7,7 @@ const RSSParser = require('rss-parser');
 const fs        = require('fs');
 const path      = require('path');
 
-const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/8.0' } });
+const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/9.0' } });
 
 /* ---- 官网原生 XML（无 RSSHub）---- */
 const OFFICIAL_XML = [
@@ -56,4 +56,3 @@ async function fetchOfficial() {
   fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));
   console.log(`[OK] 写入 ${posts.length} 条（官网 XML）→ ${outFile}`);
 })();
-

@@ -56,3 +56,4 @@ async function fetchOfficial() {
   fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));
   console.log(`[OK] 写入 ${posts.length} 条（官网 XML）→ ${outFile}`);
 })();
+

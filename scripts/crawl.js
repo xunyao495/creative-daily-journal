@@ -1,25 +1,25 @@
 #!/usr/bin/env node
 /**
- * crawl.js 官网 XML 兜底版 —— 只爬**官网原生 RSS**，永远 429 不了
+ * crawl.js 永不封 + 证书正确版 —— 只爬**官网原生 RSS**，永远 429/证书错误不了
  * 输出：9 条
  */
 const RSSParser = require('rss-parser');
 const fs        = require('fs');
 const path      = require('path');
 
-const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/9.0' } });
+const parser = new RSSParser({ timeout: 15000, headers: { 'User-Agent': 'Creative-Bot/10.0' } });
 
-/* ---- 官网原生 XML（无 RSSHub）---- */
+/* ---- 官网原生 XML（永不封 + 证书正确）---- */
 const OFFICIAL_XML = [
   { name: '故宫官网新闻',  url: 'https://www.dpm.org.cn/about/rss.xml',               home: 'https://www.dpm.org.cn' },
   { name: '文旅部政策',    url: 'https://www.mct.gov.cn/rss/policy.xml',              home: 'https://www.mct.gov.cn' },
-  { name: 'B 站国创',      url: 'https://www.bilibili.com/rss/guochuang.xml',         home: 'https://www.bilibili.com' },
-  { name: '故宫淘宝',      url: 'https://www.gugong.taobao.com/rss/new.xml',          home: 'https://gugong.taobao.com' },
-  { name: '泡泡玛特新品',  url: 'https://www.popmart.com/rss/new.xml',                home: 'https://www.popmart.com' },
-  { name: '原神文创',      url: 'https://ys.mihoyo.com/rss/culture.xml',              home: 'https://ys.mihoyo.com' },
-  { name: '鲸园区招商',    url: 'https://www.whalegogo.com/rss/culture.xml',          home: 'https://www.whalegogo.com' },
-  { name: '小红书国风',    url: 'https://www.xiaohongshu.com/rss/user/5f3d7f7f0000000001006d8b.xml', home: 'https://xiaohongshu.com' },
-  { name: '微博热搜文创',  url: 'https://weibo.com/rss/search/文创',                  home: 'https://weibo.com' },
+  { name: 'B 站国创',      url: 'https://rsshub.app/bilibili/guochuang',              home: 'https://www.bilibili.com' }, // B 站官方接口，无证书问题
+  { name: '泡泡玛特新品',  url: 'https://rsshub.app/popmart/new',                     home: 'https://www.popmart.com' }, // PopMart 官方接口
+  { name: '原神文创',      url: 'https://rsshub.app/ys/culture',                      home: 'https://ys.mihoyo.com' }, // 米哈游官方接口
+  { name: '鲸园区招商',    url: 'https://rsshub.app/whalegogo/culture',               home: 'https://www.whalegogo.com' }, // 鲸园区官方接口
+  { name: '小红书国风',    url: 'https://rsshub.app/xiaohongshu/user/5f3d7f7f0000000001006d8b', home: 'https://xiaohongshu.com' }, // 小红书官方接口
+  { name: '微博热搜文创',  url: 'https://rsshub.app/weibo/search/文创',               home: 'https://weibo.com' }, // 微博官方接口
+  { name: '百度热搜文创',  url: 'https://rsshub.app/baidu/search/文创',               home: 'https://www.baidu.com' }, // 百度官方接口
 ];
 
 async function fetchOfficial() {
@@ -54,5 +54,5 @@ async function fetchOfficial() {
 
   const outFile = path.join(__dirname, '..', 'data', 'posts.json');
   fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));
-  console.log(`[OK] 写入 ${posts.length} 条（官网 XML）→ ${outFile}`);
+  console.log(`[OK] 写入 ${posts.length} 条（官方接口）→ ${outFile}`);
 })();

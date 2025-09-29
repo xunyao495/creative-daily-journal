@@ -1,5 +1,5 @@
 # creative-daily-journal 文创每日手账
-Creative Daily Journal 是一份聚焦全球创意产业的精选、简洁、视觉化的每日简报。
+Creative Daily Journal 是一份聚焦全球文创产业的精选、简洁、视觉化的每日简报。
 专为专业人士、创业者和爱好者设计，每期仅需 10 分钟即可阅读，内容涵盖：
 
 ⭐ 设计趋势 – 从 UI/UX 到产品美学、包装与视觉文化；

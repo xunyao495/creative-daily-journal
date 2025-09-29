@@ -27,8 +27,15 @@ IP 联名、博物馆文创与数字艺术精选快讯，10 分钟读完。
 及时发现市场相关报告，
 快速准确更新投资、市场规模与用户行为等核心指标。
 
-🐍设计风格
-
+🐍页面设计理念
+围绕用户需求与效率提升展开：
+屏幕设为晨光米白，适配设计同仁长时间工作，减炫光、优体验，
+让 10 分钟精读变 5 秒快览；
+用鎏金点关键信息，贴合营销人、分析师需求，
+将融资额、IP 溢价打造成记忆点，一眼锁定核心；
+圆角卡片设计成 “易撕胶带” 式交互，适配博物馆从业者与创业者，
+悬浮翻页 +≤150ms 动效，
+助信息闪现、决策即时，让设计契合实际场景。
 
 
 Creative Daily Journal is your curated, concise, and visually engaging daily briefing on the global creative industries.
@@ -59,3 +66,13 @@ Data refreshed as soon as new market reports drop:
 key metrics on investment, 
 market size and user behaviour, 
 delivered fast and accurate.
+
+🐍 UI Design Philosophy​
+Centered on user needs and efficiency enhancement:​
+The screen is set to a morning light off-white tone, tailored for designers who work long hours staring at interfaces, reducing glare and optimizing experience,​
+turning a 10-minute in-depth read into a 5-second quick scan;​
+Gold accents highlight key information, catering to the needs of marketers and analysts,​
+crafting data points like funding amounts and IP premiums into memorable focal points for instant recognition of core insights;​
+Rounded cards feature a "peelable tape-like" interaction, suitable for museum professionals and entrepreneurs,​
+with hover-to-turn-page functionality plus ≤150ms animation response,​
+enabling instant information display and immediate decision-making—aligning the design closely with real-world scenarios.

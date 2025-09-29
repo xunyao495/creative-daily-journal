@@ -59,6 +59,19 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        .date-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+        }
     </style>
 </head>
 <body>
@@ -84,6 +97,19 @@
     <!-- Hero Section -->
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto text-center">
+            <!-- 今日日期 -->
+            <div class="mb-6">
+                <span id="today-chip" class="date-chip">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span id="today-text"></span>
+                </span>
+            </div>
+
             <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">
                 文创每日手账
             </h1>
@@ -131,6 +157,15 @@
     </footer>
 
     <script>
+        // 设置今日日期
+        const today = new Date();
+        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        const month = today.getMonth() + 1;
+        const date = today.getDate();
+        const weekday = weekdays[today.getDay()];
+        document.getElementById('today-text').textContent = `${month}月${date}日 ${weekday}`;
+
+        // 加载新闻
         document.addEventListener('DOMContentLoaded', function() {
             fetch('/data/posts.json')
                 .then(response => response.json())

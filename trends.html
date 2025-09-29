@@ -101,19 +101,50 @@
             position:relative;
             font-variant-numeric:tabular-nums;
         }
+        /* ===== 横向时间轴 ===== */
         .timeline-card{
             width:280px;
             height:180px;
             display:flex;
             flex-direction:column;
             justify-content:space-between;
-            transition:transform .3s ease,box-shadow .3s ease;
+            transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
             cursor:pointer;
+            border:1px solid var(--border-light);
         }
         .timeline-card:hover{
             transform:scale(1.08);
             box-shadow:0 12px 32px rgba(0,0,0,.2);
             border-color:var(--accent-gold);
+        }
+        /* 月份刻度轴 */
+        .month-axis{
+            position:relative;
+            margin:2rem 0;
+            height:2px;
+            background:#e8e9ea;
+        }
+        .month-dot{
+            position:absolute;
+            top:-6px;
+            width:14px;
+            height:14px;
+            background:var(--accent-gold);
+            border-radius:50%;
+            transform:translateX(-50%);
+            cursor:pointer;
+            transition:transform .2s;
+        }
+        .month-dot:hover{
+            transform:translateX(-50%) scale(1.3);
+        }
+        .month-label{
+            position:absolute;
+            top:20px;
+            transform:translateX(-50%);
+            font-size:12px;
+            color:#000;
+            white-space:nowrap;
         }
     </style>
 </head>
@@ -229,16 +260,16 @@
     </div>
 </section>
 
-<!-- 横向时间轴 -->
+<!-- 横向时间轴 + 月份刻度 -->
 <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
     <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-12 text-black">2025 文创大事件时间轴</h2>
-        <div class="relative overflow-x-auto pb-10">
-            <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-border-light"></div>
-            <div class="relative flex items-center justify-between min-w-max px-4">
-                <div id="timeline-horizontal" class="flex items-center justify-between w-full"></div>
-            </div>
-        </div>
+        <h2 class="text-3xl font-bold text-center mb-6 text-black">2025 文创大事件时间轴</h2>
+
+        <!-- 月份刻度轴 -->
+        <div class="month-axis" id="month-axis"></div>
+
+        <!-- 事件卡片 -->
+        <div class="flex items-center justify-between overflow-x-auto gap-6 px-4" id="timeline-horizontal"></div>
     </div>
 </section>
 
@@ -331,9 +362,9 @@ document.querySelectorAll('.flip-counter').forEach(el=>{
 
 /* 实时资讯 */
 const liveNews=[
-    {title:'2025中国数字文创版权大会在杭召开',summary:'区块链确权平台“文版链3.0”上线，首日确权量破10万件',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521 '},
-    {title:'上海数据交易所开通“数字文创专板”',summary:'大闹天宫数字藏品IP以1200万元成交，首日挂牌破百项',source:'上海数交所',url:'https://www.sde.com.cn/news/20250929/11223 '},
-    {title:'四川上线“非遗数字版权保护一张图”',summary:'系统覆盖2187项非遗资源，3秒生成维权报告',source:'四川省版权局',url:'https://www.scopyright.gov.cn/news/20250927/13321 '}
+    {title:'2025中国数字文创版权大会在杭召开',summary:'区块链确权平台“文版链3.0”上线，首日确权量破10万件',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521'},
+    {title:'上海数据交易所开通“数字文创专板”',summary:'大闹天宫数字藏品IP以1200万元成交，首日挂牌破百项',source:'上海数交所',url:'https://www.sde.com.cn/news/20250929/11223'},
+    {title:'四川上线“非遗数字版权保护一张图”',summary:'系统覆盖2187项非遗资源，3秒生成维权报告',source:'四川省版权局',url:'https://www.scopyright.gov.cn/news/20250927/13321'}
 ];
 document.getElementById('live-news').innerHTML=liveNews.map(item=>`
 <div class="chart-container p-5 flex flex-col justify-between">
@@ -347,15 +378,17 @@ document.getElementById('live-news').innerHTML=liveNews.map(item=>`
     </div>
 </div>`).join('');
 
-/* 时间轴 */
+/* 时间轴数据 */
 const timeline=[
-    {date:'2025-01-15',title:'《人工智能生成合成内容标识办法》正式施行',desc:'AI文创平台须嵌入“隐形水印+可读标签”，违规最高罚款年营收5%。',source:'网易新闻',url:'http://163.com/dy/article/K0B5LTLN05199DKK.html '},
-    {date:'2025-03-20',title:'2025成都国际数字文创季启动',desc:'发放450万元电子消费福袋，首次提出“票根经济”概念。',source:'川观新闻',url:'https://cbgc.scol.com.cn/news/6793384 '},
-    {date:'2025-06-18',title:'广州互联网法院发布数字体育纠纷十大案例',desc:'明确NFT球星卡版权归属，为文创维权提供样本。',source:'广州互联网法院',url:'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a '},
-    {date:'2025-09-29',title:'2025中国数字文创版权大会召开',desc:'“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521 '}
+    {date:'2025-01-15',title:'《人工智能生成合成内容标识办法》正式施行',desc:'AI文创平台须嵌入“隐形水印+可读标签”，违规最高罚款年营收5%。',source:'网易新闻',url:'http://163.com/dy/article/K0B5LTLN05199DKK.html'},
+    {date:'2025-03-20',title:'2025成都国际数字文创季启动',desc:'发放450万元电子消费福袋，首次提出“票根经济”概念。',source:'川观新闻',url:'https://cbgc.scol.com.cn/news/6793384'},
+    {date:'2025-06-18',title:'广州互联网法院发布数字体育纠纷十大案例',desc:'明确NFT球星卡版权归属，为文创维权提供样本。',source:'广州互联网法院',url:'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a'},
+    {date:'2025-09-29',title:'2025中国数字文创版权大会召开',desc:'“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521'}
 ];
-const timelineWrap = document.getElementById('timeline-horizontal');
-timelineWrap.innerHTML = timeline.map(e => `
+
+/* 渲染事件卡片 */
+const timelineWrap=document.getElementById('timeline-horizontal');
+timelineWrap.innerHTML=timeline.map(e=>`
 <div class="timeline-card chart-container p-4 text-center">
     <div class="text-xs text-accent-gold font-medium mb-1">${e.date}</div>
     <h3 class="font-semibold text-black mb-1">${e.title}</h3>
@@ -365,6 +398,15 @@ timelineWrap.innerHTML = timeline.map(e => `
         <a href="${e.url}" target="_blank" class="text-accent-gold hover:underline">原文</a>
     </div>
 </div>`).join('');
+
+/* 生成月份刻度轴 */
+const monthAxis=document.getElementById('month-axis');
+const months=['2025.01','2025.02','2025.03','2025.04','2025.05','2025.06','2025.07','2025.08','2025.09','2025.10','2025.11','2025.12'];
+monthAxis.innerHTML=months.map((m,i)=>{
+    const left=(i/(months.length-1))*100;
+    return`<div class="month-dot" style="left:${left}%"></div>
+           <div class="month-label" style="left:${left}%">${m}</div>`;
+}).join('');
 
 /* 图表初始化 */
 function initChart(id,type,option){

@@ -27,6 +27,9 @@ IP 联名、博物馆文创与数字艺术精选快讯，10 分钟读完。
 及时发现市场相关报告，
 快速准确更新投资、市场规模与用户行为等核心指标。
 
+🐍设计风格
+
+
 
 Creative Daily Journal is your curated, concise, and visually engaging daily briefing on the global creative industries.
 Designed for professionals, entrepreneurs, and enthusiasts, each edition takes just 10 minutes to read and delivers:

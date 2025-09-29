@@ -108,7 +108,30 @@
     "tags": ["电竞IP", "成都", "综合体"],
     "source": "每经网",
     "originalUrl": "https://www.nbd.com.cn/articles/2025-09-28/4078274.html"
-  }
+  },
+  {
+    "id": 11,
+    "title": "2025成都国际数字文创季正式启幕，28个热门IP集结",
+    "summary": "AI视频首发，集中展示哪吒、花局、王者荣耀等28个本土热门IP，规划IP孵化、数字艺术、沉浸文旅全链路。",
+    "image": "https://picsum.photos/seed/cd-ipstar/400/300",
+    "date": "2025-09-28",
+    "readTime": "2分钟",
+    "tags": ["成都", "数字文创", "IP"],
+    "source": "中国新闻网",
+    "originalUrl": "https://www.chinanews.com.cn/cul/2025/09-28/10491286.shtml"
+},
+  {
+    "id": 12,
+    "title": "丽江市第二届‘舍不得的丽江’文创大赛成果发布",
+    "summary": "大赛评选出13个创意设计奖与9个优秀作品，聚焦‘丽江礼物’主题，推动文旅融合与地方文化品牌打造。",
+    "image": "https://picsum.photos/seed/lijiang2025/400/300",
+    "date": "2025-09-28",
+    "readTime": "2分钟",
+    "tags": ["丽江", "文创大赛", "文旅融合"],
+    "source": "新华网云南频道",
+    "originalUrl": "http://www.yn.xinhuanet.com/20250928/8a0bc9e11f8c4a85b8e9aba8e08ab4ef/c.html"
+}
 ]
+
 
 

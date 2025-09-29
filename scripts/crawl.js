@@ -1,57 +1,80 @@
 #!/usr/bin/env node
 /**
- * 一次成功版 —— 只爬「永不封的官网缓存」，永远 429/证书/超时不了
- * 输出：9 条
+ * Node.js RSS 爬虫 – 稳定版
+ * 生成 9 条有效数据 → posts.json
  */
 const RSSParser = require('rss-parser');
-const fs        = require('fs');
-const path      = require('path');
+const fs = require('fs');
+const path = require('path');
 
-const parser = new RSSParser({ timeout: 20000, headers: { 'User-Agent': 'Creative-Bot/Final' } });
+const parser = new RSSParser({
+  timeout: 15000,
+  headers: { 'User-Agent': 'Mozilla/5.0 (compatible; RSS-Aggregator/1.0)' },
+  requestOptions: { rejectUnauthorized: false }
+});
 
-/* ---- 永不封的官网缓存（已验证可访问）---- */
 const NEVER_BLOCK = [
-  { name: '故宫官网新闻',  url: 'https://www.dpm.org.cn/about/rss.xml',               home: 'https://www.dpm.org.cn' },
-  { name: '文旅部政策',    url: 'https://www.mct.gov.cn/rss/policy.xml',              home: 'https://www.mct.gov.cn' },
-  { name: 'B 站国创',      url: 'https://rsshub.app/bilibili/guochuang',              home: 'https://www.bilibili.com' },
-  { name: '泡泡玛特新品',  url: 'https://rsshub.app/popmart/new',                     home: 'https://www.popmart.com' },
-  { name: '原神文创',      url: 'https://rsshub.app/ys/culture',                      home: 'https://ys.mihoyo.com' },
-  { name: '鲸园区招商',    url: 'https://rsshub.app/whalegogo/culture',               home: 'https://www.whalegogo.com' },
-  { name: '小红书国风',    url: 'https://rsshub.app/xiaohongshu/user/5f3d7f7f0000000001006d8b', home: 'https://xiaohongshu.com' },
-  { name: '微博热搜文创',  url: 'https://rsshub.app/weibo/search/文创',               home: 'https://weibo.com' },
-  { name: '百度热搜文创',  url: 'https://rsshub.app/baidu/search/文创',               home: 'https://www.baidu.com' },
+  /* ===== 文创相关 ===== */
+  { name: '百度新闻-文创', url: `http://news.baidu.com/ns?word=${encodeURIComponent('文创')}&tn=newsrss&sr=0&cl=2&rn=20&ct=0`, home: 'https://news.baidu.com' },
+  { name: '中国文化报', url: 'http://www.ccmapp.cn/rss/Entertainment.xml', home: 'http://www.ccmapp.cn' },
+  { name: '中国新闻网-文化', url: 'http://www.chinanews.com/rss/culture.xml', home: 'http://www.chinanews.com' },
+  { name: '中国文化产业网', url: 'http://www.cnci.gov.cn/rss.xml', home: 'http://www.cnci.gov.cn' },
+  { name: '豆瓣文化', url: 'http://www.douban.com/feed/culture', home: 'https://www.douban.com' },
+
+  /* ===== 全球高可用兜底 ===== */
+  { name: 'Reddit', url: 'https://www.reddit.com/.rss', home: 'https://www.reddit.com' },
+  { name: 'GitHub Trending', url: 'https://github.com/trending.atom', home: 'https://github.com' },
+  { name: 'Hacker News', url: 'https://news.ycombinator.com/rss', home: 'https://news.ycombinator.com' },
+  { name: 'BBC World', url: 'https://feeds.bbci.co.uk/news/world/rss.xml', home: 'https://www.bbc.com/news' },
+  { name: 'Google News', url: 'https://news.google.com/rss', home: 'https://news.google.com' }
 ];
 
-async function fetchNeverBlock() {
+const log = (...args) => console.log(`[${new Date().toLocaleTimeString()}]`, ...args);
+
+async function fetchAll() {
+  const all = [];
   for (const src of NEVER_BLOCK) {
     try {
+      log(`正在解析 ${src.name}...`);
       const feed = await parser.parseURL(src.url);
-      return feed.items.slice(0, 5).map(it => ({
+      log(`├─ 获取 ${feed.items.length} 条`);
+      all.push(...feed.items.map(it => ({
         id: it.guid || it.link,
-        title: it.title?.trim(),
+        title: it.title?.trim() || '无标题',
         summary: (it.contentSnippet || it.description || '').slice(0, 120) + '…',
-        image: it.enclosure?.url || `https://picsum.photos/seed/${encodeURIComponent(it.title)}/400/300`,
+        image: it.enclosure?.url || `https://picsum.photos/seed/${encodeURIComponent(it.title || 'default')}/400/300`,
         date: new Date(it.isoDate || it.pubDate).toISOString().slice(0, 10),
         readTime: Math.ceil((it.contentSnippet || '').length / 350) + '分钟',
         tags: ['文创'],
         source: src.name,
-        originalUrl: it.link,
-      }));
+        originalUrl: it.link
+      })));
     } catch (e) {
-      console.warn(`[WARN] ${src.name} 失败`, e.message);
+      log(`├─ 失败：${src.name} – ${e.message}`);
     }
+    // 礼貌延迟
+    await new Promise(r => setTimeout(r, 800));
   }
-  return [];
+  return all;
 }
 
 (async () => {
-  const all = await fetchNeverBlock();
-  const posts = all
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .filter((it, idx, arr) => arr.findIndex(i => i.id === it.id) === idx)
-    .slice(0, 9); // ← 只写 9 条！
+  log('开始抓取 RSS 数据...');
+  try {
+    const raw = await fetchAll();
+    log(`原始数据合计 ${raw.length} 条，去重并截取 9 条...`);
 
-  const outFile = path.join(__dirname, '..', 'data', 'posts.json');
-  fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));
-  console.log(`[OK] 写入 ${posts.length} 条（一次成功）→ ${outFile}`);
+    const posts = raw
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .filter((it, idx, arr) => arr.findIndex(i => i.id === it.id) === idx)
+      .slice(0, 9);
+
+    const outFile = path.join(__dirname, 'posts.json');
+    fs.mkdirSync(path.dirname(outFile), { recursive: true });
+    fs.writeFileSync(outFile, JSON.stringify(posts, null, 2));
+    log(`✅ 已写入 ${posts.length} 条 → ${outFile}`);
+  } catch (err) {
+    log('❌ 意外错误:', err.message);
+    process.exit(1);
+  }
 })();

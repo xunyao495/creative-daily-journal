@@ -138,6 +138,22 @@
         .flip-counter.flip span{
             transform:rotateX(90deg);
         }
+        <style>
+  /* 你原来的样式代码... */
+
+  /* 强制文字变黑 - 放在这里 */
+  body,
+  .text-white,
+  .text-gray-300,
+  .text-gray-400,
+  .text-text-light,
+  .text-text-medium {
+      color: #000 !important;
+  }
+  a {
+      color: #d4af37 !important;
+  }
+</style>
     </style>
 </head>
 <body>
@@ -255,12 +271,15 @@
     </div>
 </section>
 
-<!-- 交互式时间轴 -->
+<!-- 横向时间轴 -->
 <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-    <div class="max-w-5xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">2025文创大事件时间轴</h2>
-        <div id="timeline" class="relative space-y-10">
-            <!-- 动态注入 -->
+    <div class="max-w-7xl mx-auto fade-in">
+        <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">2025 文创大事件时间轴</h2>
+        <div class="relative overflow-x-auto pb-10">
+            <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-border-light"></div>
+            <div class="relative flex items-center justify-between min-w-max px-4">
+                <div id="timeline-horizontal" class="flex items-center justify-between w-full"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -377,17 +396,18 @@ const timeline=[
     {date:'2025-06-18',title:'广州互联网法院发布数字体育纠纷十大案例',desc:'明确NFT球星卡版权归属，为文创维权提供样本。',source:'广州互联网法院',url:'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a'},
     {date:'2025-09-29',title:'2025中国数字文创版权大会召开',desc:'“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521'}
 ];
-const tLine=document.getElementById('timeline');
-tLine.innerHTML=timeline.map((ev,i)=>`
-<div class="relative pl-10 before:absolute before:left-0 before:top-2 before:w-4 before:h-4 before:bg-accent-gold before:rounded-full before:ring-4 before:ring-white/70 after:absolute after:left-2 after:top-6 after:w-px after:h-[calc(100%-1rem)] after:bg-border-light ${i===timeline.length-1?'after:hidden':''}">
-    <div class="chart-container p-4">
-        <div class="flex justify-between items-center mb-2">
-            <span class="text-xs text-accent-gold font-medium">${ev.date}</span>
-            <a href="${ev.url}" target="_blank" class="text-xs text-text-light hover:text-accent-gold">原文</a>
+const timelineWrap = document.getElementById('timeline-horizontal');
+timelineWrap.innerHTML = timeline.map(e => `
+<div class="flex flex-col items-center relative z-10 w-64">
+    <div class="w-4 h-4 rounded-full bg-accent-gold ring-4 ring-white/70 mb-3"></div>
+    <div class="chart-container p-4 text-center w-full">
+        <div class="text-xs text-accent-gold font-medium mb-1">${e.date}</div>
+        <h3 class="font-semibold text-text-dark mb-1">${e.title}</h3>
+        <p class="text-sm text-text-medium mb-2">${e.desc}</p>
+        <div class="flex justify-between items-center text-xs">
+            <span class="text-text-light">来源：${e.source}</span>
+            <a href="${e.url}" target="_blank" class="text-accent-gold hover:underline">原文</a>
         </div>
-        <h3 class="font-semibold text-text-dark mb-1">${ev.title}</h3>
-        <p class="text-sm text-text-medium">${ev.desc}</p>
-        <div class="text-xs text-text-light mt-2">来源：${ev.source}</div>
     </div>
 </div>`).join('');
 

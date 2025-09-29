@@ -17,7 +17,7 @@ Creative Daily Journal 是一份聚焦全球创意产业的精选、简洁、视
 
 📬 更新机制
 每日更新：5–10 条创意产业资讯、政策、投融资、IP 联名、博物馆文创与数字艺术精选快讯，10 分钟读完。
-数据实时刷新：一旦发布新市场报告，立即更新投资、市场规模与用户行为等核心指标，快速准确。
+数据刷新：一旦发布新市场报告，快速准确更新投资、市场规模与用户行为等核心指标。
 
 
 Creative Daily Journal is your curated, concise, and visually engaging daily briefing on the global creative industries.

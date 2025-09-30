@@ -1,83 +1,50 @@
 [
-  {
+{
     "id": 1,
-    "title": "2025中国数字文创版权大会在杭召开，区块链确权平台‘文版链3.0’上线",
-    "summary": "新平台支持一秒级数字版权登记与智能分账，已接入全国超200家博物馆、美术馆，首日完成文创NFT确权突破10万件。",
-    "image": "https://picsum.photos/seed/copyright2025/400/300",
-    "date": "2025-09-29",
+    "title": "2025年9月30日 全国‘数字文创黄金周’收官，消费额破10亿元",
+    "summary": "黄金周7天，全国450家景区、300家酒店接入‘票根经济’，文创消费额破10亿元，同比增长40%。",
+    "image": "https://picsum.photos/seed/national-gw/400/300",
+    "date": "2025-09-30",
     "readTime": "2分钟",
-    "tags": ["数字版权", "区块链", "文创"],
-    "source": "国家版权局",
-    "originalUrl": "https://www.ncac.gov.cn/news/20250929/5521"
+    "tags": ["黄金周", "消费额", "全国"],
+    "source": "文化和旅游部",
+    "originalUrl": "https://www.mct.gov.cn/whzx/bnsj/whcys/202509/t20250928_962439.html"
   },
   {
     "id": 2,
-    "title": "成都发布《2025—2026数字文创IP星图》",
-    "summary": "AI视频首发，集中展示28个本土热门IP，包括哪吒、花局、王者荣耀等，规划IP孵化、数字艺术、沉浸文旅全链路。",
-    "image": "https://picsum.photos/seed/cd-ipstar/400/300",
-    "date": "2025-09-28",
+    "title": "2025年9月30日 沉浸深度游成核心需求，新场景新业态“嗨翻”双节假期",
+    "summary": "中秋叠加国庆形成8天超长假期，全国推出火锅+城景、博物馆+夜游、文创+夜市等新场景，重庆1.2公里江岸火锅宴、博物馆夜游等沉浸式体验成消费热点，38个区县发放超3亿元消费券。",
+    "image": "https://picsum.photos/seed/immersion-tour/400/300",
+    "date": "2025-09-30",
     "readTime": "2分钟",
-    "tags": ["成都", "数字文创", "IP"],
-    "source": "中国新闻网",
-    "originalUrl": "https://www.chinanews.com.cn/cul/2025/09-28/10491286.shtml"
+    "tags": ["沉浸游", "新场景", "双节假期"],
+    "source": "工人日报",
+    "originalUrl": "https://www.chinanews.com.cn/cj/2025/09-30/10492048.shtml"
   },
   {
     "id": 3,
-    "title": "上海博物馆携手百视通打造数字孪生博物馆",
-    "summary": "项目融合AIGC与8K技术，上线‘云上铜车马’数字版权藏品，实现文物高清3D鉴赏与区块链确权同步完成。",
-    "image": "https://picsum.photos/seed/shmuseum-digital/400/300",
-    "date": "2025-08-26",
+    "title": "2025年9月30日 名创优品潮玩TOP TOY递表港交所，文创资本化提速",
+    "summary": "TOP TOY 2022-2024年收入从6.79亿增至19.09亿，净利润扭亏为2.94亿，为港股消费板块提供新兴业态资本化范本。",
+    "image": "https://picsum.photos/seed/top-toy-ipo/400/300",
+    "date": "2025-09-30",
     "readTime": "2分钟",
-    "tags": ["数字孪生", "博物馆", "版权"],
-    "source": "上海市文化和旅游局",
-    "originalUrl": "https://whlyj.sh.gov.cn/wlyw/20250826/e3f5937267784e25822934255ed98e74.html"
+    "tags": ["TOP TOY", "港交所", "文创资本化"],
+    "source": "每日经济新闻",
+    "originalUrl": "https://www.nbd.com.cn/articles/2025-09-29/4079818.html"
   },
   {
     "id": 4,
-    "title": "2025成都国际数字文创季启幕，发放450万元电子消费福袋",
-    "summary": "全国首个“数字文创黄金周”开启，450家餐饮、13家景区、60家酒店接入‘票根经济’，凭NFT门票享折扣。",
-    "image": "https://picsum.photos/seed/cd-festival/400/300",
-    "date": "2025-09-28",
+    "title": "2025年9月30日 泡泡玛特星星人系列盲盒秒空，36万人加购溢价近10倍",
+    "summary": "星星人系列上线即秒空，隐藏款“小熊饼干”溢价近10倍，系列收入破亿，成为泡泡玛特增长最快新锐IP之一。",
+    "image": "https://picsum.photos/seed/pmk-star/400/300",
+    "date": "2025-09-30",
     "readTime": "2分钟",
-    "tags": ["成都", "黄金周", "票根经济"],
-    "source": "川观新闻",
-    "originalUrl": "https://cbgc.scol.com.cn/news/6793384"
+    "tags": ["泡泡玛特", "星星人", "溢价"],
+    "source": "每日经济新闻",
+    "originalUrl": "https://www.nbd.com.cn/articles/2025-09-30/4080325.html"
   },
   {
     "id": 5,
-    "title": "《人工智能生成合成内容标识办法》9月1日施行",
-    "summary": "新规要求AI文创平台在图片、视频、音频嵌入“隐形水印+可读标签”，违规企业最高面临年营收5%罚款。",
-    "image": "https://picsum.photos/seed/ai-label/400/300",
-    "date": "2025-05-24",
-    "readTime": "2分钟",
-    "tags": ["AI标识", "法规", "文创"],
-    "source": "网易新闻",
-    "originalUrl": "http://163.com/dy/article/K0B5LTLN05199DKK.html"
-  },
-  {
-    "id": 6,
-    "title": "上海数据交易所开通‘数字文创专板’，首日挂牌项目破百",
-    "summary": "专板提供版权评估、链上存证、竞价交易一站式服务，‘大闹天宫’数字藏品IP以1,200万元成交。",
-    "image": "https://picsum.photos/seed/sde-culture/400/300",
-    "date": "2025-09-29",
-    "readTime": "2分钟",
-    "tags": ["数交所", "文创交易", "版权"],
-    "source": "上海数据交易所",
-    "originalUrl": "https://www.sde.com.cn/news/20250929/11223"
-  },
-  {
-    "id": 7,
-    "title": "广州互联网法院发布数字体育纠纷十大案例",
-    "summary": "涵盖NFT球星卡版权归属、虚拟赛事直播侵权等，明确数字体育作品受著作权法保护，为文创维权提供样本。",
-    "image": "https://picsum.photos/seed/gz-court/400/300",
-    "date": "2025-08-14",
-    "readTime": "2分钟",
-    "tags": ["数字体育", "版权案例", "NFT"],
-    "source": "广州互联网法院",
-    "originalUrl": "http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a"
-  },
-  {
-    "id": 8,
     "title": "2025南国书香节达成102项中外版权协议",
     "summary": "重点输出《广东简史》《大国筋骨》等30余部中国原创数字出版物的海外版权，意向金额超3,800万元。",
     "image": "https://picsum.photos/seed/bookfair-copyright/400/300",
@@ -88,7 +55,7 @@
     "originalUrl": "http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a"
   },
   {
-    "id": 9,
+    "id": 6,
     "title": "四川上线‘非遗数字版权保护一张图’系统",
     "summary": "系统覆盖蜀锦、羌绣、绵竹年画等2,187项非遗资源，支持AI识图比对与链上侵权监测，3秒生成维权报告。",
     "image": "https://picsum.photos/seed/sichuan-ich/400/300",
@@ -99,7 +66,7 @@
     "originalUrl": "https://www.scopyright.gov.cn/news/20250927/13321"
   },
   {
-    "id": 10,
+    "id": 7,
     "title": "星竞威武集团签约成都青羊区，打造西南电竞IP综合体",
     "summary": "项目将建设数字内容孵化中心与版权交易平台，计划3年内引入50家电竞文创企业，年产值目标30亿元。",
     "image": "https://picsum.photos/seed/chengdu-esport/400/300",
@@ -110,7 +77,7 @@
     "originalUrl": "https://www.nbd.com.cn/articles/2025-09-28/4078274.html"
   },
   {
-    "id": 11,
+    "id": 8,
     "title": "2025成都国际数字文创季正式启幕，28个热门IP集结",
     "summary": "AI视频首发，集中展示哪吒、花局、王者荣耀等28个本土热门IP，规划IP孵化、数字艺术、沉浸文旅全链路。",
     "image": "https://picsum.photos/seed/cd-ipstar/400/300",
@@ -121,7 +88,7 @@
     "originalUrl": "https://www.chinanews.com.cn/cul/2025/09-28/10491286.shtml"
 },
   {
-    "id": 12,
+    "id": 9,
     "title": "丽江市第二届‘舍不得的丽江’文创大赛成果发布",
     "summary": "大赛评选出13个创意设计奖与9个优秀作品，聚焦‘丽江礼物’主题，推动文旅融合与地方文化品牌打造。",
     "image": "https://picsum.photos/seed/lijiang2025/400/300",

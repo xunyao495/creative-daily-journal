@@ -55,6 +55,9 @@ IP 联名、博物馆文创与数字艺术精选快讯，10 分钟读完。
 
 ⭐悬浮翻页 +≤150ms 动效，助信息闪现、决策即时，让设计契合实际场景。
 
+😊持续迭代
+📅2025年9月30日   功能更新：增加首页打卡功能
+
 
 Creative Daily Journal is a curated, concise, and visual daily briefing focusing on the global cultural and creative industry.
 Tailored for professionals, entrepreneurs, and enthusiasts, each issue takes only 10 minutes to read, covering the following content:
@@ -109,3 +112,7 @@ It reduces glare and optimizes the experience, meeting both the need for a 5-sec
 
 ⭐ Hover-to-turn-page functionality plus ≤150ms animation response enables instant information display 
 and immediate decision-making, aligning the design with real-world scenarios.
+
+😊 Continuous Iteration
+
+📅 September 30, 2025   Feature Update: Daily Check-In added to homepage

@@ -1,105 +1,104 @@
 [
   {
     "id": 1,
-    "title": "成都街头邂逅“哪吒”“花花” 数字文创升级黄金周文旅新场景",
-    "summary": "金秋十月，蓉城街头上演跨越次元奇妙邂逅——身披混天绫的“哪吒”从电影中“走出”，憨态可掬的大熊猫“花花”与王者荣耀英雄并肩而立，引得无数游客驻足打卡、互动合影。",
-    "image": "https://picsum.photos/seed/chengdu-digital-creative-2025/1200/800",
-    "date": "2025-10-05",
+    "title": "文化中国行·传统村落人文影像志",
+    "summary": "塱头村坐落于广州市花都区炭步镇，距今已有约700年历史，由塱东、塱中和塱西三社组成，以半月塘为核心，18条以“礼”命名的巷道，呈“梳式”布局延展。",
+    "image": "https://picsum.photos/seed/langtou-village/1200/800",
+    "date": "2025-10-07",
     "readTime": "2 分钟",
-    "tags": ["数字文创", "哪吒", "花花", "成都", "黄金周"],
-    "source": "中国新闻网",
-    "originalUrl": "https://www.chinanews.com.cn/cj/2025/10-05/10494149.shtml"
+    "tags": ["传统村落", "塱头村", "影像志", "文化中国行"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251007/a1f07efde8504e9b9f7e5f6e316b7f77/c.html"
   },
   {
     "id": 2,
-    "title": "“篮球+”燃动假日 一张票根解锁文旅新场景",
-    "summary": "国庆假期，近20场浙BA比赛点燃之江大地，借力“票根经济”，白天游景区、晚上看比赛，勾勒“白天游景区，晚上看比赛”假日新图景。",
-    "image": "https://picsum.photos/seed/zhejiang-ba-game-2025/1200/800",
+    "title": "“十一”假期，山西文旅凭啥“出圈”又“出彩”？",
+    "summary": "“这个假期，山西又‘火’了！”10月5日，在太原从事文旅行业20多年的张创美表示，他的旅行社已连续两年在“十一”假期忙得不可开交。",
+    "image": "https://picsum.photos/seed/shanxi-culture-tourism/1200/800",
     "date": "2025-10-05",
     "readTime": "2 分钟",
-    "tags": ["篮球", "票根经济", "浙BA", "文旅", "假期"],
-    "source": "中国新闻网",
-    "originalUrl": "https://www.chinanews.com.cn/cj/2025/10-05/10494147.shtml"
+    "tags": ["山西文旅", "十一假期", "出圈", "出彩"],
+    "source": "中国证券网",
+    "originalUrl": "https://www.cnstock.com/commonDetail/550332"
   },
   {
     "id": 3,
-    "title": "“宝藏”公园新意足 北京市属公园多项假日活动丰富游园选择",
-    "summary": "国庆中秋假期过半，北京市属公园共接待游客79.63万人次，天坛公园、颐和园、景山公园游客量位列前三，游园秩序整体平稳有序。",
-    "image": "https://picsum.photos/seed/beijing-parks-2025/1200/800",
-    "date": "2025-10-05",
+    "title": "一汽-大众联合长春新民大街举办汽车文化嘉年华",
+    "summary": "10月1日至3日，一汽-大众携手长春市新民大街举办“首届汽车文化嘉年华”，展示汽车工业与品牌文化，探索工业与城市文化协同发展。",
+    "image": "https://picsum.photos/seed/volkswagen-carnival/1200/800",
+    "date": "2025-10-01",
     "readTime": "2 分钟",
-    "tags": ["北京市属公园", "游园", "假期", "天坛", "颐和园"],
-    "source": "中国新闻网",
-    "originalUrl": "http://www.news.cn/sh/2025/10-05/10494115.shtml"
+    "tags": ["一汽-大众", "汽车文化", "嘉年华", "长春"],
+    "source": "中国证券网",
+    "originalUrl": "https://www.cnstock.com/commonDetail/550143"
   },
   {
     "id": 4,
-    "title": "假期前四天 全国重点零售和餐饮企业销售额同比增长3.3%",
-    "summary": "假期前四天，全国重点零售和餐饮企业销售额同比增长3.3%，生活必需品量足价稳，各地消费市场繁荣兴旺。",
-    "image": "https://picsum.photos/seed/festive-lantern-2025/1200/800",
-    "date": "2025-10-04",
+    "title": "海南离岛免税消费活力足",
+    "summary": "国庆中秋假期，海南离岛免税经营主体通过拓宽消费场景、推出促销，持续释放吸引力；10月5日，cdf三亚国际免税城单日销售额突破1.2亿元。",
+    "image": "https://picsum.photos/seed/hainan-duty-free/1200/800",
+    "date": "2025-10-05",
     "readTime": "2 分钟",
-    "tags": ["零售", "餐饮", "销售额", "假期", "消费"],
-    "source": "每日经济新闻",
-    "originalUrl": "https://www.nbd.com.cn/articles/2025-10-04/4082683.html"
+    "tags": ["海南", "离岛免税", "消费活力", "三亚"],
+    "source": "中国证券网",
+    "originalUrl": "https://www.cnstock.com/commonDetail/550325"
   },
   {
     "id": 5,
-    "title": "“川超”5场比赛同日开赛，各地“文旅盛宴”热闹开摆",
-    "summary": "10月2日，川超5场比赛同日开赛，借力“票根经济”，白天游景区，晚上看比赛，勾勒“白天游景区，晚上看比赛」假日新图景。",
-    "image": "https://picsum.photos/seed/football-fan-2025/1200/800",
-    "date": "2025-10-04",
+    "title": "人财两旺！第36届上海旅游节释放“全”方位魅力",
+    "summary": "10月6日晚，第36届上海旅游节闭幕，接待市民游客人数与旅游消费金额均创纪录，实现“人财两旺”都市旅游发展新势头。",
+    "image": "https://picsum.photos/seed/shanghai-tourism-festival/1200/800",
+    "date": "2025-10-06",
     "readTime": "2 分钟",
-    "tags": ["川超", "足球", "票根经济", "文旅", "假期"],
-    "source": "每日经济新闻",
-    "originalUrl": "https://www.nbd.com.cn/articles/2025-10-04/4082671.html"
+    "tags": ["上海旅游节", "人财两旺", "旅游消费", "纪录"],
+    "source": "中国证券网",
+    "originalUrl": "https://www.cnstock.com/commonDetail/550317"
   },
   {
     "id": 6,
-    "title": "“好看”“必看”更“耐看”——读懂上海假日经济“顶流密码”",
-    "summary": "上海假日经济“顶流密码”：精细治理、创新升级、开放格局，好看、必看更耐看，上海成为假期经济顶流。",
-    "image": "https://picsum.photos/seed/shanghai-night-2025/1200/800",
-    "date": "2025-10-05",
-    "readTime": "3 分钟",
-    "tags": ["上海", "假日经济", "顶流密码", "精细治理", "开放格局"],
-    "source": "新华网",
-    "originalUrl": "http://www.news.cn/2025/10/05/f680fe9ae2af4b4bb907c527a80bd823/c.html"
+    "title": "“了不起的老祖宗——周同学的时空奇遇记”主题艺术秀在上博启幕",
+    "summary": "9月29日，上海博物馆推出“周同学”IP主题艺术秀，融合AI光影、全息投影、机器人互动等现代技术，打造沉浸式文化现场。",
+    "image": "https://picsum.photos/seed/zhou-tongxue-sh-museum/1200/800",
+    "date": "2025-09-29",
+    "readTime": "2 分钟",
+    "tags": ["周同学", "上海博物馆", "沉浸式艺术秀", "AI光影"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/image/102849502.html"
   },
   {
     "id": 7,
-    "title": "传统书市何以人气爆棚",
-    "summary": "地坛书市收官，累计接待读者55万人次，图书销售额超9000万元，传统书市人气爆棚，成为文旅风景线。",
-    "image": "https://picsum.photos/seed/book-fair-2025/1200/800",
-    "date": "2025-10-05",
+    "title": "总资产达34.4万亿元！“十四五”文化产业成绩单发布",
+    "summary": "“十四五”以来，我国文化产业总资产达34.4万亿元，文化和旅游高质量发展成就显著，文化影响力持续提升。",
+    "image": "https://picsum.photos/seed/14th-culture-industry/1200/800",
+    "date": "2025-09-29",
     "readTime": "2 分钟",
-    "tags": ["传统书市", "地坛书市", "文旅风景线", "人气爆棚"],
-    "source": "新华网",
-    "originalUrl": "http://www.news.cn/fortune/20251005/56f5720cb1cd401486356c652ecfd8bf/c.html"
+    "tags": ["十四五", "文化产业", "34.4万亿元", "高质量发展"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102848864.html"
   },
   {
     "id": 8,
-    "title": "双节假期北京消费市场活力迸发",
-    "summary": "国庆中秋假期，北京消费市场焕发活力，市商务局重点监测的百货、超市、专业专卖店、餐饮和电商等业态企业实现销售额同比增长0.4%，其中老字号餐饮、连锁快餐带动餐饮业态增长4.8%；全市60个重点商圈客流量同比增长14.3%。",
-    "image": "https://picsum.photos/seed/beijing-consumption-2025/1200/800",
-    "date": "2025-10-05",
+    "title": "成都怎么这么会玩！28大IP点燃成都国际数字文创季",
+    "summary": "9月28日-10月26日，成都联动王者荣耀、哪吒等28个热门数字文创IP，推出五大主体活动，打造数字文嘉年华，展示中国数字文创创造力。",
+    "image": "https://picsum.photos/seed/chengdu-digital-ip/1200/800",
+    "date": "2025-09-28",
     "readTime": "2 分钟",
-    "tags": ["北京", "消费市场", "假期", "餐饮", "商圈"],
-    "source": "新华网",
-    "originalUrl": "http://www.news.cn/sh/2025/10/05/7fe980f1b9aa4679834622fc99f191ad/c.html"
+    "tags": ["成都", "数字文创季", "28大IP", "王者荣耀"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102848594.html"
   },
   {
     "id": 9,
-    "title": "台湾咖啡师和他的“茶与咖”",
-    "summary": "10月2日，杭州“咖享上城”咖啡文化嘉年华上，台湾咖啡师李毅现场手冲阿里山邹筑园限量“索恩那”豆，年产量仅100公斤，168元/杯仍吸引络绎不绝的客人。李毅坚持分享产地风土理念，让咖啡像茶一样喝出个性与故事。",
-    "image": "https://picsum.photos/seed/global-drama-2025/1200/800",
-    "date": "2025-10-02",
+    "title": "体重管理热潮下月饼市场刮起“低卡”风",
+    "summary": "中秋消费市场刮起“低卡”“低脂”风，沈阳多家商超推出低糖月饼，满足全民体重管理需求，成为中秋新卖点。",
+    "image": "https://picsum.photos/seed/low-cal-mooncake/1200/800",
+    "date": "2025-10-06",
     "readTime": "2 分钟",
-    "tags": ["台湾咖啡师", "阿里山", "手冲咖啡", "茶与咖", "杭州嘉年华"],
-    "source": "中国新闻网",
-    "originalUrl": "https://www.chinanews.com.cn/sh/2025/10-02/10493355.shtml"
+    "tags": ["低卡月饼", "体重管理", "中秋", "沈阳"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251006/536173b5e1bf4129b7b40c6702cb1c22/c.html"
   }
 ]
-
 
 
 

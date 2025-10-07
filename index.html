@@ -8,106 +8,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     /* ---- 通用 ---- */
-    body{
-      font-family:'Noto Sans SC',sans-serif;
-      background:linear-gradient(135deg,#fefefe 0%,#f8f9fa 100%);
-      color:#2c3e50;
-    }
-    .hero-title{
-      font-family:'Playfair Display',serif;
-      background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-    /* ---- 导航 ---- */
-    .nav-blur{
-      backdrop-filter:blur(20px);
-      background:rgba(255,255,255,.95);
-      border-bottom:1px solid #e8e9ea;
-      box-shadow:0 2px 20px rgba(0,0,0,.08);
-    }
+    body{font-family:'Noto Sans SC',sans-serif;background:#faf7f2;color:#2c3e50;}
+    .hero-title{font-family:'Playfair Display',serif;background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .nav-blur{backdrop-filter:blur(20px);background:rgba(255,255,255,.95);border-bottom:1px solid #e8e9ea;box-shadow:0 2px 20px rgba(0,0,0,.08);}
     /* ---- 打卡 ---- */
-    .check-in-btn{
-      background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);
-      color:#fff;
-      border:none;
-      padding:10px 24px;
-      border-radius:999px;
-      font-size:16px;
-      font-weight:500;
-      cursor:pointer;
-      box-shadow:0 4px 12px rgba(212,175,55,.3);
-      transition:all .3s ease;
-    }
+    .check-in-btn{background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);color:#fff;border:none;padding:10px 24px;border-radius:999px;font-size:16px;font-weight:500;cursor:pointer;box-shadow:0 4px 12px rgba(212,175,55,.3);transition:all .3s ease;}
     .check-in-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,175,55,.4);}
-    .check-in-btn.checked{
-      background:linear-gradient(135deg,#95a5a6 0%,#7f8c8d 100%);
-      cursor:not-allowed;
-      box-shadow:none;
-    }
-    /* ---- 新卡片 ---- */
-    .fig-card{
-      display:flex;
-      background:#fff;
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 4px 16px rgba(0,0,0,.08);
-      transition:all .35s ease;
+    .check-in-btn.checked{background:linear-gradient(135deg,#95a5a6 0%,#7f8c8d 100%);cursor:not-allowed;box-shadow:none;}
+    /* ---- 手账卡片 ---- */
+    .memo-card{
+      background:#fff9f0;
+      border:1px solid #e9dfd1;
+      border-radius:18px;
+      padding:24px;
+      margin-bottom:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,.06);
       cursor:pointer;
-    }
-    .fig-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 12px 28px rgba(0,0,0,.12);
-    }
-    .fig-left{
-      flex:0 0 33%;
-      aspect-ratio:1/1;
+      transition:all .35s ease;
       position:relative;
       overflow:hidden;
     }
-    .fig-left img{
-      width:100%;height:100%;object-fit:cover;
-      transition:transform .45s ease;
-    }
-    .fig-card:hover .fig-left img{transform:scale(1.08);}
-    .fig-left::after{  /* 渐变遮罩 */
+    /* 撕边效果 */
+    .memo-card::before,
+    .memo-card::after{
       content:'';
-      position:absolute;inset:0;
-      background:linear-gradient(135deg,rgba(212,175,55,.25) 0%,rgba(243,156,18,.35) 100%);
+      position:absolute;
+      width:120%;
+      height:14px;
+      left:-10%;
+      background-repeat:repeat-x;
     }
-    .fig-right{
-      flex:1;
-      padding:24px 28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      position:relative;
-      overflow:hidden;
-    }
-    /* 扫光 */
-    .fig-right::before{
-      content:'';
-      position:absolute;top:0;left:-120%;
-      width:100%;height:100%;
-      background:linear-gradient(90deg,transparent 0%,rgba(212,175,55,.18) 50%,transparent 100%);
-      transition:left .6s ease;
-    }
-    .fig-card:hover .fig-right::before{left:120%;}
-    .fig-title{
-      font-size:1.25rem;font-weight:600;color:#2c3e50;
-      line-height:1.4;
-      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-    }
-    .fig-summary{
-      margin-top:10px;font-size:.95rem;color:#555;
-      line-height:1.65;
-      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-    }
-    .fig-bottom{
-      margin-top:14px;display:flex;align-items:center;justify-content:space-between;font-size:.8rem;color:#7f8c8d;
-    }
-    .fig-tags{display:flex;flex-wrap:wrap;gap:6px;}
-    .fig-tag{background:#fdf6e9;color:#b58900;padding:4px 10px;border-radius:999px;font-weight:500;}
+    .memo-card::before{top:-1px;background:linear-gradient(180deg,transparent 6px,#e9dfd1 6px,#e9dfd1 8px,transparent 8px);}
+    .memo-card::after{bottom:-1px;background:linear-gradient(180deg,transparent 6px,#e9dfd1 6px,#e9dfd1 8px,transparent 8px);}
+    /* 悬浮微旋转 */
+    .memo-card:hover{transform:translateY(-4px) rotate(.8deg);box-shadow:0 12px 30px rgba(0,0,0,.1);}
+    .memo-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+    .memo-where{background:#f3ede2;color:#8c7d61;font-size:12px;padding:4px 10px;border-radius:999px;}
+    .memo-title{font-size:1.15rem;font-weight:600;color:#4a4438;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .memo-summary{font-size:.9rem;color:#6b6657;margin:10px 0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .memo-footer{margin-top:14px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#9d9483;}
+    .memo-tag{background:#f5efe2;color:#8c7d61;padding:3px 8px;border-radius:999px;}
   </style>
 </head>
 <body class="antialiased">
@@ -116,11 +56,11 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <h1 class="text-2xl font-bold hero-title">文创每日手账</h1>
-      <div class="hidden md:flex items-baseline space-x-8">
-        <a href="index.html" class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium">首页</a>
-        <a href="news.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium">新闻详情</a>
-        <a href="trends.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium">趋势分析</a>
-        <a href="about.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium">关于我们</a>
+      <div class="hidden md:flex items-baseline space-x-8 text-sm font-medium">
+        <a href="index.html" class="text-gray-900 hover:text-yellow-600">首页</a>
+        <a href="news.html" class="text-gray-600 hover:text-yellow-600">新闻详情</a>
+        <a href="trends.html" class="text-gray-600 hover:text-yellow-600">趋势分析</a>
+        <a href="about.html" class="text-gray-600 hover:text-yellow-600">关于我们</a>
       </div>
     </div>
   </div>
@@ -131,16 +71,14 @@
   <div class="max-w-7xl mx-auto text-center">
     <!-- 今日日期 -->
     <div class="mb-6 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span id="today-text"></span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span id="todayText"></span>
     </div>
-
     <!-- 打卡 -->
     <div class="mb-8">
-      <button id="checkInBtn" class="check-in-btn">今日打卡</button>
-      <div id="checkInTxt" class="mt-2 text-sm text-gray-500">持续输入，保持敏锐</div>
+      <button id="checkBtn" class="check-in-btn">今日打卡</button>
+      <div id="checkTxt" class="mt-2 text-sm text-gray-500">持续输入，保持敏锐</div>
     </div>
-
     <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">文创每日手账</h1>
     <p class="text-xl text-gray-600">每天十分钟，一起学习文创市场动态</p>
   </div>
@@ -148,9 +86,12 @@
 
 <!-- 新闻列表 -->
 <section class="py-16 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">最新文创动态</h2>
-    <div id="fig-news-list" class="space-y-6"><!-- JS 注入 --></div>
+    <!-- 保持原网格尺寸 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="memoGrid">
+      <!-- JS 注入 -->
+    </div>
   </div>
 </section>
 
@@ -164,11 +105,7 @@
     </div>
     <div>
       <h4 class="font-semibold mb-4 text-gray-800">联系我们</h4>
-      <div class="space-y-1 text-gray-600">
-        <p>📞 86-18210095234</p>
-        <p>📍 北京市东城区环球贸易大厦A座3层</p>
-        <p>📧 mistoraworld@163.com</p>
-      </div>
+      <div class="space-y-1 text-gray-600"><p>📞 86-18210095234</p><p>📍 北京市东城区环球贸易大厦A座3层</p><p>📧 mistoraworld@163.com</p></div>
     </div>
     <div>
       <h4 class="font-semibold mb-4 text-gray-800">关注我们</h4>
@@ -179,12 +116,12 @@
 
 <script>
 /* ---- 今日日期 ---- */
-const t=new Date(),w=['周日','周一','周二','周三','周四','周五','周六'];
-document.getElementById('today-text').textContent=`${t.getMonth()+1}月${t.getDate()}日 ${w[t.getDay()]}`;
+const d=new Date(),w=['周日','周一','周二','周三','周四','周五','周六'];
+document.getElementById('todayText').textContent=`${d.getMonth()+1}月${d.getDate()}日 ${w[d.getDay()]}`;
 
 /* ---- 打卡 ---- */
-const key=`checkIn_${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`;
-const btn=document.getElementById('checkInBtn'),txt=document.getElementById('checkInTxt');
+const key=`checkIn_${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+const btn=document.getElementById('checkBtn'),txt=document.getElementById('checkTxt');
 if(localStorage.getItem(key)==='true'){btn.classList.add('checked');btn.textContent='已打卡';txt.textContent='今日已完成';txt.classList.add('text-green-600','font-medium');}
 btn.addEventListener('click',()=>{
   if(btn.classList.contains('checked'))return;
@@ -193,30 +130,25 @@ btn.addEventListener('click',()=>{
   txt.textContent='今日已完成学习，明日继续加油！';txt.classList.add('text-green-600','font-medium');
 });
 
-/* ---- 拉取新闻 ---- */
+/* ---- 加载新闻 ---- */
 fetch('/data/posts.json')
   .then(r=>r.json())
-  .then(renderList)
+  .then(list=>renderMemo(list))
   .catch(console.error);
 
-function renderList(posts){
-  const box=document.getElementById('fig-news-list');
+function renderMemo(posts){
+  const box=document.getElementById('memoGrid');
   box.innerHTML=posts.map(p=>`
-  <div class="fig-card" onclick="window.open('${p.originalUrl}','_blank')">
-    <div class="fig-left">
-      <img src="${p.image}" alt="">
+  <div class="memo-card" onclick="window.open('${p.originalUrl}','_blank')">
+    <div class="memo-header">
+      <span class="memo-where">${p.source} · ${p.date}</span>
+      <span class="text-xs text-gray-500">${p.readTime}</span>
     </div>
-    <div class="fig-right">
-      <div>
-        <h3 class="fig-title">${p.title}</h3>
-        <p class="fig-summary">${p.summary}</p>
-      </div>
-      <div class="fig-bottom">
-        <div class="fig-tags">${p.tags.map(tag=>`<span class="fig-tag">#${tag}</span>`).join('')}</div>
-        <div class="flex items-center gap-3">
-          <span>${p.source}</span>
-          <span>${p.readTime}</span>
-        </div>
+    <h3 class="memo-title">${p.title}</h3>
+    <p class="memo-summary">${p.summary}</p>
+    <div class="memo-footer">
+      <div class="flex flex-wrap gap-2">
+        ${p.tags.map(t=>`<span class="memo-tag">#${t}</span>`).join('')}
       </div>
     </div>
   </div>`).join('');

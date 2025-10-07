@@ -7,15 +7,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* ---- 通用 ---- */
     body{font-family:'Noto Sans SC',sans-serif;background:#faf7f2;color:#2c3e50;}
     .hero-title{font-family:'Playfair Display',serif;background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
     .nav-blur{backdrop-filter:blur(20px);background:rgba(255,255,255,.95);border-bottom:1px solid #e8e9ea;box-shadow:0 2px 20px rgba(0,0,0,.08);}
-    /* ---- 打卡 ---- */
     .check-in-btn{background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);color:#fff;border:none;padding:10px 24px;border-radius:999px;font-size:16px;font-weight:500;cursor:pointer;box-shadow:0 4px 12px rgba(212,175,55,.3);transition:all .3s ease;}
     .check-in-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,175,55,.4);}
     .check-in-btn.checked{background:linear-gradient(135deg,#95a5a6 0%,#7f8c8d 100%);cursor:not-allowed;box-shadow:none;}
-    /* ---- 手账卡片 ---- */
+
+    /* ====== 手账便签卡片 ====== */
     .memo-card{
       background:#fff9f0;
       border:1px solid #e9dfd1;
@@ -88,7 +87,7 @@
 <section class="py-16 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">最新文创动态</h2>
-    <!-- 保持原网格尺寸 -->
+    <!-- 电脑端 3 列 / 手机端 1 列 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="memoGrid">
       <!-- JS 注入 -->
     </div>

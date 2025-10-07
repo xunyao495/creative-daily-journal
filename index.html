@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文创每日手账 - 优化版本</title>
+    <title>文创每日手账 - 数据库连接版本</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -296,6 +296,60 @@
             gap: 4px;
         }
 
+        /* 加载状态样式 */
+        .loading-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            grid-column: 1 / -1;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(212, 175, 55, 0.1);
+            border-left-color: #d4af37;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .error-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            grid-column: 1 / -1;
+            color: #e74c3c;
+        }
+        
+        .error-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .retry-btn {
+            margin-top: 16px;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .retry-btn:hover {
+            background-color: #c29a2e;
+        }
+
         /* 动画效果 */
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -380,7 +434,11 @@
             
             <!-- 新闻网格 -->
             <div class="news-grid" id="news-grid">
-                <!-- 新闻将通过JavaScript动态加载 -->
+                <!-- 加载状态 -->
+                <div class="loading-state" id="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>正在加载新闻数据...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -490,6 +548,8 @@
 
         // 处理标签过多的情况 - 只显示前3个标签
         function renderTags(tags) {
+            if (!tags || tags.length === 0) return '';
+            
             if (tags.length <= 3) {
                 return tags.map(tag => `
                     <span class="card-tag">${tag}</span>
@@ -501,111 +561,107 @@
             }
         }
 
-        // 新闻数据 - 使用更高清的图片
-        const newsData = [
-            {
-                image: "https://picsum.photos/seed/culture1/800/600",
-                title: "2025年全球文创产业发展趋势报告发布，数字化转型成主流",
-                summary: "最新发布的全球文创产业报告指出，随着元宇宙技术的发展，文创产业正经历前所未有的数字化转型",
-                tags: ["产业趋势", "数字化", "元宇宙"],
-                readTime: "8分钟",
-                date: "2025-10-07",
-                source: "文创产业研究院"
-            },
-            {
-                image: "https://picsum.photos/seed/culture2/800/600",
-                title: "传统文化IP创新开发研讨会在京举行",
-                summary: "来自全国各地的文创专家齐聚北京，共同探讨传统文化IP的现代化转化路径",
-                tags: ["传统文化", "IP开发", "研讨会"],
-                readTime: "5分钟",
-                date: "2025-10-06",
-                source: "文化报"
-            },
-            {
-                image: "https://picsum.photos/seed/culture3/800/600",
-                title: "人工智能在文创设计中的应用案例分析",
-                summary: "AI技术正逐步渗透到文创设计领域，从图案生成到产品造型，人工智能提高了设计效率",
-                tags: ["人工智能", "文创设计", "技术应用"],
-                readTime: "6分钟",
-                date: "2025-10-06",
-                source: "数字艺术杂志"
-            },
-            {
-                image: "https://picsum.photos/seed/culture4/800/600",
-                title: "乡村文创产品如何走出特色发展之路",
-                summary: "乡村文创作为乡村振兴的重要组成部分，如何结合当地特色资源，打造具有市场竞争力的产品",
-                tags: ["乡村文创", "乡村振兴", "特色产品"],
-                readTime: "7分钟",
-                date: "2025-10-05",
-                source: "农业文化周刊"
-            },
-            {
-                image: "https://picsum.photos/seed/culture5/800/600",
-                title: "国际文创博览会将于下月在上海举办",
-                summary: "一年一度的国际文创博览会即将拉开帷幕，将有来自30多个国家和地区的500多家企业参展",
-                tags: ["博览会", "上海", "国际交流"],
-                readTime: "4分钟",
-                date: "2025-10-05",
-                source: "会展资讯"
-            },
-            {
-                image: "https://picsum.photos/seed/culture6/800/600",
-                title: "文创品牌如何通过社交媒体提升影响力",
-                summary: "在新媒体时代，文创品牌的营销方式发生了巨大变化，本文分析了多个成功案例",
-                tags: ["品牌营销", "社交媒体", "案例分析"],
-                readTime: "9分钟",
-                date: "2025-10-04",
-                source: "营销智库"
-            }
-        ];
-
-        // 加载新闻
-        document.addEventListener('DOMContentLoaded', function() {
+        // 从JSON文件加载新闻数据
+        async function loadNewsData() {
             const newsGrid = document.getElementById('news-grid');
+            const loadingIndicator = document.getElementById('loading-indicator');
             
-            if (newsData && newsData.length > 0) {
-                newsGrid.innerHTML = newsData.map(post => {
-                    const dateInfo = parseDate(post.date);
-                    return `
-                    <div class="news-card" onclick="handleNewsClick(this)">
-                        <div class="card-image-container">
-                            <img src="${post.image}" alt="${post.title}" class="card-image">
-                            <div class="card-image-overlay"></div>
-                            
-                            <!-- 小日历 -->
-                            <div class="card-calendar">
-                                <div class="calendar-month">${dateInfo.month}</div>
-                                <div class="calendar-day">${dateInfo.day}</div>
-                            </div>
-                            
-                            <!-- 文字内容位于图片下半部 -->
-                            <div class="card-content">
-                                <div class="card-tags">
-                                    ${renderTags(post.tags || [])}
-                                </div>
-                                <h3 class="card-title">${post.title}</h3>
-                                <p class="card-description">${post.summary}</p>
-                                <div class="read-time">
-                                    <i class="far fa-clock"></i> ${post.readTime}
-                                </div>
-                            </div>
-                        </div>
+            try {
+                // 从data/posts.json获取数据
+                const response = await fetch('data/posts.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误，状态码: ${response.status}`);
+                }
+                
+                const newsData = await response.json();
+                
+                // 隐藏加载指示器
+                if (loadingIndicator) {
+                    loadingIndicator.remove();
+                }
+                
+                // 渲染新闻
+                if (newsData && newsData.length > 0) {
+                    newsGrid.innerHTML = newsData.map(post => {
+                        // 确保帖子有必要的字段
+                        if (!post.title || !post.image) {
+                            console.warn('不完整的新闻数据:', post);
+                            return ''; // 跳过不完整的新闻
+                        }
                         
-                        <!-- 底部信息 -->
-                        <div class="card-footer">
-                            <div class="card-meta">来源: ${post.source}</div>
-                            <div class="card-actions">
-                                <button class="card-btn primary">
-                                    <i class="fas fa-book-reader"></i> 阅读全文
-                                </button>
+                        // 处理日期 - 如果没有日期，使用当前日期
+                        const dateString = post.date || new Date().toISOString().split('T')[0];
+                        const dateInfo = parseDate(dateString);
+                        
+                        return `
+                        <div class="news-card" onclick="handleNewsClick(this)">
+                            <div class="card-image-container">
+                                <img src="${post.image}" alt="${post.title || '新闻图片'}" class="card-image">
+                                <div class="card-image-overlay"></div>
+                                
+                                <!-- 小日历 -->
+                                <div class="card-calendar">
+                                    <div class="calendar-month">${dateInfo.month}</div>
+                                    <div class="calendar-day">${dateInfo.day}</div>
+                                </div>
+                                
+                                <!-- 文字内容位于图片下半部 -->
+                                <div class="card-content">
+                                    <div class="card-tags">
+                                        ${renderTags(post.tags)}
+                                    </div>
+                                    <h3 class="card-title">${post.title}</h3>
+                                    <p class="card-description">${post.summary || '点击查看详情...'}</p>
+                                    <div class="read-time">
+                                        <i class="far fa-clock"></i> ${post.readTime || '5分钟'}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 底部信息 -->
+                            <div class="card-footer">
+                                <div class="card-meta">来源: ${post.source || '未知来源'}</div>
+                                <div class="card-actions">
+                                    <button class="card-btn primary">
+                                        <i class="fas fa-book-reader"></i> 阅读全文
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        `;
+                    }).join('');
+                } else {
+                    newsGrid.innerHTML = `
+                        <div class="text-center col-span-full py-10">
+                            <p>暂无新闻数据</p>
+                        </div>
                     `;
-                }).join('');
-            } else {
-                newsGrid.innerHTML = '<p class="text-center col-span-full py-10">暂无新闻数据</p>';
+                }
+            } catch (error) {
+                console.error('加载新闻数据失败:', error);
+                
+                // 显示错误状态
+                if (loadingIndicator) {
+                    loadingIndicator.remove();
+                }
+                
+                newsGrid.innerHTML = `
+                    <div class="error-state">
+                        <div class="error-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p>加载新闻失败: ${error.message}</p>
+                        <p>请检查data/posts.json文件是否存在且格式正确</p>
+                        <button class="retry-btn" onclick="loadNewsData()">重试</button>
+                    </div>
+                `;
             }
+        }
+
+        // 页面加载完成后加载新闻数据
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNewsData();
         });
 
         // 新闻卡片点击事件

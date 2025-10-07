@@ -257,7 +257,7 @@
             color: #2c3e50; /* 标签文字改为黑色 */
         }
         
-        /* 底部信息区域 */
+        /* 底部信息区域 - 移除了分隔线 */
         .card-footer {
             padding: 16px;
             background-color: white;
@@ -265,7 +265,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid #f5f5f5;
+            /* 已移除 border-top 属性，去掉了那条线 */
         }
         
         .card-meta {
@@ -597,6 +597,9 @@
                         const dateString = post.date || new Date().toISOString().split('T')[0];
                         const dateInfo = parseDate(dateString);
                         
+                        // 处理原文链接 - 使用originalUrl字段
+                        const originalUrl = post.originalUrl || '#';
+                        
                         return `
                         <div class="news-card">
                             <div class="card-image-container">
@@ -619,19 +622,19 @@
                                 </div>
                             </div>
                             
-                            <!-- 标签区域 - 移至白色区域 -->
+                            <!-- 标签区域 -->
                             <div class="card-tags-container">
                                 <div class="card-tags">
                                     ${renderTags(post.tags)}
                                 </div>
                             </div>
                             
-                            <!-- 底部信息区域 -->
+                            <!-- 底部信息区域 - 已移除分隔线 -->
                             <div class="card-footer">
                                 <div class="card-meta">来源: ${post.source || '未知来源'}</div>
                                 <div class="card-actions">
                                     <button class="card-btn primary" 
-                                            onclick="window.open('${post.url || '#'}', '_blank')">
+                                            onclick="window.open('${originalUrl}', '_blank')">
                                         <i class="fas fa-book-reader"></i> 阅读全文
                                     </button>
                                 </div>
@@ -690,6 +693,4 @@
     </script>
 </body>
 </html>
-    
-    
     

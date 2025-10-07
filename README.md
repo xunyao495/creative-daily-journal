@@ -59,6 +59,8 @@ IP 联名、博物馆文创与数字艺术精选快讯，10 分钟读完。
 
 📅2025年9月30日   功能更新：增加首页打卡功能
 
+📅2025年10月07日  视觉更新：更新首页卡片视觉效果
+
 
 Creative Daily Journal is a curated, concise, and visual daily briefing focusing on the global cultural and creative industry.
 Tailored for professionals, entrepreneurs, and enthusiasts, each issue takes only 10 minutes to read, covering the following content:
@@ -117,3 +119,5 @@ and immediate decision-making, aligning the design with real-world scenarios.
 😊 Continuous Iteration
 
 📅 September 30, 2025   Feature Update: Daily Check-In added to homepage
+
+📅 October 7, 2025 - Visual Update: Refreshed the homepage card visuals

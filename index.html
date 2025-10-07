@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文创每日手账 - 数据库连接版本</title>
+    <title>文创每日手账 - 显示9条新闻</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,7 +16,7 @@
             padding-top: 4rem; /* 为固定导航栏留出空间 */
         }
         
-        /* 新闻卡片样式 */
+        /* 新闻卡片样式 - 调整为更紧凑以适应9条新闻 */
         .news-card {
             background: white;
             border-radius: 12px;
@@ -36,14 +36,22 @@
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
         }
         
+        /* 新闻网格 - 调整为更大屏幕显示3列，确保9条新闻能完整显示 */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 24px;
             padding: 20px 0;
         }
         
-        @media (max-width: 1024px) {
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
             .news-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -134,32 +142,32 @@
             font-weight: 500;
         }
 
-        /* 卡片图片样式 - 确保充满且清晰 */
+        /* 卡片图片样式 */
         .card-image-container {
             position: relative;
-            height: 280px; /* 增加图片高度 */
+            height: 220px; /* 适当减小图片高度，使页面更紧凑 */
             overflow: hidden;
         }
         
         .card-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 确保图片充满容器 */
+            object-fit: cover;
             transition: transform 0.6s ease;
-            filter: brightness(0.9); /* 稍微降低亮度，让文字更清晰 */
+            filter: brightness(0.9);
         }
         
         .news-card:hover .card-image {
             transform: scale(1.05);
         }
         
-        /* 图片上的渐变遮罩 - 增强文字可读性 */
+        /* 图片上的渐变遮罩 */
         .card-image-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 70%; /* 下半部分的渐变遮罩 */
+            height: 70%;
             background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
             z-index: 1;
         }
@@ -201,15 +209,15 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px;
+            padding: 18px;
             z-index: 2;
             color: white;
         }
         
         .card-title {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -218,9 +226,9 @@
         }
         
         .card-description {
-            font-size: 14px;
+            font-size: 13px;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -232,7 +240,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .card-tag {
@@ -247,7 +255,7 @@
         
         /* 底部信息区域 */
         .card-footer {
-            padding: 18px;
+            padding: 16px;
             background-color: white;
             margin-top: auto;
             display: flex;
@@ -256,7 +264,7 @@
         }
         
         .card-meta {
-            font-size: 13px;
+            font-size: 12px;
             color: #7f8c8d;
         }
         
@@ -266,9 +274,9 @@
         }
         
         .card-btn {
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -546,7 +554,7 @@
             };
         }
 
-        // 处理标签过多的情况 - 只显示前3个标签
+        // 处理标签过多的情况
         function renderTags(tags) {
             if (!tags || tags.length === 0) return '';
             
@@ -561,7 +569,7 @@
             }
         }
 
-        // 从JSON文件加载新闻数据
+        // 从JSON文件加载新闻数据，限制显示9条
         async function loadNewsData() {
             const newsGrid = document.getElementById('news-grid');
             const loadingIndicator = document.getElementById('loading-indicator');
@@ -574,7 +582,10 @@
                     throw new Error(`HTTP错误，状态码: ${response.status}`);
                 }
                 
-                const newsData = await response.json();
+                const allNewsData = await response.json();
+                
+                // 限制只显示前9条新闻
+                const newsData = allNewsData.slice(0, 9);
                 
                 // 隐藏加载指示器
                 if (loadingIndicator) {
@@ -590,7 +601,7 @@
                             return ''; // 跳过不完整的新闻
                         }
                         
-                        // 处理日期 - 如果没有日期，使用当前日期
+                        // 处理日期
                         const dateString = post.date || new Date().toISOString().split('T')[0];
                         const dateInfo = parseDate(dateString);
                         
@@ -695,4 +706,5 @@
     </script>
 </body>
 </html>
+    
     

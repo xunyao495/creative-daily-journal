@@ -10,43 +10,43 @@
     body{font-family:'Noto Sans SC',sans-serif;background:#faf7f2;color:#2c3e50;}
     .hero-title{font-family:'Playfair Display',serif;background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
     .nav-blur{backdrop-filter:blur(20px);background:rgba(255,255,255,.95);border-bottom:1px solid #e8e9ea;box-shadow:0 2px 20px rgba(0,0,0,.08);}
-    .check-in-btn{background:linear-gradient(135deg,#d4af37 0%,#f39c12 100%);color:#fff;border:none;padding:10px 24px;border-radius:999px;font-size:16px;font-weight:500;cursor:pointer;box-shadow:0 4px 12px rgba(212,175,55,.3);transition:all .3s ease;}
-    .check-in-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,175,55,.4);}
-    .check-in-btn.checked{background:linear-gradient(135deg,#95a5a6 0%,#7f8c8d 100%);cursor:not-allowed;box-shadow:none;}
 
-    /* ====== 手账便签卡片 ====== */
-    .memo-card{
-      background:#fff9f0;
-      border:1px solid #e9dfd1;
-      border-radius:18px;
-      padding:24px;
+    /* ====== 小日历 ====== */
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;}
+    .cal-day{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:13px;transition:all .2s ease;}
+    .cal-today{background:#fde68a;color:#854d0e;font-weight:600;}
+    .cal-checked{background:#d4af37;color:#fff;}
+    .cal-checked::after{content:'✓';position:absolute;font-size:10px;margin-top:14px;}
+
+    /* ====== 卡片 ====== */
+    .card{
+      background:rgba(255,255,255,0.75);
+      border:1px solid rgba(255,255,255,0.4);
+      border-radius:20px;
+      overflow:hidden;
       margin-bottom:20px;
-      box-shadow:0 6px 20px rgba(0,0,0,.06);
       cursor:pointer;
       transition:all .35s ease;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      box-shadow:0 8px 32px rgba(0,0,0,0.08);
+    }
+    .card:hover{transform:translateY(-4px) rotate(.8deg);box-shadow:0 12px 40px rgba(0,0,0,0.12);}
+    .card-img{height:160px;object-cover;w-full;}
+    /* 渐变模糊边界 */
+    .card-blur{
+      height:24px;
+      background:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.9));
+      margin-top:-24px;
       position:relative;
-      overflow:hidden;
+      z-index:2;
     }
-    /* 撕边效果 */
-    .memo-card::before,
-    .memo-card::after{
-      content:'';
-      position:absolute;
-      width:120%;
-      height:14px;
-      left:-10%;
-      background-repeat:repeat-x;
-    }
-    .memo-card::before{top:-1px;background:linear-gradient(180deg,transparent 6px,#e9dfd1 6px,#e9dfd1 8px,transparent 8px);}
-    .memo-card::after{bottom:-1px;background:linear-gradient(180deg,transparent 6px,#e9dfd1 6px,#e9dfd1 8px,transparent 8px);}
-    /* 悬浮微旋转 */
-    .memo-card:hover{transform:translateY(-4px) rotate(.8deg);box-shadow:0 12px 30px rgba(0,0,0,.1);}
-    .memo-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-    .memo-where{background:#f3ede2;color:#8c7d61;font-size:12px;padding:4px 10px;border-radius:999px;}
-    .memo-title{font-size:1.15rem;font-weight:600;color:#4a4438;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-    .memo-summary{font-size:.9rem;color:#6b6657;margin:10px 0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-    .memo-footer{margin-top:14px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#9d9483;}
-    .memo-tag{background:#f5efe2;color:#8c7d61;padding:3px 8px;border-radius:999px;}
+    .card-body{padding:20px 24px 24px;}
+    .card-cal{display:inline-flex;align-items:center;gap:6px;background:#fff8e1;border:1px solid #f3e0b0;border-radius:999px;padding:4px 10px;font-size:12px;color:#8c7d61;}
+    .card-title{font-size:1.15rem;font-weight:600;color:#4a4438;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .card-summary{font-size:.9rem;color:#6b6657;margin:10px 0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .card-footer{margin-top:14px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#9d9483;}
+    .card-tag{background:#f5efe2;color:#8c7d61;padding:3px 8px;border-radius:999px;}
   </style>
 </head>
 <body class="antialiased">
@@ -68,18 +68,14 @@
 <!-- Hero -->
 <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto text-center">
-    <!-- 今日日期 -->
-    <div class="mb-6 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span id="todayText"></span>
-    </div>
-    <!-- 打卡 -->
-    <div class="mb-8">
-      <button id="checkBtn" class="check-in-btn">今日打卡</button>
-      <div id="checkTxt" class="mt-2 text-sm text-gray-500">持续输入，保持敏锐</div>
-    </div>
     <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">文创每日手账</h1>
-    <p class="text-xl text-gray-600">每天十分钟，一起学习文创市场动态</p>
+    <p class="text-xl text-gray-600 mb-8">每天十分钟，一起学习文创市场动态</p>
+
+    <!-- 小日历 -->
+    <div class="inline-block bg-white/70 rounded-2xl p-4 shadow">
+      <div class="text-sm text-gray-700 font-semibold mb-2" id="calTitle"></div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
   </div>
 </section>
 
@@ -87,8 +83,8 @@
 <section class="py-16 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">最新文创动态</h2>
-    <!-- 电脑端 3 列 / 手机端 1 列 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="memoGrid">
+    <!-- 电脑 3 列 / 手机 1 列 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="cardGrid">
       <!-- JS 注入 -->
     </div>
   </div>
@@ -114,44 +110,54 @@
 </footer>
 
 <script>
-/* ---- 今日日期 ---- */
-const d=new Date(),w=['周日','周一','周二','周三','周四','周五','周六'];
-document.getElementById('todayText').textContent=`${d.getMonth()+1}月${d.getDate()}日 ${w[d.getDay()]}`;
+/* ========== 小日历 ========== */
+const today=new Date(),y=today.getFullYear(),m=today.getMonth();
+document.getElementById('calTitle').textContent=`${y}年${m+1}月`;
+function renderCal(){
+  const days=new Date(y,m+1,0).getDate(),first=new Date(y,m,1).getDay();
+  let html='';
+  for(let i=0;i<first;i++)html+='<div></div>';
+  for(let d=1;d<=days;d++){
+    const dateKey=`checkIn_${y}-${m+1}-${d}`;
+    const checked=localStorage.getItem(dateKey)==='true';
+    const isToday=d===today.getDate()&&m===today.getMonth()&&y===today.getFullYear();
+    html+=`<div class="cal-day relative ${isToday?'cal-today':''} ${checked?'cal-checked':''}">${d}</div>`;
+  }
+  document.getElementById('calGrid').innerHTML=html;
+}
+renderCal();
 
-/* ---- 打卡 ---- */
-const key=`checkIn_${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
-const btn=document.getElementById('checkBtn'),txt=document.getElementById('checkTxt');
-if(localStorage.getItem(key)==='true'){btn.classList.add('checked');btn.textContent='已打卡';txt.textContent='今日已完成';txt.classList.add('text-green-600','font-medium');}
-btn.addEventListener('click',()=>{
-  if(btn.classList.contains('checked'))return;
-  localStorage.setItem(key,'true');
-  btn.classList.add('checked');btn.textContent='已打卡';
-  txt.textContent='今日已完成学习，明日继续加油！';txt.classList.add('text-green-600','font-medium');
-});
-
-/* ---- 加载新闻 ---- */
+/* ========== 新闻卡片 ========== */
 fetch('/data/posts.json')
   .then(r=>r.json())
-  .then(list=>renderMemo(list))
+  .then(list=>renderCards(list))
   .catch(console.error);
 
-function renderMemo(posts){
-  const box=document.getElementById('memoGrid');
+function renderCards(posts){
+  const box=document.getElementById('cardGrid');
   box.innerHTML=posts.map(p=>`
-  <div class="memo-card" onclick="window.open('${p.originalUrl}','_blank')">
-    <div class="memo-header">
-      <span class="memo-where">${p.source} · ${p.date}</span>
-      <span class="text-xs text-gray-500">${p.readTime}</span>
-    </div>
-    <h3 class="memo-title">${p.title}</h3>
-    <p class="memo-summary">${p.summary}</p>
-    <div class="memo-footer">
-      <div class="flex flex-wrap gap-2">
-        ${p.tags.map(t=>`<span class="memo-tag">#${t}</span>`).join('')}
+  <div class="card" onclick="window.open('${p.originalUrl}','_blank')">
+    <img src="${p.image}" alt="" class="card-img">
+    <div class="card-blur"></div>
+    <div class="card-body">
+      <div class="card-cal">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>${p.date}</span>
+      </div>
+      <h3 class="card-title">${p.title}</h3>
+      <p class="card-summary">${p.summary}</p>
+      <div class="card-footer">
+        <div class="flex flex-wrap gap-2">
+          ${p.tags.map(t=>`<span class="card-tag">#${t}</span>`).join('')}
+        </div>
+        <span>${p.readTime}</span>
       </div>
     </div>
   </div>`).join('');
 }
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>

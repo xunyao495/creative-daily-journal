@@ -16,7 +16,7 @@
             padding-top: 4rem; /* 为固定导航栏留出空间 */
         }
         
-        /* 新闻卡片样式 - 调整为更紧凑以适应9条新闻 */
+        /* 新闻卡片样式 */
         .news-card {
             background: white;
             border-radius: 12px;
@@ -36,7 +36,7 @@
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
         }
         
-        /* 新闻网格 - 调整为更大屏幕显示3列，确保9条新闻能完整显示 */
+        /* 新闻网格 */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -145,7 +145,7 @@
         /* 卡片图片样式 */
         .card-image-container {
             position: relative;
-            height: 220px; /* 适当减小图片高度，使页面更紧凑 */
+            height: 220px;
             overflow: hidden;
         }
         
@@ -235,22 +235,26 @@
             overflow: hidden;
         }
         
-        /* 标签样式 */
+        /* 标签样式 - 调整为黑色并放在白色区域 */
+        .card-tags-container {
+            padding: 0 16px 10px;
+            background-color: white;
+        }
+        
         .card-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-bottom: 8px;
+            padding-top: 12px;
         }
         
         .card-tag {
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(4px);
+            background-color: #f1f1f1;
             padding: 3px 10px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
-            color: white;
+            color: #2c3e50; /* 标签文字改为黑色 */
         }
         
         /* 底部信息区域 */
@@ -261,6 +265,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-top: 1px solid #f5f5f5;
         }
         
         .card-meta {
@@ -430,7 +435,7 @@
                 文创每日手账
             </h1>
             <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                每天十分钟，一起学习文创市场动态
+                每天十分钟，一起学习文创市场动态，洞察行业趋势，把握发展机遇
             </p>
         </div>
     </section>
@@ -451,13 +456,13 @@
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- 页脚 - 已移除社交图标 -->
     <footer class="py-16 px-4 sm:px-6 lg:px-8 mt-12" style="background-color: #f8f9fa; border-top: 1px solid #eee;">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <h3 class="text-2xl font-bold gradient-text mb-6">文创每日手账</h3>
-                    <p class="text-gray-600 mb-6">每天十分钟，一起学习文创市场动态</p>
+                    <p class="text-gray-600 mb-6">每天十分钟，一起学习文创市场动态，洞察行业趋势，把握发展机遇</p>
                     <p class="text-sm text-gray-500">© 2025 鳞迹文化创意有限公司 版权所有</p>
                 </div>
                 <div>
@@ -471,20 +476,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-6 text-gray-800">关注我们</h4>
                     <p class="text-gray-600 text-sm mb-6">获取最新文创资讯和市场动态</p>
-                    <div class="flex space-x-5">
-                        <a href="#" class="text-gray-500 hover:text-yellow-600 transition-colors text-xl">
-                            <i class="fab fa-weixin"></i>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-yellow-600 transition-colors text-xl">
-                            <i class="fab fa-weibo"></i>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-yellow-600 transition-colors text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-yellow-600 transition-colors text-xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
+                    <!-- 已移除微信、微博等社交图标 -->
                 </div>
             </div>
         </div>
@@ -606,7 +598,7 @@
                         const dateInfo = parseDate(dateString);
                         
                         return `
-                        <div class="news-card" onclick="handleNewsClick(this)">
+                        <div class="news-card">
                             <div class="card-image-container">
                                 <img src="${post.image}" alt="${post.title || '新闻图片'}" class="card-image">
                                 <div class="card-image-overlay"></div>
@@ -619,9 +611,6 @@
                                 
                                 <!-- 文字内容位于图片下半部 -->
                                 <div class="card-content">
-                                    <div class="card-tags">
-                                        ${renderTags(post.tags)}
-                                    </div>
                                     <h3 class="card-title">${post.title}</h3>
                                     <p class="card-description">${post.summary || '点击查看详情...'}</p>
                                     <div class="read-time">
@@ -630,11 +619,19 @@
                                 </div>
                             </div>
                             
-                            <!-- 底部信息 -->
+                            <!-- 标签区域 - 移至白色区域 -->
+                            <div class="card-tags-container">
+                                <div class="card-tags">
+                                    ${renderTags(post.tags)}
+                                </div>
+                            </div>
+                            
+                            <!-- 底部信息区域 -->
                             <div class="card-footer">
                                 <div class="card-meta">来源: ${post.source || '未知来源'}</div>
                                 <div class="card-actions">
-                                    <button class="card-btn primary">
+                                    <button class="card-btn primary" 
+                                            onclick="window.open('${post.url || '#'}', '_blank')">
                                         <i class="fas fa-book-reader"></i> 阅读全文
                                     </button>
                                 </div>
@@ -675,19 +672,6 @@
             loadNewsData();
         });
 
-        // 新闻卡片点击事件
-        function handleNewsClick(element) {
-            // 添加点击动画
-            element.classList.add('pulse-animation');
-            setTimeout(() => {
-                element.classList.remove('pulse-animation');
-                // 实际应用中这里会跳转到新闻详情页
-                const title = element.querySelector('.card-title').textContent;
-                console.log(`打开新闻详情: ${title}`);
-                // window.location.href = `news-detail.html?title=${encodeURIComponent(title)}`;
-            }, 500);
-        }
-
         // 移动端菜单切换
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
@@ -706,5 +690,6 @@
     </script>
 </body>
 </html>
+    
     
     

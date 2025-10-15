@@ -1,104 +1,105 @@
 [
   {
     "id": 1,
-    "title": "政策红利精准触达 消费贷贴息政策加速落地",
-    "summary": "自个人消费贷款财政贴息政策正式实施以来，银行业金融机构积极响应，加速政策落地见效，通过线上化服务升级、场景化金融布局、精准化客群对接，把政策红利转化为民生消费动力。",
-    "image": "https://picsum.photos/seed/consumer-loan-subsidy-2025/1200/800",
-    "date": "2025-10-14",
+    "title": "核心CPI同比涨幅连续5个月扩大，“反内卷”带动相关行业价格改善",
+    "summary": "受益于低基数以及反内卷和促消费政策进一步显效，9月居民消费价格指数（CPI）和工业品出厂价格指数（PPI）同比降幅均有所收窄。国家统计局10月15日发布的数据显示，9月CPI环比由上月持平转为上涨0.1%，同比下降0.3%，降幅比上月收窄0.1个百分点。PPI环比继续持平，同比下降2.3%，降幅比上月收窄0.6个百分点。",
+    "image": "https://picsum.photos/seed/core-cpi-2025/1200/800",
+    "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["消费贷", "财政贴息", "银行业", "政策红利"],
-    "source": "中国证券网",
-    "originalUrl": "https://www.cnstock.com/commonDetail/553025"
+    "tags": ["CPI", "PPI", "反内卷", "促消费"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102863547.html"
   },
   {
     "id": 2,
-    "title": "下单“中国服务”",
-    "summary": "1688跨境供应链专区吸纳服务商入驻，为跨境买家提供质检、财税、清关、物流等一站式服务，反映海外对国内制造业及服务需求上升。",
-    "image": "https://picsum.photos/seed/1688-crossborder-service-2025/1200/800",
-    "date": "2025-10-14",
+    "title": "这个国庆中秋假期，伴手礼添彩城市名片",
+    "summary": "伴手礼如何与城市深度绑定？今年5月发布的《2025中国城市礼物发展白皮书》（以下简称“白皮书”）提出了“城市礼物”的概念。白皮书认为，“城市礼物”是以城市文化精神为核心，通过创意设计将地域符号、历史记忆与生活方式转化为特色商品，并依托品牌化运营及与地方特色产业的联动，实现消费促进、产业升级、文化传播与城市形象塑造的新型经济形态。",
+    "image": "https://picsum.photos/seed/city-gifts-2025/1200/800",
+    "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["1688", "跨境服务", "供应链", "制造业出海"],
+    "tags": ["城市礼物", "伴手礼", "城市文化"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251014/cf372ad198d046a88b1f7298c825f8b1/c.html"
+    "originalUrl": "https://www.news.cn/20251015/e363ed1454b64868a55227e5cd90b41b/c.html"
   },
   {
     "id": 3,
-    "title": "“小镇夜话”为“国门新城”发展添新彩",
-    "summary": "北京大兴国际机场区域依托资源禀赋，改革要素配置，打造“协同发展示范区、繁荣开放国门新城”，推动高质量发展和对外开放。",
-    "image": "https://picsum.photos/seed/daxing-airport-gateway-city-2025/1200/800",
+    "title": "文旅空间“解锁”敦煌文化新地标",
+    "summary": "近年来，甘肃省敦煌市持续推进沉浸式文旅体验项目建设，通过改造闲置建筑，以多种方式对敦煌文化遗产进行活化利用，打造了敦煌书局、敦煌印局、敦煌无界等一批以敦煌文化为主题，集艺术展览、互动体验、文创消费及社交休闲为一体的文化新地标，吸引了大批喜爱敦煌文化与艺术的游客前来打卡游览。",
+    "image": "https://picsum.photos/seed/dunhuang-culture-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["大兴机场", "国门新城", "协同发展", "对外开放"],
+    "tags": ["敦煌文化", "文旅体验", "文化新地标"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251014/c2f748ba9f1d49b19cc3c493d6bf699f/c.html"
+    "originalUrl": "https://www.news.cn/20251014/1c54872372dc4d6d8e293ba54d678503/c.html"
   },
   {
     "id": 4,
-    "title": "“一平方米博物馆”讲述静安寺商圈历史",
-    "summary": "一张120年前的明信片呈现上海西区愚园旧影，讲述宁波商人张氏重建花园并对外开放的历史，折射静安寺商圈百年变迁。",
-    "image": "https://picsum.photos/seed/old-shanghai-yuyuan-postcard-2025/1200/800",
+    "title": "浙江义乌：因地制宜抱团发展铺就乡村振兴路",
+    "summary": "“2025年，城西街道锚定义乌红糖、南枣、火腿等农特产品资源，建立农特产品加工产业园，这个产业园如今成为带动村民发展的重要引擎。”城西街道办事处副主任朱超说，产业园预计年产值超3000万元，每年能为毛店桥头村村集体带来30万元收入，并给周边村民带来众多就业机会。",
+    "image": "https://picsum.photos/seed/yiwu-rural-revitalization-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["静安寺", "愚园", "历史明信片", "商圈文化"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102860677.html"
+    "tags": ["义乌", "乡村振兴", "农特产品"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251014/4ac064938a1e428090f104fac74074ab/c.html"
   },
   {
     "id": 5,
-    "title": "贵金属涨疯了！白银时隔45年创新高，黄金突破4130美元",
-    "summary": "贸易紧张局势叠加美国降息预期，黄金首次突破每盎司4130美元，白银刷新1980年代以来高位，机构密集上调目标价但警示短线超买风险。",
-    "image": "https://picsum.photos/seed/gold-silver-surge-2025/1200/800",
+    "title": "网红城市居民的喜悦与烦恼",
+    "summary": "随着社交媒体特别是短视频的快速发展，一批城市在网络上爆火，吸引了大量游客，成功将网络流量转化为文旅消费增量。城市爆火，给本地人带来了哪些机遇？又藏着哪些“甜蜜的烦恼”？网红城市如何兼顾游客的游玩体验、城市的发展前景和本地居民的生活质量？",
+    "image": "https://picsum.photos/seed/internet-famous-cities-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["黄金", "白银", "历史新高", "降息预期"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102861050.html"
+    "tags": ["网红城市", "社交媒体", "文旅消费"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251014/6a4efe35625647e3baf52a3b490b1b10/c.html"
   },
   {
     "id": 6,
-    "title": "税务总局：9月税收增幅较高",
-    "summary": "三季度税收收入同比增长6.9%，9月增幅更高，主要受经济向好、PPI降幅收窄及低基数影响，财政收入筹集作用凸显。",
-    "image": "https://picsum.photos/seed/tax-revenue-growth-2025/1200/800",
+    "title": "美国汉学家：中国古代的原则和概念也给当代人以启发",
+    "summary": "10月14日，500余位海内外知名专家学者齐聚第二届世界中国学大会，围绕“世界视野下的历史中国与当代中国”主题进行深入交流与探讨。何为中国学？北京外国语大学国际关系学院院长、教授谢韬对第一财经记者解释称，与主要研究古代中国的历史、文化、思想的汉学（Sinology）不同，中国学（China Studies）更多聚焦于当代中国的政治、经济、社会等方面。中国学的特点之一在于，其并非一个独立学科，而是从多学科和交叉学科的角度，对当代中国开展综合性研究。",
+    "image": "https://picsum.photos/seed/china-studies-conference-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["税收", "财政收入", "PPI", "经济向好"],
+    "tags": ["中国学", "汉学", "学术交流"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102861705.html"
+    "originalUrl": "https://www.yicai.com/news/102862942.html"
   },
   {
     "id": 7,
-    "title": "风景区也“反内卷”：行业协会称将破除地方保护",
-    "summary": "中国风景名胜区协会提出区域协作、资源共享，破除市场分割与内卷式竞争，助力更多景区申报世界遗产。",
-    "image": "https://picsum.photos/seed/scenic-anti-neijuan-2025/1200/800",
+    "title": "从硅谷到好莱坞，科技巨头欲重塑全球话语权",
+    "summary": "美国科技巨头已不满足于在自己的商业王国呼风唤雨，纷纷将目光投向更广阔的新产业。它们或在传统新闻领域开疆拓土，或在新型社交平台攻城略地，抑或在影视娱乐天地横刀立马，还在游戏动漫世界起舞弄影。从AT&T到亚马逊，从特斯拉到甲骨文，科技巨擘一次又一次为跨界并购大戏更新曲目。",
+    "image": "https://picsum.photos/seed/tech-giants-global-influence-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["风景名胜区", "地方保护", "世界遗产", "反内卷"],
+    "tags": ["科技巨头", "跨界并购", "全球话语权"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102861508.html"
+    "originalUrl": "https://www.yicai.com/news/102862767.html"
   },
   {
     "id": 8,
-    "title": "从“流动的中国”到“双十一”预热 消费的崛起，凸显中国经济勃勃生机",
-    "summary": "国庆中秋假期文旅新业态频出，如阿勒泰夜市、禾木骑马漫游、万岁山武侠城沉浸式剧情等，带动多样化消费融合，预示“双十一”消费热潮。",
-    "image": "https://picsum.photos/seed/flow-china-travel-2025/1200/800",
+    "title": "博物馆如何加速成长",
+    "summary": "刚刚过去的国庆、中秋假期，“博物馆热”持续升温。不少游客为了一座馆，奔赴一座城，各地博物馆也纷纷创新展陈方式、推出多彩活动、延长开放时间，回应群众需求。",
+    "image": "https://picsum.photos/seed/museum-growth-2025/1200/800",
     "date": "2025-10-14",
-    "readTime": "3 分钟",
-    "tags": ["流动中国", "文旅融合", "双十一", "消费升级"],
-    "source": "中国证券网",
-    "originalUrl": "https://www.cnstock.com/commonDetail/551879"
+    "readTime": "2 分钟",
+    "tags": ["博物馆", "国庆", "中秋", "展陈创新"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251014/b81823bd91754fd2bf087b70dd6bfa79/c.html"
   },
   {
     "id": 9,
-    "title": "沪兰政企共绘“火星方舟”蓝图 世界农业遗产点燃兰州创新引擎",
-    "summary": "兰州驻沪办在沪举办团拜会，携手企业家谋划“火星方舟”构想，以农业遗产与科技融合为兰州高质量发展注入新动能。",
-    "image": "https://picsum.photos/seed/mars-ark-lanzhou-2025/1200/800",
-    "date": "2025-10-14",
-    "readTime": "2 分钟",
-    "tags": ["火星方舟", "兰州", "农业遗产", "科技创新"],
-    "source": "中国证券网",
-    "originalUrl": "https://www.cnstock.com/commonDetail/552222"
-  }
+"title": "《永不消逝的电波》首次出海 在朝鲜引巨大轰动",
+"summary": "朝鲜劳动党成立八十周年之际，应朝方邀请，中国上海艺术团《永不消逝的电波》剧组赴朝进行专场演出。演出在朝引发巨大轰动，为中朝友谊写下新的生动注脚。此次在朝鲜的两场演出分别是电波剧组的第788场和789场演出，尽管在国内已积累丰富经验，但在短短三天内，于语言不通的环境下呈现一场精准的演出，仍是不小的挑战。",
+"image": "https://picsum.photos/seed/never-fading-electric-waves-2025/1200/800",
+"date": "2025-10-14",
+"readTime": "2 分钟",
+"tags": ["《永不消逝的电波》", "朝鲜", "中朝友谊"],
+"source": "第一财经",
+"originalUrl": "https://www.yicai.com/video/102862558.html"
+}
 ]
+
 
 
 

@@ -1,104 +1,105 @@
 [
   {
     "id": 1,
-    "title": "核心CPI同比涨幅连续5个月扩大，“反内卷”带动相关行业价格改善",
-    "summary": "受益于低基数以及反内卷和促消费政策进一步显效，9月居民消费价格指数（CPI）和工业品出厂价格指数（PPI）同比降幅均有所收窄。国家统计局10月15日发布的数据显示，9月CPI环比由上月持平转为上涨0.1%，同比下降0.3%，降幅比上月收窄0.1个百分点。PPI环比继续持平，同比下降2.3%，降幅比上月收窄0.6个百分点。",
-    "image": "https://picsum.photos/seed/core-cpi-2025/1200/800",
+    "title": "财经聚焦丨核心CPI重回1%，9月物价数据透出哪些信号？",
+    "summary": "国家统计局15日发布的数据显示，9月份，消费市场运行总体平稳，全国居民消费价格指数（CPI）环比上涨0.1%，扣除食品和能源价格的核心CPI同比上涨1%。",
+    "image": "https://picsum.photos/seed/cpi-china-202509/1200/800",
     "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["CPI", "PPI", "反内卷", "促消费"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102863547.html"
+    "tags": ["CPI", "核心CPI", "物价", "消费"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/fortune/20251015/619fec7ef6004db3aa784dd3c5eb408e/c.html"
   },
   {
     "id": 2,
-    "title": "这个国庆中秋假期，伴手礼添彩城市名片",
-    "summary": "伴手礼如何与城市深度绑定？今年5月发布的《2025中国城市礼物发展白皮书》（以下简称“白皮书”）提出了“城市礼物”的概念。白皮书认为，“城市礼物”是以城市文化精神为核心，通过创意设计将地域符号、历史记忆与生活方式转化为特色商品，并依托品牌化运营及与地方特色产业的联动，实现消费促进、产业升级、文化传播与城市形象塑造的新型经济形态。",
-    "image": "https://picsum.photos/seed/city-gifts-2025/1200/800",
-    "date": "2025-10-15",
+    "title": "卖不完的月饼去哪了",
+    "summary": "节后剩余月饼的主要去向包括：全平台促销、员工内购、节后持续销售、发放福利，以及卖给第三方或按规定销毁等。部分月饼礼盒会在电商平台上持续销售，其定位逐渐由“礼盒”向“零食”靠拢。",
+    "image": "https://picsum.photos/seed/mooncake-after-holiday-2025/1200/800",
+    "date": "2025-10-16",
     "readTime": "2 分钟",
-    "tags": ["城市礼物", "伴手礼", "城市文化"],
+    "tags": ["月饼", "节后处理", "电商", "零食化"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251015/e363ed1454b64868a55227e5cd90b41b/c.html"
+    "originalUrl": "https://www.xinhuanet.com/food/20251016/635fbc9b741b44dea8d04bbc4f6bc0be/c.html"
   },
   {
     "id": 3,
-    "title": "文旅空间“解锁”敦煌文化新地标",
-    "summary": "近年来，甘肃省敦煌市持续推进沉浸式文旅体验项目建设，通过改造闲置建筑，以多种方式对敦煌文化遗产进行活化利用，打造了敦煌书局、敦煌印局、敦煌无界等一批以敦煌文化为主题，集艺术展览、互动体验、文创消费及社交休闲为一体的文化新地标，吸引了大批喜爱敦煌文化与艺术的游客前来打卡游览。",
-    "image": "https://picsum.photos/seed/dunhuang-culture-2025/1200/800",
-    "date": "2025-10-14",
-    "readTime": "2 分钟",
-    "tags": ["敦煌文化", "文旅体验", "文化新地标"],
+    "title": "“抄作业”的赣超，为何“超预期”？",
+    "summary": "从赛事初期被质疑抄“苏超”作业，到决赛前已有超115万人次到场观赛，这个夏季，纯粹草根的“赣超”火得让人意外。江西省级业余足球城市联赛点燃了“足球小省”的街头巷陌，也迸发出令人惊叹的城市活力。",
+    "image": "https://picsum.photos/seed/jiangxi-football-league-2025/1200/800",
+    "date": "2025-10-15",
+    "readTime": "3 分钟",
+    "tags": ["赣超", "草根足球", "江西", "城市活力"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251014/1c54872372dc4d6d8e293ba54d678503/c.html"
+    "originalUrl": "https://www.news.cn/20251015/3c50e45722164029b7d28bc06e991391/c.html"
   },
   {
     "id": 4,
-    "title": "浙江义乌：因地制宜抱团发展铺就乡村振兴路",
-    "summary": "“2025年，城西街道锚定义乌红糖、南枣、火腿等农特产品资源，建立农特产品加工产业园，这个产业园如今成为带动村民发展的重要引擎。”城西街道办事处副主任朱超说，产业园预计年产值超3000万元，每年能为毛店桥头村村集体带来30万元收入，并给周边村民带来众多就业机会。",
-    "image": "https://picsum.photos/seed/yiwu-rural-revitalization-2025/1200/800",
-    "date": "2025-10-14",
+    "title": "广交会开幕 “向新”“向智”“向绿”潮流涌动",
+    "summary": "数据显示，参展企业方面，本届广交会拥有高新技术、专精特新、单项冠军等称号的优质企业突破1万家，创历史新高；展品方面，预计现场展示新产品超100万件、拥有自主知识产权产品近110万件、广交会首展产品近80万件。",
+    "image": "https://picsum.photos/seed/canton-fair-2025/1200/800",
+    "date": "2025-10-16",
     "readTime": "2 分钟",
-    "tags": ["义乌", "乡村振兴", "农特产品"],
+    "tags": ["广交会", "高新技术", "新产品", "自主知识产权"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251014/4ac064938a1e428090f104fac74074ab/c.html"
+    "originalUrl": "https://www.news.cn/fortune/20251016/8daeee3a7c114881bb1203f3f02fae2d/c.html"
   },
   {
     "id": 5,
-    "title": "网红城市居民的喜悦与烦恼",
-    "summary": "随着社交媒体特别是短视频的快速发展，一批城市在网络上爆火，吸引了大量游客，成功将网络流量转化为文旅消费增量。城市爆火，给本地人带来了哪些机遇？又藏着哪些“甜蜜的烦恼”？网红城市如何兼顾游客的游玩体验、城市的发展前景和本地居民的生活质量？",
-    "image": "https://picsum.photos/seed/internet-famous-cities-2025/1200/800",
+    "title": "金秋文旅亮点纷呈 消费新场景激发经济强劲动能",
+    "summary": "金秋时节，全国多地在文旅消费领域积极探索创新，推动文商旅体业态深度联动，打造多元消费新场景，激发经济强劲动能。",
+    "image": "https://picsum.photos/seed/autumn-tourism-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["网红城市", "社交媒体", "文旅消费"],
+    "tags": ["文旅", "消费新场景", "金秋", "经济动能"],
     "source": "新华网",
     "originalUrl": "https://www.news.cn/20251014/6a4efe35625647e3baf52a3b490b1b10/c.html"
   },
   {
     "id": 6,
-    "title": "美国汉学家：中国古代的原则和概念也给当代人以启发",
-    "summary": "10月14日，500余位海内外知名专家学者齐聚第二届世界中国学大会，围绕“世界视野下的历史中国与当代中国”主题进行深入交流与探讨。何为中国学？北京外国语大学国际关系学院院长、教授谢韬对第一财经记者解释称，与主要研究古代中国的历史、文化、思想的汉学（Sinology）不同，中国学（China Studies）更多聚焦于当代中国的政治、经济、社会等方面。中国学的特点之一在于，其并非一个独立学科，而是从多学科和交叉学科的角度，对当代中国开展综合性研究。",
-    "image": "https://picsum.photos/seed/china-studies-conference-2025/1200/800",
-    "date": "2025-10-14",
+    "title": "各地多措并举促进文旅体融合发展",
+    "summary": "10月14日，贵州省发布《贵州省推进文旅体融合工作方案（2025—2027年）》，提出到2027年，培育10个具有国际影响力的赛事活动，打造10个展现文旅体特色的项目，推出10个体旅融合消费项目。",
+    "image": "https://picsum.photos/seed/guizhou-sports-tourism-2025/1200/800",
+    "date": "2025-10-16",
     "readTime": "2 分钟",
-    "tags": ["中国学", "汉学", "学术交流"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102862942.html"
+    "tags": ["文旅体融合", "贵州", "赛事活动", "体育旅游"],
+    "source": "财经网",
+    "originalUrl": "https://economy.caijing.com.cn/20251016/5119269.shtml"
   },
   {
     "id": 7,
-    "title": "从硅谷到好莱坞，科技巨头欲重塑全球话语权",
-    "summary": "美国科技巨头已不满足于在自己的商业王国呼风唤雨，纷纷将目光投向更广阔的新产业。它们或在传统新闻领域开疆拓土，或在新型社交平台攻城略地，抑或在影视娱乐天地横刀立马，还在游戏动漫世界起舞弄影。从AT&T到亚马逊，从特斯拉到甲骨文，科技巨擘一次又一次为跨界并购大戏更新曲目。",
-    "image": "https://picsum.photos/seed/tech-giants-global-influence-2025/1200/800",
-    "date": "2025-10-14",
-    "readTime": "2 分钟",
-    "tags": ["科技巨头", "跨界并购", "全球话语权"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102862767.html"
+    "title": "从“产品出海”转向“体系出海”——中国企业“出海”锚定新航向",
+    "summary": "中国企业“出海”正从“产品出海”转向“体系出海”。2025年前三季度，我国货物贸易出口总值19.95万亿元，同比增长7.1%，涵盖茶饮、新能源汽车、AI硬件、能源等多领域。",
+    "image": "https://picsum.photos/seed/china-global-business-2025/1200/800",
+    "date": "2025-10-15",
+    "readTime": "3 分钟",
+    "tags": ["出海", "体系化", "出口增长", "全球化"],
+    "source": "证券日报",
+    "originalUrl": "http://www.zqrb.cn/gscy/qiyexinxi/2025-10-15/A1760535695676.html"
   },
   {
     "id": 8,
-    "title": "博物馆如何加速成长",
-    "summary": "刚刚过去的国庆、中秋假期，“博物馆热”持续升温。不少游客为了一座馆，奔赴一座城，各地博物馆也纷纷创新展陈方式、推出多彩活动、延长开放时间，回应群众需求。",
-    "image": "https://picsum.photos/seed/museum-growth-2025/1200/800",
-    "date": "2025-10-14",
+    "title": "多家A股公司布局RWA赛道 实体资产与数字经济加速融合",
+    "summary": "RWA（Real World Assets）成为金融与科技融合热门方向，借助区块链技术将现实资产数字化。2025年以来，多家A股公司入局，探索实体资产与数字经济融合，推动资产价值释放。",
+    "image": "https://picsum.photos/seed/rwa-blockchain-2025/1200/800",
+    "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["博物馆", "国庆", "中秋", "展陈创新"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251014/b81823bd91754fd2bf087b70dd6bfa79/c.html"
+    "tags": ["RWA", "区块链", "实体资产", "数字经济", "A股"],
+    "source": "证券日报",
+    "originalUrl": "http://epaper.zqrb.cn/html/2025-10/15/content_756068.htm"
   },
   {
     "id": 9,
-"title": "《永不消逝的电波》首次出海 在朝鲜引巨大轰动",
-"summary": "朝鲜劳动党成立八十周年之际，应朝方邀请，中国上海艺术团《永不消逝的电波》剧组赴朝进行专场演出。演出在朝引发巨大轰动，为中朝友谊写下新的生动注脚。此次在朝鲜的两场演出分别是电波剧组的第788场和789场演出，尽管在国内已积累丰富经验，但在短短三天内，于语言不通的环境下呈现一场精准的演出，仍是不小的挑战。",
-"image": "https://picsum.photos/seed/never-fading-electric-waves-2025/1200/800",
-"date": "2025-10-14",
-"readTime": "2 分钟",
-"tags": ["《永不消逝的电波》", "朝鲜", "中朝友谊"],
-"source": "第一财经",
-"originalUrl": "https://www.yicai.com/video/102862558.html"
-}
+    "title": "神垕：古镇焕新 “瓷”力十足",
+    "summary": "河南禹州神垕古镇因钧瓷而兴，千年窑火不断。如今，凭借独特的钧瓷文化与产业基因，神垕成为文旅财经领域的“潜力股”，吸引资本持续关注。",
+    "image": "https://picsum.photos/seed/shenhou-jun porcelain-2025/1200/800",
+    "date": "2025-10-13",
+    "readTime": "3 分钟",
+    "tags": ["神垕古镇", "钧瓷", "文旅", "产业基因"],
+    "source": "证券日报",
+    "originalUrl": "http://www.zqrb.cn/finance/hangyedongtai/2025-10-13/A1760357033924.html"
+  }
 ]
+
 
 
 

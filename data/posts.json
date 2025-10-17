@@ -1,104 +1,105 @@
 [
   {
     "id": 1,
-    "title": "财经聚焦丨核心CPI重回1%，9月物价数据透出哪些信号？",
-    "summary": "国家统计局15日发布的数据显示，9月份，消费市场运行总体平稳，全国居民消费价格指数（CPI）环比上涨0.1%，扣除食品和能源价格的核心CPI同比上涨1%。",
-    "image": "https://picsum.photos/seed/cpi-china-202509/1200/800",
+    "title": "新时代中国调研行之文化中华丨“微短剧之都”西安：风口之上的深耕与远望",
+    "summary": "秋日古都，天气渐凉。走进西安西咸新区的十里沣河影视基地，却是一派热闹景象：医院、工厂、酒吧等影棚中，演员全情投入，导演目光紧盯监视器。户外广场上，工作人员手捧剧本，讨论得热火朝天。",
+    "image": "https://picsum.photos/seed/xian-micro-drama-2025/1200/800",
     "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["CPI", "核心CPI", "物价", "消费"],
+    "tags": ["微短剧", "西安", "影视基地", "文化中华"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/fortune/20251015/619fec7ef6004db3aa784dd3c5eb408e/c.html"
+    "originalUrl": "https://www.news.cn/20251015/496be829187e43e9b9582a421e8b616a/c.html"
   },
   {
     "id": 2,
-    "title": "卖不完的月饼去哪了",
-    "summary": "节后剩余月饼的主要去向包括：全平台促销、员工内购、节后持续销售、发放福利，以及卖给第三方或按规定销毁等。部分月饼礼盒会在电商平台上持续销售，其定位逐渐由“礼盒”向“零食”靠拢。",
-    "image": "https://picsum.photos/seed/mooncake-after-holiday-2025/1200/800",
-    "date": "2025-10-16",
-    "readTime": "2 分钟",
-    "tags": ["月饼", "节后处理", "电商", "零食化"],
+    "title": "五千年良渚，文脉与科创共舞",
+    "summary": "一边，是沉睡五千年的良渚古城遗址，它以玉琮、水坝与古城格局，实证了中华早期文明的辉煌；另一边，是不断更新的城市和社区，现代而诗意的办公空间里，年轻人正以科技为笔，创造新的历史……在杭州余杭区，跨越时空的共生故事正在上演。",
+    "image": "https://picsum.photos/seed/liangzhu-heritage-tech-2025/1200/800",
+    "date": "2025-10-17",
+    "readTime": "3 分钟",
+    "tags": ["良渚", "文脉", "科创", "杭州"],
     "source": "新华网",
-    "originalUrl": "https://www.xinhuanet.com/food/20251016/635fbc9b741b44dea8d04bbc4f6bc0be/c.html"
+    "originalUrl": "https://www.news.cn/20251017/94aee7bbfdc54b3eb8516f3517f038fc/c.html"
   },
   {
     "id": 3,
-    "title": "“抄作业”的赣超，为何“超预期”？",
-    "summary": "从赛事初期被质疑抄“苏超”作业，到决赛前已有超115万人次到场观赛，这个夏季，纯粹草根的“赣超”火得让人意外。江西省级业余足球城市联赛点燃了“足球小省”的街头巷陌，也迸发出令人惊叹的城市活力。",
-    "image": "https://picsum.photos/seed/jiangxi-football-league-2025/1200/800",
-    "date": "2025-10-15",
-    "readTime": "3 分钟",
-    "tags": ["赣超", "草根足球", "江西", "城市活力"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251015/3c50e45722164029b7d28bc06e991391/c.html"
+    "title": "外资玩乐巨头深耕中国市场 本土化创新成增长新引擎",
+    "summary": "今年以来，中国玩乐市场活力日益凸显，吸引国际巨头纷纷布局。它们携全球IP，通过本土化创新与跨界合作，从联名文创到影视共创，为中国消费者带来多元玩乐体验，开拓新的增长空间。",
+    "image": "https://picsum.photos/seed/global-ip-china-toy-2025/1200/800",
+    "date": "2025-10-16",
+    "readTime": "2 分钟",
+    "tags": ["外资", "玩乐市场", "本土化", "IP"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/video/102867892.html"
   },
   {
     "id": 4,
     "title": "广交会开幕 “向新”“向智”“向绿”潮流涌动",
-    "summary": "数据显示，参展企业方面，本届广交会拥有高新技术、专精特新、单项冠军等称号的优质企业突破1万家，创历史新高；展品方面，预计现场展示新产品超100万件、拥有自主知识产权产品近110万件、广交会首展产品近80万件。",
-    "image": "https://picsum.photos/seed/canton-fair-2025/1200/800",
+    "summary": "数据显示，参展企业方面，本届广交会拥有高新技术、专精特新、单项冠军等称号的优质企业突破1万家，创历史新高；展品方面，预计现场展示新产品超100万件、拥有自主知识产权产品近110万件、广交会首展产品近80万件；展区设置方面，共设置175个产品专区，其中智慧类专区18个，现场展示智能产品35万多件。",
+    "image": "https://picsum.photos/seed/canton-fair-2025-green/1200/800",
     "date": "2025-10-16",
-    "readTime": "2 分钟",
-    "tags": ["广交会", "高新技术", "新产品", "自主知识产权"],
+    "readTime": "3 分钟",
+    "tags": ["广交会", "高新技术", "绿色智造", "专精特新"],
     "source": "新华网",
     "originalUrl": "https://www.news.cn/fortune/20251016/8daeee3a7c114881bb1203f3f02fae2d/c.html"
   },
   {
     "id": 5,
     "title": "金秋文旅亮点纷呈 消费新场景激发经济强劲动能",
-    "summary": "金秋时节，全国多地在文旅消费领域积极探索创新，推动文商旅体业态深度联动，打造多元消费新场景，激发经济强劲动能。",
-    "image": "https://picsum.photos/seed/autumn-tourism-2025/1200/800",
+    "summary": "金秋时节，全国多地在文旅消费领域积极探索创新，推动文商旅体业态深度联动。",
+    "image": "https://picsum.photos/seed/golden-autumn-travel-2025/1200/800",
     "date": "2025-10-14",
     "readTime": "2 分钟",
-    "tags": ["文旅", "消费新场景", "金秋", "经济动能"],
+    "tags": ["金秋文旅", "消费新场景", "文商旅体"],
     "source": "新华网",
     "originalUrl": "https://www.news.cn/20251014/6a4efe35625647e3baf52a3b490b1b10/c.html"
   },
   {
     "id": 6,
     "title": "各地多措并举促进文旅体融合发展",
-    "summary": "10月14日，贵州省发布《贵州省推进文旅体融合工作方案（2025—2027年）》，提出到2027年，培育10个具有国际影响力的赛事活动，打造10个展现文旅体特色的项目，推出10个体旅融合消费项目。",
+    "summary": "10月14日，贵州省发布《贵州省推进文旅体融合工作方案（2025—2027年）》，提出到2027年培育10个国际影响力赛事、10个文旅体特色项目、10个体旅融合消费项目。",
     "image": "https://picsum.photos/seed/guizhou-sports-tourism-2025/1200/800",
     "date": "2025-10-16",
     "readTime": "2 分钟",
-    "tags": ["文旅体融合", "贵州", "赛事活动", "体育旅游"],
+    "tags": ["文旅体融合", "贵州", "赛事经济"],
     "source": "财经网",
     "originalUrl": "https://economy.caijing.com.cn/20251016/5119269.shtml"
   },
   {
     "id": 7,
     "title": "从“产品出海”转向“体系出海”——中国企业“出海”锚定新航向",
-    "summary": "中国企业“出海”正从“产品出海”转向“体系出海”。2025年前三季度，我国货物贸易出口总值19.95万亿元，同比增长7.1%，涵盖茶饮、新能源汽车、AI硬件、能源等多领域。",
-    "image": "https://picsum.photos/seed/china-global-business-2025/1200/800",
+    "summary": "从风靡东南亚的茶饮品牌到驰骋欧洲的新能源汽车，从扎根拉美的AI硬件公司到在非洲买矿的能源企业，中国企业“出海”正从“产品出海”转向“体系出海”。2025年前三季度，我国货物贸易出口总值19.95万亿元，同比增长7.1%。",
+    "image": "https://picsum.photos/seed/china-global-system-2025/1200/800",
     "date": "2025-10-15",
     "readTime": "3 分钟",
-    "tags": ["出海", "体系化", "出口增长", "全球化"],
+    "tags": ["体系出海", "跨境电商", "新能源汽车", "AI硬件"],
     "source": "证券日报",
     "originalUrl": "http://www.zqrb.cn/gscy/qiyexinxi/2025-10-15/A1760535695676.html"
   },
   {
     "id": 8,
     "title": "多家A股公司布局RWA赛道 实体资产与数字经济加速融合",
-    "summary": "RWA（Real World Assets）成为金融与科技融合热门方向，借助区块链技术将现实资产数字化。2025年以来，多家A股公司入局，探索实体资产与数字经济融合，推动资产价值释放。",
+    "summary": "作为金融与科技融合热门方向，RWA借助区块链将现实资产数字化、拆分、交易。2025年以来政策规范、技术成熟、需求释放，多家A股公司入局，探索实体资产与数字经济融合，推动资产价值在数字化时代新释放。",
     "image": "https://picsum.photos/seed/rwa-blockchain-2025/1200/800",
     "date": "2025-10-15",
     "readTime": "2 分钟",
-    "tags": ["RWA", "区块链", "实体资产", "数字经济", "A股"],
+    "tags": ["RWA", "区块链", "实体资产", "数字经济"],
     "source": "证券日报",
     "originalUrl": "http://epaper.zqrb.cn/html/2025-10/15/content_756068.htm"
   },
   {
     "id": 9,
     "title": "神垕：古镇焕新 “瓷”力十足",
-    "summary": "河南禹州神垕古镇因钧瓷而兴，千年窑火不断。如今，凭借独特的钧瓷文化与产业基因，神垕成为文旅财经领域的“潜力股”，吸引资本持续关注。",
+    "summary": "“进入神垕山，七里长街观。七十二座窑，烟火遮云天。”这句流传数百年的俗语，道出了河南禹州神垕古镇与钧瓷的深厚渊源。凭借独步天下的钧瓷魅力和与景德镇截然不同的产业基因，神垕正成为文旅财经领域的“潜力股”。",
     "image": "https://picsum.photos/seed/shenhou-jun porcelain-2025/1200/800",
     "date": "2025-10-13",
     "readTime": "3 分钟",
-    "tags": ["神垕古镇", "钧瓷", "文旅", "产业基因"],
+    "tags": ["神垕古镇", "钧瓷", "文旅融合", "河南"],
     "source": "证券日报",
     "originalUrl": "http://www.zqrb.cn/finance/hangyedongtai/2025-10-13/A1760357033924.html"
   }
 ]
+
 
 
 

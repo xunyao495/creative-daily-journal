@@ -9,79 +9,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', 'Playfair Display', sans-serif;
-            background-color: #1a1a1a; /* Dark background */
-            color: #e0e0e0;
-            line-height: 1.8;
-            padding-top: 5rem;
-            overflow-x: hidden;
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding-top: 4rem; /* 为固定导航栏留出空间 */
         }
-
+        
         /* 新闻卡片样式 */
         .news-card {
-            background: linear-gradient(145deg, #2c3e50, #34495e); /* Gradient dark card */
-            border-radius: 15px;
+            background: white;
+            border-radius: 12px;
             overflow: hidden;
             margin-bottom: 24px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            height: 100%;
         }
-
+        
         .news-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
         }
-
+        
         /* 新闻网格 */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            padding: 40px 0;
+            gap: 24px;
+            padding: 20px 0;
         }
-
+        
         /* 响应式调整 */
         @media (max-width: 1200px) {
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
             .news-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
+        
         @media (max-width: 768px) {
             .news-grid {
                 grid-template-columns: 1fr;
             }
         }
-
+        
         /* 标题样式 */
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
+            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            text-transform: uppercase;
+            background-clip: text;
+            font-weight: 600;
         }
-
+        
         .gradient-text {
             background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 600;
+            background-clip: text;
         }
 
         /* 导航栏样式 */
         .nav-blur {
-            backdrop-filter: blur(25px);
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 1px solid #333;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e8e9ea;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
         /* 日期标签样式 */
@@ -89,40 +93,40 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #f39c12;
+            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
             color: white;
             padding: 8px 16px;
             border-radius: 9999px;
             font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
         }
 
         /* 打卡按钮样式 */
         .check-in-btn {
-            background: #f39c12;
+            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 10px 24px;
             border-radius: 9999px;
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
             margin-top: 16px;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
 
         .check-in-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         }
 
         .check-in-btn.checked {
-            background: #27ae60;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             cursor: not-allowed;
         }
 
@@ -150,13 +154,13 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s ease;
-            filter: brightness(0.8);
+            filter: brightness(0.9);
         }
-
+        
         .news-card:hover .card-image {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
-
+        
         /* 图片上的渐变遮罩 */
         .card-image-overlay {
             position: absolute;
@@ -167,16 +171,16 @@
             background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
             z-index: 1;
         }
-
+        
         /* 小日历样式 */
         .card-calendar {
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 8px;
-            width: 60px;
-            height: 60px;
+            width: 54px;
+            height: 54px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -184,35 +188,35 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             z-index: 10;
         }
-
+        
         .calendar-month {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            color: #f39c12;
+            color: #e67e22;
             text-transform: uppercase;
         }
-
+        
         .calendar-day {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: #2c3e50;
             line-height: 1;
         }
-
+        
         /* 文字内容区域 - 位于图片下半部 */
         .card-content {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px;
+            padding: 18px;
             z-index: 2;
             color: white;
         }
-
+        
         .card-title {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 6px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -220,9 +224,9 @@
             overflow: hidden;
             line-height: 1.4;
         }
-
+        
         .card-description {
-            font-size: 14px;
+            font-size: 13px;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 10px;
             display: -webkit-box;
@@ -230,29 +234,30 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-
-        /* 标签样式 */
+        
+        /* 标签样式 - 调整为黑色并放在白色区域 */
         .card-tags-container {
             padding: 0 16px 10px;
             background-color: white;
         }
-
+        
         .card-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
+            padding-top: 12px;
         }
-
+        
         .card-tag {
             background-color: #f1f1f1;
             padding: 3px 10px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
-            color: #2c3e50;
+            color: #2c3e50; /* 标签文字改为黑色 */
         }
-
-        /* 底部信息区域 */
+        
+        /* 底部信息区域 - 移除了分隔线 */
         .card-footer {
             padding: 16px;
             background-color: white;
@@ -260,18 +265,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            /* 已移除 border-top 属性，去掉了那条线 */
         }
-
+        
         .card-meta {
             font-size: 12px;
             color: #7f8c8d;
         }
-
+        
         .card-actions {
             display: flex;
             gap: 10px;
         }
-
+        
         .card-btn {
             padding: 5px 12px;
             border-radius: 6px;
@@ -284,17 +290,17 @@
             align-items: center;
             gap: 5px;
         }
-
+        
         .card-btn.primary {
             background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
             color: white;
         }
-
+        
         .card-btn:hover {
             opacity: 0.9;
             transform: translateY(-2px);
         }
-
+        
         .read-time {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.8);
@@ -312,7 +318,7 @@
             padding: 40px 0;
             grid-column: 1 / -1;
         }
-
+        
         .spinner {
             width: 40px;
             height: 40px;
@@ -322,11 +328,11 @@
             animation: spin 1s linear infinite;
             margin-bottom: 16px;
         }
-
+        
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
-
+        
         .error-state {
             display: flex;
             flex-direction: column;
@@ -336,12 +342,12 @@
             grid-column: 1 / -1;
             color: #e74c3c;
         }
-
+        
         .error-icon {
             font-size: 40px;
             margin-bottom: 16px;
         }
-
+        
         .retry-btn {
             margin-top: 16px;
             background-color: #d4af37;
@@ -352,9 +358,49 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
+        
         .retry-btn:hover {
             background-color: #c29a2e;
+        }
+
+        /* 动画效果 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 0.8s ease-in-out;
+        }
+
+        /* 新增：主标题区域背景样式 */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://picsum.photos/id/1073/1600/800');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
         }
     </style>
 </head>
@@ -368,10 +414,10 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href=" " class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">首页</a >
-                        <a href="news.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">新闻详情</a >
-                        <a href="trends.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">趋势分析</a >
-                        <a href="about.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">关于我们</a >
+                        <a href="index.html" class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                        <a href="news.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                        <a href="trends.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">趋势分析</a>
+                        <a href="about.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -381,10 +427,20 @@
                 </div>
             </div>
         </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-100">首页</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">新闻详情</a>
+                <a href="trends.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">趋势分析</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">关于我们</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- 主标题区域 -->
+    <!-- 主标题区域 - 添加了背景图片 -->
     <section class="pt-24 pb-24 px-4 sm:px-6 lg:px-8 hero-section">
+        <!-- 背景图片和遮罩 -->
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         
@@ -413,7 +469,7 @@
             </h1>
             <p class="text-xl text-white mb-8 max-w-3xl mx-auto">
                 每天十分钟，一起学习文创市场动态
-            </p >
+            </p>
         </div>
     </section>
 
@@ -422,34 +478,38 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">最新文创动态</h2>
             
+            <!-- 新闻网格 -->
             <div class="news-grid" id="news-grid">
+                <!-- 加载状态 -->
                 <div class="loading-state" id="loading-indicator">
                     <div class="spinner"></div>
-                    <p>正在加载新闻数据...</p >
+                    <p>正在加载新闻数据...</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 px-4 sm:px-6 lg:px-8 mt-12" style="background-color: #2c3e50; border-top: 1px solid #444;">
+    <!-- 页脚 - 已移除社交图标 -->
+    <footer class="py-16 px-4 sm:px-6 lg:px-8 mt-12" style="background-color: #f8f9fa; border-top: 1px solid #eee;">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <h3 class="text-2xl font-bold gradient-text mb-6">文创每日手账</h3>
-                    <p class="text-gray-600 mb-6">每天十分钟，一起学习文创市场动态</p >
-                    <p class="text-sm text-gray-500">© 2025 鳞迹文化创意有限公司 版权所有</p >
+                    <p class="text-gray-600 mb-6">每天十分钟，一起学习文创市场动态</p>
+                    <p class="text-sm text-gray-500">© 2025 鳞迹文化创意有限公司 版权所有</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-6 text-gray-800">联系我们</h4>
                     <div class="space-y-3 text-gray-600">
-                        <p><i class="fas fa-phone-alt mr-2"></i>86-18210095234</p >
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>北京市东城区环球贸易大厦A座3层</p >
-                        <p><i class="fas fa-envelope mr-2"></i>mistoraworld@163.com</p >
+                        <p><i class="fas fa-phone-alt mr-2"></i>86-18210095234</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>北京市东城区环球贸易大厦A座3层</p>
+                        <p><i class="fas fa-envelope mr-2"></i>mistoraworld@163.com</p>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-6 text-gray-800">关注我们</h4>
-                    <p class="text-gray-600 text-sm mb-6">获取最新文创资讯和市场动态</p >
+                    <p class="text-gray-600 text-sm mb-6">获取最新文创资讯和市场动态</p>
+                    <!-- 已移除微信、微博等社交图标 -->
                 </div>
             </div>
         </div>
@@ -492,8 +552,7 @@
             }
         }
 
-        //
-// 打卡按钮点击事件
+        // 打卡按钮点击事件
         checkInBtn.addEventListener('click', function() {
             if (!hasCheckedIn) {
                 // 执行打卡
@@ -508,6 +567,18 @@
             }
         });
 
+        // 月份英文缩写
+        const monthAbbr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        
+        // 解析日期为月份和日期
+        function parseDate(dateString) {
+            const date = new Date(dateString);
+            return {
+                month: monthAbbr[date.getMonth()],
+                day: date.getDate()
+            };
+        }
+
         // 处理标签过多的情况
         function renderTags(tags) {
             if (!tags || tags.length === 0) return '';
@@ -521,15 +592,6 @@
                     <span class="card-tag">${tag}</span>
                 `).join('') + `<span class="card-tag">+${tags.length - 3}</span>`;
             }
-        }
-
-        // 解析日期为月份和日期
-        function parseDate(dateString) {
-            const date = new Date(dateString);
-            return {
-                month: new Intl.DateTimeFormat('en', { month: 'short' }).format(date),
-                day: date.getDate()
-            };
         }
 
         // 从JSON文件加载新闻数据，限制显示9条
@@ -574,7 +636,7 @@
                         return `
                         <div class="news-card">
                             <div class="card-image-container">
-                                < img src="${post.image}" alt="${post.title || '新闻图片'}" class="card-image">
+                                <img src="${post.image}" alt="${post.title || '新闻图片'}" class="card-image">
                                 <div class="card-image-overlay"></div>
                                 
                                 <!-- 小日历 -->
@@ -586,7 +648,7 @@
                                 <!-- 文字内容位于图片下半部 -->
                                 <div class="card-content">
                                     <h3 class="card-title">${post.title}</h3>
-                                    <p class="card-description">${post.summary || '点击查看详情...'}</p >
+                                    <p class="card-description">${post.summary || '点击查看详情...'}</p>
                                     <div class="read-time">
                                         <i class="far fa-clock"></i> ${post.readTime || '5分钟'}
                                     </div>
@@ -600,7 +662,7 @@
                                 </div>
                             </div>
                             
-                            <!-- 底部信息区域 -->
+                            <!-- 底部信息区域 - 已移除分隔线 -->
                             <div class="card-footer">
                                 <div class="card-meta">来源: ${post.source || '未知来源'}</div>
                                 <div class="card-actions">
@@ -616,7 +678,7 @@
                 } else {
                     newsGrid.innerHTML = `
                         <div class="text-center col-span-full py-10">
-                            <p>暂无新闻数据</p >
+                            <p>暂无新闻数据</p>
                         </div>
                     `;
                 }
@@ -633,8 +695,8 @@
                         <div class="error-icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </div>
-                        <p>加载新闻失败: ${error.message}</p >
-                        <p>请检查data/posts.json文件是否存在且格式正确</p >
+                        <p>加载新闻失败: ${error.message}</p>
+                        <p>请检查data/posts.json文件是否存在且格式正确</p>
                         <button class="retry-btn" onclick="loadNewsData()">重试</button>
                     </div>
                 `;

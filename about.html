@@ -3,109 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我们 - 鳞迹文化创意</title>
+    <title>关于我们 - 文创每日手账</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-white: #ffffff;
-            --warm-white: #fefefe;
-            --light-gray: #f8f9fa;
-            --soft-gray: #e9ecef;
-            --accent-gold: #c8a951; /* 更柔和的金色，带古风感 */
-            --soft-gold: #f7efe5;
+            --warm-cream: #f9f6f1;
+            --warm-beige: #f1ebe4;
+            --accent-gold: #c8a951;
+            --accent-soft: #d9c9ac;
             --text-dark: #2c3e50;
             --text-medium: #5a6c7d;
             --text-light: #8896a0;
-            --border-light: #e8e9ea;
-            --shadow-light: rgba(0, 0, 0, 0.08);
+            --shadow-soft: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
         }
         
         body {
             font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-dark);
             line-height: 1.7;
+            background-color: var(--warm-cream);
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 保持您指定的导航栏样式 */
+        .top-nav {
+            background-color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--accent-gold); /* 保持金色logo */
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 15px;
+            padding-bottom: 3px;
+        }
+        
+        .nav-links a.active {
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+        
+        /* 主视觉区域 */
+        .hero-section {
             position: relative;
-        }
-        
-        /* 背景装饰 - 更年轻且带古风元素 */
-        .bg-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background-color: #fcfaf5; /* 米白色背景，带古风感 */
-            opacity: 0.95;
-        }
-        
-        .bg-texture {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: 
-                url('https://picsum.photos/id/152/800/800'), /* 宣纸纹理感图片 */
-                url('https://picsum.photos/id/175/800/800'), /* 传统纹样感图片 */
-                url('https://picsum.photos/id/301/600/600'); /* 书法笔触感图片 */
-            background-size: 300px, 400px, 250px;
-            background-repeat: no-repeat, no-repeat, no-repeat;
-            background-position: -50px -50px, calc(100% - 150px) calc(100% - 100px), 20% 80%;
-            opacity: 0.06;
-            pointer-events: none;
-        }
-        
-        /* 古风纹理装饰 */
-        .bg-paper {
-            background-image: url('https://picsum.photos/id/106/1200/800');
+            height: 60vh;
+            min-height: 450px;
+            background-image: url('https://picsum.photos/seed/craft1/1600/900');
             background-size: cover;
             background-position: center;
-            background-blend-mode: overlay;
-            opacity: 0.03;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .hero-title {
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+            max-width: 800px;
+        }
+        
+        .section-title {
             font-family: 'Playfair Display', serif;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
         }
         
-        .nav-blur {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(200, 169, 81, 0.15);
-            box-shadow: 0 2px 20px var(--shadow-light);
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 10%;
+            width: 80%;
+            height: 2px;
+            background-color: var(--accent-gold);
         }
         
-        .value-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(200, 169, 81, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 16px var(--shadow-light);
-            border-radius: 16px;
+        .content-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-soft);
+            transition: all 0.4s ease;
         }
         
-        .value-card:hover {
+        .craft-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-soft);
+            transition: all 0.4s ease;
+        }
+        
+        .craft-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent-gold);
+            box-shadow: 0 20px 40px var(--shadow-medium);
         }
         
-        .contact-form {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(200, 169, 81, 0.1);
-            box-shadow: 0 8px 24px var(--shadow-light);
-            border-radius: 16px;
+        .craft-image {
+            height: 240px;
+            overflow: hidden;
+        }
+        
+        .craft-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .craft-card:hover .craft-image img {
+            transform: scale(1.05);
+        }
+        
+        .collaborate-button {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .collaborate-button:hover {
+            background-color: var(--accent-gold);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(200, 169, 81, 0.2);
+        }
+        
+        .footer {
+            background-color: white;
+            border-top: 1px solid #eee;
+            padding: 40px 0;
+            margin-top: 60px;
         }
         
         .fade-in {
@@ -121,368 +189,236 @@
         
         .stagger-1 { transition-delay: 0.1s; }
         .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .story-section {
-            background: linear-gradient(135deg, rgba(248, 246, 241, 0.8) 0%, rgba(254, 253, 250, 0.8) 100%);
-            backdrop-filter: blur(10px);
-        }
-        
-        .business-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(200, 169, 81, 0.15);
-            transition: all 0.4s ease;
-            border-radius: 16px;
-        }
-        
-        .business-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 32px rgba(200, 169, 81, 0.1);
-            border-color: var(--accent-gold);
-        }
-        
-        /* 古风装饰元素 */
-        .decor-element {
-            position: absolute;
-            background: linear-gradient(135deg, var(--accent-gold), var(--soft-gold));
-            border-radius: 50%;
-            opacity: 0.04;
-            z-index: -1;
-        }
-        
-        /* 改良的合作按钮 */
-        .collaborate-button {
-            background: transparent;
-            color: var(--accent-gold);
-            border: 1px solid var(--accent-gold);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .collaborate-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
-            transition: width 0.3s ease;
-            z-index: -1;
-        }
-        
-        .collaborate-button:hover {
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(200, 169, 81, 0.2);
-        }
-        
-        .collaborate-button:hover::after {
-            width: 100%;
-        }
-        
-        /* 传统分隔线装饰 */
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-            opacity: 0.3;
-        }
     </style>
 </head>
 <body>
-    <!-- 背景装饰 -->
-    <div class="bg-pattern"></div>
-    <div class="bg-texture"></div>
-    <div class="bg-paper fixed inset-0 z-[-3]"></div>
-    
-    <!-- 古风装饰元素 -->
-    <div class="decor-element" style="top: 20%; left: 10%; width: 250px; height: 250px;"></div>
-    <div class="decor-element" style="top: 70%; right: 5%; width: 350px; height: 350px;"></div>
-    <div class="decor-element" style="top: 45%; left: 45%; width: 150px; height: 150px;"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-blur">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
-                        <a href="news.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
-                        <a href="trends.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">趋势分析</a>
-                        <a href="about.html" class="text-text-dark hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">关于我们</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button class="text-text-medium hover:text-accent-gold">
-                        <i class="fa fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
+    <!-- 保持您指定的导航栏样式 -->
+    <nav class="top-nav">
+        <div class="logo">文创每日手账</div>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="news.html">新闻详情</a>
+            <a href="trends.html">趋势分析</a>
+            <a href="about.html" class="active">关于我们</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6 fade-in">
-                鳞迹文化创意
-            </h1>
-            <p class="text-xl text-text-medium mb-8 fade-in stagger-1 max-w-3xl mx-auto">
-                传承文化脉络，连接传统与现代的美学桥梁
-            </p>
-            <div class="divider max-w-xl mx-auto mb-8 fade-in stagger-1"></div>
-            <a href="#contact" class="inline-block px-8 py-3 rounded-full font-medium collaborate-button fade-in stagger-2 relative z-10">
-                共谱文创新篇
+    <!-- 关于我们主视觉 -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">关于我们</h1>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">传承文化脉络，连接传统与现代的美学桥梁</p>
+            <a href="#intro" class="collaborate-button text-white border-white hover:bg-white hover:text-text-dark">
+                了解更多
             </a>
         </div>
     </section>
 
-    <!-- Brand Story -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 story-section rounded-3xl mx-4 md:mx-8">
+    <!-- 我们介绍 - 保留非遗相关内容 -->
+    <section id="intro" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">我们是谁</h2>
+            
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <h2 class="text-3xl font-bold mb-6 text-text-dark">我们是谁？—— 鳞迹文化创意</h2>
-                    <div class="space-y-6 text-text-medium leading-relaxed">
-                        <p class="text-lg">
-                            <span class="bg-soft-gold text-accent-gold px-2 py-1 rounded font-medium">鳞迹</span>
-                            二字，源自鱼传尺素的古典浪漫。敦煌曲子词《破阵子》中"月断妆楼相忆苦，鱼雁山川鳞迹疏，和愁封去书"的名句，让鳞迹与鱼雁一同成为书信的雅称，承载着跨越山海的情感与价值传递。
-                        </p>
-                        <p>
-                            而今，我们以鳞迹为名，既延续这份连接的初心，更立志在文创领域，搭建起传统与现代、本土与世界的文化桥梁。
-                        </p>
-                        <p>
-                            我们始终锚定非遗产业化 + 文创数字化核心赛道。一方面沉心打磨自有非遗品牌——从登门走访老匠人、深挖濒临失传的独家技艺，到用现代设计重构产品形态、以数字化手段拓宽传播边界，更通过技艺的数字化开发与实体化改良，让非遗跳出文化符号的框架，变成人人可触摸、可使用的生活美学产品。
-                        </p>
-                    </div>
-                </div>
-                <div class="fade-in stagger-2 overflow-hidden rounded-2xl shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                    <img src="https://picsum.photos/seed/culture/600/400" alt="鳞迹文化创意" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Business -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">我们的核心业务</h2>
-            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="business-card p-8 fade-in stagger-1 floating-animation">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-vase text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">自研非遗品牌</h3>
-                    <p class="text-text-medium text-center leading-relaxed">
-                        深挖传统技艺，开展技艺数字化开发与实体化改良，研发并推广非遗美学产品，让非遗变成人人可触摸的生活美学。
-                    </p>
-                </div>
-                
-                <div class="business-card p-8 fade-in stagger-2 floating-animation" style="animation-delay: 0.2s;">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-cogs text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创全链服务</h3>
-                    <p class="text-text-medium text-center leading-relaxed">
-                        提供数字文创开发、版权代理等专业服务，助力从业者与企业高效落地项目，为行业发展赋能。
-                    </p>
-                </div>
-                
-                <div class="business-card p-8 fade-in stagger-3 floating-animation" style="animation-delay: 0.4s;">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-book text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创资讯服务</h3>
-                    <p class="text-text-medium text-center leading-relaxed">
-                        运营「文创每日学习手账」内容社区，链接文创爱好者，共享行业知识与灵感，构建用户-内容-品牌的生态闭环。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brand Philosophy -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray/30 rounded-3xl mx-4 md:mx-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">品牌理念</h2>
-            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="value-card p-8 text-center fade-in floating-animation">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-bullseye text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">专注非遗</h3>
-                    <p class="text-text-medium leading-relaxed">
-                        致力于非遗产业化，通过数字化手段让传统技艺焕发新生，打造世界性文化美学品牌。
-                    </p>
-                </div>
-                
-                <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.2s;">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-bridge text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">连接古今</h3>
-                    <p class="text-text-medium leading-relaxed">
-                        搭建传统与现代、本土与世界的文化桥梁，让传统文化在当代生活中找到新的表达方式。
-                    </p>
-                </div>
-                
-                <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.4s;">
-                    <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa fa-users text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">共创生态</h3>
-                    <p class="text-text-medium leading-relaxed">
-                        构建开放的行业生态，与文创从业者、爱好者共同成长，推动整个文创产业的健康发展。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">联系我们</h2>
-            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="fade-in stagger-1">
-                    <div class="contact-form p-8">
-                        <h3 class="text-2xl font-semibold mb-6 text-text-dark">联系信息</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <i class="fa fa-phone text-white text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-text-dark">电话</p>
-                                    <p class="text-text-medium">86-18210095234</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <i class="fa fa-map-marker text-white text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-text-dark">地址</p>
-                                    <p class="text-text-medium">北京市东城区环球贸易大厦A座3层</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <i class="fa fa-envelope text-white text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-text-dark">邮箱</p>
-                                    <p class="text-text-medium">mistoraworld@163.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="pt-4">
-                                <p class="font-semibold text-text-dark mb-3">关注我们</p>
-                                <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
-                                        <i class="fa fa-weixin"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
-                                        <i class="fa fa-weibo"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="content-card h-full">
+                        <div class="space-y-6 text-text-medium leading-relaxed">
+                            <p class="text-lg">
+                                我们是一群热爱传统文化与现代设计的文创从业者，致力于非遗产业化与文创数字化的融合发展。
+                            </p>
+                            <p>
+                                我们始终锚定非遗产业化 + 文创数字化核心赛道。一方面沉心打磨自有非遗品牌——从登门走访老匠人、深挖濒临失传的独家技艺，到用现代设计重构产品形态、以数字化手段拓宽传播边界，更通过技艺的数字化开发与实体化改良，让非遗跳出文化符号的框架，变成人人可触摸、可使用的生活美学产品。
+                            </p>
+                            <p>
+                                同时，我们运营「文创每日手账」内容社区，链接文创爱好者，共享行业知识与灵感，构建用户-内容-品牌的生态闭环，让更多人感受传统工艺的魅力，参与文化传承与创新。
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="fade-in stagger-1">
+                    <img src="https://picsum.photos/seed/craft5/600/800" alt="非遗工艺展示" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心业务 - 保留非遗相关内容 -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">核心业务</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="craft-card fade-in">
+                    <div class="craft-image">
+                        <img src="https://picsum.photos/seed/craft2/600/400" alt="自研非遗品牌">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">自研非遗品牌</h3>
+                        <p class="text-text-medium">深挖传统技艺，开展技艺数字化开发与实体化改良，研发并推广非遗美学产品，让非遗变成人人可触摸的生活美学。</p>
+                    </div>
+                </div>
                 
-                <div class="fade-in stagger-2">
-                    <div class="contact-form p-8">
-                        <h3 class="text-2xl font-semibold mb-6 text-text-dark">商务合作</h3>
-                        <div class="space-y-6">
-                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
-                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <i class="fa fa-handshake-o mr-2 text-accent-gold"></i>
-                                    非遗品牌合作
-                                </h4>
-                                <p class="text-text-medium text-sm">传统技艺现代化开发、产品联名设计</p>
+                <div class="craft-card fade-in stagger-1">
+                    <div class="craft-image">
+                        <img src="https://picsum.photos/seed/craft3/600/400" alt="文创全链服务">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">文创全链服务</h3>
+                        <p class="text-text-medium">提供数字文创开发、版权代理等专业服务，助力从业者与企业高效落地项目，为行业发展赋能。</p>
+                    </div>
+                </div>
+                
+                <div class="craft-card fade-in stagger-2">
+                    <div class="craft-image">
+                        <img src="https://picsum.photos/seed/craft4/600/400" alt="文创资讯服务">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">文创资讯服务</h3>
+                        <p class="text-text-medium">运营「文创每日学习手账」内容社区，链接文创爱好者，共享行业知识与灵感，构建用户-内容-品牌的生态闭环。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌理念 -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-warm-cream">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">我们的理念</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="content-card fade-in">
+                    <div class="w-14 h-14 bg-accent-gold/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-bullseye text-accent-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">专注非遗</h3>
+                    <p class="text-text-medium">致力于非遗产业化，通过数字化手段让传统技艺焕发新生，打造世界性文化美学品牌。</p>
+                </div>
+                
+                <div class="content-card fade-in stagger-1">
+                    <div class="w-14 h-14 bg-accent-gold/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-bridge text-accent-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">连接古今</h3>
+                    <p class="text-text-medium">搭建传统与现代、本土与世界的文化桥梁，让传统文化在当代生活中找到新的表达方式。</p>
+                </div>
+                
+                <div class="content-card fade-in stagger-2">
+                    <div class="w-14 h-14 bg-accent-gold/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-users text-accent-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">共创生态</h3>
+                    <p class="text-text-medium">构建开放的行业生态，与文创从业者、爱好者共同成长，推动整个文创产业的健康发展。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 section-title">联系我们</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="content-card fade-in">
+                    <h3 class="text-2xl font-semibold mb-6">联系信息</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-accent-gold/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-map-marker text-accent-gold"></i>
                             </div>
-                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
-                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <i class="fa fa-briefcase mr-2 text-accent-gold"></i>
-                                    企业服务
-                                </h4>
-                                <p class="text-text-medium text-sm">文创项目咨询、数字化解决方案、版权服务</p>
-                            </div>
-                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
-                                <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <i class="fa fa-globe mr-2 text-accent-gold"></i>
-                                    媒体合作
-                                </h4>
-                                <p class="text-text-medium text-sm">内容共创、品牌推广、活动策划</p>
+                            <div>
+                                <h4 class="font-medium text-text-dark mb-1">地址</h4>
+                                <p class="text-text-medium">北京市东城区环球贸易大厦A座3层</p>
                             </div>
                         </div>
                         
-                        <div class="mt-8">
-                            <a href="mailto:mistoraworld@163.com" class="block w-full text-center py-3 rounded-full font-medium collaborate-button relative z-10">
-                                携手共创
-                            </a>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-accent-gold/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-phone text-accent-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-dark mb-1">电话</h4>
+                                <p class="text-text-medium">86-18210095234</p>
+                            </div>
                         </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-accent-gold/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-envelope text-accent-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-dark mb-1">邮箱</h4>
+                                <p class="text-text-medium">mistoraworld@163.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-card fade-in stagger-1">
+                    <h3 class="text-2xl font-semibold mb-6">商务合作</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 border border-gray-100 rounded-lg hover:border-accent-gold transition-colors">
+                            <h4 class="font-medium text-text-dark mb-2">非遗品牌合作</h4>
+                            <p class="text-text-medium text-sm">传统技艺现代化开发、产品联名设计、文化IP合作</p>
+                        </div>
+                        
+                        <div class="p-4 border border-gray-100 rounded-lg hover:border-accent-gold transition-colors">
+                            <h4 class="font-medium text-text-dark mb-2">企业定制服务</h4>
+                            <p class="text-text-medium text-sm">文创项目咨询、数字化解决方案、版权服务</p>
+                        </div>
+                        
+                        <div class="p-4 border border-gray-100 rounded-lg hover:border-accent-gold transition-colors">
+                            <h4 class="font-medium text-text-dark mb-2">媒体内容合作</h4>
+                            <p class="text-text-medium text-sm">文化主题内容共创、手工艺人访谈、线上线下活动</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <a href="mailto:mistoraworld@163.com" class="collaborate-button">
+                            携手共创
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 mt-12" style="background: linear-gradient(135deg, var(--light-gray) 0%, #fcfaf5 100%); border-top: 1px solid rgba(200, 169, 81, 0.15);">
-        <div class="max-w-7xl mx-auto">
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4">鳞迹文化创意</h3>
+                    <h3 class="text-xl font-bold text-text-dark mb-4">文创每日手账</h3>
                     <p class="text-text-medium mb-4">传承文化脉络，连接传统与现代的美学桥梁</p>
-                    <p class="text-sm text-text-light">© 2025 鳞迹文化创意有限公司 版权所有</p>
+                    <p class="text-sm text-text-light">© 2025 版权所有</p>
                 </div>
+                
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-text-dark">核心业务</h4>
-                    <div class="space-y-2 text-text-medium text-sm">
-                        <p>• 自研非遗品牌</p>
-                        <p>• 文创全链服务</p>
-                        <p>• 文创资讯服务</p>
-                        <p>• 技艺数字化开发</p>
-                    </div>
+                    <h4 class="font-semibold text-text-dark mb-4">快速链接</h4>
+                    <ul class="space-y-2 text-text-medium">
+                        <li><a href="index.html" class="hover:text-accent-gold transition-colors">首页</a></li>
+                        <li><a href="news.html" class="hover:text-accent-gold transition-colors">新闻详情</a></li>
+                        <li><a href="trends.html" class="hover:text-accent-gold transition-colors">趋势分析</a></li>
+                        <li><a href="about.html" class="hover:text-accent-gold transition-colors">关于我们</a></li>
+                    </ul>
                 </div>
+                
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-text-dark">联系信息</h4>
-                    <div class="space-y-2 text-text-medium text-sm">
-                        <p><i class="fa fa-phone mr-2 text-accent-gold"></i> 86-18210095234</p>
-                        <p><i class="fa fa-map-marker mr-2 text-accent-gold"></i> 北京市东城区环球贸易大厦A座3层</p>
-                        <p><i class="fa fa-envelope mr-2 text-accent-gold"></i> mistoraworld@163.com</p>
+                    <h4 class="font-semibold text-text-dark mb-4">关注我们</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-warm-beige rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-warm-beige rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-warm-beige rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -490,12 +426,8 @@
     </footer>
 
     <script>
-        // 初始化动画
+        // 初始化滚动动画
         document.addEventListener('DOMContentLoaded', function() {
-            initializeAnimations();
-        });
-
-        function initializeAnimations() {
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -512,16 +444,7 @@
             document.querySelectorAll('.fade-in').forEach(el => {
                 observer.observe(el);
             });
-            
-            // 移动端菜单切换
-            const menuButton = document.querySelector('.md\\:hidden button');
-            if (menuButton) {
-                menuButton.addEventListener('click', function() {
-                    // 移动端菜单逻辑可以在这里实现
-                    alert('移动端菜单将在这里显示');
-                });
-            }
-        }
+        });
     </script>
 </body>
 </html>

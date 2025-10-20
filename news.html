@@ -21,14 +21,12 @@
             --border-light: #e8e9ea;
             --shadow-light: rgba(0, 0, 0, 0.08);
         }
-        
         body {
             font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
             color: var(--text-dark);
             line-height: 1.7;
         }
-        
         .hero-title {
             font-family: 'Playfair Display', serif;
             background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
@@ -38,14 +36,12 @@
             font-weight: 600;
             letter-spacing: -0.02em;
         }
-        
         .nav-blur {
             backdrop-filter: blur(20px);
             background: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--border-light);
             box-shadow: 0 2px 20px var(--shadow-light);
         }
-        
         .news-card {
             background: rgba(255, 255, 255, 0.98);
             border: 1px solid var(--border-light);
@@ -53,52 +49,34 @@
             box-shadow: 0 4px 16px var(--shadow-light);
             border-radius: 16px;
         }
-        
         .news-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
             border-color: var(--accent-gold);
         }
-        
         .sidebar-card {
             background: rgba(255, 255, 255, 0.98);
             border: 1px solid var(--border-light);
             box-shadow: 0 4px 16px var(--shadow-light);
             border-radius: 16px;
         }
-        
         .gradient-text {
             background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
-        .text-white {
-            color: var(--text-dark) !important;
-        }
-        
-        .text-gray-300 {
-            color: var(--text-medium) !important;
-        }
-        
-        .text-gray-400 {
-            color: var(--text-light) !important;
-        }
-        
+        .text-white { color: var(--text-dark) !important; }
+        .text-gray-300 { color: var(--text-medium) !important; }
+        .text-gray-400 { color: var(--text-light) !important; }
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.8s ease forwards;
         }
-        
         @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
         .stagger-1 { animation-delay: 0.1s; }
         .stagger-2 { animation-delay: 0.2s; }
         .stagger-3 { animation-delay: 0.3s; }
@@ -135,104 +113,78 @@
                     <article class="news-card p-8 mb-8 fade-in">
                         <div class="flex items-center mb-4">
                             <span class="bg-accent-gold text-white px-3 py-1 rounded-full text-sm font-medium mr-4">精选</span>
-                            <span class="text-text-light text-sm">2025-09-25</span>
+                            <span class="text-text-light text-sm">2025-10-20</span>
                         </div>
-                        
                         <h1 class="text-3xl md:text-4xl font-bold mb-6 text-text-dark leading-tight">
-                            文化产业投融资市场回暖，上半年投融资额激增88.9%
+                            交通运输部发布《国际绿色航运走廊合作倡议》
                         </h1>
-                        
                         <div class="flex items-center mb-6">
                             <img src="https://picsum.photos/seed/author1/50/50.jpg" alt="作者头像" class="w-12 h-12 rounded-full mr-4">
                             <div>
                                 <p class="font-semibold text-text-dark">文创观察员</p>
-                                <p class="text-text-light text-sm">来源：中国文化产业协会</p>
+                                <p class="text-text-light text-sm">来源：新华网</p>
                             </div>
                         </div>
-                        
-                        <img src="https://picsum.photos/seed/news-main/800/400.jpg" alt="文化产业投融资" class="w-full h-64 object-cover rounded-lg mb-6">
-                        
+                        <img src="https://picsum.photos/seed/green-shipping-corridor-2025/800/400" alt="绿色航运" class="w-full h-64 object-cover rounded-lg mb-6">
                         <div class="prose prose-lg max-w-none text-text-medium leading-relaxed">
                             <p class="text-xl mb-6 text-text-dark font-medium">
-                                2025年上半年文化产业投融资增速显著提升，文化科技融合领域成为投资重点，AI+文化项目占比超过40%。
+                                2025北外滩国际航运论坛在沪开幕，中国携手全球打造更安全、高效、绿色的航运新生态。
                             </p>
-                            
                             <p class="mb-6">
-                                根据中国文化产业协会发布的最新数据，2025年上半年我国文化产业投融资市场呈现强劲复苏态势。全国文化产业投融资总额同比增长88.9%，达到历史新高。这一增长主要得益于政策支持力度加大、市场环境改善以及技术创新驱动。
+                                新华社上海10月19日电——2025北外滩国际航运论坛今日开幕，交通运输部于会上发布《国际绿色航运走廊合作倡议》，呼吁全球港口、航运及产业链各方在零碳燃料供应、绿色技术示范、船舶靠港管理等方面加强协作，共同构建面向2030/2040年的绿色航运网络。
                             </p>
-                            
-                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">投资热点分析</h3>
-                            
+                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">三大核心目标</h3>
                             <p class="mb-6">
-                                在投资领域分布方面，文化科技融合项目成为最大热点，占总投资额的42%。其中，AI+文化项目表现尤为突出，涵盖了智能创作、虚拟演出、数字化文化遗产保护等多个细分领域。
+                                倡议提出“安全、高效、绿色”三大核心：到2030年，共建超过20条国际绿色航运走廊；实现挂靠港口岸电使用率不低于80%；零碳燃料在航运能耗占比达到10%以上。
                             </p>
-                            
+                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">资本闻风而动</h3>
                             <p class="mb-6">
-                                数字艺术市场持续火爆，NFT和数字藏品交易平台获得大量投资。同时，传统文化IP的现代化转型也受到资本青睐，国潮品牌的衍生品开发项目融资活跃。
+                                受政策带动，A股绿色港口、LNG动力船、氢燃料发动机板块午后集体拉升；中远海运、上港集团等宣布追加投资超300亿元用于岸电改造、甲醇燃料船建造及港口碳管理体系建设。
                             </p>
-                            
-                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">区域发展特点</h3>
-                            
-                            <p class="mb-6">
-                                从区域分布来看，北京、上海、深圳继续领跑文创投资市场，三地合计占总投资额的65%。值得注意的是，成都、杭州等新一线城市文创产业发展迅速，投资增速超过一线城市。
-                            </p>
-                            
-                            <p class="mb-6">
-                                文创产业园区的集聚效应进一步显现，形成了完整的产业链条。各地政府纷纷出台支持政策，为文创企业发展提供了良好的政策环境。
-                            </p>
-                            
-                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">未来展望</h3>
-                            
-                            <p class="mb-6">
-                                专家预测，随着5G、AI、VR等技术的进一步成熟，文化产业将迎来新一轮发展机遇。沉浸式体验、互动娱乐、数字文创等领域有望成为下一个投资热点。
-                            </p>
-                            
+                            <h3 class="text-2xl font-semibold mb-4 text-text-dark">文创视角</h3>
                             <p class="mb-8">
-                                同时，文创产业的国际化合作也将进一步深化，中国文创品牌有望在全球市场占据更重要的地位。
+                                绿色航运故事成为新IP：上海 Maritime Museum 同步推出沉浸式展览《零碳航线2040》，用VR体验未来“无声码头”，周边环保帆布袋、船模拼图上线即售罄，显示“双碳”主题正成为文创消费新热点。
                             </p>
                         </div>
-                        
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">投融资</span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">文化科技</span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">政策</span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">AI+文化</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">绿色航运</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">北外滩论坛</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">双碳</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-sm font-medium">文创IP</span>
                         </div>
-                        
                         <div class="border-t border-border-light pt-6">
                             <p class="text-text-light text-sm">
-                                阅读时间：5分钟 | 发布时间：2025-09-25 | 数据来源：中国文化产业协会
+                                阅读时间：5分钟 | 发布时间：2025-10-20 | 数据来源：交通运输部、新华网
                             </p>
                         </div>
                     </article>
-                    
+
                     <!-- Related Articles -->
                     <div class="fade-in stagger-3">
                         <h2 class="text-2xl font-bold mb-6 text-text-dark">相关文章</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <article class="news-card p-6">
-                                <img src="https://picsum.photos/seed/related1/400/200.jpg" alt="数字艺术" class="w-full h-32 object-cover rounded-lg mb-4">
-                                <h3 class="text-lg font-semibold mb-2 text-text-dark">数字艺术市场突破千亿美元</h3>
-                                <p class="text-text-medium text-sm mb-3">AI技术重塑创意表达边界，算法艺术成为新趋势</p>
+                                <img src="https://picsum.photos/seed/related1/400/200" alt="岭南文化" class="w-full h-32 object-cover rounded-lg mb-4">
+                                <h3 class="text-lg font-semibold mb-2 text-text-dark">百年岭南风、壮哉英歌舞——粤港澳大湾区文化周点亮上海</h3>
+                                <p class="text-text-medium text-sm mb-3">800余件/套岭南珍品跨越山海，讲述砥砺前行、突破创新的文化故事。</p>
                                 <div class="flex justify-between items-center text-xs text-text-light">
-                                    <span>2025-09-24</span>
-                                    <span>8分钟阅读</span>
+                                    <span>2025-10-19</span>
+                                    <span>6分钟阅读</span>
                                 </div>
                             </article>
-                            
                             <article class="news-card p-6">
-                                <img src="https://picsum.photos/seed/related2/400/200.jpg" alt="文创产品" class="w-full h-32 object-cover rounded-lg mb-4">
-                                <h3 class="text-lg font-semibold mb-2 text-text-dark">毛绒绒风席卷全国文创市场</h3>
-                                <p class="text-text-medium text-sm mb-3">年轻人更愿意为情绪价值买单，文创产品成为新标配</p>
+                                <img src="https://picsum.photos/seed/related2/400/200" alt="杭州文博会" class="w-full h-32 object-cover rounded-lg mb-4">
+                                <h3 class="text-lg font-semibold mb-2 text-text-dark">好看好逛又好玩！第十九届杭州文博会开幕</h3>
+                                <p class="text-text-medium text-sm mb-3">10月17-20日，白马湖主会场+28个分会场，全城联动“创意杭州·联通世界”。</p>
                                 <div class="flex justify-between items-center text-xs text-text-light">
-                                    <span>2025-09-23</span>
-                                    <span>6分钟阅读</span>
+                                    <span>2025-10-18</span>
+                                    <span>5分钟阅读</span>
                                 </div>
                             </article>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Sidebar -->
                 <div class="lg:col-span-1">
                     <!-- Search -->
@@ -247,79 +199,55 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Categories -->
                     <div class="sidebar-card p-6 mb-6 fade-in stagger-3">
                         <h3 class="text-lg font-semibold mb-4 text-text-dark">分类浏览</h3>
                         <div class="space-y-2">
-                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">
-                                政策解读
-                            </a>
-                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">
-                                数字艺术
-                            </a>
-                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">
-                                文创产品
-                            </a>
-                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">
-                                投资动态
-                            </a>
-                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">
-                                市场趋势
-                            </a>
+                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">政策解读</a>
+                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">数字艺术</a>
+                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">文创产品</a>
+                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">投资动态</a>
+                            <a href="#" class="block px-3 py-2 text-text-medium hover:bg-accent-gold hover:text-white rounded-lg transition-colors">市场趋势</a>
                         </div>
                     </div>
-                    
+
                     <!-- Popular Tags -->
                     <div class="sidebar-card p-6 mb-6 fade-in stagger-4">
                         <h3 class="text-lg font-semibold mb-4 text-text-dark">热门标签</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                投融资
-                            </span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                AI+文化
-                            </span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                数字艺术
-                            </span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                博物馆
-                            </span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                国潮
-                            </span>
-                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">
-                                VR/AR
-                            </span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">绿色航运</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">岭南文化</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">杭州文博</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">物流降本</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">AI+储能</span>
+                            <span class="bg-soft-gold text-accent-gold px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:bg-accent-gold hover:text-white transition-colors">故宫AI玩具</span>
                         </div>
                     </div>
-                    
+
                     <!-- Recent News -->
                     <div class="sidebar-card p-6 fade-in stagger-4">
                         <h3 class="text-lg font-semibold mb-4 text-text-dark">最新资讯</h3>
                         <div class="space-y-4">
                             <div class="flex items-start">
-                                <img src="https://picsum.photos/seed/recent1/60/60.jpg" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
+                                <img src="https://picsum.photos/seed/recent1/60/60" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
                                 <div>
-                                    <h4 class="text-sm font-medium text-text-dark mb-1">博物馆文创销售额增长20倍</h4>
-                                    <p class="text-xs text-text-light">2025-09-21</p>
+                                    <h4 class="text-sm font-medium text-text-dark mb-1">国常会再提物流降本四条</h4>
+                                    <p class="text-xs text-text-light">2025-10-17</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start">
-                                <img src="https://picsum.photos/seed/recent2/60/60.jpg" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
+                                <img src="https://picsum.photos/seed/recent2/60/60" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
                                 <div>
-                                    <h4 class="text-sm font-medium text-text-dark mb-1">低空经济+文旅融合发展</h4>
-                                    <p class="text-xs text-text-light">2025-09-20</p>
+                                    <h4 class="text-sm font-medium text-text-dark mb-1">OpenAI 5%付费率待翻倍</h4>
+                                    <p class="text-xs text-text-light">2025-10-18</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start">
-                                <img src="https://picsum.photos/seed/recent3/60/60.jpg" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
+                                <img src="https://picsum.photos/seed/recent3/60/60" alt="新闻" class="w-12 h-12 rounded-lg object-cover mr-3">
                                 <div>
-                                    <h4 class="text-sm font-medium text-text-dark mb-1">VR+文化项目占比超30%</h4>
-                                    <p class="text-xs text-text-light">2025-09-19</p>
+                                    <h4 class="text-sm font-medium text-text-dark mb-1">前三季度居民收入增5.1%</h4>
+                                    <p class="text-xs text-text-light">2025-10-19</p>
                                 </div>
                             </div>
                         </div>

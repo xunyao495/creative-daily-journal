@@ -9,457 +9,547 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{
-            --primary-white:#ffffff;
-            --warm-white:#fefefe;
-            --light-gray:#f8f9fa;
-            --soft-gray:#e9ecef;
-            --accent-gold:#d4af37;
-            --soft-gold:#f4e4a6;
-            --text-dark:#000000;
-            --text-medium:#000000;
-            --text-light:#000000;
-            --border-light:#e8e9ea;
-            --shadow-light:rgba(0,0,0,.08);
+        :root {
+            --primary-white: #ffffff;
+            --warm-white: #fefefe;
+            --light-gray: #f8f9fa;
+            --soft-gray: #e9ecef;
+            --accent-gold: #d4af37;
+            --soft-gold: #f4e4a6;
+            --text-dark: #000000;
+            --text-medium: #000000;
+            --text-light: #000000;
+            --border-light: #e8e9ea;
+            --shadow-light: rgba(0, 0, 0, 0.08);
         }
-        body{
-            font-family:'Noto Sans SC','Inter',sans-serif;
-            background:linear-gradient(135deg,var(--warm-white) 0%,var(--light-gray) 100%);
-            color:var(--text-dark);
-            line-height:1.7;
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
         }
-        .hero-title{
-            font-family:'Playfair Display',serif;
-            background:linear-gradient(135deg,var(--accent-gold) 0%,#f39c12 100%);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-            background-clip:text;
-            font-weight:600;
-            letter-spacing:-.02em;
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
-        .nav-blur{
-            backdrop-filter:blur(20px);
-            background:rgba(255,255,255,.95);
-            border-bottom:1px solid var(--border-light);
-            box-shadow:0 2px 20px var(--shadow-light);
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: 0 2px 20px var(--shadow-light);
         }
-        .chart-container{
-            background:rgba(255,255,255,.98);
-            border:1px solid var(--border-light);
-            transition:all .4s cubic-bezier(.4,0,.2,1);
-            box-shadow:0 4px 16px var(--shadow-light);
-            border-radius:16px;
+        .chart-container {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-light);
+            border-radius: 16px;
         }
-        .chart-container:hover{
-            transform:translateY(-4px);
-            box-shadow:0 12px 32px rgba(0,0,0,.12);
-            border-color:var(--accent-gold);
+        .chart-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-gold);
         }
-        .metric-card{
-            background:rgba(255,255,255,.98);
-            border:1px solid var(--border-light);
-            transition:all .4s cubic-bezier(.4,0,.2,1);
-            box-shadow:0 4px 16px var(--shadow-light);
-            border-radius:16px;
+        .metric-card {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-light);
+            border-radius: 16px;
         }
-        .metric-card:hover{
-            transform:translateY(-6px);
-            box-shadow:0 20px 40px rgba(0,0,0,.15);
-            border-color:var(--accent-gold);
+        .metric-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-gold);
         }
-        .trend-number{
-            font-family:'Inter',sans-serif;
-            font-weight:700;
-            color:var(--accent-gold);
+        .trend-number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            color: var(--accent-gold);
         }
-        .filter-tab{
-            transition:all .3s ease;
-            cursor:pointer;
+        .filter-tab {
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
-        .filter-tab.active{
-            background:var(--accent-gold);
-            color:#fff;
-            box-shadow:0 4px 12px rgba(212,175,55,.3);
+        .filter-tab.active {
+            background: var(--accent-gold);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
-        .fade-in{
-            opacity:0;
-            transform:translateY(20px);
-            animation:fadeInUp .6s ease forwards;
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
         }
-        @keyframes fadeInUp{
-            to{opacity:1;transform:translateY(0);}
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
         }
-        .floating-animation{
-            animation:float 6s ease-in-out infinite;
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
         }
-        @keyframes float{
-            0%,100%{transform:translateY(0);}
-            50%{transform:translateY(-10px);}
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
-        .flip-counter{
-            display:inline-block;
-            position:relative;
-            font-variant-numeric:tabular-nums;
+        .flip-counter {
+            display: inline-block;
+            font-variant-numeric: tabular-nums;
         }
-        /* ===== 悬停放大连线时间轴 ===== */
-        .tl-month-axis{position:relative;margin:3rem 0 4rem;height:2px;background:#e8e9ea;}
-        .tl-month-dot{position:absolute;top:-6px;width:14px;height:14px;background:var(--accent-gold);border-radius:50%;transform:translateX(-50%);cursor:pointer;transition:transform .2s;}
-        .tl-month-dot:hover{transform:translateX(-50%) scale(1.3);}
-        .tl-month-label{position:absolute;top:22px;transform:translateX(-50%);font-size:12px;color:#000;white-space:nowrap;}
-        /* 事件微点 */
-        .tl-event-dot{position:absolute;top:-5px;width:10px;height:10px;background:#d4af37;border-radius:50%;transform:translateX(-50%);cursor:pointer;z-index:10;}
-        /* 微卡片（默认极小） */
-        .tl-micro-card{position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:120px;padding:6px 8px;background:#fff;border:1px solid #e8e9ea;border-radius:8px;font-size:11px;color:#000;box-shadow:0 2px 6px rgba(0,0,0,.08);pointer-events:none;opacity:0;transition:opacity .3s;}
-        .tl-micro-card.show{opacity:1;}
-        .tl-micro-card::after{content:'';position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #e8e9ea;}
-        /* 放大卡片（悬停出现） */
-        .tl-hover-card{position:absolute;top:-200px;left:50%;transform:translateX(-50%) scale(0);width:280px;background:#fff;border:1px solid var(--accent-gold);border-radius:12px;padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.15);z-index:20;transition:transform .3s ease,opacity .3s ease;opacity:0;pointer-events:none;}
-        .tl-hover-card.show{transform:translateX(-50%) scale(1);opacity:1;pointer-events:auto;}
-        .tl-hover-card::after{content:'';position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid var(--accent-gold);}
+        /* 时间轴样式 */
+        .tl-month-axis {
+            position: relative;
+            margin: 3rem 0 4rem;
+            height: 2px;
+            background: #e8e9ea;
+        }
+        .tl-month-dot {
+            position: absolute;
+            top: -6px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .tl-month-dot:hover {
+            transform: translateX(-50%) scale(1.3);
+        }
+        .tl-month-label {
+            position: absolute;
+            top: 22px;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #000;
+            white-space: nowrap;
+        }
+        .tl-event-dot {
+            position: absolute;
+            top: -5px;
+            width: 10px;
+            height: 10px;
+            background: #d4af37;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+        .tl-micro-card {
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            padding: 6px 8px;
+            background: #fff;
+            border: 1px solid #e8e9ea;
+            border-radius: 8px;
+            font-size: 11px;
+            color: #000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tl-micro-card.show {
+            opacity: 1;
+        }
+        .tl-micro-card::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #e8e9ea;
+        }
+        .tl-hover-card {
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 280px;
+            background: #fff;
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            z-index: 20;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .tl-hover-card.show {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .tl-hover-card::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid var(--accent-gold);
+        }
     </style>
 </head>
 <body class="text-black">
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 nav-blur">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
-            </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-8">
-                    <a href="index.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
-                    <a href="news.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
-                    <a href="trends.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">趋势分析</a>
-                    <a href="about.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                        <a href="news.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                        <a href="trends.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">趋势分析</a>
+                        <a href="about.html" class="text-black hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero -->
-<section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto text-center fade-in">
-        <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">文创市场趋势分析</h1>
-        <p class="text-xl text-black mb-8">深度解析文创产业发展动态，把握市场脉搏</p>
-        <div class="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm text-black border border-border-light shadow-light">
-            <svg xmlns="http://www.w3.org/2000/svg  " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <span id="today-chip"></span>
-        </div>
-    </div>
-</section>
-
-<!-- Key Metrics -->
-<section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-12 text-black">关键指标概览</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="metric-card p-6 text-center floating-animation">
-                <div class="trend-number text-4xl mb-2 flip-counter" data-target="88.9">0</div>
-                <p class="text-black mb-1">投融资增长率</p>
-                <p class="text-xs text-black">2025上半年</p>
-                <a href="https://www.199it.com/archives/1673865.html  " target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：199IT</a>
-            </div>
-            <div class="metric-card p-6 text-center floating-animation" style="animation-delay:.2s">
-                <div class="trend-number text-4xl mb-2 flip-counter" data-target="1000">0</div>
-                <p class="text-black mb-1">数字艺术市场</p>
-                <p class="text-xs text-black">美元规模</p>
-                <a href="https://www.artnet.com/press-releases/art-tech-report-2025  " target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：ArtTech Report</a>
-            </div>
-            <div class="metric-card p-6 text-center floating-animation" style="animation-delay:.4s">
-                <div class="trend-number text-4xl mb-2 flip-counter" data-target="30">0</div>
-                <p class="text-black mb-1">VR项目占比</p>
-                <p class="text-xs text-black">文化领域应用</p>
-                <a href="https://www.mckinsey.com/industries/technology/our-insights/the-state-of-vr-in-culture-2025  " target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：McKinsey</a>
-            </div>
-            <div class="metric-card p-6 text-center floating-animation" style="animation-delay:.6s">
-                <div class="trend-number text-4xl mb-2 flip-counter" data-target="2000">0</div>
-                <p class="text-black mb-1">博物馆文创</p>
-                <p class="text-xs text-black">产品种类增长</p>
-                <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html  " target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：国家文物局</a>
+    <!-- Hero -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">文创市场趋势分析</h1>
+            <p class="text-xl text-black mb-8">深度解析文创产业发展动态，把握市场脉搏</p>
+            <div class="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm text-black border border-border-light shadow-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span id="today-chip"></span>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- 实时资讯 -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-    <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-10 text-black">实时资讯·数据更新</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="live-news"></div>
-    </div>
-</section>
-
-<!-- Charts -->
-<section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-10 text-black">数据分析图表</h2>
-        <div class="flex flex-wrap justify-center gap-4 mb-10">
-            <button class="filter-tab active px-5 py-2 rounded-full text-sm" data-period="year">年度趋势</button>
-            <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-black hover:bg-accent-gold hover:text-white" data-period="quarter">季度分析</button>
-            <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-black hover:bg-accent-gold hover:text-white" data-period="month">月度数据</button>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div class="chart-container p-6">
-                <h3 class="text-xl font-semibold mb-4 text-black">文创产业市场规模增长趋势</h3>
-                <div id="market-growth-chart" style="height:380px;"></div>
-                <div class="text-xs text-black mt-2">数据来源：国家统计局《2025文化及相关产业统计年鉴》</div>
-            </div>
-            <div class="chart-container p-6">
-                <h3 class="text-xl font-semibold mb-4 text-black">投资分布情况</h3>
-                <div id="investment-chart" style="height:380px;"></div>
-                <div class="text-xs text-black mt-2">数据来源：IT桔子《2025H1文化科技投融资报告》</div>
-            </div>
-            <div class="chart-container p-6">
-                <h3 class="text-xl font-semibold mb-4 text-black">细分领域发展趋势</h3>
-                <div id="category-chart" style="height:380px;"></div>
-                <div class="text-xs text-black mt-2">数据来源：ArtTech研究院《2025Q2数字艺术追踪》</div>
-            </div>
-            <div class="chart-container p-6">
-                <h3 class="text-xl font-semibold mb-4 text-black">区域发展分析</h3>
-                <div id="regional-chart" style="height:380px;"></div>
-                <div class="text-xs text-black mt-2">数据来源：各地2025年统计公报&天眼查</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 横向时间轴 + 悬停放大连线 -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-    <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-6 text-black">2025 文创大事件时间轴</h2>
-
-        <!-- 月份刻度轴 -->
-        <div class="tl-month-axis" id="month-axis"></div>
-
-        <!-- 事件点 & 微卡片 & 悬停卡片 -->
-        <div class="relative flex items-center justify-between overflow-x-auto gap-6 px-4" id="timeline-area"></div>
-    </div>
-</section>
-
-<!-- 深度解读 -->
-<section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto fade-in">
-        <h2 class="text-3xl font-bold text-center mb-12 text-black">深度趋势解读</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="chart-container p-6 floating-animation">
-                <div class="flex items-center mb-4">
-                    <span class="text-2xl mr-3">📈</span>
-                    <h3 class="text-lg font-semibold text-black">数字文创崛起</h3>
+    <!-- Key Metrics -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">关键指标概览</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="metric-card p-6 text-center floating-animation">
+                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="88.9">0</div>
+                    <p class="text-black mb-1">投融资增长率</p>
+                    <p class="text-xs text-black">2025上半年</p>
+                    <a href="https://www.199it.com/archives/1673865.html" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：199IT</a>
                 </div>
-                <p class="text-black text-sm leading-relaxed mb-3">AI与文化创意深度融合，推动数字艺术市场2025年突破千亿美元。VR/AR沉浸式体验占比达30%，成为投资热点。</p>
-                <a href="https://www.arttech-report.com/2025  " target="_blank" class="text-xs text-accent-gold">数据来源：ArtTech Report 2025</a>
-            </div>
-            <div class="chart-container p-6 floating-animation" style="animation-delay:.2s">
-                <div class="flex items-center mb-4">
-                    <span class="text-2xl mr-3">🏛️</span>
-                    <h3 class="text-lg font-semibold text-black">博物馆文创爆发</h3>
+                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.2s">
+                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="1000">0</div>
+                    <p class="text-black mb-1">数字艺术市场</p>
+                    <p class="text-xs text-black">美元规模</p>
+                    <a href="https://www.artnet.com/press-releases/art-tech-report-2025" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：ArtTech Report</a>
                 </div>
-                <p class="text-black text-sm leading-relaxed mb-3">传统文化IP现代化转型加速，2025年博物馆文创产品种类同比增2000%，销售额增长20倍。</p>
-                <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html  " target="_blank" class="text-xs text-accent-gold">数据来源：国家文物局2025年报</a>
-            </div>
-            <div class="chart-container p-6 floating-animation" style="animation-delay:.4s">
-                <div class="flex items-center mb-4">
-                    <span class="text-2xl mr-3">🚀</span>
-                    <h3 class="text-lg font-semibold text-black">投资热情高涨</h3>
+                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.4s">
+                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="30">0</div>
+                    <p class="text-black mb-1">VR项目占比</p>
+                    <p class="text-xs text-black">文化领域应用</p>
+                    <a href="https://www.mckinsey.com/industries/technology/our-insights/the-state-of-vr-in-culture-2025" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：McKinsey</a>
                 </div>
-                <p class="text-black text-sm leading-relaxed mb-3">2025H1文化科技投融资额同比增88.9%，AI+文化项目占总量40%，区块链确权规模达10万件/日。</p>
-                <a href="https://www.199it.com/archives/1673865.html  " target="_blank" class="text-xs text-accent-gold">数据来源：199IT《2025H1文创投融资报告》</a>
+                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.6s">
+                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="2000">0</div>
+                    <p class="text-black mb-1">博物馆文创</p>
+                    <p class="text-xs text-black">产品种类增长</p>
+                    <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：国家文物局</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-gray-100 text-black py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-            <h3 class="text-2xl font-bold gradient-text mb-4">文创每日手账</h3>
-            <p class="text-black mb-4">每天十分钟，一起学习文创市场动态</p>
-            <p class="text-sm text-black">© 2025 鳞迹文化创意有限公司 版权所有</p>
+    <!-- 实时资讯 -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+        <div class="max-w-7xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold text-center mb-10 text-black">实时资讯·数据更新</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="live-news"></div>
         </div>
-        <div>
-            <h4 class="text-lg font-semibold mb-4">核心数据源</h4>
-            <ul class="space-y-2 text-black text-sm">
-                <li>• <a href="https://www.sach.gov.cn  " target="_blank" class="hover:text-accent-gold">国家文物局</a></li>
-                <li>• <a href="https://www.199it.com  " target="_blank" class="hover:text-accent-gold">199IT</a></li>
-                <li>• <a href="https://www.artnet.com  " target="_blank" class="hover:text-accent-gold">ArtNet</a></li>
-                <li>• <a href="https://www.mckinsey.com  " target="_blank" class="hover:text-accent-gold">McKinsey</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="text-lg font-semibold mb-4">联系我们</h4>
-            <div class="space-y-2 text-black text-sm">
-                <p>📞 86-18210095234</p>
-                <p>📍 北京市东城区环球贸易大厦A座3层</p>
-                <p>📧 mistoraworld@163.com</p>
+    </section>
+
+    <!-- Charts -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold text-center mb-10 text-black">数据分析图表</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <button class="filter-tab active px-5 py-2 rounded-full text-sm" data-period="year">年度趋势</button>
+                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-black hover:bg-accent-gold hover:text-white" data-period="quarter">季度分析</button>
+                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-black hover:bg-accent-gold hover:text-white" data-period="month">月度数据</button>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="chart-container p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-black">文创产业市场规模增长趋势</h3>
+                    <div id="market-growth-chart" style="height: 380px;"></div>
+                    <div class="text-xs text-black mt-2">数据来源：国家统计局《2025文化及相关产业统计年鉴》</div>
+                </div>
+                <div class="chart-container p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-black">投资分布情况</h3>
+                    <div id="investment-chart" style="height: 380px;"></div>
+                    <div class="text-xs text-black mt-2">数据来源：IT桔子《2025H1文化科技投融资报告》</div>
+                </div>
+                <div class="chart-container p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-black">细分领域发展趋势</h3>
+                    <div id="category-chart" style="height: 380px;"></div>
+                    <div class="text-xs text-black mt-2">数据来源：ArtTech研究院《2025Q2数字艺术追踪》</div>
+                </div>
+                <div class="chart-container p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-black">区域发展分析</h3>
+                    <div id="regional-chart" style="height: 380px;"></div>
+                    <div class="text-xs text-black mt-2">数据来源：各地2025年统计公报&天眼查</div>
+                </div>
             </div>
         </div>
-        <div>
-            <h4 class="text-lg font-semibold mb-4">数据下载</h4>
-            <a href="/data/2025-cultural-creative-industry-report.xlsx" class="inline-flex items-center gap-2 bg-accent-gold text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 transition">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-                下载完整报告
-            </a>
+    </section>
+
+    <!-- 横向时间轴 + 悬停放大连线 -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+        <div class="max-w-7xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold text-center mb-6 text-black">2025 文创大事件时间轴</h2>
+            <!-- 月份刻度轴 -->
+            <div class="tl-month-axis" id="month-axis"></div>
+            <!-- 事件点 & 微卡片 & 悬停卡片 -->
+            <div class="relative flex items-center justify-between overflow-x-auto gap-6 px-4" id="timeline-area"></div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script>
-/* 今日日期 */
-const today=new Date();
-const weekdays=['周日','周一','周二','周三','周四','周五','周六'];
-document.getElementById('today-chip').textContent=`${today.getMonth()+1}月${today.getDate()}日 ${weekdays[today.getDay()]}`;
-
-/* 数字翻牌 */
-document.querySelectorAll('.flip-counter').forEach(el=>{
-    const target=parseFloat(el.dataset.target);
-    const duration=1200;
-    const step=target/(duration/16);
-    let current=0;
-    const timer=setInterval(()=>{
-        current+=step;
-        if(current>=target){current=target;clearInterval(timer);}
-        el.textContent=current.toFixed(el.dataset.decimal||0);
-    },16);
-});
-
-/* 实时资讯 */
-const liveNews=[
-    {title:'2025中国数字文创版权大会在杭召开',summary:'区块链确权平台“文版链3.0”上线，首日确权量破10万件',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521 '},
-    {title:'上海数据交易所开通“数字文创专板”',summary:'大闹天宫数字藏品IP以1200万元成交，首日挂牌破百项',source:'上海数交所',url:'https://www.sde.com.cn/news/20250929/11223 '},
-    {title:'四川上线“非遗数字版权保护一张图”',summary:'系统覆盖2187项非遗资源，3秒生成维权报告',source:'四川省版权局',url:'https://www.scopyright.gov.cn/news/20250927/13321 '}
-];
-document.getElementById('live-news').innerHTML=liveNews.map(item=>`
-<div class="chart-container p-5 flex flex-col justify-between">
-    <div>
-        <h3 class="font-semibold text-black mb-2">${item.title}</h3>
-        <p class="text-sm text-black mb-3">${item.summary}</p>
-    </div>
-    <div class="flex justify-between items-center text-xs">
-        <span class="text-black">${item.source}</span>
-        <a href="${item.url}" target="_blank" class="text-accent-gold hover:underline">查看原文</a>
-    </div>
-</div>`).join('');
-
-/* 时间轴数据 */
-const timeline=[
-    {date:'2025-01-15',title:'《人工智能生成合成内容标识办法》正式施行',desc:'AI文创平台须嵌入“隐形水印+可读标签”，违规最高罚款年营收5%。',source:'网易新闻',url:'http://163.com/dy/article/K0B5LTLN05199DKK.html '},
-    {date:'2025-03-20',title:'2025成都国际数字文创季启动',desc:'发放450万元电子消费福袋，首次提出“票根经济”概念。',source:'川观新闻',url:'https://cbgc.scol.com.cn/news/6793384 '},
-    {date:'2025-06-18',title:'广州互联网法院发布数字体育纠纷十大案例',desc:'明确NFT球星卡版权归属，为文创维权提供样本。',source:'广州互联网法院',url:'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a '},
-    {date:'2025-09-29',title:'2025中国数字文创版权大会召开',desc:'“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。',source:'国家版权局',url:'https://www.ncac.gov.cn/news/20250929/5521 '}
-];
-
-/* 渲染时间轴 + 月份刻度 + 悬停放大连线 */
-const area=document.getElementById('timeline-area');
-const monthAxis=document.getElementById('month-axis');
-
-/* 生成月份刻度 */
-const months=['2025.01','2025.02','2025.03','2025.04','2025.05','2025.06','2025.07','2025.08','2025.09','2025.10','2025.11','2025.12'];
-monthAxis.innerHTML=months.map((m,i)=>{
-    const left=(i/(months.length-1))*100;
-    return`<div class="tl-month-dot" style="left:${left}%"></div>
-           <div class="tl-month-label" style="left:${left}%">${m}</div>`;
-}).join('');
-
-/* 计算事件在轴上的位置 */
-function getPosition(dateStr){
-    const d=new Date(dateStr);
-    const start=new Date('2025-01-01');
-    const end=new Date('2025-12-31');
-    return ((d-start)/(end-start))*100;
-}
-
-/* 生成事件点 & 微卡片 & 悬停卡片 */
-area.innerHTML=timeline.map(ev=>{
-    const pos=getPosition(ev.date);
-    return`
-    <div class="relative" style="left:${pos}%;">
-        <!-- 事件点 -->
-        <div class="tl-event-dot" data-pos="${pos}"></div>
-        <!-- 微卡片（极小简介） -->
-        <div class="tl-micro-card">
-            <div class="font-semibold text-black text-xs">${ev.date}</div>
-            <div class="text-black text-xs mt-1">${ev.title}</div>
-        </div>
-        <!-- 悬停卡片（放大详情） -->
-        <div class="tl-hover-card">
-            <div class="text-xs text-accent-gold font-medium mb-1">${ev.date}</div>
-            <h3 class="font-semibold text-black mb-1">${ev.title}</h3>
-            <p class="text-sm text-black mb-2">${ev.desc}</p>
-            <div class="flex justify-between items-center text-xs">
-                <span class="text-black">来源：${ev.source}</span>
-                <a href="${ev.url}" target="_blank" class="text-accent-gold hover:underline">原文</a>
+    <!-- 深度解读 -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto fade-in">
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">深度趋势解读</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="chart-container p-6 floating-animation">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">📈</span>
+                        <h3 class="text-lg font-semibold text-black">数字文创崛起</h3>
+                    </div>
+                    <p class="text-black text-sm leading-relaxed mb-3">AI与文化创意深度融合，推动数字艺术市场2025年突破千亿美元。VR/AR沉浸式体验占比达30%，成为投资热点。</p>
+                    <a href="https://www.arttech-report.com/2025" target="_blank" class="text-xs text-accent-gold">数据来源：ArtTech Report 2025</a>
+                </div>
+                <div class="chart-container p-6 floating-animation" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🏛️</span>
+                        <h3 class="text-lg font-semibold text-black">博物馆文创爆发</h3>
+                    </div>
+                    <p class="text-black text-sm leading-relaxed mb-3">传统文化IP现代化转型加速，2025年博物馆文创产品种类同比增2000%，销售额增长20倍。</p>
+                    <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html" target="_blank" class="text-xs text-accent-gold">数据来源：国家文物局2025年报</a>
+                </div>
+                <div class="chart-container p-6 floating-animation" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🚀</span>
+                        <h3 class="text-lg font-semibold text-black">投资热情高涨</h3>
+                    </div>
+                    <p class="text-black text-sm leading-relaxed mb-3">2025H1文化科技投融资额同比增88.9%，AI+文化项目占总量40%，区块链确权规模达10万件/日。</p>
+                    <a href="https://www.199it.com/archives/1673865.html" target="_blank" class="text-xs text-accent-gold">数据来源：199IT《2025H1文创投融资报告》</a>
+                </div>
             </div>
         </div>
-    </div>`;
-}).join('');
+    </section>
 
-/* 悬停逻辑：鼠标进入事件点 → 显示放大卡片 */
-document.querySelectorAll('.tl-event-dot').forEach(dot=>{
-    const card=dot.parentElement.querySelector('.tl-hover-card');
-    const micro=dot.parentElement.querySelector('.tl-micro-card');
-    micro.classList.add('show');               // 默认显示微卡片
-    dot.addEventListener('mouseenter',()=>{
-        micro.classList.remove('show');
-        card.classList.add('show');
-    });
-    dot.addEventListener('mouseleave',()=>{
-        card.classList.remove('show');
-        micro.classList.add('show');
-    });
-});
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-black py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold gradient-text mb-4">文创每日手账</h3>
+                <p class="text-black mb-4">每天十分钟，一起学习文创市场动态</p>
+                <p class="text-sm text-black">© 2025 鳞迹文化创意有限公司 版权所有</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">核心数据源</h4>
+                <ul class="space-y-2 text-black text-sm">
+                    <li>• <a href="https://www.sach.gov.cn" target="_blank" class="hover:text-accent-gold">国家文物局</a></li>
+                    <li>• <a href="https://www.199it.com" target="_blank" class="hover:text-accent-gold">199IT</a></li>
+                    <li>• <a href="https://www.artnet.com" target="_blank" class="hover:text-accent-gold">ArtNet</a></li>
+                    <li>• <a href="https://www.mckinsey.com" target="_blank" class="hover:text-accent-gold">McKinsey</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">联系我们</h4>
+                <div class="space-y-2 text-black text-sm">
+                    <p>📞 86-18210095234</p>
+                    <p>📍 北京市东城区环球贸易大厦A座3层</p>
+                    <p>📧 mistoraworld@163.com</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">数据下载</h4>
+                <a href="/data/2025-cultural-creative-industry-report.xlsx" class="inline-flex items-center gap-2 bg-accent-gold text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-600 transition">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                    下载完整报告
+                </a>
+            </div>
+        </div>
+    </footer>
 
-/* 图表初始化 */
-function initChart(id,type,option){
-    const chart=echarts.init(document.getElementById(id));
-    chart.setOption(option);
-    window.addEventListener('resize',()=>chart.resize());
-    return chart;
-}
-const marketChart=initChart('market-growth-chart','line',{
-    tooltip:{trigger:'axis',backgroundColor:'rgba(255,255,255,.95)',borderColor:'#d4af37',textStyle:{color:'#2c3e50'}},
-    grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
-    xAxis:{type:'category',data:['2020','2021','2022','2023','2024','2025'],axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'}},
-    yAxis:{type:'value',name:'市场规模(亿元)',axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'},splitLine:{lineStyle:{color:'#f8f9fa'}}},
-    series:[{name:'文创产业市场规模',type:'line',smooth:true,data:[2800,3200,3800,4500,5200,6000],lineStyle:{color:'#d4af37',width:3},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(212,175,55,.3)'},{offset:1,color:'rgba(212,175,55,.1)'}]}},itemStyle:{color:'#d4af37',borderColor:'#fff',borderWidth:2}}]
-});
-const investChart=initChart('investment-chart','pie',{
-    tooltip:{trigger:'item',backgroundColor:'rgba(255,255,255,.95)',borderColor:'#d4af37',textStyle:{color:'#2c3e50'}},
-    series:[{name:'投资分布',type:'pie',radius:['40%','70%'],data:[{value:35,name:'数字艺术',itemStyle:{color:'#d4af37'}},{value:25,name:'文创产品',itemStyle:{color:'#f39c12'}},{value:20,name:'VR/AR',itemStyle:{color:'#e67e22'}},{value:12,name:'博物馆文创',itemStyle:{color:'#f1c40f'}},{value:8,name:'其他',itemStyle:{color:'#ecf0f1'}}],label:{color:'#2c3e50',fontSize:12},emphasis:{itemStyle:{shadowBlur:10,shadowOffsetX:0,shadowColor:'rgba(0,0,0,.5)'}}}]
-});
-const categoryChart=initChart('category-chart','bar',{
-    tooltip:{trigger:'axis',backgroundColor:'rgba(255,255,255,.95)',borderColor:'#d4af37',textStyle:{color:'#2c3e50'}},
-    legend:{data:['数字艺术','文创产品','VR/AR'],textStyle:{color:'#5a6c7d'}},
-    grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
-    xAxis:{type:'category',data:['Q1','Q2','Q3','Q4'],axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'}},
-    yAxis:{type:'value',name:'增长率(%)',axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'},splitLine:{lineStyle:{color:'#f8f9fa'}}},
-    series:[{name:'数字艺术',type:'bar',data:[45,52,61,73],itemStyle:{color:'#d4af37'}},{name:'文创产品',type:'bar',data:[38,42,48,55],itemStyle:{color:'#f39c12'}},{name:'VR/AR',type:'bar',data:[28,35,42,51],itemStyle:{color:'#e67e22'}}]
-});
-const regionalChart=initChart('regional-chart','bar',{
-    tooltip:{trigger:'axis',backgroundColor:'rgba(255,255,255,.95)',borderColor:'#d4af37',textStyle:{color:'#2c3e50'}},
-    grid:{left:'3%',right:'4%',bottom:'3%',containLabel:true},
-    xAxis:{type:'value',axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'},splitLine:{lineStyle:{color:'#f8f9fa'}}},
-    yAxis:{type:'category',data:['北京','上海','深圳','成都','杭州','西安'],axisLine:{lineStyle:{color:'#e8e9ea'}},axisLabel:{color:'#5a6c7d'}},
-    series:[{name:'文创产业规模',type:'bar',data:[1200,980,750,620,480,380],itemStyle:{color:function(params){const colors=['#d4af37','#f39c12','#e67e22','#f1c40f','#ecf0f1','#95a5a6'];return colors[params.dataIndex];}}}]
-});
+    <script>
+        /* 今日日期 */
+        const today = new Date();
+        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        document.getElementById('today-chip').textContent = `${today.getMonth() + 1}月${today.getDate()}日 ${weekdays[today.getDay()]}`;
 
-/* 筛选切换 */
-document.querySelectorAll('.filter-tab').forEach(tab=>{
-    tab.addEventListener('click',function(){
-        document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
-        this.classList.add('active');
-        const p=this.dataset.period;
-        // 这里可替换不同时间段数据
-        console.log('切换至',p);
-    });
-});
-</script>
+        /* 数字翻牌 */
+        document.querySelectorAll('.flip-counter').forEach(el => {
+            const target = parseFloat(el.dataset.target);
+            const duration = 1200;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) { current = target; clearInterval(timer); }
+                el.textContent = current.toFixed(el.dataset.decimal || 0);
+            }, 16);
+        });
+
+        /* 实时资讯 */
+        const liveNews = [
+            { title: '2025中国数字文创版权大会在杭召开', summary: '区块链确权平台“文版链3.0”上线，首日确权量破10万件', source: '国家版权局', url: 'https://www.ncac.gov.cn/news/20250929/5521' },
+            { title: '上海数据交易所开通“数字文创专板”', summary: '大闹天宫数字藏品IP以1200万元成交，首日挂牌破百项', source: '上海数交所', url: 'https://www.sde.com.cn/news/20250929/11223' },
+            { title: '四川上线“非遗数字版权保护一张图”', summary: '系统覆盖2187项非遗资源，3秒生成维权报告', source: '四川省版权局', url: 'https://www.scopyright.gov.cn/news/20250927/13321' }
+        ];
+        document.getElementById('live-news').innerHTML = liveNews.map(item => `
+            <div class="chart-container p-5 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-semibold text-black mb-2">${item.title}</h3>
+                    <p class="text-sm text-black mb-3">${item.summary}</p>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-black">${item.source}</span>
+                    <a href="${item.url}" target="_blank" class="text-accent-gold hover:underline">查看原文</a>
+                </div>
+            </div>`).join('');
+
+        /* 时间轴数据 */
+        const timeline = [
+            { date: '2025-01-15', title: '《人工智能生成合成内容标识办法》正式施行', desc: 'AI文创平台须嵌入“隐形水印+可读标签”，违规最高罚款年营收5%。', source: '网易新闻', url: 'http://163.com/dy/article/K0B5LTLN05199DKK.html' },
+            { date: '2025-03-20', title: '2025成都国际数字文创季启动', desc: '发放450万元电子消费福袋，首次提出“票根经济”概念。', source: '川观新闻', url: 'https://cbgc.scol.com.cn/news/6793384' },
+            { date: '2025-06-18', title: '广州互联网法院发布数字体育纠纷十大案例', desc: '明确NFT球星卡版权归属，为文创维权提供样本。', source: '广州互联网法院', url: 'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a' },
+            { date: '2025-09-29', title: '2025中国数字文创版权大会召开', desc: '“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。', source: '国家版权局', url: 'https://www.ncac.gov.cn/news/20250929/5521' }
+        ];
+
+        /* 渲染时间轴 + 月份刻度 + 悬停卡片 */
+        const area = document.getElementById('timeline-area');
+        const monthAxis = document.getElementById('month-axis');
+
+        /* 生成月份刻度 */
+        const months = ['2025.01', '2025.02', '2025.03', '2025.04', '2025.05', '2025.06', '2025.07', '2025.08', '2025.09', '2025.10', '2025.11', '2025.12'];
+        monthAxis.innerHTML = months.map((m, i) => {
+            const left = (i / (months.length - 1)) * 100;
+            return `<div class="tl-month-dot" style="left:${left}%"></div>
+                    <div class="tl-month-label" style="left:${left}%">${m}</div>`;
+        }).join('');
+
+        /* 计算事件在轴上的位置 */
+        function getPosition(dateStr) {
+            const d = new Date(dateStr);
+            const start = new Date('2025-01-01');
+            const end = new Date('2025-12-31');
+            return ((d - start) / (end - start)) * 100;
+        }
+
+        /* 生成事件点 & 微卡片 & 悬停卡片 */
+        area.innerHTML = timeline.map(ev => {
+            const pos = getPosition(ev.date);
+            return `
+            <div class="relative" style="left:${pos}%;">
+                <!-- 事件点 -->
+                <div class="tl-event-dot" data-pos="${pos}"></div>
+                <!-- 微卡片（极小简介） -->
+                <div class="tl-micro-card">
+                    <div class="font-semibold text-black text-xs">${ev.date}</div>
+                    <div class="text-black text-xs mt-1">${ev.title}</div>
+                </div>
+                <!-- 悬停卡片（放大详情） -->
+                <div class="tl-hover-card">
+                    <div class="text-xs text-accent-gold font-medium mb-1">${ev.date}</div>
+                    <h3 class="font-semibold text-black mb-1">${ev.title}</h3>
+                    <p class="text-sm text-black mb-2">${ev.desc}</p>
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-black">来源：${ev.source}</span>
+                        <a href="${ev.url}" target="_blank" class="text-accent-gold hover:underline">原文</a>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+
+        /* 悬停逻辑：鼠标进入事件点 → 显示放大卡片 */
+        document.querySelectorAll('.tl-event-dot').forEach(dot => {
+            const card = dot.parentElement.querySelector('.tl-hover-card');
+            const micro = dot.parentElement.querySelector('.tl-micro-card');
+            micro.classList.add('show');               // 默认显示微卡片
+            dot.addEventListener('mouseenter', () => {
+                micro.classList.remove('show');
+                card.classList.add('show');
+            });
+            dot.addEventListener('mouseleave', () => {
+                card.classList.remove('show');
+                micro.classList.add('show');
+            });
+        });
+
+        /* 图表初始化 */
+        function initChart(id, type, option) {
+            const chart = echarts.init(document.getElementById(id));
+            chart.setOption(option);
+            window.addEventListener('resize', () => chart.resize());
+            return chart;
+        }
+        const marketChart = initChart('market-growth-chart', 'line', {
+            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
+            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: { type: 'category', data: ['2020', '2021', '2022', '2023', '2024', '2025'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
+            yAxis: { type: 'value', name: '市场规模(亿元)', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
+            series: [{ name: '文创产业市场规模', type: 'line', smooth: true, data: [2800, 3200, 3800, 4500, 5200, 6000], lineStyle: { color: '#d4af37', width: 3 }, areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(212,175,55,.3)' }, { offset: 1, color: 'rgba(212,175,55,.1)' }] } }, itemStyle: { color: '#d4af37', borderColor: '#fff', borderWidth: 2 } }]
+        });
+        const investChart = initChart('investment-chart', 'pie', {
+            tooltip: { trigger: 'item', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
+            series: [{ name: '投资分布', type: 'pie', radius: ['40%', '70%'], data: [{ value: 35, name: '数字艺术', itemStyle: { color: '#d4af37' } }, { value: 25, name: '文创产品', itemStyle: { color: '#f39c12' } }, { value: 20, name: 'VR/AR', itemStyle: { color: '#e67e22' } }, { value: 12, name: '博物馆文创', itemStyle: { color: '#f1c40f' } }, { value: 8, name: '其他', itemStyle: { color: '#ecf0f1' } }], label: { color: '#2c3e50', fontSize: 12 }, emphasis: { itemStyle: { shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0,0,0,.5)' } } }]
+        });
+        const categoryChart = initChart('category-chart', 'bar', {
+            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
+            legend: { data: ['数字艺术', '文创产品', 'VR/AR'], textStyle: { color: '#5a6c7d' } },
+            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: { type: 'category', data: ['Q1', 'Q2', 'Q3', 'Q4'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
+            yAxis: { type: 'value', name: '增长率(%)', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
+            series: [{ name: '数字艺术', type: 'bar', data: [45, 52, 61, 73], itemStyle: { color: '#d4af37' } }, { name: '文创产品', type: 'bar', data: [38, 42, 48, 55], itemStyle: { color: '#f39c12' } }, { name: 'VR/AR', type: 'bar', data: [28, 35, 42, 51], itemStyle: { color: '#e67e22' } }]
+        });
+        const regionalChart = initChart('regional-chart', 'bar', {
+            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
+            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+            xAxis: { type: 'value', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
+            yAxis: { type: 'category', data: ['北京', '上海', '深圳', '成都', '杭州', '西安'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
+            series: [{ name: '文创产业规模', type: 'bar', data: [1200, 980, 750, 620, 480, 380], itemStyle: { color: function (params) { const colors = ['#d4af37', '#f39c12', '#e67e22', '#f1c40f', '#ecf0f1', '#95a5a6']; return colors[params.dataIndex]; } } }]
+        });
+
+        /* 筛选切换 */
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const p = this.dataset.period;
+                // 这里可替换不同时间段数据
+                console.log('切换至', p);
+            });
+        });
+    </script>
 </body>
 </html>

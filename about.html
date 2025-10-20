@@ -28,43 +28,23 @@
             background-color: var(--warm-cream);
             margin: 0;
             padding: 0;
+            padding-top: 4rem; /* 为固定导航栏留出空间 */
         }
         
-        /* 保持您指定的导航栏样式 */
-        .top-nav {
-            background-color: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
+        /* 导航栏样式 */
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e8e9ea;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--accent-gold); /* 保持金色logo */
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 15px;
-            padding-bottom: 3px;
-        }
-        
-        .nav-links a.active {
-            color: var(--accent-gold);
-            border-bottom: 2px solid var(--accent-gold);
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-gold);
+        /* 渐变文字样式（导航栏标题使用） */
+        .gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         /* 主视觉区域 */
@@ -192,14 +172,36 @@
     </style>
 </head>
 <body>
-    <!-- 保持您指定的导航栏样式 -->
-    <nav class="top-nav">
-        <div class="logo">文创每日手账</div>
-        <div class="nav-links">
-            <a href="index.html">首页</a>
-            <a href="news.html">新闻详情</a>
-            <a href="trends.html">趋势分析</a>
-            <a href="about.html" class="active">关于我们</a>
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 nav-blur transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-900 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                        <a href="news.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                        <a href="trends.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">趋势分析</a>
+                        <a href="about.html" class="text-gray-600 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 bg-gray-100">首页</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">新闻详情</a>
+                <a href="trends.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">趋势分析</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">关于我们</a>
+            </div>
         </div>
     </nav>
 
@@ -426,6 +428,22 @@
     </footer>
 
     <script>
+        // 滚动时导航栏效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
         // 初始化滚动动画
         document.addEventListener('DOMContentLoaded', function() {
             const observerOptions = {

@@ -1,105 +1,104 @@
 [
   {
     "id": 1,
-    "title": "世界遗产地绿色可持续发展倡议在北京发布",
-    "summary": "2025年10月11-12日，故宫百年院庆暨第七届太和论坛召开，40余家国内机构与20余家海外遗产地管理者共同发布《世界遗产地绿色可持续发展倡议》，共绘全球遗产地绿色未来。",
-    "image": "https://picsum.photos/seed/forbidden-city-green-initiative-2025/1200/800",
-    "date": "2025-10-12",
+    "title": "交通运输部发布《国际绿色航运走廊合作倡议》",
+    "summary": "2025北外滩国际航运论坛开幕式上，交通运输部发布《国际绿色航运走廊合作倡议》，推动全球航运业打造更安全、高效、绿色的新生态。",
+    "image": "https://picsum.photos/seed/green-shipping-corridor-2025/1200/800",
+    "date": "2025-10-19",
     "readTime": "2 分钟",
-    "tags": ["故宫百年", "世界遗产", "绿色可持续", "太和论坛"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31798669"
+    "tags": ["绿色航运", "交通运输部", "国际倡议", "北外滩论坛"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/politics/20251019/12fa672e5a914b75969fac501b4a2649/c.html"
   },
   {
     "id": 2,
-    "title": "我国生成式人工智能用户规模超5亿",
-    "summary": "CNNIC最新报告：截至2025年6月，我国生成式AI用户达5.15亿，半年暴增2.66亿，普及率36.5%，每3位中国人就有1位在用大模型。",
-    "image": "https://picsum.photos/seed/gen-ai-china-515M-2025/1200/800",
-    "date": "2025-10-18",
+    "title": "百年岭南风、壮哉英歌舞——粤港澳大湾区文化周点亮上海",
+    "summary": "800余件/套岭南珍品亮相上海，涵盖林风眠、关良等名家作品及当代湾区创作，展示砥砺前行、突破创新的文化故事。",
+    "image": "https://picsum.photos/seed/lingnan-culture-shanghai-2025/1200/800",
+    "date": "2025-10-19",
     "readTime": "2 分钟",
-    "tags": ["生成式AI", "用户规模", "CNNIC", "半年翻番"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31801906"
+    "tags": ["粤港澳大湾区", "岭南文化", "英歌舞", "上海展览"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251019/b5f7a3fceeac47389a42f83f9e673ba4/c.html"
   },
   {
     "id": 3,
-    "title": "线上购物你会顺手买一件吗？冲动消费2.0",
-    "summary": "电商结账页“顺手买1件”成线上版收银台口香糖，算法精准推荐刺激即时下单，经济日报提醒：别为省5元多花50。",
-    "image": "https://picsum.photos/seed/impulse-buy-check-out-2025/1200/800",
-    "date": "2025-10-18",
+    "title": "好看好逛又好玩！第十九届杭州文博会开幕",
+    "summary": "10月17-20日，杭州文博会以“创意杭州·联通世界”为主题，设1个主会场28个分会场，打造全城文化消费嘉年华。",
+    "image": "https://picsum.photos/seed/hangzhou-cultural-fair-2025/1200/800",
+    "date": "2025-10-17",
     "readTime": "2 分钟",
-    "tags": ["顺手买1件", "冲动消费", "算法推荐", "经济日报"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31801792"
+    "tags": ["杭州文博会", "文化创意", "白马湖", "分会场"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/ci/20251018/b9fe71356c1d4d71a6ac7e9c45ad1634/c.html"
   },
   {
     "id": 4,
-    "title": "巨震超4%！国际金价冲击4400美元未果",
-    "summary": "COMEX黄金尾盘跳水，盘中最高逼近4400美元，收盘4240美元/盎司，日内振幅逾4%；机构称短期获利回吐，长期依旧看涨。",
-    "image": "https://picsum.photos/seed/gold-4400-surge-2025/1200/800",
-    "date": "2025-10-18",
-    "readTime": "2 分钟",
-    "tags": ["国际金价", "COMEX", "4400美元", "避险情绪"],
+    "title": "有效降低全社会物流成本，国常会四项要求如何落地",
+    "summary": "国常会明确“四项要求”：推动降本提质增效、建设智慧绿色物流体系、深化运输结构调整、加强多式联运标准衔接。",
+    "image": "https://picsum.photos/seed/logistics-cost-reduction-2025/1200/800",
+    "date": "2025-10-17",
+    "readTime": "3 分钟",
+    "tags": ["物流成本", "国常会", "多式联运", "智慧物流"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102869185.html"
+    "originalUrl": "https://www.yicai.com/news/102870134.html"
   },
   {
     "id": 5,
-    "title": "《黑神话：悟空》等获中国版权金奖作品奖",
-    "summary": "中国版权金奖揭晓，《黑神话：悟空》《我的阿勒泰》《哪吒之魔童闹海》等6部作品获奖，国产3A游戏首次摘得国家级版权桂冠。",
-    "image": "https://picsum.photos/seed/black-myth-wukong-copyright-2025/1200/800",
+    "title": "英伟达中国市场份额从95%降到0%；OpenAI被曝8亿活跃用户只有5%付费",
+    "summary": "OpenAI拟五年翻倍付费率：推出ChatGPT Go低价订阅、发力政府企业定制、借Sora与AI Agent商业化，印度先行，菲律宾、巴西跟进。",
+    "image": "https://picsum.photos/seed/openai-monetization-2025/1200/800",
     "date": "2025-10-18",
     "readTime": "2 分钟",
-    "tags": ["黑神话悟空", "中国版权金奖", "国产3A", "知识产权"],
+    "tags": ["OpenAI", "ChatGPT", "付费订阅", "市场扩张"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102866356.html"
+    "originalUrl": "https://www.yicai.com/news/102869457.html"
   },
   {
     "id": 6,
-    "title": "清华“科学立方”刻录杨振宁13项重要贡献",
-    "summary": "诺贝尔物理学奖得主杨振宁10月18日逝世，享年103岁。清华曾赠黑色立方体，镌刻其13项里程碑式科学贡献，从杨-米尔斯到统计力学，见证一代物理巨匠。",
-    "image": "https://picsum.photos/seed/yang-zhenning-science-cube-2025/1200/800",
+    "title": "“AI+储能”站上风口：宁德等企业抢滩，算力与数据安全瓶颈待破",
+    "summary": "国家首次将“AI+储能”纳入能源战略：2027年建成5+能源大模型、10+示范项目、100个场景；2030年总体技术世界领先。",
+    "image": "https://picsum.photos/seed/ai-energy-storage-2025/1200/800",
     "date": "2025-10-18",
-    "readTime": "2 分钟",
-    "tags": ["杨振宁", "科学立方", "杨-米尔斯理论", "清华"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31802241"
+    "readTime": "3 分钟",
+    "tags": ["AI+储能", "宁德时代", "能源战略", "算力协同"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102869436.html"
   },
   {
     "id": 7,
-    "title": "第三届马路生活节收官：三城联动300场活动",
-    "summary": "上海、广州、杭州同步上演“马路生活节”，25条Citywalk线路+300场线下活动，合作门店数千家，参与商家同比翻10倍。",
-    "image": "https://picsum.photos/seed/citywalk-marliv-2025/1200/800",
-    "date": "2025-10-16",
+    "title": "前三季度，全国居民人均可支配收入32509元，同比名义增长5.1%",
+    "summary": "收入增速5.1%，消费结构升级：教育文化娱乐、交通通信、生活用品及服务支出增速均超8%，占比持续提升。",
+    "image": "https://picsum.photos/seed/disposable-income-2025q3/1200/800",
+    "date": "2025-10-19",
     "readTime": "2 分钟",
-    "tags": ["马路生活节", "Citywalk", "三城联动", "消费转化"],
-    "source": "财经网",
-    "originalUrl": "https://economy.caijing.com.cn/20251016/5119269.shtml"
+    "tags": ["居民收入", "消费支出", "前三季度", "经济数据"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102870325.html"
   },
   {
     "id": 8,
-    "title": "网红城市居民的喜悦与烦恼：家门口成打卡地",
-    "summary": "客流暴增带来商机也带来拥堵、涨价，多地开放政府停车场、改造交通设施、设工作专班，努力把流量变留量、让市民与游客共赢。",
-    "image": "https://picsum.photos/seed/over-tourism-china-city-2025/1200/800",
+    "title": "184天，260万观众！世博会博物馆参展大阪世博会圆满收官",
+    "summary": "世博会博物馆在大阪世博接待260万观众、近百批贵宾，举办14场活动，曝光量近900万次，闭幕系列活动画上圆满句号。",
+    "image": "https://picsum.photos/seed/expo-museum-osaka-2025/1200/800",
     "date": "2025-10-18",
     "readTime": "2 分钟",
-    "tags": ["网红城市", "城市治理", "流量经济", "游客与居民"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31775801"
+    "tags": ["世博会博物馆", "大阪世博会", "260万观众", "国际对话"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102868371.html"
   },
   {
     "id": 9,
-    "title": "人民日报跨版聚焦故宫博物院建院百年",
-    "summary": "10月10日故宫迎建院100周年，人民日报跨版点赞：百年匠心守护，世界上最大最完整的木结构宫殿群正把中华文明瑰宝呵护好、弘扬好。",
-    "image": "https://picsum.photos/seed/forbidden-city-100years-2025/1200/800",
-    "date": "2025-10-10",
-    "readTime": "3 分钟",
-    "tags": ["故宫百年", "中华文明", "木结构宫殿", "文化守护"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31768273"
+    "title": "央企巨头布局AI玩具 故宫文化联合中国电信发布首款故宫猫福墩AI玩偶",
+    "summary": "“故宫猫福墩”AI玩偶迪拜GITEX与上海CTE双城同步发布，集成AI语音交互与物联网技术，打造“AI+文创”新范式。",
+    "image": "https://picsum.photos/seed/forbidden-city-ai-toy-2025/1200/800",
+    "date": "2025-10-16",
+    "readTime": "2 分钟",
+    "tags": ["AI玩具", "故宫文化", "中国电信", "福墩"],
+    "source": "证券日报",
+    "originalUrl": "http://www.zqrb.cn/finance/hangyedongtai/2025-10-17/A1760683728129.html"
   }
 ]
-
 
 
 

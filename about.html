@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于我们 - 鳞迹文化创意</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,8 +13,8 @@
             --warm-white: #fefefe;
             --light-gray: #f8f9fa;
             --soft-gray: #e9ecef;
-            --accent-gold: #d4af37;
-            --soft-gold: #f4e4a6;
+            --accent-gold: #c8a951; /* 更柔和的金色，带古风感 */
+            --soft-gold: #f7efe5;
             --text-dark: #2c3e50;
             --text-medium: #5a6c7d;
             --text-light: #8896a0;
@@ -24,14 +24,53 @@
         
         body {
             font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
             color: var(--text-dark);
             line-height: 1.7;
+            position: relative;
+        }
+        
+        /* 背景装饰 - 更年轻且带古风元素 */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-color: #fcfaf5; /* 米白色背景，带古风感 */
+            opacity: 0.95;
+        }
+        
+        .bg-texture {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                url('https://picsum.photos/id/152/800/800'), /* 宣纸纹理感图片 */
+                url('https://picsum.photos/id/175/800/800'), /* 传统纹样感图片 */
+                url('https://picsum.photos/id/301/600/600'); /* 书法笔触感图片 */
+            background-size: 300px, 400px, 250px;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-position: -50px -50px, calc(100% - 150px) calc(100% - 100px), 20% 80%;
+            opacity: 0.06;
+            pointer-events: none;
+        }
+        
+        /* 古风纹理装饰 */
+        .bg-paper {
+            background-image: url('https://picsum.photos/id/106/1200/800');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            opacity: 0.03;
         }
         
         .hero-title {
             font-family: 'Playfair Display', serif;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -42,51 +81,51 @@
         .nav-blur {
             backdrop-filter: blur(20px);
             background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid rgba(200, 169, 81, 0.15);
             box-shadow: 0 2px 20px var(--shadow-light);
         }
         
         .value-card {
-            background: rgba(255, 255, 255, 0.98);
-            border: 1px solid var(--border-light);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 169, 81, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 16px var(--shadow-light);
-            border-radius: 20px;
+            border-radius: 16px;
         }
         
         .value-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
             border-color: var(--accent-gold);
         }
         
         .contact-form {
-            background: rgba(255, 255, 255, 0.98);
-            border: 1px solid var(--border-light);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 169, 81, 0.1);
             box-shadow: 0 8px 24px var(--shadow-light);
-            border-radius: 20px;
+            border-radius: 16px;
         }
         
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
         
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
         
         .gradient-text {
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #f39c12 100%);
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -102,25 +141,84 @@
         }
         
         .story-section {
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);
+            background: linear-gradient(135deg, rgba(248, 246, 241, 0.8) 0%, rgba(254, 253, 250, 0.8) 100%);
+            backdrop-filter: blur(10px);
         }
         
         .business-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(200, 169, 81, 0.15);
             transition: all 0.4s ease;
             border-radius: 16px;
         }
         
         .business-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 12px 32px rgba(200, 169, 81, 0.1);
             border-color: var(--accent-gold);
+        }
+        
+        /* 古风装饰元素 */
+        .decor-element {
+            position: absolute;
+            background: linear-gradient(135deg, var(--accent-gold), var(--soft-gold));
+            border-radius: 50%;
+            opacity: 0.04;
+            z-index: -1;
+        }
+        
+        /* 改良的合作按钮 */
+        .collaborate-button {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collaborate-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #a67c29 100%);
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+        
+        .collaborate-button:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(200, 169, 81, 0.2);
+        }
+        
+        .collaborate-button:hover::after {
+            width: 100%;
+        }
+        
+        /* 传统分隔线装饰 */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
+    <!-- 背景装饰 -->
+    <div class="bg-pattern"></div>
+    <div class="bg-texture"></div>
+    <div class="bg-paper fixed inset-0 z-[-3]"></div>
+    
+    <!-- 古风装饰元素 -->
+    <div class="decor-element" style="top: 20%; left: 10%; width: 250px; height: 250px;"></div>
+    <div class="decor-element" style="top: 70%; right: 5%; width: 350px; height: 350px;"></div>
+    <div class="decor-element" style="top: 45%; left: 45%; width: 150px; height: 150px;"></div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-blur">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,6 +234,11 @@
                         <a href="about.html" class="text-text-dark hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">关于我们</a>
                     </div>
                 </div>
+                <div class="md:hidden">
+                    <button class="text-text-medium hover:text-accent-gold">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -146,14 +249,18 @@
             <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6 fade-in">
                 鳞迹文化创意
             </h1>
-            <p class="text-xl text-text-medium mb-8 fade-in stagger-1">
+            <p class="text-xl text-text-medium mb-8 fade-in stagger-1 max-w-3xl mx-auto">
                 传承文化脉络，连接传统与现代的美学桥梁
             </p>
+            <div class="divider max-w-xl mx-auto mb-8 fade-in stagger-1"></div>
+            <a href="#contact" class="inline-block px-8 py-3 rounded-full font-medium collaborate-button fade-in stagger-2 relative z-10">
+                共谱文创新篇
+            </a>
         </div>
     </section>
 
     <!-- Brand Story -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 story-section">
+    <section class="py-16 px-4 sm:px-6 lg:px-8 story-section rounded-3xl mx-4 md:mx-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
@@ -161,7 +268,7 @@
                     <div class="space-y-6 text-text-medium leading-relaxed">
                         <p class="text-lg">
                             <span class="bg-soft-gold text-accent-gold px-2 py-1 rounded font-medium">鳞迹</span>
-                            二字，源自鱼传尺素的古典浪漫。敦煌曲子词《破阵子》中月断妆楼相忆苦，鱼雁山川鳞迹疏，和愁封去书的名句，让鳞迹与鱼雁一同成为书信的雅称，承载着跨越山海的情感与价值传递。
+                            二字，源自鱼传尺素的古典浪漫。敦煌曲子词《破阵子》中"月断妆楼相忆苦，鱼雁山川鳞迹疏，和愁封去书"的名句，让鳞迹与鱼雁一同成为书信的雅称，承载着跨越山海的情感与价值传递。
                         </p>
                         <p>
                             而今，我们以鳞迹为名，既延续这份连接的初心，更立志在文创领域，搭建起传统与现代、本土与世界的文化桥梁。
@@ -171,8 +278,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="fade-in stagger-2">
-                    <img src="https://picsum.photos/seed/brand-story/600/400.jpg" alt="鳞迹文化创意" class="w-full rounded-2xl shadow-lg">
+                <div class="fade-in stagger-2 overflow-hidden rounded-2xl shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                    <img src="https://picsum.photos/seed/culture/600/400" alt="鳞迹文化创意" class="w-full h-auto transform hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
         </div>
@@ -181,11 +288,12 @@
     <!-- Core Business -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">我们的核心业务</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">我们的核心业务</h2>
+            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="business-card p-8 fade-in stagger-1 floating-animation">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">🏺</span>
+                        <i class="fa fa-vase text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">自研非遗品牌</h3>
                     <p class="text-text-medium text-center leading-relaxed">
@@ -195,7 +303,7 @@
                 
                 <div class="business-card p-8 fade-in stagger-2 floating-animation" style="animation-delay: 0.2s;">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">🛠️</span>
+                        <i class="fa fa-cogs text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创全链服务</h3>
                     <p class="text-text-medium text-center leading-relaxed">
@@ -205,7 +313,7 @@
                 
                 <div class="business-card p-8 fade-in stagger-3 floating-animation" style="animation-delay: 0.4s;">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">📚</span>
+                        <i class="fa fa-book text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark text-center">文创资讯服务</h3>
                     <p class="text-text-medium text-center leading-relaxed">
@@ -217,13 +325,14 @@
     </section>
 
     <!-- Brand Philosophy -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray/30 rounded-3xl mx-4 md:mx-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">品牌理念</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">品牌理念</h2>
+            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="value-card p-8 text-center fade-in floating-animation">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">🎯</span>
+                        <i class="fa fa-bullseye text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark">专注非遗</h3>
                     <p class="text-text-medium leading-relaxed">
@@ -233,7 +342,7 @@
                 
                 <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.2s;">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">🌉</span>
+                        <i class="fa fa-bridge text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark">连接古今</h3>
                     <p class="text-text-medium leading-relaxed">
@@ -243,7 +352,7 @@
                 
                 <div class="value-card p-8 text-center fade-in floating-animation" style="animation-delay: 0.4s;">
                     <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-2xl">🤝</span>
+                        <i class="fa fa-users text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4 text-text-dark">共创生态</h3>
                     <p class="text-text-medium leading-relaxed">
@@ -255,9 +364,10 @@
     </section>
 
     <!-- Contact Information -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark fade-in">联系我们</h2>
+            <h2 class="text-3xl font-bold text-center mb-4 text-text-dark fade-in">联系我们</h2>
+            <div class="divider max-w-xs mx-auto mb-12 fade-in"></div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="fade-in stagger-1">
                     <div class="contact-form p-8">
@@ -265,7 +375,7 @@
                         <div class="space-y-6">
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-xl">📞</span>
+                                    <i class="fa fa-phone text-white text-xl"></i>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-text-dark">电话</p>
@@ -275,7 +385,7 @@
                             
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-xl">📍</span>
+                                    <i class="fa fa-map-marker text-white text-xl"></i>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-text-dark">地址</p>
@@ -285,11 +395,26 @@
                             
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4">
-                                    <span class="text-white text-xl">📧</span>
+                                    <i class="fa fa-envelope text-white text-xl"></i>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-text-dark">邮箱</p>
                                     <p class="text-text-medium">mistoraworld@163.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <p class="font-semibold text-text-dark mb-3">关注我们</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                                        <i class="fa fa-weixin"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                                        <i class="fa fa-weibo"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-light-gray rounded-full flex items-center justify-center text-text-medium hover:bg-accent-gold hover:text-white transition-colors">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -300,27 +425,33 @@
                     <div class="contact-form p-8">
                         <h3 class="text-2xl font-semibold mb-6 text-text-dark">商务合作</h3>
                         <div class="space-y-6">
-                            <div>
+                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
                                 <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <span class="mr-2">🤝</span>
+                                    <i class="fa fa-handshake-o mr-2 text-accent-gold"></i>
                                     非遗品牌合作
                                 </h4>
                                 <p class="text-text-medium text-sm">传统技艺现代化开发、产品联名设计</p>
                             </div>
-                            <div>
+                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
                                 <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <span class="mr-2">💼</span>
+                                    <i class="fa fa-briefcase mr-2 text-accent-gold"></i>
                                     企业服务
                                 </h4>
                                 <p class="text-text-medium text-sm">文创项目咨询、数字化解决方案、版权服务</p>
                             </div>
-                            <div>
+                            <div class="p-4 border border-border-light rounded-xl hover:border-accent-gold transition-colors">
                                 <h4 class="font-semibold text-text-dark mb-2 flex items-center">
-                                    <span class="mr-2">🌐</span>
+                                    <i class="fa fa-globe mr-2 text-accent-gold"></i>
                                     媒体合作
                                 </h4>
                                 <p class="text-text-medium text-sm">内容共创、品牌推广、活动策划</p>
                             </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="mailto:mistoraworld@163.com" class="block w-full text-center py-3 rounded-full font-medium collaborate-button relative z-10">
+                                携手共创
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -329,7 +460,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, var(--light-gray) 0%, var(--warm-white) 100%);">
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 mt-12" style="background: linear-gradient(135deg, var(--light-gray) 0%, #fcfaf5 100%); border-top: 1px solid rgba(200, 169, 81, 0.15);">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
@@ -349,9 +480,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 text-text-dark">联系信息</h4>
                     <div class="space-y-2 text-text-medium text-sm">
-                        <p>📞 86-18210095234</p>
-                        <p>📍 北京市东城区环球贸易大厦A座3层</p>
-                        <p>📧 mistoraworld@163.com</p>
+                        <p><i class="fa fa-phone mr-2 text-accent-gold"></i> 86-18210095234</p>
+                        <p><i class="fa fa-map-marker mr-2 text-accent-gold"></i> 北京市东城区环球贸易大厦A座3层</p>
+                        <p><i class="fa fa-envelope mr-2 text-accent-gold"></i> mistoraworld@163.com</p>
                     </div>
                 </div>
             </div>
@@ -373,8 +504,7 @@
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('visible');
                     }
                 });
             }, observerOptions);
@@ -382,6 +512,15 @@
             document.querySelectorAll('.fade-in').forEach(el => {
                 observer.observe(el);
             });
+            
+            // 移动端菜单切换
+            const menuButton = document.querySelector('.md\\:hidden button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    // 移动端菜单逻辑可以在这里实现
+                    alert('移动端菜单将在这里显示');
+                });
+            }
         }
     </script>
 </body>

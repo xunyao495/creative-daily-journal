@@ -1,102 +1,102 @@
 [
- {
-  "id": 1,
-  "title": "法国卢浮宫失窃藏品清单公布",
-  "summary": "该画廊收藏法国王室珠宝和“王冠钻石”系列。两座高安全级别展柜成为目标，共有8件具有“无法估量历史价值”的珠宝被盗，具体包括：玛丽-阿梅莉王后与奥尔唐斯王后的头饰套件中的冠冕、蓝宝石套装中的项链与耳环，玛丽-路易丝王后的祖母绿套装中的项链与耳环，“圣物匣式胸针”，欧也妮王后的冠冕及大襟花胸针。",
-  "image": "https://picsum.photos/seed/louvre-theft-2025/1200/800",
-  "date": "2025-10-20",
-  "readTime": "2 分钟",
-  "tags": ["卢浮宫", "艺术藏品", "法国", "文化遗产"],
-  "source": "央视新闻",
-  "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31810371"
- },
+  {
+    "id": 1,
+    "title": "千年瓷都“潮”浪生：看！多国陶艺家用景德镇陶泥演绎“和而不同”",
+    "summary": "在景德镇，泥土开始了“环球艺术之旅”。它可能变成北欧艺术家手中线条流畅的纯白极简的器皿，也可能在南美艺术家那里成为一件色彩奔放，充满原始力量的图腾雕塑。",
+    "image": "https://picsum.photos/seed/jingdezhen-pottery-global-2025/1200/800",
+    "date": "2025-10-20",
+    "readTime": "2 分钟",
+    "tags": ["景德镇", "陶艺", "国际交流", "和而不同"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/20251020/11f7cf0139b74ec2aedf387071321d72/c.html"
+  },
   {
     "id": 2,
-    "title": "百年岭南风、壮哉英歌舞——粤港澳大湾区文化周点亮上海",
-    "summary": "800余件/套岭南珍品亮相上海，涵盖林风眠、关良等名家作品及当代湾区创作，展示砥砺前行、突破创新的文化故事。",
-    "image": "https://picsum.photos/seed/lingnan-culture-shanghai-2025/1200/800",
-    "date": "2025-10-19",
-    "readTime": "2 分钟",
-    "tags": ["粤港澳大湾区", "岭南文化", "英歌舞", "上海展览"],
+    "title": "新华网财经观察丨工厂为何成为“网红打卡地”？",
+    "summary": "据携程发布的2025年国庆旅游数据，工业旅游成为市场黑马。航空与汽车工业游市场关注度占比超20%，重庆816核工厂、吉利汽车工厂、嘉兴火箭工厂等入围关注度榜单TOP5。曾经“谢绝参观”的工厂如今成了一些人热衷的“网红打卡地”。这股“工厂游”热潮为何兴起？",
+    "image": "https://picsum.photos/seed/factory-tourism-2025/1200/800",
+    "date": "2025-10-20",
+    "readTime": "3 分钟",
+    "tags": ["工业旅游", "网红打卡", "国庆数据", "携程"],
     "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251019/b5f7a3fceeac47389a42f83f9e673ba4/c.html"
+    "originalUrl": "https://www.news.cn/20251020/c7fea80b63584abebe98b0a352748fd4/c.html"
   },
   {
     "id": 3,
-    "title": "好看好逛又好玩！第十九届杭州文博会开幕",
-    "summary": "10月17-20日，杭州文博会以“创意杭州·联通世界”为主题，设1个主会场28个分会场，打造全城文化消费嘉年华。",
-    "image": "https://picsum.photos/seed/hangzhou-cultural-fair-2025/1200/800",
-    "date": "2025-10-17",
+    "title": "金添动漫赴港IPO：收入依赖奥特曼等授权IP，存货规模逐年上升",
+    "summary": "10月20日，据港交所披露的信息，“IP趣玩食品企业”广东金添动漫股份有限公司正式向港交所递交上市申请。公司拥有26个授权IP及超过600个活跃SKU，产品涵盖糖果、饼干、膨化、巧克力、海苔零食五大类别。",
+    "image": "https://picsum.photos/seed/gold-add-animation-ipo-2025/1200/800",
+    "date": "2025-10-20",
     "readTime": "2 分钟",
-    "tags": ["杭州文博会", "文化创意", "白马湖", "分会场"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/ci/20251018/b9fe71356c1d4d71a6ac7e9c45ad1634/c.html"
+    "tags": ["金添动漫", "IPO", "授权IP", "食品+IP"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31814875"
   },
   {
     "id": 4,
-    "title": "有效降低全社会物流成本，国常会四项要求如何落地",
-    "summary": "国常会明确“四项要求”：推动降本提质增效、建设智慧绿色物流体系、深化运输结构调整、加强多式联运标准衔接。",
-    "image": "https://picsum.photos/seed/logistics-cost-reduction-2025/1200/800",
+    "title": "在外滩音乐节买文创、做按摩，这些体验都来自残疾人工作室",
+    "summary": "10月17日，上海外滩音乐节在外滩源圆明园路步行街启幕。本次音乐节不仅集结了中外爵士乐手带来国际化艺术演出，更因“阳光201”综合服务平台携6家残疾人工作室的加入，成为一场兼具艺术氛围与公益温度的盛会。",
+    "image": "https://picsum.photos/seed/shanghai-disabled-artists-2025/1200/800",
     "date": "2025-10-17",
-    "readTime": "3 分钟",
-    "tags": ["物流成本", "国常会", "多式联运", "智慧物流"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102870134.html"
+    "readTime": "2 分钟",
+    "tags": ["外滩音乐节", "残疾人工作室", "公益", "文创"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31807070"
   },
   {
     "id": 5,
-    "title": "英伟达中国市场份额从95%降到0%；OpenAI被曝8亿活跃用户只有5%付费",
-    "summary": "OpenAI拟五年翻倍付费率：推出ChatGPT Go低价订阅、发力政府企业定制、借Sora与AI Agent商业化，印度先行，菲律宾、巴西跟进。",
-    "image": "https://picsum.photos/seed/openai-monetization-2025/1200/800",
+    "title": "余杭美术馆开馆首展“艺术与科技国际双年展”",
+    "summary": "10月18日，作为第三届“良渚论坛”期间举办的国际文化艺术交流活动，中国（杭州）艺术与科技国际双年展在余杭美术馆对外展出，展出来自全球20余个国家和地区、160余位（组）艺术家、科学家等的作品。",
+    "image": "https://picsum.photos/seed/hangzhou-art-tech-biennale-2025/1200/800",
     "date": "2025-10-18",
     "readTime": "2 分钟",
-    "tags": ["OpenAI", "ChatGPT", "付费订阅", "市场扩张"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102869457.html"
+    "tags": ["余杭美术馆", "艺术与科技", "双年展", "良渚论坛"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31814683"
   },
   {
     "id": 6,
-    "title": "“AI+储能”站上风口：宁德等企业抢滩，算力与数据安全瓶颈待破",
-    "summary": "国家首次将“AI+储能”纳入能源战略：2027年建成5+能源大模型、10+示范项目、100个场景；2030年总体技术世界领先。",
-    "image": "https://picsum.photos/seed/ai-energy-storage-2025/1200/800",
-    "date": "2025-10-18",
-    "readTime": "3 分钟",
-    "tags": ["AI+储能", "宁德时代", "能源战略", "算力协同"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102869436.html"
+    "title": "第八届国际跨媒体艺术节：“带电的孩子”是一种日常",
+    "summary": "10月17日，以“带电的孩子”为主题的第八届国际跨媒体艺术节在上海油罐艺术中心与UFO terminal未知终端同步开幕，以百余件作品展现艺术家对于技术与数字等话题的探讨。",
+    "image": "https://picsum.photos/seed/shanghai-intermedia-art-fest-2025/1200/800",
+    "date": "2025-10-17",
+    "readTime": "2 分钟",
+    "tags": ["跨媒体艺术节", "带电的孩子", "上海油罐艺术中心", "科技艺术"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31799851"
   },
   {
     "id": 7,
-    "title": "前三季度，全国居民人均可支配收入32509元，同比名义增长5.1%",
-    "summary": "收入增速5.1%，消费结构升级：教育文化娱乐、交通通信、生活用品及服务支出增速均超8%，占比持续提升。",
-    "image": "https://picsum.photos/seed/disposable-income-2025q3/1200/800",
+    "title": "四个人数分钟酿卢浮宫大劫案，法国博物馆为何状况频出",
+    "summary": "当地时间10月19日9时30分左右，4名蒙面人来到卢浮宫外，分工配合操作升降装置，从建筑物外部阳台潜入室内，用角磨机打碎展柜，劫走9件拿破仑时期的珠宝，其间还用角磨机威胁博物馆保安，最后驾摩托车扬长而去。",
+    "image": "https://picsum.photos/seed/louvre-heist-2025/1200/800",
     "date": "2025-10-19",
-    "readTime": "2 分钟",
-    "tags": ["居民收入", "消费支出", "前三季度", "经济数据"],
+    "readTime": "3 分钟",
+    "tags": ["卢浮宫", "劫案", "拿破仑珠宝", "法国博物馆"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102870325.html"
+    "originalUrl": "https://www.yicai.com/news/102871645.html"
   },
   {
     "id": 8,
-    "title": "184天，260万观众！世博会博物馆参展大阪世博会圆满收官",
-    "summary": "世博会博物馆在大阪世博接待260万观众、近百批贵宾，举办14场活动，曝光量近900万次，闭幕系列活动画上圆满句号。",
-    "image": "https://picsum.photos/seed/expo-museum-osaka-2025/1200/800",
-    "date": "2025-10-18",
+    "title": "离岛免税政策再优化 多方面利好免税销售",
+    "summary": "财政部、海关总署、税务总局近日发文调整海南离岛旅客免税购物政策，并定于11月1日起实施，主要涉及五项内容调整，包括扩大离岛免税商品范围、增加国货品类并退税、上调购物年龄、将离境旅客纳入享惠主体范围、岛内居民一次离岛可多次“即购即提”。",
+    "image": "https://picsum.photos/seed/hainan-duty-free-upgrade-2025/1200/800",
+    "date": "2025-10-20",
     "readTime": "2 分钟",
-    "tags": ["世博会博物馆", "大阪世博会", "260万观众", "国际对话"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102868371.html"
+    "tags": ["离岛免税", "海南", "购物政策", "国货退税"],
+    "source": "证券时报网",
+    "originalUrl": "https://www.stcn.com/article/detail/3392198.html"
   },
   {
     "id": 9,
-    "title": "央企巨头布局AI玩具 故宫文化联合中国电信发布首款故宫猫福墩AI玩偶",
-    "summary": "“故宫猫福墩”AI玩偶迪拜GITEX与上海CTE双城同步发布，集成AI语音交互与物联网技术，打造“AI+文创”新范式。",
-    "image": "https://picsum.photos/seed/forbidden-city-ai-toy-2025/1200/800",
-    "date": "2025-10-16",
+    "title": "“世界超市”义乌将全力打造全球贸易标杆地",
+    "summary": "被誉为“世界超市”的浙江义乌，10月20日召开2025义乌商贸大会，吸引1000余名国内外采购商、国内外商协会代表、国内批发市场负责人、电商平台等参加。",
+    "image": "https://picsum.photos/seed/yiwu-global-trade-2025/1200/800",
+    "date": "2025-10-20",
     "readTime": "2 分钟",
-    "tags": ["AI玩具", "故宫文化", "中国电信", "福墩"],
-    "source": "证券日报",
-    "originalUrl": "http://www.zqrb.cn/finance/hangyedongtai/2025-10-17/A1760683728129.html"
+    "tags": ["义乌", "世界超市", "全球贸易", "商贸大会"],
+    "source": "证券时报网",
+    "originalUrl": "https://www.stcn.com/article/detail/3392166.html"
   }
 ]
 

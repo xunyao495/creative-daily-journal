@@ -1,109 +1,104 @@
 [
   {
     "id": 1,
-    "title": "千年瓷都“潮”浪生：看！多国陶艺家用景德镇陶泥演绎“和而不同”",
-    "summary": "在景德镇，泥土开始了“环球艺术之旅”。它可能变成北欧艺术家手中线条流畅的纯白极简的器皿，也可能在南美艺术家那里成为一件色彩奔放，充满原始力量的图腾雕塑。",
-    "image": "https://picsum.photos/seed/jingdezhen-pottery-global-2025/1200/800",
-    "date": "2025-10-20",
+    "title": "“何以敦煌”大展重返上海，5座经典洞窟复制窟有何看点？",
+    "summary": "“何以敦煌·念念回响”敦煌文化艺术公益展在上海艺丰中心免费开放，5座莫高窟经典洞窟复制窟集中亮相。",
+    "image": "https://picsum.photos/seed/dunhuang-shanghai-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["景德镇", "陶艺", "国际交流", "和而不同"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251020/11f7cf0139b74ec2aedf387071321d72/c.html"
+    "tags": ["敦煌", "复制窟", "上海", "文化艺术", "公益展"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31826072"
   },
   {
     "id": 2,
-    "title": "新华网财经观察丨工厂为何成为“网红打卡地”？",
-    "summary": "据携程发布的2025年国庆旅游数据，工业旅游成为市场黑马。航空与汽车工业游市场关注度占比超20%，重庆816核工厂、吉利汽车工厂、嘉兴火箭工厂等入围关注度榜单TOP5。曾经“谢绝参观”的工厂如今成了一些人热衷的“网红打卡地”。这股“工厂游”热潮为何兴起？",
-    "image": "https://picsum.photos/seed/factory-tourism-2025/1200/800",
-    "date": "2025-10-20",
+    "title": "卢浮宫劫后重开，追回被抢文物“可能性极低”",
+    "summary": "卢浮宫在8800万欧元珠宝抢劫案闭馆3天后重新开放，阿波罗长廊仍关闭，馆长承认安保缺陷，马克龙要求加快升级安保。",
+    "image": "https://picsum.photos/seed/louvre-heist-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "3 分钟",
-    "tags": ["工业旅游", "网红打卡", "国庆数据", "携程"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251020/c7fea80b63584abebe98b0a352748fd4/c.html"
+    "tags": ["卢浮宫", "抢劫案", "珠宝", "安保", "法国"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31826275"
   },
   {
     "id": 3,
-    "title": "金添动漫赴港IPO：收入依赖奥特曼等授权IP，存货规模逐年上升",
-    "summary": "10月20日，据港交所披露的信息，“IP趣玩食品企业”广东金添动漫股份有限公司正式向港交所递交上市申请。公司拥有26个授权IP及超过600个活跃SKU，产品涵盖糖果、饼干、膨化、巧克力、海苔零食五大类别。",
-    "image": "https://picsum.photos/seed/gold-add-animation-ipo-2025/1200/800",
-    "date": "2025-10-20",
-    "readTime": "2 分钟",
-    "tags": ["金添动漫", "IPO", "授权IP", "食品+IP"],
+    "title": "跨越百年的文化姻缘，岭南文化绽放上海",
+    "summary": "广东美术百年大展、新编粤剧《双绣缘》、舞剧《英歌》等岭南文化项目国庆档在上海轮番上演，观众反响热烈。",
+    "image": "https://picsum.photos/seed/lingnan-shanghai-2025/1200/800",
+    "date": "2025-10-23",
+    "readTime": "3 分钟",
+    "tags": ["岭南文化", "广东美术", "粤剧", "舞剧", "上海"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31814875"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31820234"
   },
   {
     "id": 4,
-    "title": "在外滩音乐节买文创、做按摩，这些体验都来自残疾人工作室",
-    "summary": "10月17日，上海外滩音乐节在外滩源圆明园路步行街启幕。本次音乐节不仅集结了中外爵士乐手带来国际化艺术演出，更因“阳光201”综合服务平台携6家残疾人工作室的加入，成为一场兼具艺术氛围与公益温度的盛会。",
-    "image": "https://picsum.photos/seed/shanghai-disabled-artists-2025/1200/800",
-    "date": "2025-10-17",
+    "title": "爱马仕三季度销售额增长10%：在大中华地区看到“改善”",
+    "summary": "爱马仕2025Q3销售额达39亿欧元，同比增10%，大中华区表现环比轻微改善，欧洲与美洲持续强劲。",
+    "image": "https://picsum.photos/seed/hermes-q3-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["外滩音乐节", "残疾人工作室", "公益", "文创"],
+    "tags": ["爱马仕", "财报", "奢侈品", "大中华区"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31807070"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824006"
   },
   {
     "id": 5,
-    "title": "余杭美术馆开馆首展“艺术与科技国际双年展”",
-    "summary": "10月18日，作为第三届“良渚论坛”期间举办的国际文化艺术交流活动，中国（杭州）艺术与科技国际双年展在余杭美术馆对外展出，展出来自全球20余个国家和地区、160余位（组）艺术家、科学家等的作品。",
-    "image": "https://picsum.photos/seed/hangzhou-art-tech-biennale-2025/1200/800",
-    "date": "2025-10-18",
+    "title": "江浙“全国外贸十强城市”公布外贸“三季报”：金华表现亮眼",
+    "summary": "苏州、宁波、金华前三季度外贸数据出炉，苏州破2万亿、宁波破1万亿，金华增速20.7%领跑浙江。",
+    "image": "https://picsum.photos/seed/jinhua-trade-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["余杭美术馆", "艺术与科技", "双年展", "良渚论坛"],
+    "tags": ["外贸", "金华", "苏州", "宁波", "进出口"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31814683"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824173"
   },
   {
     "id": 6,
-    "title": "第八届国际跨媒体艺术节：“带电的孩子”是一种日常",
-    "summary": "10月17日，以“带电的孩子”为主题的第八届国际跨媒体艺术节在上海油罐艺术中心与UFO terminal未知终端同步开幕，以百余件作品展现艺术家对于技术与数字等话题的探讨。",
-    "image": "https://picsum.photos/seed/shanghai-intermedia-art-fest-2025/1200/800",
-    "date": "2025-10-17",
+    "title": "上海陆家嘴咖啡节第十年举办：打造联名文创，已成产业孵化器",
+    "summary": "第十届陆家嘴国际咖啡文化节采用“5+3”双会场模式，集结全球300+品牌，同期举办研讨会、拉花大赛等。",
+    "image": "https://picsum.photos/seed/lujiazui-coffee-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["跨媒体艺术节", "带电的孩子", "上海油罐艺术中心", "科技艺术"],
+    "tags": ["陆家嘴", "咖啡节", "文创", "上海", "产业孵化"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31799851"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824101"
   },
   {
     "id": 7,
-    "title": "四个人数分钟酿卢浮宫大劫案，法国博物馆为何状况频出",
-    "summary": "当地时间10月19日9时30分左右，4名蒙面人来到卢浮宫外，分工配合操作升降装置，从建筑物外部阳台潜入室内，用角磨机打碎展柜，劫走9件拿破仑时期的珠宝，其间还用角磨机威胁博物馆保安，最后驾摩托车扬长而去。",
-    "image": "https://picsum.photos/seed/louvre-heist-2025/1200/800",
-    "date": "2025-10-19",
+    "title": "重新发现中国 | 江苏盐城的“出圈秘籍”：比风景更动人的是人文",
+    "summary": "盐城凭借湿地生态、世遗品牌与创意传播，跻身旅行App“宝藏城市”榜单，成为亲子游与研学游新热点。",
+    "image": "https://picsum.photos/seed/yancheng-wetland-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "3 分钟",
-    "tags": ["卢浮宫", "劫案", "拿破仑珠宝", "法国博物馆"],
+    "tags": ["盐城", "湿地", "文旅", "亲子游", "江苏"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102871645.html"
+    "originalUrl": "https://www.yicai.com/news/102872446.html"
   },
   {
     "id": 8,
-    "title": "离岛免税政策再优化 多方面利好免税销售",
-    "summary": "财政部、海关总署、税务总局近日发文调整海南离岛旅客免税购物政策，并定于11月1日起实施，主要涉及五项内容调整，包括扩大离岛免税商品范围、增加国货品类并退税、上调购物年龄、将离境旅客纳入享惠主体范围、岛内居民一次离岛可多次“即购即提”。",
-    "image": "https://picsum.photos/seed/hainan-duty-free-upgrade-2025/1200/800",
-    "date": "2025-10-20",
+    "title": "国内AI应用赛道最大单笔融资问世 LiblibAI完成1.3亿美元融资",
+    "summary": "AI创作平台LiblibAI宣布完成1.3亿美元B轮，红杉中国、CMC资本领投，创年内国内AI应用最大单笔融资。",
+    "image": "https://picsum.photos/seed/liblibai-1b-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["离岛免税", "海南", "购物政策", "国货退税"],
-    "source": "证券时报网",
-    "originalUrl": "https://www.stcn.com/article/detail/3392198.html"
+    "tags": ["AI应用", "LiblibAI", "融资", "红杉中国", "创作平台"],
+    "source": "证券时报",
+    "originalUrl": "https://www.stcn.com/article/detail/3399513.html"
   },
   {
     "id": 9,
-    "title": "“世界超市”义乌将全力打造全球贸易标杆地",
-    "summary": "被誉为“世界超市”的浙江义乌，10月20日召开2025义乌商贸大会，吸引1000余名国内外采购商、国内外商协会代表、国内批发市场负责人、电商平台等参加。",
-    "image": "https://picsum.photos/seed/yiwu-global-trade-2025/1200/800",
-    "date": "2025-10-20",
+    "title": "曾红极一时的咖啡品牌，北京仅剩1家店！今年将关掉40多家门店",
+    "summary": "85度C北京知春二店关闭后仅剩白广路1店，2025年大陆市场已关40余家，上半年亏损约4600万元。",
+    "image": "https://picsum.photos/seed/85c-closure-2025/1200/800",
+    "date": "2025-10-23",
     "readTime": "2 分钟",
-    "tags": ["义乌", "世界超市", "全球贸易", "商贸大会"],
-    "source": "证券时报网",
-    "originalUrl": "https://www.stcn.com/article/detail/3392166.html"
+    "tags": ["85度C", "关店", "北京", "亏损", "烘焙咖啡"],
+    "source": "证券时报",
+    "originalUrl": "https://www.stcn.com/article/detail/3392004.html"
   }
 ]
-
-
-
-
-
 
 
 

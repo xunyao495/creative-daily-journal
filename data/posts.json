@@ -1,104 +1,142 @@
 [
-  {
-    "id": 1,
-    "title": "“何以敦煌”大展重返上海，5座经典洞窟复制窟有何看点？",
-    "summary": "“何以敦煌·念念回响”敦煌文化艺术公益展在上海艺丰中心免费开放，5座莫高窟经典洞窟复制窟集中亮相。",
-    "image": "https://picsum.photos/seed/dunhuang-shanghai-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["敦煌", "复制窟", "上海", "文化艺术", "公益展"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31826072"
-  },
-  {
-    "id": 2,
-    "title": "卢浮宫劫后重开，追回被抢文物“可能性极低”",
-    "summary": "卢浮宫在8800万欧元珠宝抢劫案闭馆3天后重新开放，阿波罗长廊仍关闭，馆长承认安保缺陷，马克龙要求加快升级安保。",
-    "image": "https://picsum.photos/seed/louvre-heist-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "3 分钟",
-    "tags": ["卢浮宫", "抢劫案", "珠宝", "安保", "法国"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31826275"
-  },
-  {
-    "id": 3,
-    "title": "跨越百年的文化姻缘，岭南文化绽放上海",
-    "summary": "广东美术百年大展、新编粤剧《双绣缘》、舞剧《英歌》等岭南文化项目国庆档在上海轮番上演，观众反响热烈。",
-    "image": "https://picsum.photos/seed/lingnan-shanghai-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "3 分钟",
-    "tags": ["岭南文化", "广东美术", "粤剧", "舞剧", "上海"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31820234"
-  },
-  {
-    "id": 4,
-    "title": "爱马仕三季度销售额增长10%：在大中华地区看到“改善”",
-    "summary": "爱马仕2025Q3销售额达39亿欧元，同比增10%，大中华区表现环比轻微改善，欧洲与美洲持续强劲。",
-    "image": "https://picsum.photos/seed/hermes-q3-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["爱马仕", "财报", "奢侈品", "大中华区"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824006"
-  },
-  {
-    "id": 5,
-    "title": "江浙“全国外贸十强城市”公布外贸“三季报”：金华表现亮眼",
-    "summary": "苏州、宁波、金华前三季度外贸数据出炉，苏州破2万亿、宁波破1万亿，金华增速20.7%领跑浙江。",
-    "image": "https://picsum.photos/seed/jinhua-trade-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["外贸", "金华", "苏州", "宁波", "进出口"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824173"
-  },
-  {
-    "id": 6,
-    "title": "上海陆家嘴咖啡节第十年举办：打造联名文创，已成产业孵化器",
-    "summary": "第十届陆家嘴国际咖啡文化节采用“5+3”双会场模式，集结全球300+品牌，同期举办研讨会、拉花大赛等。",
-    "image": "https://picsum.photos/seed/lujiazui-coffee-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["陆家嘴", "咖啡节", "文创", "上海", "产业孵化"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31824101"
-  },
-  {
-    "id": 7,
-    "title": "重新发现中国 | 江苏盐城的“出圈秘籍”：比风景更动人的是人文",
-    "summary": "盐城凭借湿地生态、世遗品牌与创意传播，跻身旅行App“宝藏城市”榜单，成为亲子游与研学游新热点。",
-    "image": "https://picsum.photos/seed/yancheng-wetland-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "3 分钟",
-    "tags": ["盐城", "湿地", "文旅", "亲子游", "江苏"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102872446.html"
-  },
-  {
-    "id": 8,
-    "title": "国内AI应用赛道最大单笔融资问世 LiblibAI完成1.3亿美元融资",
-    "summary": "AI创作平台LiblibAI宣布完成1.3亿美元B轮，红杉中国、CMC资本领投，创年内国内AI应用最大单笔融资。",
-    "image": "https://picsum.photos/seed/liblibai-1b-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["AI应用", "LiblibAI", "融资", "红杉中国", "创作平台"],
-    "source": "证券时报",
-    "originalUrl": "https://www.stcn.com/article/detail/3399513.html"
-  },
-  {
-    "id": 9,
-    "title": "曾红极一时的咖啡品牌，北京仅剩1家店！今年将关掉40多家门店",
-    "summary": "85度C北京知春二店关闭后仅剩白广路1店，2025年大陆市场已关40余家，上半年亏损约4600万元。",
-    "image": "https://picsum.photos/seed/85c-closure-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "2 分钟",
-    "tags": ["85度C", "关店", "北京", "亏损", "烘焙咖啡"],
-    "source": "证券时报",
-    "originalUrl": "https://www.stcn.com/article/detail/3392004.html"
-  }
+{
+"id":1,
+"title":"特斯拉AI前成员卡帕西给Agent泼冷水：真正成熟还需十年",
+"summary":"2025年被称为智能体Agent之年，当行业的热潮席卷全球之际，OpenAI创始成员、特斯拉前AI总监安德烈·卡帕西（Andrej Karpathy）近日在接受播客节目“Dwarkesh Patel Show”采访时给这股热潮泼下一盆冷水，他直言，当前AI Agent技术尚处早期，还存在“无法持续学习、非真正的多模态、不能自如操作电脑”等核心缺陷，要实现真正的实用化还需要十年左右。",
+"image":"https://picsum.photos/seed/tesla-ai-agent-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"2 分钟",
+"tags":[
+"人工智能",
+"Agent",
+"特斯拉",
+"技术发展"
+],
+"source":"澎湃新闻",
+"originalUrl":"https://www.thepaper.cn/newsDetail_forward_31811695"
+},
+{
+"id":2,
+"title":"《时代》公布2025最佳发明，有DeepSeek、宇树等",
+"summary":"近日，美国《时代周刊》杂志公布了2025年最佳发明榜单，选出了300项年度最具影响力的创新发明，涵盖机器人、人工智能、航空航天、可穿戴技术、农业、教育、娱乐和游戏、饮食、绿色能源、制造与材料、隐私与安全等36个品类。中国科技品牌在此次评选中表现亮眼，华为、联想、比亚迪、荣耀、小米、DeepSeek、宇树科技、追觅科技、雷鸟创新、XREAL、影石创新、传音、韶音、松鼠AI、极哲、友宏科技、零零科技、和生创新、拓竹科技等20余个中国企业的产品成功入选。",
+"image":"https://picsum.photos/seed/time-best-inventions-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"3 分钟",
+"tags":[
+"最佳发明",
+"科技创新",
+"中国品牌"
+],
+"source":"澎湃新闻",
+"originalUrl":"https://www.thepaper.cn/newsDetail_forward_31769977"
+},
+{
+"id":3,
+"title":"AI观察｜AI眼镜能否成为下一代人机互动的超级入口？",
+"summary":"眼镜的智能化演进重新定义了人与周围世界的互动方式，打破传统屏幕边界。刚刚落幕的外滩大会期间，一批轻盈便携的消费级AI眼镜展出，用户只需戴上眼镜，就能解锁实时翻译、扫码开锁、导航等体验，将信息与服务融入现实视野。多位参会者表示，智能眼镜有望成为新的入口，重新定义人机关系。AI眼镜不只在于比拼参数，还要创造“无感化”的沉浸体验，人机交互的最终目标是减少交互，实现无感智能。",
+"image":"https://picsum.photos/seed/ai-glasses-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"3 分钟",
+"tags":[
+"AI眼镜",
+"人机互动",
+"智能设备"
+],
+"source":"澎湃新闻",
+"originalUrl":"https://www.thepaper.cn/newsDetail_forward_31601372"
+},
+{
+"id":4,
+"title":"今年1至8月汕头玩具文化产品出口超160亿元",
+"summary":"人民财讯10月23日电，广东汕头澄海被称为“中国玩具礼品之都”，占据全球约三分之一的塑料玩具产能。今天，第24届汕头·澄海国际玩具礼品博览会开幕，展会共展出25万款玩具及展品，预计吸引全球各地采购商和消费者超25万人次，展会初步达成意向采购订单约158亿元。今年1至8月份，汕头市玩具+文化产品出口总额超160亿元，其中七八月份玩具品类出口额近27亿元。",
+"image":"https://picsum.photos/seed/shantou-toy-export-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"2 分钟",
+"tags":[
+"汕头",
+"玩具出口",
+"文化产业"
+],
+"source":"证券时报",
+"originalUrl":"https://www.stcn.com/article/detail/3402198.html"
+},
+{
+"id":5,
+"title":"守护绿水青山 绘就生态画卷——长白山65年保护与发展实践",
+"summary":"在吉林省东南部，长白山宛如一道天然屏障矗立在亚洲大陆东北部。自1960年建立自然保护区以来，一代代长白山人历经65载接力守护，从“靠山吃山”的传统模式逐步转向“养山富山”的生态文明探索，为绿水青山就是金山银山理念的实践提供生动样本。长白山国家级自然保护区森林覆盖率超过92%，保留着欧亚大陆东部最典型的温带山地森林生态系统。如今，长白山通过产业创新、交通升级，将生态优势转化为经济动能，推动区域高质量发展。",
+"image":"https://picsum.photos/seed/changbaishan-protection-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"3 分钟",
+"tags":[
+"长白山",
+"生态保护",
+"绿色发展"
+],
+"source":"新华网",
+"originalUrl":"https://www.news.cn/20251022/63075258d1bf4eb4bfb0e1fa17aa6829/c.html"
+},
+{
+"id":6,
+"title":"“村BA”助力文旅产业更有活力",
+"summary":"10月17日，2025年全国和美乡村篮球大赛（“村BA”）总决赛冠亚军决赛在贵州省台江县台盘村举行。据统计，当晚现场观众超2万人，气氛热烈。村里的民宿、餐馆早早被订满，处处是升腾的烟火气。台盘村通过举办“村BA”，将流量转化为乡村发展的动力，推动了乡村文旅产业的融合发展，吸引了大量游客，带动了当地餐饮、住宿等产业的繁荣，成为乡村振兴的生动实践。",
+"image":"https://picsum.photos/seed/cunba-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"2 分钟",
+"tags":[
+"村BA",
+"文旅产业",
+"乡村振兴"
+],
+"source":"新华网",
+"originalUrl":"https://www.news.cn/20251024/33736b1d342e4c9cb9da2aef9bfd90ed/c.html"
+},
+{
+"id":7,
+"title":"重新发现中国 | 江苏盐城的“出圈秘籍”：比风景更动人的是人文",
+"summary":"近年来，江苏盐城凭借独特的自然生态、文化魅力和创新的表达方式，逐渐走进大众视野。盐城通过深挖城市记忆与老文脉，将红色精神、非遗传说、老盐城故事转化为游客可感、可触、可体验的消费场景，塑造了文旅的辨识度。无论是新四军纪念馆的红色文创，还是东台西溪天仙缘景区的爱情传说，亦或是竹林大饭店的怀旧氛围，都让盐城成为了一个充满人文魅力的旅游目的地。",
+"image":"https://picsum.photos/seed/yancheng-culture-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"3 分钟",
+"tags":[
+"盐城",
+"文旅",
+"人文魅力"
+],
+"source":"第一财经",
+"originalUrl":"https://www.yicai.com/news/102872446.html"
+},
+{
+"id":8,
+"title":"国内AI应用赛道最大单笔融资问世 LiblibAI完成1.3亿美元融资",
+"summary":"2025年以来，AI应用层加速爆发。10月22日，AI应用公司LiblibAI宣布完成1.3亿美元B轮融资，由红杉中国、CMC资本及一战略投资方联合领投，老股东顺为资本、源码资本、明势创投等均超额增持。LiblibAI成立于2023年底，现已成长为中国最大的多模态模型与创作社区，平台整合了图像、视频、3D、LoRA训练等多模态能力，覆盖从灵感生成、视觉设计到动态视频制作的完整AI工作流，孵化了超过2000万AI创作者。这笔融资标志着AI投资热点正从底层模型转向应用层。",
+"image":"https://picsum.photos/seed/liblibai-funding-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"2 分钟",
+"tags":[
+"AI应用",
+"融资",
+"LiblibAI"
+],
+"source":"证券时报",
+"originalUrl":"https://www.stcn.com/article/detail/3399513.html"
+},
+{
+"id":9,
+"title":"曾红极一时的咖啡品牌，北京仅剩1家店！今年将关掉40多家门店，上半年大陆市场亏损约4600万元",
+"summary":"曾红极一时的烘焙咖啡品牌“85度C”近日正频繁闭店。10月20日，《每日经济新闻》记者经实地走访证实，85度C北京知春二店已于10月19日正式关闭。至此，85度C在北京仅剩白广路的一家门店。85度C母公司“美食-KY”近日表示，今年中国大陆关店总数将超过40家，背后是公司在大陆市场销售额超20%的锐减与持续亏损。行业专家认为，接连闭店揭示出这一烘焙巨头正面临品牌老化与创新不足的深层挑战。",
+"image":"https://picsum.photos/seed/85dc-coffee-2025/1200/800",
+"date":"2025-10-24",
+"readTime":"2 分钟",
+"tags":[
+"85度C",
+"咖啡品牌",
+"闭店"
+],
+"source":"证券时报",
+"originalUrl":"https://www.stcn.com/article/detail/3392004.html"
+}
 ]
+
 
 
 

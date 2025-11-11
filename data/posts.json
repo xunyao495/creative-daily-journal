@@ -1,104 +1,103 @@
 [
   {
     "id": 1,
-    "title": "2%排片撬动20%票房，上海银发市场被《菜肉馄饨》打开了",
-    "summary": "沪语电影《菜肉馄饨》以仅2.2%的排片占比，斩获172.6万元票房，成为上海城市票房亚军，上座率高达58%，成为现象级票房黑马。",
-    "image": "https://picsum.photos/seed/cairou-wonton-movie/1200/800",
-    "date": "2025-11-08",
-    "readTime": "2 分钟",
-    "tags": ["电影票房", "银发市场", "沪语电影", "上海"],
+    "title": "AI是否具备真正的创造力？",
+    "summary": "英国《自然》网站指出，AI生成作品已能媲美人类创作，但多数科学家认为AI缺乏真正的创造过程，未经历人类创作中的想象、推理与调整。顶尖人类创作者仍保有优势，而人机协同创造被视为未来方向，但需警惕文化同质化和过度依赖AI的风险。",
+    "image": "https://picsum.photos/seed/ai-creativity-debate-2025/1200/800",
+    "date": "2025-11-11",
+    "readTime": "3 分钟",
+    "tags": ["AI创造力", "人机协作", "科学定义", "文化挑战"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31926558"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939566"
   },
   {
     "id": 2,
-    "title": "汇聚全球创意共绘“姑苏繁华图”，苏州持续擦亮“文创之城”名片",
-    "summary": "第十四届苏州文博会吸引超10万人次参与，直播曝光量近140万，展现苏州作为“最强地级市”与江南文化高地的双重魅力。",
-    "image": "https://picsum.photos/seed/suzhou-creative-fest-2025/1200/800",
-    "date": "2025-11-02",
+    "title": "李飞飞发表长文：空间智能是AI下一个前沿",
+    "summary": "斯坦福大学教授李飞飞11月10日发表长文，指出当前大语言模型缺乏对物理世界的真实理解，而空间智能——理解、导航并与三维世界交互的能力，将是AI实现真正智能的关键。其创立的World Labs已融资2.3亿美元，推出空间智能模型Marble预览版。",
+    "image": "https://picsum.photos/seed/spatial-intelligence-feifeili-2025/1200/800",
+    "date": "2025-11-10",
     "readTime": "2 分钟",
-    "tags": ["苏州文博会", "文创产业", "江南文化", "全球创意"],
+    "tags": ["空间智能", "李飞飞", "World Labs", "AI前沿"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31907450"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939684"
   },
   {
     "id": 3,
-    "title": "国家广电总局：启动不良动画微短剧和动画短视频专项治理",
-    "summary": "广电总局启动专项治理，首次将AIGC、漫画、表情包等动画形式纳入审核体系，强化内容监管，营造未成年人清朗网络空间。",
-    "image": "https://picsum.photos/seed/animation-crackdown-2025/1200/800",
-    "date": "2025-11-07",
-    "readTime": "2 分钟",
-    "tags": ["动画治理", "广电总局", "未成年人保护", "AIGC"],
+    "title": "上海数字法院变革：逾八百应用场景嵌入办案系统，九成法官受益",
+    "summary": "上海法院打造数字法院系统，将800余个应用场景嵌入办案系统，累计推送提示信息150万余条，覆盖全市法院92%的法官。系统可智能甄别'假离婚、实逃债'等虚假诉讼，实现从'事后监督'到'事前预警'的转变，法官反馈有帮助率超90%。",
+    "image": "https://picsum.photos/seed/digital-court-shanghai-2025/1200/800",
+    "date": "2025-11-10",
+    "readTime": "3 分钟",
+    "tags": ["数字法院", "智慧司法", "上海", "司法大数据"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31922582"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939439"
   },
   {
     "id": 4,
-    "title": "关于具身智能，湖州的生长力",
-    "summary": "湖州马拉松博览会上，9款人形机器人与2款机器狗组成“智能军团”，咖啡机器人、跳舞机器狗等场景展现具身智能城市活力。",
-    "image": "https://picsum.photos/seed/huzhou-robot-marathon/1200/800",
-    "date": "2025-11-08",
+    "title": "2025年布克奖得主：今年确实是匈牙利作家的好年头",
+    "summary": "英籍匈牙利作家大卫·邵洛伊凭小说《肉身》赢得2025年布克奖，获得5万英镑奖金。评审团称其为'非凡且独特的小说'，讲述了一位神秘男子从匈牙利到伦敦的人生历程。这是继匈牙利作家获诺贝尔文学奖后的又一重要文学奖项。",
+    "image": "https://picsum.photos/seed/booker-prize-2025/1200/800",
+    "date": "2025-11-10",
     "readTime": "2 分钟",
-    "tags": ["具身智能", "湖州马拉松", "人形机器人", "未来城市"],
+    "tags": ["布克奖", "大卫·邵洛伊", "匈牙利文学", "肉身"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31923659"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939129"
   },
   {
     "id": 5,
-    "title": "12秒售罄、6.2万人涌入鸟巢，中国电竞“蓄势待发”",
-    "summary": "2025 KPL年度总决赛在鸟巢举行，成都AG超玩会4:2击败重庆狼队夺冠，成为首支鸟巢夺冠战队，电竞迈入主流体育殿堂。",
-    "image": "https://picsum.photos/seed/kpl-bird-nest-2025/1200/800",
-    "date": "2025-11-08",
+    "title": "百度第二次做AI眼镜，售价超过2000元",
+    "summary": "百度AI智能眼镜PRO于11月10日开售，售价2299元。产品主打拍摄、AI翻译、识物、备忘等功能，但不具备AR显示能力。这是百度自2014年BaiduEye项目失败后，时隔11年重返AI眼镜市场，面临小米、华为等品牌的激烈竞争。",
+    "image": "https://picsum.photos/seed/baidu-ai-glasses-pro-2025/1200/800",
+    "date": "2025-11-10",
     "readTime": "2 分钟",
-    "tags": ["KPL", "鸟巢", "电竞夺冠", "成都AG"],
+    "tags": ["AI眼镜", "百度", "智能硬件", "小度"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102902746.html"
+    "originalUrl": "https://www.yicai.com/news/102904921.html"
   },
   {
     "id": 6,
-    "title": "悦己、银发还是毛孩子？去进博会寻找下一个消费爆款",
-    "summary": "进博会透露消费新趋势：悦己主义崛起，情绪价值驱动购买，银发经济与宠物经济成为品牌布局重点，奢侈品策略转向“自我奖赏”。",
-    "image": "https://picsum.photos/seed/ciiet-consumer-trends-2025/1200/800",
-    "date": "2025-11-07",
-    "readTime": "2 分钟",
-    "tags": ["进博会", "悦己消费", "银发经济", "宠物经济"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102902800.html"
+    "title": "中国艺术节如何激发文旅消费新动能",
+    "summary": "第十四届中国艺术节在川渝举办，推出100个文旅特色场景，通过'跟着演出去旅行'模式串联演出场馆与旅游景区。艺术节期间，武侯祠博物馆文创收入同比增长21.18%，'夜游锦江'等沉浸式体验项目成为夜间经济亮点，有效激发文旅消费新动能。",
+    "image": "https://picsum.photos/seed/china-art-festival-2025/1200/800",
+    "date": "2025-11-03",
+    "readTime": "3 分钟",
+    "tags": ["中国艺术节", "文旅消费", "川渝", "沉浸式体验"],
+    "source": "新华网",
+    "originalUrl": "http://www.news.cn/20251103/2f0668eaf5e6429b95637b7b1582cfab/c.html"
   },
   {
     "id": 7,
-    "title": "OpenAI预计年化收入超200亿美元；谷歌构想将数据中心建在太空",
-    "summary": "谷歌“捕日者”计划拟2027年发射太阳能卫星，打造太空数据中心；OpenAI则预计2025年年化收入破200亿美元，2030年达数千亿。",
-    "image": "https://picsum.photos/seed/google-space-datacenter/1200/800",
-    "date": "2025-11-07",
+    "title": "《世界遗产地绿色可持续发展倡议》发布：35项世界遗产携手共筑未来生态与文化愿景",
+    "summary": "第七届太和论坛发布《世界遗产地绿色可持续发展倡议》，由故宫博物院等35项世界遗产及万科公益基金会共同发起。论坛分享'故宫零废弃'项目经验，该项目使故宫人均垃圾产生量下降31.2%，生活垃圾回收利用率提升至28%，为遗产地提供可复制的绿色发展模式。",
+    "image": "https://picsum.photos/seed/world-heritage-green-initiative-2025/1200/800",
+    "date": "2025-11-10",
     "readTime": "2 分钟",
-    "tags": ["OpenAI", "谷歌", "太空数据中心", "AI收入"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102902740.html"
+    "tags": ["世界遗产", "绿色可持续发展", "故宫零废弃", "太和论坛"],
+    "source": "新华网",
+    "originalUrl": "http://www.news.cn/ci/20251110/312cfd0a28a54de4841c180a17b10a50/c.html"
   },
   {
     "id": 8,
-    "title": "电影分镜艺术，重新打开感官｜上海艺术周展览推荐",
-    "summary": "第七届上海国际艺术品交易周将于11月13-17日举办，西岸艺博会五大展馆创历年最大规模，ART021首迎东南亚画廊集中亮相。",
-    "image": "https://picsum.photos/seed/shanghai-art-week-2025/1200/800",
-    "date": "2025-11-12",
+    "title": "全运会｜开幕式主创团队：粤港澳三地文化交融无处不在",
+    "summary": "第十五届全国运动会11月9日在广州开幕，开幕式以《圆梦未来》为主题，展现粤港澳大湾区千年发展历程。粤港澳三地文艺工作者共同创作所有节目，三地火炬手共同点燃主火炬。工业人形机器人敲响千年青铜句鑃，呈现古今对话的独特创意。",
+    "image": "https://picsum.photos/seed/national-games-opening-2025/1200/800",
+    "date": "2025-11-09",
     "readTime": "2 分钟",
-    "tags": ["上海艺术周", "西岸艺博会", "ART021", "一带一路"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102902790.html"
+    "tags": ["全运会", "粤港澳", "开幕式", "文化交融"],
+    "source": "新华网",
+    "originalUrl": "http://www.news.cn/ci/20251110/adbdbb2e703c454085e74c7eacaa8691/c.html"
   },
   {
     "id": 9,
-    "title": "一句话炸掉5000亿美元市值！OpenAI紧急“救火”，AI泡沫临近？",
-    "summary": "OpenAI高管一句“需政府担保”引发美股科技板块蒸发5000亿美元，CEO奥尔特曼紧急发文澄清并披露收入预期，试图稳住市场信心。",
-    "image": "https://picsum.photos/seed/openai-market-crash-2025/1200/800",
+    "title": "文物的“新展厅”：三星堆文创潮玩的出圈密码",
+    "summary": "三星堆博物馆文创产业年销售额突破2亿元，IP授权收入超千万元。文创产品品类超2700种，年更新率超30%，成都东站设立联名文创专区。博物馆通过深耕文博衍生品开发、品牌联名授权和数字产品研发，构建起完整的文创产业链，推动文物活化利用。",
+    "image": "https://picsum.photos/seed/sanxingdui-creative-industry-2025/1200/800",
     "date": "2025-11-07",
     "readTime": "2 分钟",
-    "tags": ["OpenAI", "美股暴跌", "AI泡沫", "市值蒸发"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102901134.html"
+    "tags": ["三星堆", "文创产业", "文物活化", "博物馆经济"],
+    "source": "新华网",
+    "originalUrl": "http://www.news.cn/ci/20251107/00ad6a754f7f42aeb9c9831a496c539b/c.html"
   }
 ]
-
 
 

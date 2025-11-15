@@ -1,103 +1,106 @@
 [
+  [
   {
     "id": 1,
-    "title": "AI是否具备真正的创造力？",
-    "summary": "英国《自然》网站指出，AI生成作品已能媲美人类创作，但多数科学家认为AI缺乏真正的创造过程，未经历人类创作中的想象、推理与调整。顶尖人类创作者仍保有优势，而人机协同创造被视为未来方向，但需警惕文化同质化和过度依赖AI的风险。",
-    "image": "https://picsum.photos/seed/ai-creativity-debate-2025/1200/800",
-    "date": "2025-11-11",
-    "readTime": "3 分钟",
-    "tags": ["AI创造力", "人机协作", "科学定义", "文化挑战"],
+    "title": "进博“艺”脉：文创与珍品的对话",
+    "summary": "第八届中国国际进口博览会启幕，以“新时代，共享未来”推近600款文创（含“8”系列徽章），展佳士得馆藏、云锦非遗及奥地利单弦琴、特斯拉无人车等，显文化与科技交融。",
+    "image": "https://picsum.photos/seed/ciiex-culture-2025/1200/800",
+    "date": "2025-11-05",
+    "readTime": "2 分钟",
+    "tags": ["进博会", "文创", "非遗", "科技", "佳士得"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939566"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31901012"
   },
   {
     "id": 2,
-    "title": "李飞飞发表长文：空间智能是AI下一个前沿",
-    "summary": "斯坦福大学教授李飞飞11月10日发表长文，指出当前大语言模型缺乏对物理世界的真实理解，而空间智能——理解、导航并与三维世界交互的能力，将是AI实现真正智能的关键。其创立的World Labs已融资2.3亿美元，推出空间智能模型Marble预览版。",
-    "image": "https://picsum.photos/seed/spatial-intelligence-feifeili-2025/1200/800",
-    "date": "2025-11-10",
-    "readTime": "2 分钟",
-    "tags": ["空间智能", "李飞飞", "World Labs", "AI前沿"],
+    "title": "AI基建竞赛再升温，Anthropic拟斥资500亿美元建数据中心",
+    "summary": "对标OpenAI 1.4万亿美元基础设施建设计划，由亚马逊支持的美国AI初创公司Anthropic拟斥资500亿美元建造美国人工智能基础设施，率先启动得克萨斯州、纽约州定制化数据中心的建设，首批设施将于2026年投入运营。",
+    "image": "https://picsum.photos/seed/anthropic-ai-500b-2025/1200/800",
+    "date": "2025-11-14",
+    "readTime": "3 分钟",
+    "tags": ["Anthropic", "AI基建", "数据中心", "亚马逊", "OpenAI"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939684"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31957577"
   },
   {
     "id": 3,
-    "title": "上海数字法院变革：逾八百应用场景嵌入办案系统，九成法官受益",
-    "summary": "上海法院打造数字法院系统，将800余个应用场景嵌入办案系统，累计推送提示信息150万余条，覆盖全市法院92%的法官。系统可智能甄别'假离婚、实逃债'等虚假诉讼，实现从'事后监督'到'事前预警'的转变，法官反馈有帮助率超90%。",
-    "image": "https://picsum.photos/seed/digital-court-shanghai-2025/1200/800",
-    "date": "2025-11-10",
-    "readTime": "3 分钟",
-    "tags": ["数字法院", "智慧司法", "上海", "司法大数据"],
+    "title": "OpenAI发布GPT-5.1：优秀的AI不仅应该智能，还应该让对话变得愉快",
+    "summary": "当地时间11月12日，OpenAI发布让ChatGPT“更智能、对话感更强、更易于定制”的GPT-5.1。该模型将成为ChatGPT唯一的默认模型，计划在未来几天内逐步推出，首先面向付费用户（Pro、Plus、Go、Business），并逐步向免费用户和未登录用户推送。",
+    "image": "https://picsum.photos/seed/gpt51-openai-2025/1200/800",
+    "date": "2025-11-13",
+    "readTime": "2 分钟",
+    "tags": ["OpenAI", "GPT-5.1", "ChatGPT", "对话体验", "AI模型"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939439"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31955778"
   },
   {
     "id": 4,
-    "title": "2025年布克奖得主：今年确实是匈牙利作家的好年头",
-    "summary": "英籍匈牙利作家大卫·邵洛伊凭小说《肉身》赢得2025年布克奖，获得5万英镑奖金。评审团称其为'非凡且独特的小说'，讲述了一位神秘男子从匈牙利到伦敦的人生历程。这是继匈牙利作家获诺贝尔文学奖后的又一重要文学奖项。",
-    "image": "https://picsum.photos/seed/booker-prize-2025/1200/800",
+    "title": "成都“霸屏”！英雄联盟、IEM、DOTA2……全球顶级电竞赛事为何齐聚成都？",
+    "summary": "当英雄联盟全球总决赛冠亚军决赛现场的欢呼声穿透蓉城天空，当英特尔极限大师赛成都站现场的灯光点亮“星际飞碟”，当BLAST DOTA2大满贯赛事即将在成都上演激烈角逐，成都这座“00后最喜欢的城市”最近一段时间持续汇聚着全球目光，“电竞之都”也正在成为成都的新名片。",
+    "image": "https://picsum.photos/seed/chengdu-esports-2025/1200/800",
     "date": "2025-11-10",
-    "readTime": "2 分钟",
-    "tags": ["布克奖", "大卫·邵洛伊", "匈牙利文学", "肉身"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31939129"
+    "readTime": "3 分钟",
+    "tags": ["成都", "电竞", "英雄联盟", "IEM", "DOTA2"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/video/102910665.html"
   },
   {
     "id": 5,
-    "title": "百度第二次做AI眼镜，售价超过2000元",
-    "summary": "百度AI智能眼镜PRO于11月10日开售，售价2299元。产品主打拍摄、AI翻译、识物、备忘等功能，但不具备AR显示能力。这是百度自2014年BaiduEye项目失败后，时隔11年重返AI眼镜市场，面临小米、华为等品牌的激烈竞争。",
-    "image": "https://picsum.photos/seed/baidu-ai-glasses-pro-2025/1200/800",
-    "date": "2025-11-10",
-    "readTime": "2 分钟",
-    "tags": ["AI眼镜", "百度", "智能硬件", "小度"],
+    "title": "年轻人追捧的“痛金”跑赢金价，但他们不只是在为爱发电",
+    "summary": "尽管金价一路奔着奢侈品行列去了，但比黄金更贵的还有“痛金”。一克“痛金”动辄两三千元，却用小小的“谷子”盖过了消费者的价格敏感，今年双11，更多“痛金”的出炉及走俏正在成为消费市场的新风向。",
+    "image": "https://picsum.photos/seed/tongjin-gold-2025/1200/800",
+    "date": "2025-11-12",
+    "readTime": "3 分钟",
+    "tags": ["痛金", "谷子", "双11", "情绪消费", "年轻人"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102904921.html"
+    "originalUrl": "https://www.yicai.com/news/102908540.html"
   },
   {
     "id": 6,
-    "title": "中国艺术节如何激发文旅消费新动能",
-    "summary": "第十四届中国艺术节在川渝举办，推出100个文旅特色场景，通过'跟着演出去旅行'模式串联演出场馆与旅游景区。艺术节期间，武侯祠博物馆文创收入同比增长21.18%，'夜游锦江'等沉浸式体验项目成为夜间经济亮点，有效激发文旅消费新动能。",
-    "image": "https://picsum.photos/seed/china-art-festival-2025/1200/800",
-    "date": "2025-11-03",
-    "readTime": "3 分钟",
-    "tags": ["中国艺术节", "文旅消费", "川渝", "沉浸式体验"],
-    "source": "新华网",
-    "originalUrl": "http://www.news.cn/20251103/2f0668eaf5e6429b95637b7b1582cfab/c.html"
+    "title": "金融科技助力进博会：从智能体验到交易撮合，金融力量贯穿“买与卖”",
+    "summary": "第八届中国国际进口博览会在上海落幕。据悉，本届进博会意向成交额达834.9亿美元，参展企业数量与展览面积均创新高，全球首发新成果达461项。",
+    "image": "https://picsum.photos/seed/fintech-ciiex-2025/1200/800",
+    "date": "2025-11-10",
+    "readTime": "2 分钟",
+    "tags": ["进博会", "金融科技", "交易撮合", "834亿美元", "首发新品"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102904775.html"
   },
   {
     "id": 7,
-    "title": "《世界遗产地绿色可持续发展倡议》发布：35项世界遗产携手共筑未来生态与文化愿景",
-    "summary": "第七届太和论坛发布《世界遗产地绿色可持续发展倡议》，由故宫博物院等35项世界遗产及万科公益基金会共同发起。论坛分享'故宫零废弃'项目经验，该项目使故宫人均垃圾产生量下降31.2%，生活垃圾回收利用率提升至28%，为遗产地提供可复制的绿色发展模式。",
-    "image": "https://picsum.photos/seed/world-heritage-green-initiative-2025/1200/800",
-    "date": "2025-11-10",
-    "readTime": "2 分钟",
-    "tags": ["世界遗产", "绿色可持续发展", "故宫零废弃", "太和论坛"],
+    "title": "从金鸡百花电影节，看中国电影120年追光密码",
+    "summary": "2025年中国金鸡百花电影节于11月11日至11月15日在福建厦门举办。今年时值中国电影诞生120周年、世界电影诞生130周年，金鸡百花电影节这一集评奖颁奖、电影展映、学术论坛、创投大会、惠民活动等为一体的文化盛宴，不仅是一次重要的光影年鉴，更是探寻中国电影120年来的追光之路，以及电影产业逐梦未来的窗口。",
+    "image": "https://picsum.photos/seed/golden-rooster-2025/1200/800",
+    "date": "2025-11-11",
+    "readTime": "4 分钟",
+    "tags": ["金鸡百花", "中国电影120年", "厦门", "光影年鉴", "电影产业"],
     "source": "新华网",
-    "originalUrl": "http://www.news.cn/ci/20251110/312cfd0a28a54de4841c180a17b10a50/c.html"
+    "originalUrl": "https://www.news.cn/ci/20251111/8c74426b12804664a96f7ce5db8e1af4/c.html"
   },
   {
     "id": 8,
-    "title": "全运会｜开幕式主创团队：粤港澳三地文化交融无处不在",
-    "summary": "第十五届全国运动会11月9日在广州开幕，开幕式以《圆梦未来》为主题，展现粤港澳大湾区千年发展历程。粤港澳三地文艺工作者共同创作所有节目，三地火炬手共同点燃主火炬。工业人形机器人敲响千年青铜句鑃，呈现古今对话的独特创意。",
-    "image": "https://picsum.photos/seed/national-games-opening-2025/1200/800",
-    "date": "2025-11-09",
-    "readTime": "2 分钟",
-    "tags": ["全运会", "粤港澳", "开幕式", "文化交融"],
+    "title": "网络文学，讲出更新更好的中国故事",
+    "summary": "一部网络文学改编的短剧上线，能带动原著日读人数增长超300%；中国网络文学全球共创共享，海外活跃用户达到约2亿并催生一批本土创作者——我们该如何定义今天的网络文学？",
+    "image": "https://picsum.photos/seed/webnovel-china-2025/1200/800",
+    "date": "2025-11-13",
+    "readTime": "3 分钟",
+    "tags": ["网络文学", "中国故事", "短剧改编", "海外用户", "本土创作者"],
     "source": "新华网",
-    "originalUrl": "http://www.news.cn/ci/20251110/adbdbb2e703c454085e74c7eacaa8691/c.html"
+    "originalUrl": "https://www.news.cn/culture/20251113/b8a7248e7a3d4984ab81bf41cb31c4f3/c.html"
   },
   {
     "id": 9,
-    "title": "文物的“新展厅”：三星堆文创潮玩的出圈密码",
-    "summary": "三星堆博物馆文创产业年销售额突破2亿元，IP授权收入超千万元。文创产品品类超2700种，年更新率超30%，成都东站设立联名文创专区。博物馆通过深耕文博衍生品开发、品牌联名授权和数字产品研发，构建起完整的文创产业链，推动文物活化利用。",
-    "image": "https://picsum.photos/seed/sanxingdui-creative-industry-2025/1200/800",
-    "date": "2025-11-07",
+    "title": "陕西榆林地区发现史前至商代石城遗址573座",
+    "summary": "自2019年启动的“榆林地区史前至商代石城遗址专项考古调查”工作历时6年，共发现史前至商代石城遗址573座。",
+    "image": "https://picsum.photos/seed/yulin-stone-city-2025/1200/800",
+    "date": "2025-11-12",
     "readTime": "2 分钟",
-    "tags": ["三星堆", "文创产业", "文物活化", "博物馆经济"],
+    "tags": ["榆林", "石城遗址", "史前", "商代", "考古调查"],
     "source": "新华网",
-    "originalUrl": "http://www.news.cn/ci/20251107/00ad6a754f7f42aeb9c9831a496c539b/c.html"
+    "originalUrl": "https://www.news.cn/culture/20251112/64752859b61b4b27981b6a49ebd1e68f/c.html"
   }
 ]
+]
+
 
 

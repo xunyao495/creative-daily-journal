@@ -1,102 +1,102 @@
- [
+[
   {
     "id": 1,
-    "title": "新质观察｜谁来喂饱中国的AI？公共数据开放的关键一跃",
-    "summary": "当你在政务App上咨询“医保报销要多久到账”，或在医疗智能体里描述症状时，后台的人工智能并不是天生的“百事通”。它之所以能理解你的问题、给出自然的回答，靠的是成千上万条语料样本——来自政策文件、医疗记录、热线对话、网络评论等真实数据。这些数据的集合有一个共同的名字：高质量数据集。它总是甘居幕后，却正成为智能时代最重要的数据基础设施之一。为什么高质量数据集的供给对于AI的发展如此重要？我国的高质量数据集建设、共享和开放如何破局呢？",
-    "image": "https://picsum.photos/seed/ai-public-data-china-2025/1200/800",
-    "date": "2025-11-17",
-    "readTime": "3 分钟",
-    "tags": ["人工智能", "公共数据", "高质量数据集", "数据开放"],
+    "title": "艺术与城市日常融合，这场公共文化展演让全龄共享文化盛宴",
+    "summary": "11月19日晚，“徐汇・听见美好”2025年徐汇区公共文化展演落幕，《我爱你中国》的旋律在西岸大剧院回荡，市民自发合唱，定格徐汇公共文化温暖瞬间。",
+    "image": "https://picsum.photos/seed/xuhui-public-art-2025/1200/800",
+    "date": "2025-11-20",
+    "readTime": "2 分钟",
+    "tags": ["公共文化", "徐汇", "西岸大剧院", "全龄共享"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31984369"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32001942"
   },
   {
     "id": 2,
-    "title": "小鹏汽车三季度营收翻番，何小鹏预期人形机器人售价或接近汽车",
-    "summary": "今年第三季度，小鹏汽车的销量、收入、毛利率等数据再创新高。11月17日，小鹏汽车披露2025年第三季度财报。财报显示，公司第三季度实现营收203.8亿元，同比增长101.8%，环比增长11.5%；归母净亏损为3.8亿元，同比收窄78.9%，环比收窄20.3%。",
-    "image": "https://picsum.photos/seed/xpeng-q3-robot-2025/1200/800",
-    "date": "2025-11-17",
+    "title": "第四届文化创新论坛暨2025全国文化创新指数发布研讨会召开",
+    "summary": "11月15日，论坛在杭州召开，发布2025全国文化创新指数，专家学者围绕深度媒介化背景下的文化创新展开研讨。",
+    "image": "https://picsum.photos/seed/culture-innovation-forum-2025/1200/800",
+    "date": "2025-11-15",
     "readTime": "2 分钟",
-    "tags": ["小鹏汽车", "人形机器人", "财报", "营收翻番"],
+    "tags": ["文化创新", "杭州", "指数发布", "媒介化"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31986682"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31973361"
   },
   {
     "id": 3,
-    "title": "5万个文旅资源点如何搭配出新玩法？上海旅游攻略大赛将启动",
-    "summary": "给你3-7天时间，你会怎么游上海？写下攻略，上传至社交平台，你就能成功参加上海第一届旅游攻略超级大赛。由上海市文旅局主办的“域见上海”第一届旅游攻略超级大赛将于11月18日启动。大赛联动上海市5万余个文旅资源点位，聚焦9天马年春节超级黄金周，通过全民参与的攻略创作赋能文旅市场主体，推动上海“全域旅游”“多日旅游”高质量发展。",
-    "image": "https://picsum.photos/seed/shanghai-travel-hackathon-2025/1200/800",
-    "date": "2025-11-17",
+    "title": "体彩助威团走进全运会——体育、历史、文化、公益的融合之旅",
+    "summary": "11月14日，奥运游泳冠军焦刘洋带队，体彩公益助威团首站打卡广东美术馆，开启体育+文化+公益体验。",
+    "image": "https://picsum.photos/seed/sport-lottery-guangdong-2025/1200/800",
+    "date": "2025-11-14",
     "readTime": "2 分钟",
-    "tags": ["上海", "旅游攻略大赛", "全域旅游", "文旅资源"],
+    "tags": ["体彩", "全运会", "焦刘洋", "公益"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31984969"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31999389"
   },
   {
     "id": 4,
-    "title": "“东绸西固”！茧丝绸将“织”就千亿产业",
-    "summary": "宋锦、云锦、漳缎……近年来，“国风国潮”愈吹愈劲，背后是传承千年的茧丝绸产业绽放如新。商务部等7部门近日印发的关于开展茧丝绸产业“东绸西固”工作的通知，11月17日对外发布。通知提出，到2028年，全国茧丝绸总产值突破3000亿元。“织”就茧丝绸千亿产业，“东绸西固”是关键词。",
-    "image": "https://picsum.photos/seed/china-silk-2025/1200/800",
-    "date": "2025-11-18",
+    "title": "国台办：一贯支持两岸影视、音乐等领域文化交流合作",
+    "summary": "11月19日，国台办发言人朱凤莲在例行发布会上表示，支持两岸青年通过金鸡百花电影节等平台深化影视交流合作。",
+    "image": "https://picsum.photos/seed/cross-strait-film-2025/1200/800",
+    "date": "2025-11-19",
     "readTime": "2 分钟",
-    "tags": ["茧丝绸", "东绸西固", "国潮", "3000亿元"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/fashion/20251118/fd6c069e6f8043e3bc59796126d543b6/c.html"
+    "tags": ["国台办", "两岸影视", "金鸡百花", "青年交流"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31995365"
   },
   {
     "id": 5,
-    "title": "两部日本电影暂缓上映？多家影院工作人员：属实",
-    "summary": "11月17日，有消息称，原定近期上映的日本电影《蜡笔小新：炽热的春日部舞者们》、《工作细胞》均宣布暂缓上映。第一财经记者以消费者身份咨询多家影院，上海市昌里路大光明丽星vip影城和合生汇中影国际影城的工作人员均表示上述消息属实。据线上购票平台，《蜡笔小新：炽热的春日部舞者们》原定于12月6日上映，《工作细胞》原定于11月22日上映。",
-    "image": "https://picsum.photos/seed/crayon-shinchan-delay-2025/1200/800",
-    "date": "2025-11-17",
+    "title": "AI时代为城市文化带来什么？这场重磅会议在沪召开",
+    "summary": "11月15日，2025世界城市文化大会在上海大厦举行，聚焦“AI时代城市文化的新质生态与消费动能”。",
+    "image": "https://picsum.photos/seed/ai-urban-culture-2025/1200/800",
+    "date": "2025-11-15",
     "readTime": "2 分钟",
-    "tags": ["日本电影", "蜡笔小新", "工作细胞", "暂缓上映"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102915623.html"
+    "tags": ["AI", "城市文化", "上海", "消费动能"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31973250"
   },
   {
     "id": 6,
-    "title": "AI会取代人类客服吗",
-    "summary": "大众对大语言模型（LLM）最熟悉的界面就是对话，ChatGPT名字中就带着“chat”。大模型并非天然以对话形式存在，其核心机制是基于预测下一个词的文本续写，但对话是LLM最成功和最广泛应用的形态。很多商业场景都依赖对话，比如客服、社交、面试、法律咨询、金融顾问等，这种天然的匹配性使这些领域成为大模型率先落地的优势场景。本文以电商为例，重点讨论大模型在客服中的应用。",
-    "image": "https://picsum.photos/seed/ai-vs-human-customer-service-2025/1200/800",
-    "date": "2025-11-17",
-    "readTime": "3 分钟",
-    "tags": ["人工智能", "客服", "大语言模型", "电商"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102915512.html"
+    "title": "江浙沪13个古镇联合申报世界文化遗产，阶段性进展公布",
+    "summary": "11月14日，浦东新场古镇研讨会透露，新场与江浙12镇携手申遗，江南水乡古镇联合申遗进入新阶段。",
+    "image": "https://picsum.photos/seed/jiangnan-heritage-2025/1200/800",
+    "date": "2025-11-14",
+    "readTime": "2 分钟",
+    "tags": ["古镇申遗", "江南水乡", "新场", "世界文化遗产"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31968303"
   },
   {
     "id": 7,
-    "title": "盘前必读丨教育部、文旅部同日发出赴日提醒；华为将发布AI领域突破性技术",
-    "summary": "文化和旅游部郑重提醒中国游客近期避免前往日本旅游，已在日中国游客密切关注当地治安形势，提高安全防范意识，加强自我保护，如遇紧急情况，请及时报警并联系驻日使领馆寻求协助。",
-    "image": "https://picsum.photos/seed/china-travel-alert-japan-2025/1200/800",
-    "date": "2025-11-17",
+    "title": "超300位演员同台，港芭《布兰诗歌》收官“大湾区文化周”",
+    "summary": "11月13日，香港芭蕾舞团与香港管弦乐团齐聚上海，300位艺术家共演《布兰诗歌》，为大湾区文化周画上句号。",
+    "image": "https://picsum.photos/seed/hongkong-ballet-carmina-2025/1200/800",
+    "date": "2025-11-13",
     "readTime": "2 分钟",
-    "tags": ["赴日提醒", "文旅部", "华为", "AI突破"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102913961.html"
+    "tags": ["香港芭蕾舞团", "布兰诗歌", "大湾区", "300演员"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_31959621"
   },
   {
     "id": 8,
-    "title": "国内化妆品市场交易额超万亿元 24项举措激发新活力",
-    "summary": "11月17日，国家药监局发布《关于深化化妆品监管改革促进产业高质量发展的意见》。《意见》旨在通过全过程深化化妆品监管改革，全方位筑牢化妆品安全底线，全链条支持化妆品产业高质量发展。",
-    "image": "https://picsum.photos/seed/china-cosmetics-trillion-2025/1200/800",
-    "date": "2025-11-18",
+    "title": "热词看未来｜培育壮大新兴产业和未来产业",
+    "summary": "“十五五”规划建议提出壮大新兴产业与未来产业，2024年我国“三新”经济增加值占GDP比重已超18%。",
+    "image": "https://picsum.photos/seed/future-industries-2025/1200/800",
+    "date": "2025-11-17",
     "readTime": "2 分钟",
-    "tags": ["化妆品", "万亿元市场", "监管改革", "国家药监局"],
-    "source": "财经网",
-    "originalUrl": "https://economy.caijing.com.cn/20251118/5125833.shtml"
+    "tags": ["十五五", "新兴产业", "未来产业", "三新经济"],
+    "source": "新华网",
+    "originalUrl": "https://www.news.cn/digital/20251117/cf1063bccfcc4bd19fc275bd3b470f50/c.html"
   },
   {
     "id": 9,
-    "title": "“人工智能+”行动落地 各产业迎“智变”时刻",
-    "summary": "近日，记者在深圳华为展厅中体验了智能座舱技术。上车后，随口一句“车里有点暗”，阅读灯便自动亮起。基于MoLA架构的车控AIAgent（智能体）让人车对话如唠家常般自然，无需标准口令。华为相关负责人告诉记者，主动服务的技术挑战极大，背后是从环境感知、策略分析到最终执行的完整闭环，这类主动服务对算法精度提出了极高要求。",
-    "image": "https://picsum.photos/seed/ai-plus-industry-2025/1200/800",
-    "date": "2025-10-23",
-    "readTime": "3 分钟",
-    "tags": ["人工智能+", "华为", "智能座舱", "MoLA架构"],
-    "source": "财经网",
-    "originalUrl": "https://stock.caijing.com.cn/20251023/5120750.shtml"
+    "title": "英伟达云端GPU已售罄！黄仁勋驳斥AI泡沫论：已进入AI良性循环",
+    "summary": "英伟达最新季报显示云端GPU供不应求，CEO黄仁勋称AI需求真实，市场已进入良性循环，否认泡沫说法。",
+    "image": "https://picsum.photos/seed/nvidia-gpu-soldout-2025/1200/800",
+    "date": "2025-11-18",
+    "readTime": "2 分钟",
+    "tags": ["英伟达", "GPU", "AI泡沫", "良性循环"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102919867.html"
   }
 ]
 

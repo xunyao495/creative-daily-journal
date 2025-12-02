@@ -1,105 +1,101 @@
 [
   {
     "id": 1,
-    "title": "5G-A规模商用有序推进，覆盖超300个城市",
-    "summary": "工信部启动2025年度5G应用“扬帆”行动评估，目标到2027年每万人5G基站达38个、个人用户普及率超85%，大中型工业企业应用渗透率超45%，将建成100个5G规模发展城市。",
-    "image": "https://picsum.photos/seed/5g-a-china-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "“从从容容、游刃有余，匆匆忙忙、连滚带爬”入选《咬文嚼字》年度十大流行语",
+    "summary": "12月2日，《咬文嚼字》发布2025年十大流行语，“从从容容、游刃有余，匆匆忙忙、连滚带爬”等入选，体现年度社会情绪与语言创新。",
+    "image": "https://picsum.photos/seed/popular-phrases-2025/1200/800",
+    "date": "2025-12-02",
     "readTime": "2 分钟",
-    "tags": ["5G-A", "扬帆行动", "工信部", "网络覆盖"],
+    "tags": ["咬文嚼字", "年度流行语", "社会热点", "语言"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32040228"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32085413"
   },
   {
     "id": 2,
-    "title": "00后谈恋爱，用AI当“僚机”",
-    "summary": "00后把AI当恋爱参谋：一键生成高情商回复的恋爱键盘、建档分析并给出策略的“AI军师”等产品上线一年就入账3000万，正向“闺蜜级”关系指导进化。",
-    "image": "https://picsum.photos/seed/ai-love-wingman-2025/1200/800",
-    "date": "2025-11-26",
-    "readTime": "2 分钟",
-    "tags": ["00后", "AI恋爱", "僚机", "高情商回复"],
+    "title": "契约、疯狂与理想之地：《疯狂动物城2》中的乌托邦叙事",
+    "summary": "《疯狂动物城2》11月26日上映，3天破10亿，6天超前作，预测票房超40亿，成中国影史进口喜剧片冠军。",
+    "image": "https://picsum.photos/seed/zootopia2-2025/1200/800",
+    "date": "2025-11-30",
+    "readTime": "3 分钟",
+    "tags": ["疯狂动物城2", "进口喜剧", "票房", "贺岁档"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32034111"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32076765"
   },
   {
     "id": 3,
-    "title": "从银河奖看“中国式科幻”创作生态的形成",
-    "summary": "第36届中国科幻银河奖揭晓，《故障乌托邦》《为什么它永无止境》等作品获奖，狐尾的笔、柯遥42、天瑞说符等作家集体亮相，展现中国式科幻网络创作与海外传播并进的新生态。",
-    "image": "https://picsum.photos/seed/yinhe-award-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "2025脑机接口大会本周四开幕，9场论坛、4场竞赛助力前沿科技",
+    "summary": "12月4-5日，上海“脑智天地”将举办2025脑机接口大会，设1主论坛+8分论坛+4竞技赛，展示最新脑机技术。",
+    "image": "https://picsum.photos/seed/brain-interface-2025/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["银河奖", "中国式科幻", "网络文学", "海外传播"],
+    "tags": ["脑机接口", "上海", "前沿科技", "大会"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32014517"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32085654"
   },
   {
     "id": 4,
-    "title": "清华艺术与科技周：人机共生时代，艺术何为？",
-    "summary": "2025清华大学“艺术博物馆—艺术与科技周”以“学习的价值”为主题，通过“小径分岔的花园”“镜像世界”两大展览和20场跨学科对话，探讨AI时代认知变革与艺术新角色。",
-    "image": "https://picsum.photos/seed/tsinghua-artech-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "2025WCI圆满落幕，“电竞+文旅”潜力巨大",
+    "summary": "2025《坦克世界》国际冠军赛（WCI）在苏州收官，波兰MAFIA战队7:6夺冠，总奖金160万元创纪录。",
+    "image": "https://picsum.photos/seed/wci2025-tank/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["清华", "人机共生", "艺术与科技", "跨学科"],
+    "tags": ["WCI", "坦克世界", "电竞", "苏州"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32034078"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32084793"
   },
   {
     "id": 5,
-    "title": "商务部研究院：2026年我国即时零售规模将破万亿",
-    "summary": "商务部研究院报告显示，我国即时零售正迈向万亿级规模，2026年将突破1万亿元，2030年达2万亿元，“十五五”期间年均增速12.6%，行业进入生态构建与高质量发展新阶段。",
-    "image": "https://picsum.photos/seed/instant-retail-china-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "奥斯卡明年新增“最佳选角奖”",
+    "summary": "第98届奥斯卡（2026-03-15）将首次颁发“最佳选角奖”，为2001年后首设新奖项，评选规则受关注。",
+    "image": "https://picsum.photos/seed/oscar-casting-2026/1200/800",
+    "date": "2025-11-30",
     "readTime": "2 分钟",
-    "tags": ["即时零售", "万亿规模", "商务部", "年均增速"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/fortune/20251126/007e0fab2ad24c2eb3f8de74e30c09b6/c.html"
+    "tags": ["奥斯卡", "最佳选角奖", "好莱坞", "新奖项"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32080220"
   },
   {
     "id": 6,
-    "title": "不止是打卡！从展览读懂故宫博物院百年新篇",
-    "summary": "午门展厅“掐丝珐琅太平有象”等带“天”字编号的文物，见证1925年故宫首批117万件藏品清点。百年后，新展以数字化、年轻化方式讲述故宫账簿里的传承与创新。",
-    "image": "https://picsum.photos/seed/forbidden-city-centenary-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "视频模型战火再燃！Runway超越谷歌登顶，可灵也来了",
+    "summary": "12月1日，Runway发布Gen-4.5登顶榜单；1小时后，可灵AI发布O1模型，视频生成赛道硝烟再起。",
+    "image": "https://picsum.photos/seed/runway-gen45-2025/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["故宫百年", "文物编号", "数字化展览", "文化传承"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251125/0c6e27c213034213a44278faa61b8caf/c.html"
+    "tags": ["Runway", "可灵AI", "视频模型", "Gen-4.5"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102937447.html"
   },
   {
     "id": 7,
-    "title": "谷歌成“新王”、OpenAI遭逆风，硅谷AI圈洗牌",
-    "summary": "Gemini 3系列模型强势发布，市场普遍认为谷歌已反超OpenAI；奥尔特曼内部备忘录承认“氛围紧张”。AI权力榜重排，直接牵动科技巨头股价与资本流向。",
-    "image": "https://picsum.photos/seed/google-gemini3-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "DeepSeek又上新！模型硬刚谷歌，承认开源与闭源差距拉大",
+    "summary": "12月1日晚，DeepSeek推出V3.2与V3.2-Speciale，推理性能全球领先，团队称开源/闭源差距正在扩大。",
+    "image": "https://picsum.photos/seed/deepseek-v32-2025/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["谷歌Gemini", "OpenAI", "AI竞赛", "硅谷洗牌"],
+    "tags": ["DeepSeek", "大模型", "开源", "推理"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102928477.html"
+    "originalUrl": "https://www.yicai.com/news/102936382.html"
   },
   {
     "id": 8,
-    "title": "2026全球市场展望：锚定AI主线，布局三大市场机遇",
-    "summary": "2025年全球主要股指、黄金皆大涨。展望2026，机构建议继续锚定AI主线，把握算力基建、AI+消费、AI+制造三大方向，同时警惕估值回撤风险。",
-    "image": "https://picsum.photos/seed/ai-outlook-2026/1200/800",
-    "date": "2025-11-26",
+    "title": "今天起这些景区可免门票，盈利压力下望拉动二次消费",
+    "summary": "12月1日起，峨眉山、灵隐飞来峰、茶卡盐湖等景区实行免票，以期通过二次消费缓解经营压力。",
+    "image": "https://picsum.photos/seed/free-admission-2025/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["全球市场", "AI投资", "算力基建", "2026展望"],
+    "tags": ["免票", "景区", "二次消费", "峨眉山"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102927181.html"
+    "originalUrl": "https://www.yicai.com/news/102936057.html"
   },
   {
     "id": 9,
-    "title": "古龙研究中心落地杭州，当代年轻人还能爱上武侠吗？",
-    "summary": "杭州成立古龙研究中心，纪念其近70部武侠作品与“人在江湖，身不由己”等金句。面对Z世代，中心拟用数字藏品、互动剧等新玩法，重燃年轻人对武侠的热情。",
-    "image": "https://picsum.photos/seed/gulong-wuxia-2025/1200/800",
-    "date": "2025-11-26",
+    "title": "影视股集体走高、中国电影涨停！《疯狂动物城2》上映6天票房已超前作",
+    "summary": "12月1日影视股大涨，中国电影涨停。《疯狂动物城2》6天票房已超第一部，带动相关公司股价飙升。",
+    "image": "https://picsum.photos/seed/film-stocks-surge-2025/1200/800",
+    "date": "2025-12-01",
     "readTime": "2 分钟",
-    "tags": ["古龙", "武侠", "Z世代", "数字藏品"],
+    "tags": ["影视股", "中国电影", "疯狂动物城2", "涨停"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102926978.html"
+    "originalUrl": "https://www.yicai.com/news/102935388.html"
   }
 ]
-
-
-
-

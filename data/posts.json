@@ -1,103 +1,104 @@
 [
   {
     "id": 1,
-    "title": "11月新增社融2.49万亿元，三部门联合发文更大力度提振消费",
-    "summary": "央行报告显示，前11个月社融增量33.39万亿元，同比多增3.99万亿元；11月单月新增社融2.49万亿元，人民币贷款增加3900亿元，M2-M1剪刀差收窄至3.1个百分点。三部门同步出台政策，更大力度刺激消费。",
-    "image": "https://picsum.photos/seed/china-social-financing-2025-12/1200/800",
-    "date": "2025-12-12",
+    "title": "能自行修复的量子计算机问世",
+    "summary": "美国“原子计算”公司在《物理评论X》发布成果，展示可在运行中自行修复的中性原子量子计算机，克服原子损耗难题，为可持续大规模量子计算奠基。",
+    "image": "https://picsum.photos/seed/self-healing-quantum-computer-2025/1200/800",
+    "date": "2025-12-23",
     "readTime": "2 分钟",
-    "tags": ["社融", "M2-M1", "提振消费", "央行数据"],
+    "tags": ["量子计算", "自修复", "原子计算", "物理突破"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32177216"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32235016"
   },
   {
     "id": 2,
-    "title": "150余位科学家、企业家与投资人预测2026科技产业图景：人工智能+跨学科融合",
-    "summary": "上海“What's Next 2026”大会发布联合预测：AI 与跨学科融合将被视作下一个爆发点，开放式问答显示，150 多位全球科研与产业领袖普遍认为“AI+”将重新定义未来科技产业格局。",
-    "image": "https://picsum.photos/seed/ai-next-2026-shanghai/1200/800",
-    "date": "2025-12-12",
+    "title": "离岸、在岸人民币对美元汇率分别升破7.02、7.03",
+    "summary": "12月23日，离岸人民币盘中最高7.01950，在岸也同步走强，双双刷新去年10月以来新高，市场预计汇率短期仍获支撑。",
+    "image": "https://picsum.photos/seed/cny-usd-7-02-2025/1200/800",
+    "date": "2025-12-23",
     "readTime": "2 分钟",
-    "tags": ["人工智能+", "跨学科", "科技预测", "上海临港"],
+    "tags": ["人民币汇率", "离岸", "在岸", "美元"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32171128"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32235575"
   },
   {
     "id": 3,
-    "title": "AI音乐改造音乐行业？",
-    "summary": "OpenAI 在 3 个月内连推 GPT-5.1 与 GPT-5.2，反击谷歌 Gemini 3。技术迭代加速背景下，AI 生成音乐对创作、版权与情感消费生态带来冲击，行业变革临界点临近。",
-    "image": "https://picsum.photos/seed/ai-music-industry-2025/1200/800",
-    "date": "2025-12-12",
+    "title": "国内首个开放式机器人租赁平台在沪发布",
+    "summary": "“擎天租”平台上线，已覆盖50座重点城市，提供“像租充电宝一样租机器人”的灵活服务，加速具身智能生态化落地。",
+    "image": "https://picsum.photos/seed/qingtian-rent-robot-2025/1200/800",
+    "date": "2025-12-22",
     "readTime": "2 分钟",
-    "tags": ["AI音乐", "OpenAI", "Gemini3", "版权生态"],
+    "tags": ["机器人租赁", "擎天租", "具身智能", "上海"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32175269"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32230384"
   },
   {
     "id": 4,
-    "title": "《燃烧的尺度》聚焦女性艺术家创作实践",
-    "summary": "上海外滩艺术中心发布同名新书，系统梳理展览中多位标志性女性艺术家的创作路径，剖析她们如何以独特艺术语言突破传统尺度，为当代女性艺术创作立传。",
-    "image": "https://picsum.photos/seed/burning-scale-women-artists/1200/800",
-    "date": "2025-12-12",
+    "title": "《阿凡达3》全球开画成绩较前部下滑20%，中国票房不降反升",
+    "summary": "《阿凡达：火与烬》全球首周3.45亿美元，较前部缩水9000万；中国内地首周4.05亿元，逆势超过去年3.99亿元。",
+    "image": "https://picsum.photos/seed/avatar3-china-boxoffice-2025/1200/800",
+    "date": "2025-12-23",
     "readTime": "2 分钟",
-    "tags": ["女性艺术家", "上海外滩艺术中心", "艺术语言", "创作实践"],
+    "tags": ["阿凡达3", "票房", "中国", "好莱坞"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32175280"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32228276"
   },
   {
     "id": 5,
-    "title": "2025马房管理挑战大赛落幕，推动青少年马术文化发展",
-    "summary": "“华天·人马一心”公益项目核心赛事——马房管理挑战大赛收官，6 支青少年战队与奥运骑手华天同场竞技，通过马房管理与马匹福利实践，把马术“非竞技部分”转化为青少年成长课堂。",
-    "image": "https://picsum.photos/seed/horse-care-challenge-2025/1200/800",
-    "date": "2025-12-13",
+    "title": "奥特曼解释AI“烧钱”逻辑：推理成本终将超过训练成本",
+    "summary": "OpenAI CEO奥特曼称，随着AI调用量暴增，推理成本将反超训练成本，算力成为收入天花板，公司正同步加码投入与商业化。",
+    "image": "https://picsum.photos/seed/altman-ai-burn-money-2025/1200/800",
+    "date": "2025-12-19",
     "readTime": "2 分钟",
-    "tags": ["马术", "青少年", "华天", "公益", "马房管理"],
+    "tags": ["OpenAI", "奥特曼", "推理成本", "算力"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32174010"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32228971"
   },
   {
     "id": 6,
-    "title": "卢浮宫上海办大展，浦东美术馆里有哪些伊斯兰艺术珍品？",
-    "summary": "卢浮宫首次登陆上海，带来“图案的奇迹”大展，汇集莫卧儿、萨法维与奥斯曼三大帝国精品，从宫廷地毯到细密画，呈现伊斯兰艺术繁复之美，展期至明年 5 月 6 日。",
-    "image": "https://picsum.photos/seed/louvre-islamic-art-shanghai/1200/800",
-    "date": "2025-12-13",
+    "title": "年终盘点｜“借别人的不如造自己的”，潮玩行业争建自有IP生态",
+    "summary": "2025年头部潮玩厂商加速布局自有IP，强化稀缺性与议价权，打造“内容-商品-体验”闭环，提升抗风险能力与全球话语权。",
+    "image": "https://picsum.photos/seed/toy-ip-ecosystem-2025/1200/800",
+    "date": "2025-12-23",
     "readTime": "3 分钟",
-    "tags": ["卢浮宫", "伊斯兰艺术", "浦东美术馆", "莫卧儿", "奥斯曼"],
+    "tags": ["潮玩", "自有IP", "文创", "年终盘点"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102957931.html"
+    "originalUrl": "https://www.yicai.com/news/102965897.html"
   },
   {
     "id": 7,
-    "title": "外骨骼机器人“出圈” 行业痛点待解",
-    "summary": "泰山、长城等景区引入外骨骼助力登山，万元级售价引爆消费级市场。记者调研发现，续航、安全与适配性仍是行业痛点，选购需认准医疗器械认证与场景匹配。",
-    "image": "https://picsum.photos/seed/exoskeleton-tourist-mountaineering-2025/1200/800",
-    "date": "2025-12-15",
+    "title": "杭州“十五五”怎么干 这场发布会释放重要信息",
+    "summary": "12月18日，杭州发布“十五五”规划建议，提出打造全球数字经济创新高地、未来产业先导区，并详解城西科创大走廊等关键举措。",
+    "image": "https://picsum.photos/seed/hangzhou-15th-plan-2025/1200/800",
+    "date": "2025-12-18",
     "readTime": "3 分钟",
-    "tags": ["外骨骼机器人", "景区登山", "行业痛点", "消费级市场"],
-    "source": "新华网",
-    "originalUrl": "https://www.news.cn/20251215/c069a7f376cd49fe8df497ab656614c8/c.html"
+    "tags": ["杭州", "十五五", "数字经济", "科创大走廊"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102965843.html"
   },
   {
     "id": 8,
-    "title": "潮玩被列入下一个“千亿级”消费市场，促消费新方案鼓励潮玩出海",
-    "summary": "六部门联合方案明确：到 2027 年打造 10 个千亿级消费热点，潮玩与珠宝首饰、国潮服饰等一同入选；政策鼓励原创 IP 出海，推动中国潮玩抢占全球文化消费高地。",
-    "image": "https://picsum.photos/seed/china-designer-toys-global/1200/800",
-    "date": "2025-12-12",
+    "title": "“摩登华影：海派旗袍与百年时尚”展在上海博物馆启幕",
+    "summary": "上博新展汇集306件/组旗袍珍品，从贝洽女士、张信哲等藏家视角，呈现海派旗袍百年设计美学与文化记忆。",
+    "image": "https://picsum.photos/seed/modern-cheongsam-shanghai-2025/1200/800",
+    "date": "2025-12-22",
     "readTime": "2 分钟",
-    "tags": ["潮玩", "千亿级消费", "国潮出海", "IP授权"],
+    "tags": ["海派旗袍", "上海博物馆", "时尚展览", "文化记忆"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102932600.html"
+    "originalUrl": "https://www.yicai.com/image/102969776.html"
   },
   {
     "id": 9,
-    "title": "汽车消费、首发经济、适老化产品研发……这场发布会回应诸多热点",
-    "summary": "国新办吹风会释放信号：将围绕汽车以旧换新、首发经济、适老化产品等推出精准政策，引导企业“按需生产”，实现供需双向奔赴，最大程度激发消费潜力。",
-    "image": "https://picsum.photos/seed/china-consumption-policy-2025/1200/800",
-    "date": "2025-11-27",
+    "title": "游戏IP如何让传统文化“活”起来？“游戏沪十条”将解锁答案",
+    "summary": "上海即将推出“游戏沪十条”，每年5000万元扶持游戏电竞产业，重点鼓励游戏IP与中华优秀传统文化深度融合，打造数字文创新范式。",
+    "image": "https://picsum.photos/seed/game-shanghai-10-2025/1200/800",
+    "date": "2025-12-23",
     "readTime": "2 分钟",
-    "tags": ["汽车消费", "首发经济", "适老化", "供需适配"],
+    "tags": ["游戏IP", "传统文化", "游戏沪十条", "数字文创"],
     "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102930563.html"
+    "originalUrl": "https://www.yicai.com/video/102968540.html"
   }
 ]
+
 
 

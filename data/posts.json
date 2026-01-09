@@ -1,104 +1,105 @@
 [
   {
     "id": 1,
-    "title": "海南消费火爆背后：免税店如何实现39.5%的毛利率",
-    "summary": "封关后首个元旦，海南离岛免税销售7.12亿元、同比增128.9%；三亚始祖鸟排长队，免税价≈七八折，44.2万件商品、8.35万人次抢购，免税渠道高毛利模式再引关注。",
-    "image": "https://picsum.photos/seed/hainan-dutyfree-2026/1200/800",
-    "date": "2026-01-07",
+    "title": "戏曲明星来到这个社区文化中心，这里有专属“戏剧日”",
+    "summary": "安平、沈昳丽、茅善玉等上海文艺名家齐聚淮海中路社区文化活动中心，1月8日开启“戏剧日”，现场传授身段唱腔并与戏迷同台切磋，未来还将不定期开展戏剧志愿活动。",
+    "image": "https://picsum.photos/seed/xiqu-community-2026/1200/800",
+    "date": "2026-01-09",
     "readTime": "2 分钟",
-    "tags": ["海南免税", "消费火爆", "毛利率", "封关效应"],
+    "tags": ["戏曲", "社区文化", "上海", "戏剧日", "文艺志愿"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32325615"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32344480"
   },
   {
     "id": 2,
-    "title": "与AI、数字技术“争夺”学生，传统教育模式为何几乎全面败北？",
-    "summary": "30年后回望1995年高校文化素质教育“春天”，北大王义遒感叹：当年会场春意融融无人离席，如今AI与数字技术全面渗透，传统课堂吸引力骤降，教育范式迭代已成必然。",
-    "image": "https://picsum.photos/seed/education-vs-ai-2026/1200/800",
-    "date": "2026-01-07",
+    "title": "具身智能迎来中国时刻：人形机器人闪耀CES",
+    "summary": "2026 CES展上，中国企占据机器人展位过半；波士顿动力电驱Atlas首秀，英伟达黄仁勋预言“具备人类级技能的机器人今年将出现”，具身智能进入“ChatGPT时刻”。",
+    "image": "https://picsum.photos/seed/ces-humanoid-china-2026/1200/800",
+    "date": "2026-01-09",
     "readTime": "3 分钟",
-    "tags": ["AI教育", "传统课堂", "数字技术", "高教改革"],
+    "tags": ["CES", "人形机器人", "具身智能", "英伟达", "中国智造"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32324782"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32337876"
   },
   {
     "id": 3,
-    "title": "中国“机器人天团”集体亮相CES：从产品出口向品牌出海战略转型",
-    "summary": "CES 2026拉斯维加斯开幕，宇树、智元、傅利叶等10余家中国具身智能企业组团登场，展示最新人形与服务机器人，释放“AI解决真实问题”信号，标志中国机器人从卖产品到树品牌。",
-    "image": "https://picsum.photos/seed/china-robot-ces-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "2 分钟",
-    "tags": ["CES", "具身智能", "品牌出海", "中国机器人"],
+    "title": "2026：数字科技产业的8个猜想",
+    "summary": "站在2026门槛，作者提出“技术突破—应用验证—商业生态”三问：人形机器人、豆包手机等能否从演示走向规模落地？中国数字产业将迎来“爆发之年”还是“验证之年”？",
+    "image": "https://picsum.photos/seed/tech-guess-2026/1200/800",
+    "date": "2026-01-09",
+    "readTime": "5 分钟",
+    "tags": ["数字科技", "2026猜想", "人形机器人", "商业生态", "技术验证"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32334402"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32318720"
   },
   {
     "id": 4,
-    "title": "2026实体书店发展大会：回归阅读本质，拥抱AI技术",
-    "summary": "1月6日北京召开，大会以“阅读新纪元，书店新坐标”为主题，探讨AI导购、数据选品与场景再造，助力实体书店在文化强国与全民阅读战略下找到高质量生存路径。",
-    "image": "https://picsum.photos/seed/bookstore-ai-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "2 分钟",
-    "tags": ["实体书店", "AI技术", "全民阅读", "文化强国"],
+    "title": "挖角大战与估值狂欢：万亿AI热钱，最终流向哪？",
+    "summary": "AI“高薪抢人”白热化：Meta数十亿美元收购Manus，OpenAI、谷歌互挖墙脚；国内姚顺雨、罗福莉等新星年薪千万。资本与人才双轮驱动，万亿热钱争夺技术制高点。",
+    "image": "https://picsum.photos/seed/ai-talent-war-2026/1200/800",
+    "date": "2026-01-09",
+    "readTime": "4 分钟",
+    "tags": ["AI抢人", "Meta收购", "人才估值", "万亿热钱", "技术争霸"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32327456"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32317394"
   },
   {
     "id": 5,
-    "title": "中国的竞争对手们，留给杉川和iRobot的时间不多了",
-    "summary": "CES 2026中国扫地机器人集体亮相，欧美市场快速边缘化iRobot；其将被杉川收购却缺席展会。美欧份额骤降、中国退场，仅剩日本保守市场第一，时间窗口急剧收窄。",
-    "image": "https://picsum.photos/seed/irobot-challenge-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "3 分钟",
-    "tags": ["杉川", "iRobot", "扫地机器人", "出海竞争"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102991146.html"
+    "title": "微短剧“造梦”：算法时代的无痛情感教育危机",
+    "summary": "爆款微短剧用“首富葬礼+乡村邂逅”的极致反差，批量生产甜宠幻梦。算法精准投喂即时快感，年轻人在无痛叙事中放弃复杂情感训练，引发情感教育空洞化担忧。",
+    "image": "https://picsum.photos/seed/short-drama-dream-2026/1200/800",
+    "date": "2026-01-09",
+    "readTime": "4 分钟",
+    "tags": ["微短剧", "算法造梦", "情感教育", "甜宠叙事", "文化批判"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32236981"
   },
   {
     "id": 6,
-    "title": "陪伴机器人的2026：反大模型的产品更好用？争夺AI应用入口",
-    "summary": "Ropet进驻上海IFC旗舰店，陪伴机器人从小众众筹走向主流商场。标准化供应链+趋同功能令行业步入商业化竞争，反大模型轻量化方案成为体验与成本新平衡。",
-    "image": "https://picsum.photos/seed/companion-robot-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "2 分钟",
-    "tags": ["陪伴机器人", "AI入口", "轻量化模型", "商业化"],
-    "source": "第一财经",
-    "originalUrl": "https://www.yicai.com/news/102991444.html"
+    "title": "“哈基米”音乐流行：年轻人愈发依赖微小、即时、可控的乐趣",
+    "summary": "从动漫旋律到漂浮能指，“哈基米” meme 成为Z世代的集体口癖。15 秒循环、空符号狂欢，折射出互联网青年对微小、即时、可控情绪价值的深度依赖。",
+    "image": "https://picsum.photos/seed/hakimi-meme-2026/1200/800",
+    "date": "2026-01-09",
+    "readTime": "3 分钟",
+    "tags": ["哈基米", "网络迷因", "Z世代", "即时快感", "空符号"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32095297"
   },
   {
     "id": 7,
     "title": "艺术跨年：美术馆和文博机构迎来2026年第一波文旅大流量",
-    "summary": "元旦假期，首博古代金器展、上博百年旗袍展、浦东美术馆独家毕加索展等“跨年展”齐开，全国头部文博机构集中放展，引爆2026首轮文旅消费热潮。",
-    "image": "https://picsum.photos/seed/art-newyear-2026/1200/800",
-    "date": "2026-01-07",
+    "summary": "元旦假期，首都博物馆金器展、上博百年旗袍展、浦东美术馆独家毕加索展等 30+ 跨年大展集中上线，全国各地美术馆迎来 2026 首轮文旅打卡高峰。",
+    "image": "https://picsum.photos/seed/museum-newyear-2026/1200/800",
+    "date": "2026-01-03",
     "readTime": "2 分钟",
-    "tags": ["跨年展", "美术馆", "文旅流量", "毕加索"],
+    "tags": ["跨年展", "美术馆", "文旅流量", "毕加索", "旗袍时尚"],
     "source": "新华网",
     "originalUrl": "https://www.news.cn/politics/20260104/0c221aa27d5d492cb4f12ca236963517/c.html"
   },
   {
     "id": 8,
     "title": "出海企业需要合规、市场、文化适应服务",
-    "summary": "2023新出海潮方兴未艾，中企在欧美碰撞纠纷屡见报端。业界反思：除了产品与资本，企业更需合规辅导、市场洞察与文化适配三大社会支持，方能减少“折戟”风险。",
-    "image": "https://picsum.photos/seed/company-global-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "2 分钟",
-    "tags": ["企业出海", "合规", "文化适应", "社会支持"],
+    "summary": "2023 年以来中企出海潮涌，碰撞与纠纷频发。学界与律所呼吁建立“合规+市场+文化”三位一体社会服务体系，助力企业在海外合法、合规、合民俗地扎根。",
+    "image": "https://picsum.photos/seed/china-go-global-2026/1200/800",
+    "date": "2026-01-09",
+    "readTime": "3 分钟",
+    "tags": ["中企出海", "合规服务", "文化适应", "社会支持", "风险防控"],
     "source": "澎湃新闻",
     "originalUrl": "https://m.thepaper.cn/newsDetail_forward_32227206"
   },
   {
     "id": 9,
     "title": "汽车消费、首发经济、适老化产品研发……这场发布会回应诸多热点",
-    "summary": "国新办吹风会指出：推动供给主动适配需求，才能最大释放消费潜力。工信部将引导车企和消费品企业从设计端精准匹配多元需求，以“称心如意”的产品与服务畅通经济循环。",
+    "summary": "国新办吹风会聚焦“消费品供需适配”：工信部提出以用户需求反向牵引汽车、适老产品、首发经济等供给创新，实现“老百姓喜欢什么，企业就造什么”的精准匹配。",
     "image": "https://picsum.photos/seed/auto-consumer-2026/1200/800",
-    "date": "2026-01-07",
-    "readTime": "2 分钟",
-    "tags": ["汽车消费", "首发经济", "适老化", "供需适配"],
+    "date": "2025-11-27",
+    "readTime": "3 分钟",
+    "tags": ["汽车消费", "首发经济", "适老化", "供需适配", "政策吹风"],
     "source": "第一财经",
     "originalUrl": "https://www.yicai.com/news/102930563.html"
   }
 ]
+
 
 
 

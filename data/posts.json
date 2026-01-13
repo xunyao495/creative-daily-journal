@@ -1,105 +1,103 @@
 [
   {
     "id": 1,
-    "title": "戏曲明星来到这个社区文化中心，这里有专属“戏剧日”",
-    "summary": "安平、沈昳丽、茅善玉等上海文艺名家齐聚淮海中路社区文化活动中心，1月8日开启“戏剧日”，现场传授身段唱腔并与戏迷同台切磋，未来还将不定期开展戏剧志愿活动。",
-    "image": "https://picsum.photos/seed/xiqu-community-2026/1200/800",
-    "date": "2026-01-09",
+    "title": "民政部：鼓励电商平台优化“长辈模式”，设立银发消费专属频道",
+    "summary": "1月13日，民政部联合多部门发布《若干措施》，提出打通银发消费供需堵点，鼓励电商平台上线“长辈模式”与银发专属频道，让老年人“买得到、用得好”。",
+    "image": "https://picsum.photos/seed/silver-ecommerce-2026/1200/800",
+    "date": "2026-01-13",
     "readTime": "2 分钟",
-    "tags": ["戏曲", "社区文化", "上海", "戏剧日", "文艺志愿"],
+    "tags": ["银发经济", "长辈模式", "电商平台", "民政部"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32344480"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32373671"
   },
   {
     "id": 2,
-    "title": "具身智能迎来中国时刻：人形机器人闪耀CES",
-    "summary": "2026 CES展上，中国企占据机器人展位过半；波士顿动力电驱Atlas首秀，英伟达黄仁勋预言“具备人类级技能的机器人今年将出现”，具身智能进入“ChatGPT时刻”。",
-    "image": "https://picsum.photos/seed/ces-humanoid-china-2026/1200/800",
-    "date": "2026-01-09",
+    "title": "AI应用概念股暴涨背后：“变现”和“放量落地”之年要来了？",
+    "summary": "1月12日A股AI应用板块掀涨停潮，蓝色光标、易点天下、中文在线等多股20CM封板。国金证券称2026年是大模型商业推广元年，流量入口与变现逻辑已跑通。",
+    "image": "https://picsum.photos/seed/ai-stocks-surge-2026/1200/800",
+    "date": "2026-01-12",
     "readTime": "3 分钟",
-    "tags": ["CES", "人形机器人", "具身智能", "英伟达", "中国智造"],
+    "tags": ["AI应用", "A股", "蓝色光标", "商业化元年"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32337876"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32368064"
   },
   {
     "id": 3,
-    "title": "2026：数字科技产业的8个猜想",
-    "summary": "站在2026门槛，作者提出“技术突破—应用验证—商业生态”三问：人形机器人、豆包手机等能否从演示走向规模落地？中国数字产业将迎来“爆发之年”还是“验证之年”？",
-    "image": "https://picsum.photos/seed/tech-guess-2026/1200/800",
-    "date": "2026-01-09",
-    "readTime": "5 分钟",
-    "tags": ["数字科技", "2026猜想", "人形机器人", "商业生态", "技术验证"],
+    "title": "工信部：将加大养老服务机器人、适老鞋服、易吞咽食品等产品研发力度",
+    "summary": "工信部消费品司表示，将以“增品种、提品质、强科技、严标准”为主线，重点研发养老服务机器人、适老鞋服及易吞咽食品，推动养老体系向“智慧提质型”升级。",
+    "image": "https://picsum.photos/seed/eldertech-robot-2026/1200/800",
+    "date": "2026-01-13",
+    "readTime": "2 分钟",
+    "tags": ["工信部", "养老机器人", "适老食品", "智慧养老"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32318720"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32373718"
   },
   {
     "id": 4,
-    "title": "挖角大战与估值狂欢：万亿AI热钱，最终流向哪？",
-    "summary": "AI“高薪抢人”白热化：Meta数十亿美元收购Manus，OpenAI、谷歌互挖墙脚；国内姚顺雨、罗福莉等新星年薪千万。资本与人才双轮驱动，万亿热钱争夺技术制高点。",
-    "image": "https://picsum.photos/seed/ai-talent-war-2026/1200/800",
-    "date": "2026-01-09",
-    "readTime": "4 分钟",
-    "tags": ["AI抢人", "Meta收购", "人才估值", "万亿热钱", "技术争霸"],
+    "title": "工人日报刊文：从“死了么”App爆红看独居人群的安全焦虑",
+    "summary": "一款叫“死了么”的签到预警App在独居青年中爆红，却因邮件触达率低、误报高、缺被动监测被吐槽“隔三差五死一次”。专家：心理慰藉大于实际保护，终极方案仍待完善。",
+    "image": "https://picsum.photos/seed/died-app-2026/1200/800",
+    "date": "2026-01-12",
+    "readTime": "3 分钟",
+    "tags": ["独居安全", "死了么App", "邮件预警", "心理慰藉"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32317394"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32373194"
   },
   {
     "id": 5,
-    "title": "微短剧“造梦”：算法时代的无痛情感教育危机",
-    "summary": "爆款微短剧用“首富葬礼+乡村邂逅”的极致反差，批量生产甜宠幻梦。算法精准投喂即时快感，年轻人在无痛叙事中放弃复杂情感训练，引发情感教育空洞化担忧。",
-    "image": "https://picsum.photos/seed/short-drama-dream-2026/1200/800",
-    "date": "2026-01-09",
-    "readTime": "4 分钟",
-    "tags": ["微短剧", "算法造梦", "情感教育", "甜宠叙事", "文化批判"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32236981"
+    "title": "未来5年脑机接口要突破哪些问题？“复旦系”加速科技创新转化",
+    "summary": "复旦光华论坛指出，2026-2030年脑机接口需攻克神经感知-计算-编码芯片、大脑编程、意识解析三大难题，并探索多元技术路线与商业模式，抢占万亿级未来产业入口。",
+    "image": "https://picsum.photos/seed/brain-interface-2026/1200/800",
+    "date": "2026-01-10",
+    "readTime": "3 分钟",
+    "tags": ["脑机接口", "复旦大学", "十五五", "未来产业"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/103000505.html"
   },
   {
     "id": 6,
-    "title": "“哈基米”音乐流行：年轻人愈发依赖微小、即时、可控的乐趣",
-    "summary": "从动漫旋律到漂浮能指，“哈基米” meme 成为Z世代的集体口癖。15 秒循环、空符号狂欢，折射出互联网青年对微小、即时、可控情绪价值的深度依赖。",
-    "image": "https://picsum.photos/seed/hakimi-meme-2026/1200/800",
-    "date": "2026-01-09",
+    "title": "陪伴机器人的2026：反大模型的产品更好用？争夺AI应用入口",
+    "summary": "Ropet等品牌把陪伴机器人搬进上海IFC旗舰店，桌面AI玩具从小众众筹走向大众消费。供应链趋同、功能同质化下，行业进入真刀真枪的商业竞争阶段。",
+    "image": "https://picsum.photos/seed/companion-robot-2026/1200/800",
+    "date": "2026-01-08",
     "readTime": "3 分钟",
-    "tags": ["哈基米", "网络迷因", "Z世代", "即时快感", "空符号"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32095297"
+    "tags": ["陪伴机器人", "Ropet", "AI玩具", "商业竞争"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/102991444.html"
   },
   {
     "id": 7,
     "title": "艺术跨年：美术馆和文博机构迎来2026年第一波文旅大流量",
-    "summary": "元旦假期，首都博物馆金器展、上博百年旗袍展、浦东美术馆独家毕加索展等 30+ 跨年大展集中上线，全国各地美术馆迎来 2026 首轮文旅打卡高峰。",
+    "summary": "元旦假期，全国头部文博机构集体推出“跨年展”：首博金器展、上博百年旗袍展、浦东美术馆独家毕加索展……引爆2026第一波文旅消费热潮。",
     "image": "https://picsum.photos/seed/museum-newyear-2026/1200/800",
     "date": "2026-01-03",
     "readTime": "2 分钟",
-    "tags": ["跨年展", "美术馆", "文旅流量", "毕加索", "旗袍时尚"],
+    "tags": ["跨年展", "美术馆", "文旅流量", "毕加索"],
     "source": "新华网",
     "originalUrl": "https://www.news.cn/politics/20260104/0c221aa27d5d492cb4f12ca236963517/c.html"
   },
   {
     "id": 8,
     "title": "出海企业需要合规、市场、文化适应服务",
-    "summary": "2023 年以来中企出海潮涌，碰撞与纠纷频发。学界与律所呼吁建立“合规+市场+文化”三位一体社会服务体系，助力企业在海外合法、合规、合民俗地扎根。",
+    "summary": "2023年以来新“出海潮”汹涌，但合规、文化冲突、市场监管成高频痛点。专家呼吁建立专业服务体系，帮中企在海外市场“少踩坑、多落地”。",
     "image": "https://picsum.photos/seed/china-go-global-2026/1200/800",
-    "date": "2026-01-09",
+    "date": "2026-01-05",
     "readTime": "3 分钟",
-    "tags": ["中企出海", "合规服务", "文化适应", "社会支持", "风险防控"],
+    "tags": ["企业出海", "合规", "文化适应", "社会支持"],
     "source": "澎湃新闻",
     "originalUrl": "https://m.thepaper.cn/newsDetail_forward_32227206"
   },
   {
     "id": 9,
     "title": "汽车消费、首发经济、适老化产品研发……这场发布会回应诸多热点",
-    "summary": "国新办吹风会聚焦“消费品供需适配”：工信部提出以用户需求反向牵引汽车、适老产品、首发经济等供给创新，实现“老百姓喜欢什么，企业就造什么”的精准匹配。",
+    "summary": "国新办吹风会上，工信部副部长谢远生表示，将推动汽车、家电等大宗消费品“供需适配”，鼓励首发经济、适老化新品研发，让老百姓“买得称心、用得舒心”。",
     "image": "https://picsum.photos/seed/auto-consumer-2026/1200/800",
     "date": "2025-11-27",
-    "readTime": "3 分钟",
-    "tags": ["汽车消费", "首发经济", "适老化", "供需适配", "政策吹风"],
+    "readTime": "2 分钟",
+    "tags": ["汽车消费", "首发经济", "适老化", "供需适配"],
     "source": "第一财经",
     "originalUrl": "https://www.yicai.com/news/102930563.html"
   }
 ]
-
-
 
 

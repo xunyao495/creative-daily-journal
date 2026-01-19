@@ -1,76 +1,76 @@
 [
   {
     "id": 1,
-    "title": "工人日报关注：租房租车租相机，“以租代买”受年轻人青睐",
-    "summary": "从无人机、民族服饰到滑雪装备，年轻人热衷“以租代买”，用更低成本享受高品质体验，不再执着于“拥有”而重“使用”。",
-    "image": "https://picsum.photos/seed/rent-not-buy-2025/1200/800",
-    "date": "2025-01-15",
+    "title": "文学双周记｜总台片单中多部文学改编，“便利店文学”走红",
+    "summary": "2026出版计划：胡迁全集、杨苡口述续集、郑执《朱砂掌》；引进托卡尔丘克《山魔》、科塔萨尔《文思嬉游》、麦克尤恩《我们能知道些什么》等重磅外国文学。",
+    "image": "https://picsum.photos/seed/lit-biweekly-2026/1200/800",
+    "date": "2026-01-19",
     "readTime": "2 分钟",
-    "tags": ["以租代买", "年轻人", "消费新趋势", "品质生活"],
+    "tags": ["文学出版", "华语文学", "外国文学", "2026新书"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32388819"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32413935"
   },
   {
     "id": 2,
-    "title": "“把天聊死”作为方法：社会学家如何研究早期人工智能",
-    "summary": "从1960年代规则式聊天机器人到今日大模型，人类始终追问AI是否真“懂”我们；社会学家用“把天聊死”的实验揭示技术幻觉与伦理困境。",
-    "image": "https://picsum.photos/seed/ai-chat-dead-end-2025/1200/800",
-    "date": "2025-01-15",
+    "title": "2025文学报年度好书公布：文学有创生一切的能力",
+    "summary": "虚构类：苏童《好天气》、刘震云《咸的玩笑》、乔伊斯《芬尼根的守灵夜》全译本等10部；非虚构：梁鸿《要有光》、易彬《穆旦传》、布鲁姆《生命的灿烂之书》等10部上榜。",
+    "image": "https://picsum.photos/seed/2025-lit-annual-books/1200/800",
+    "date": "2026-01-18",
     "readTime": "3 分钟",
-    "tags": ["AI伦理", "社会学家", "大语言模型", "技术哲学"],
+    "tags": ["年度好书", "虚构", "非虚构", "文学报"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32311018"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32410471"
   },
   {
     "id": 3,
-    "title": "海关总署：我国人工智能算力需求旺盛，去年电脑零部件进口增长20%",
-    "summary": "2025年AI算力需求带动电脑零部件进口增20%，激光雷达、光收发模块等核心器件进出口双升，中国成全球AI供应链关键枢纽。",
-    "image": "https://picsum.photos/seed/ai-supply-chain-2025/1200/800",
-    "date": "2025-01-14",
+    "title": "一个月内两家机器人租赁平台在沪成立：相比买，更多人选租机器人？",
+    "summary": "1月15日“万机易租”发布，对标滴滴共享模式，打通机器人厂商、代理商与商业演出、养老、学校等需求端，降低“重资产采购”门槛。",
+    "image": "https://picsum.photos/seed/rent-robot-platform/1200/800",
+    "date": "2026-01-17",
     "readTime": "2 分钟",
-    "tags": ["人工智能", "算力", "进出口", "供应链"],
+    "tags": ["机器人租赁", "共享经济", "上海", "万机易租"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32381824"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32398090"
   },
   {
     "id": 4,
     "title": "当“按年猪”成为网络奇观：一个人的邀约，一座城的应对",
-    "summary": "重庆合川网友“呆呆”帮父亲线上“按年猪”引爆流量，账号涨粉200万，文旅部门紧急回应“非联合炒作”，小城意外登上热搜。",
-    "image": "https://picsum.photos/seed/pig-viral-chongqing-2025/1200/800",
-    "date": "2025-01-15",
-    "readTime": "2 分钟",
-    "tags": ["网络奇观", "重庆合川", "流量经济", "文旅"],
+    "summary": "重庆合川网友“呆呆”求助帮父亲按年猪视频爆火，账号涨粉200万；当地文旅否认联合炒作，盼借流量带动合川出圈。",
+    "image": "https://picsum.photos/seed/online-pig-event/1200/800",
+    "date": "2026-01-16",
+    "readTime": "3 分钟",
+    "tags": ["网络热点", "重庆合川", "文旅", "流量经济"],
     "source": "澎湃新闻",
     "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32381326"
   },
   {
     "id": 5,
     "title": "瑞银：短期并未看到中国明确AI泡沫迹象，中国企业资本开支策略更务实",
-    "summary": "瑞银研报指出，中国AI融资与数据中心建设相对理性，资本开支比美国更务实，短期内出现泡沫概率远低于美国。",
-    "image": "https://picsum.photos/seed/ai-bubble-china-2025/1200/800",
-    "date": "2025-01-14",
+    "summary": "瑞银大中华研讨会指出：中国AI模型融资与数据中心建设相对理性，出现泡沫概率远低于美国，企业资本开支更务实。",
+    "image": "https://picsum.photos/seed/china-ai-bubble-ubs/1200/800",
+    "date": "2026-01-15",
     "readTime": "2 分钟",
-    "tags": ["瑞银", "AI泡沫", "资本开支", "中国市场"],
+    "tags": ["瑞银", "AI泡沫", "资本开支", "中国科技"],
     "source": "澎湃新闻",
     "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32382250"
   },
   {
     "id": 6,
     "title": "上海人形机器人“出海”东南亚：智元海外首家体验馆在马来西亚开业",
-    "summary": "2026年1月13日，智元机器人海外首馆落地马来西亚i-City，打造东南亚首个AI机器人沉浸体验空间，中国智造再下一城。",
-    "image": "https://picsum.photos/seed/robot-sea-malaysia-2025/1200/800",
-    "date": "2025-01-13",
+    "summary": "1月13日，智元机器人海外首馆落地马来西亚雪兰莪i-City，成为当地首家AI机器人体验馆，标志上海人形机器人品牌加速出海。",
+    "image": "https://picsum.photos/seed/zhiyuan-robot-malaysia/1200/800",
+    "date": "2026-01-14",
     "readTime": "2 分钟",
-    "tags": ["人形机器人", "出海", "马来西亚", "智元"],
+    "tags": ["人形机器人", "出海", "智元", "马来西亚"],
     "source": "澎湃新闻",
     "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32382240"
   },
   {
     "id": 7,
     "title": "豆包手机之后，阿里千问加入“一句话点外卖”",
-    "summary": "千问App全面接入阿里生态，用户一句“帮我点一杯咖啡”即可自动选品、定位、支付，AI购物从概念走进日常。",
-    "image": "https://picsum.photos/seed/qianwen-takeaway-2025/1200/800",
-    "date": "2025-01-15",
+    "summary": "1月15日，千问App全面接入淘宝、支付宝、飞猪、高德，用户可直接说“帮我点一杯咖啡”完成选品、地址推荐、支付宝付款，AI购物进入一句话时代。",
+    "image": "https://picsum.photos/seed/qianwen-ai-shopping/1200/800",
+    "date": "2026-01-15",
     "readTime": "2 分钟",
     "tags": ["千问", "AI购物", "一句话点外卖", "阿里生态"],
     "source": "第一财经",
@@ -79,19 +79,19 @@
   {
     "id": 8,
     "title": "出海企业需要合规、市场、文化适应服务",
-    "summary": "新一轮“出海潮”下，中企在合规、市场与文化三方面频频碰壁，催生专业第三方服务需求，出海生态正从野蛮生长走向精细运营。",
-    "image": "https://picsum.photos/seed/chinese-company-global-2025/1200/800",
-    "date": "2025-01-15",
+    "summary": "2023新出海潮下，中企在合规、市场与文化适应上遭遇碰撞。文章呼吁建立法律、财税、品牌、文化等一站式社会支持体系，助力企业稳健全球化。",
+    "image": "https://picsum.photos/seed/chinese-company-overseas/1200/800",
+    "date": "2026-01-12",
     "readTime": "3 分钟",
-    "tags": ["企业出海", "合规", "文化适应", "生态服务"],
+    "tags": ["企业出海", "合规", "文化适应", "全球化"],
     "source": "澎湃新闻",
     "originalUrl": "https://m.thepaper.cn/newsDetail_forward_32227206"
   },
   {
     "id": 9,
     "title": "汽车消费、首发经济、适老化产品研发……这场发布会回应诸多热点",
-    "summary": "国新办吹风会聚焦“供需适配”：工信部提出以消费者需求反向驱动设计，推动汽车、首发经济、适老化产品等多点开花，激发最大消费潜力。",
-    "image": "https://picsum.photos/seed/supply-demand-match-2025/1200/800",
+    "summary": "国新办吹风会：工信部提出“供需总体适配”激发消费潜力，鼓励企业从设计端匹配多元需求，推动汽车消费、首发经济、适老化产品等优质供给。",
+    "image": "https://picsum.photos/seed/auto-consumption-policy/1200/800",
     "date": "2025-11-27",
     "readTime": "3 分钟",
     "tags": ["汽车消费", "首发经济", "适老化", "供需适配"],
@@ -99,5 +99,4 @@
     "originalUrl": "https://www.yicai.com/news/102930563.html"
   }
 ]
-
 

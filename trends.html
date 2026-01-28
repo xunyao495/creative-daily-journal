@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 替换为目标网页同款字体CDN，保留即可 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tailwind自定义配置 -->
@@ -68,7 +69,7 @@
             --warm-white: #fefefe;
             --light-gray: #f8f9fa;
             --soft-gray: #e9ecef;
-            --accent-gold: #d4af37;
+            --accent-gold: #c8a951;;
             --soft-gold: #f4e4a6;
             --light-gold: #f9e9a8;
             --deep-gold: #b8860b;
@@ -79,16 +80,16 @@
             --shadow-light: rgba(0, 0, 0, 0.08);
         }
         body {
-            font-family: 'Noto Sans SC', 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
-            color: var(--text-dark);
-            line-height: 1.7;
-            padding-top: 4rem; /* 适配固定导航栏 */
+              font-family: 'Noto Sans SC', 'Inter', sans-serif; /* 正文字体和目标页一致 */
+              background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+              color: var(--text-dark);
+              line-height: 1.7;
+              padding-top: 4rem;
         }
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            letter-spacing: -0.02em;
+        .hero-title, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Playfair Display', serif;
+                font-weight: 600;
+                letter-spacing: -0.02em;
         }
         .chart-container, .metric-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

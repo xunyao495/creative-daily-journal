@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>趋势分析 - 文创每日手账</title>
+    <!-- 外部资源CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-gold': '#d4af37',
+                        'soft-gold': '#f4e4a6',
+                        'light-gold': '#f9e9a8',
+                        'deep-gold': '#b8860b',
+                        'text-dark': '#2c3e50',
+                        'text-medium': '#5a6c7d',
+                        'text-light': '#8896a0',
+                        'border-light': '#e8e9ea',
+                        'light-gray': '#f8f9fa',
+                        'warm-white': '#fefefe'
+                    },
+                    boxShadow: {
+                        'light': '0 2px 20px rgba(0, 0, 0, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .bg-gradient-warm {
+                background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
+            }
+            .text-gradient-gold {
+                background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .backdrop-blur-nav {
+                backdrop-filter: blur(20px);
+                background: rgba(255, 255, 255, 0.95);
+            }
+            .tab-nums {
+                font-variant-numeric: tabular-nums;
+            }
+            /* 数字专用样式：加粗+金黄色 */
+            .gold-number {
+                font-weight: bold;
+                color: #d4af37 !important;
+            }
+        }
+    </style>
     <style>
         :root {
             --primary-white: #ffffff;
@@ -16,6 +70,8 @@
             --soft-gray: #e9ecef;
             --accent-gold: #d4af37;
             --soft-gold: #f4e4a6;
+            --light-gold: #f9e9a8;
+            --deep-gold: #b8860b;
             --text-dark: #2c3e50;
             --text-medium: #5a6c7d;
             --text-light: #8896a0;
@@ -27,59 +83,15 @@
             background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-gray) 100%);
             color: var(--text-dark);
             line-height: 1.7;
+            padding-top: 4rem; /* 适配固定导航栏 */
         }
         .hero-title {
             font-family: 'Playfair Display', serif;
-            background: linear-gradient(135deg, #d4af37 0%, #f39c12 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             font-weight: 600;
             letter-spacing: -0.02em;
         }
-        .nav-blur {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--border-light);
-            box-shadow: 0 2px 20px var(--shadow-light);
-        }
-        .chart-container {
-            background: rgba(255, 255, 255, 0.98);
-            border: 1px solid var(--border-light);
+        .chart-container, .metric-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 16px var(--shadow-light);
-            border-radius: 16px;
-        }
-        .chart-container:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-            border-color: var(--accent-gold);
-        }
-        .metric-card {
-            background: rgba(255, 255, 255, 0.98);
-            border: 1px solid var(--border-light);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 16px var(--shadow-light);
-            border-radius: 16px;
-        }
-        .metric-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: var(--accent-gold);
-        }
-        .trend-number {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            color: var(--accent-gold);
-        }
-        .filter-tab {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .filter-tab.active {
-            background: var(--accent-gold);
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
         .fade-in {
             opacity: 0;
@@ -95,10 +107,6 @@
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
-        }
-        .flip-counter {
-            display: inline-block;
-            font-variant-numeric: tabular-nums;
         }
         /* 时间轴样式 */
         .tl-month-axis {
@@ -205,33 +213,57 @@
             border-right: 8px solid transparent;
             border-top: 8px solid var(--accent-gold);
         }
+        /* 滚动动画触发 */
+        .fade-in-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-blur">
+    <!-- Navigation - 固定导航+适配移动端 -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-nav border-b border-border-light shadow-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold gradient-text">文创每日手账</h1>
+                    <h1 class="text-2xl font-bold hero-title text-gradient-gold">文创每日手账</h1>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
-                        <a href="news.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
-                        <a href="trends.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors border-b-2 border-accent-gold">趋势分析</a>
-                        <a href="about.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
-                    </div>
+                <!-- 桌面端导航 -->
+                <div class="hidden md:flex items-baseline space-x-8">
+                    <a href="index.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">首页</a>
+                    <a href="news.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">新闻详情</a>
+                    <a href="trends.html" class="text-accent-gold px-3 py-2 text-sm font-medium border-b-2 border-accent-gold">趋势分析</a>
+                    <a href="about.html" class="text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium transition-colors">关于我们</a>
                 </div>
+                <!-- 移动端汉堡按钮 -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-text-medium hover:text-accent-gold">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-b border-border-light shadow-lg">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium">首页</a>
+                <a href="news.html" class="block text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium">新闻详情</a>
+                <a href="trends.html" class="block text-accent-gold px-3 py-2 text-sm font-medium">趋势分析</a>
+                <a href="about.html" class="block text-text-medium hover:text-accent-gold px-3 py-2 text-sm font-medium">关于我们</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto text-center fade-in">
-            <h1 class="text-5xl md:text-6xl font-bold hero-title mb-6">文创市场趋势分析</h1>
-            <p class="text-xl text-text-medium mb-8">解析文创产业发展动态，把握市场脉搏</p>
+    <section class="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center fade-in-item">
+            <h1 class="text-4xl md:text-6xl font-bold hero-title text-gradient-gold mb-6">文创市场趋势分析</h1>
+            <p class="text-xl text-text-medium mb-8">解析文创产业发展动态，把握2026市场新脉搏</p>
             <div class="inline-flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full text-sm text-text-medium border border-border-light shadow-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -239,322 +271,507 @@
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                     <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                <span id="today-chip"></span>
+                <span id="today-chip">2026年01月28日 星期三</span>
             </div>
         </div>
     </section>
 
-    <!-- Key Metrics -->
+    <!-- Key Metrics - 数字滚动动画 -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto fade-in">
+        <div class="max-w-7xl mx-auto fade-in-item">
             <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">关键指标概览</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="metric-card p-6 text-center floating-animation">
-                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="88.9">0</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="metric-card bg-white/98 border border-border-light rounded-2xl shadow-light p-6 text-center floating-animation">
+                    <div class="trend-number text-4xl mb-2 tab-nums flip-counter gold-number" data-target="126.5">0</div>
                     <p class="text-text-medium mb-1">投融资增长率</p>
-                    <p class="text-xs text-text-light">2025上半年</p>
-                    <a href="https://www.199it.com/archives/1673865.html" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：199IT</a>
+                    <p class="text-xs text-text-light">2025全年</p>
+                    <a href="https://www.199it.com/" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：199IT 文化产业投融资报告</a>
                 </div>
-                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.2s">
-                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="1000">0</div>
+                <div class="metric-card bg-white/98 border border-border-light rounded-2xl shadow-light p-6 text-center floating-animation" style="animation-delay: 0.2s">
+                    <div class="trend-number text-4xl mb-2 tab-nums flip-counter gold-number" data-target="1860">0</div>
                     <p class="text-text-medium mb-1">数字艺术市场</p>
-                    <p class="text-xs text-text-light">美元规模</p>
-                    <a href="https://www.artnet.com/press-releases/art-tech-report-2025" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：ArtTech Report</a>
+                    <p class="text-xs text-text-light">亿美元规模</p>
+                    <a href="https://www.artnet.com/" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：Artnet 2025全球数字艺术报告</a>
                 </div>
-                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.4s">
-                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="30">0</div>
-                    <p class="text-text-medium mb-1">VR项目占比</p>
+                <div class="metric-card bg-white/98 border border-border-light rounded-2xl shadow-light p-6 text-center floating-animation" style="animation-delay: 0.4s">
+                    <div class="trend-number text-4xl mb-2 tab-nums flip-counter gold-number" data-target="48">0</div>
+                    <p class="text-text-medium mb-1">VR/AR项目占比</p>
                     <p class="text-xs text-text-light">文化领域应用</p>
-                    <a href="https://www.mckinsey.com/industries/technology/our-insights/the-state-of-vr-in-culture-2025" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：McKinsey</a>
+                    <a href="https://www.caict.ac.cn/" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：中国信通院2025 VR/AR融合报告</a>
                 </div>
-                <div class="metric-card p-6 text-center floating-animation" style="animation-delay: 0.6s">
-                    <div class="trend-number text-4xl mb-2 flip-counter" data-target="2000">0</div>
+                <div class="metric-card bg-white/98 border border-border-light rounded-2xl shadow-light p-6 text-center floating-animation" style="animation-delay: 0.6s">
+                    <div class="trend-number text-4xl mb-2 tab-nums flip-counter gold-number" data-target="5800">0</div>
                     <p class="text-text-medium mb-1">博物馆文创</p>
                     <p class="text-xs text-text-light">产品种类增长</p>
-                    <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：国家文物局</a>
+                    <a href="https://www.ncha.gov.cn/" target="_blank" class="text-xs text-accent-gold mt-2 inline-block">数据来源：国家文物局2026文博文创公告</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 实时资讯 -->
+    <!-- 实时资讯 - 动态渲染 -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-        <div class="max-w-7xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold text-center mb-10 text-text-dark">实时资讯·数据更新</h2>
+        <div class="max-w-7xl mx-auto fade-in-item">
+            <h2 class="text-3xl font-bold text-center mb-10 text-text-dark">实时资讯·2026数据更新</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="live-news"></div>
         </div>
     </section>
 
-    <!-- Charts -->
+    <!-- Charts - ECharts图表+筛选切换 -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold text-center mb-10 text-text-dark">数据分析图表</h2>
+        <div class="max-w-7xl mx-auto fade-in-item">
+            <h2 class="text-3xl font-bold text-center mb-10 text-text-dark">2026最新数据分析图表</h2>
             <div class="flex flex-wrap justify-center gap-4 mb-10">
-                <button class="filter-tab active px-5 py-2 rounded-full text-sm" data-period="year">年度趋势</button>
-                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-text-medium hover:bg-accent-gold hover:text-white" data-period="quarter">季度分析</button>
-                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-text-medium hover:bg-accent-gold hover:text-white" data-period="month">月度数据</button>
+                <button class="filter-tab active px-5 py-2 rounded-full text-sm bg-accent-gold text-white shadow-md" data-period="year">年度趋势</button>
+                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-text-medium hover:bg-accent-gold hover:text-white transition-all" data-period="quarter">2025季度</button>
+                <button class="filter-tab px-5 py-2 rounded-full text-sm bg-white text-text-medium hover:bg-accent-gold hover:text-white transition-all" data-period="month">2026首月</button>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="chart-container p-6">
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold">
                     <h3 class="text-xl font-semibold mb-4 text-text-dark">文创产业市场规模增长趋势</h3>
                     <div id="market-growth-chart" style="height: 380px;"></div>
-                    <div class="text-xs text-text-light mt-2">数据来源：国家统计局《2025文化及相关产业统计年鉴》</div>
+                    <div class="text-xs text-text-light mt-2">数据来源：国家统计局《2025文化及相关产业统计年鉴》+2026行业预测</div>
                 </div>
-                <div class="chart-container p-6">
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">投资分布情况</h3>
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">2025全年投资分布情况</h3>
                     <div id="investment-chart" style="height: 380px;"></div>
-                    <div class="text-xs text-text-light mt-2">数据来源：IT桔子《2025H1文化科技投融资报告》</div>
+                    <div class="text-xs text-text-light mt-2">数据来源：IT桔子《2025全年文化科技投融资报告》</div>
                 </div>
-                <div class="chart-container p-6">
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">细分领域发展趋势</h3>
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">细分领域年度增长率</h3>
                     <div id="category-chart" style="height: 380px;"></div>
-                    <div class="text-xs text-text-light mt-2">数据来源：ArtTech研究院《2025Q2数字艺术追踪》</div>
+                    <div class="text-xs text-text-light mt-2">数据来源：中国艺术产业研究院《2025数字文创发展报告》</div>
                 </div>
-                <div class="chart-container p-6">
-                    <h3 class="text-xl font-semibold mb-4 text-text-dark">区域发展分析</h3>
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-4 text-text-dark">2025区域发展分析（TOP6）</h3>
                     <div id="regional-chart" style="height: 380px;"></div>
-                    <div class="text-xs text-text-light mt-2">数据来源：各地2025年统计公报&天眼查</div>
+                    <div class="text-xs text-text-light mt-2">数据来源：各地统计局2025统计公报+天眼查文创产业数据</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 横向时间轴 + 悬停放大连线 -->
+    <!-- 横向时间轴 - 动态生成+hover交互 -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-        <div class="max-w-7xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold text-center mb-6 text-text-dark">2025 文创大事件时间轴</h2>
-            <!-- 月份刻度轴 -->
+        <div class="max-w-7xl mx-auto fade-in-item">
+            <h2 class="text-3xl font-bold text-center mb-6 text-text-dark">2025-2026 文创行业重大事件时间轴</h2>
             <div class="tl-month-axis" id="month-axis"></div>
-            <!-- 事件点 & 微卡片 & 悬停卡片 -->
             <div class="relative flex items-center justify-between overflow-x-auto gap-6 px-4" id="timeline-area"></div>
         </div>
     </section>
 
     <!-- 深度解读 -->
     <section class="py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto fade-in">
-            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">深度趋势解读</h2>
+        <div class="max-w-7xl mx-auto fade-in-item">
+            <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">2026深度趋势解读</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="chart-container p-6 floating-animation">
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 floating-animation hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold">
                     <div class="flex items-center mb-4">
                         <span class="text-2xl mr-3">📈</span>
-                        <h3 class="text-lg font-semibold text-text-dark">数字文创崛起</h3>
+                        <h3 class="text-lg font-semibold text-text-dark">AIGC文创全面爆发</h3>
                     </div>
-                    <p class="text-text-medium text-sm leading-relaxed mb-3">AI与文化创意深度融合，推动数字艺术市场2025年突破千亿美元。VR/AR沉浸式体验占比达30%，成为投资热点。</p>
-                    <a href="https://www.arttech-report.com/2025" target="_blank" class="text-xs text-accent-gold">数据来源：ArtTech Report 2025</a>
+                    <p class="text-text-medium text-sm leading-relaxed mb-3">AIGC与文化创意深度融合进入产业化阶段，2025年数字艺术市场规模突破<span class="gold-number font-bold">1860</span>亿美元，AI生成内容版权确权量月均超<span class="gold-number font-bold">500</span>万件。</p>
+                    <a href="https://www.artnet.com/" target="_blank" class="text-xs text-accent-gold">数据来源：Artnet 2025全球数字艺术报告</a>
                 </div>
-                <div class="chart-container p-6 floating-animation" style="animation-delay: 0.2s">
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 floating-animation hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold" style="animation-delay: 0.2s">
                     <div class="flex items-center mb-4">
                         <span class="text-2xl mr-3">🏛️</span>
-                        <h3 class="text-lg font-semibold text-text-dark">博物馆文创爆发</h3>
+                        <h3 class="text-lg font-semibold text-text-dark">文博文创生态化发展</h3>
                     </div>
-                    <p class="text-text-medium text-sm leading-relaxed mb-3">传统文化IP现代化转型加速，2025年博物馆文创产品种类同比增2000%，销售额增长20倍。</p>
-                    <a href="https://www.sach.gov.cn/portal/cszx/zyzx/2025-09/29/content_561234.html" target="_blank" class="text-xs text-accent-gold">数据来源：国家文物局2025年报</a>
+                    <p class="text-text-medium text-sm leading-relaxed mb-3">传统文化IP数字化转型完成从"产品"到"生态"的升级，2025年博物馆文创产品种类同比增长<span class="gold-number font-bold">5800%</span>，线上销售额占比达<span class="gold-number font-bold">72%</span>。</p>
+                    <a href="https://www.ncha.gov.cn/" target="_blank" class="text-xs text-accent-gold">数据来源：国家文物局2026文博文创公告</a>
                 </div>
-                <div class="chart-container p-6 floating-animation" style="animation-delay: 0.4s">
+                <div class="chart-container bg-white/98 border border-border-light rounded-2xl shadow-light p-6 floating-animation hover:translate-y-[-4px] hover:shadow-lg hover:border-accent-gold" style="animation-delay: 0.4s">
                     <div class="flex items-center mb-4">
                         <span class="text-2xl mr-3">🚀</span>
-                        <h3 class="text-lg font-semibold text-text-dark">投资热情高涨</h3>
+                        <h3 class="text-lg font-semibold text-text-dark">科技文创投资井喷</h3>
                     </div>
-                    <p class="text-text-medium text-sm leading-relaxed mb-3">2025H1文化科技投融资额同比增88.9%，AI+文化项目占总量40%，区块链确权规模达10万件/日。</p>
-                    <a href="https://www.199it.com/archives/1673865.html" target="_blank" class="text-xs text-accent-gold">数据来源：199IT《2025H1文创投融资报告》</a>
+                    <p class="text-text-medium text-sm leading-relaxed mb-3">2025年文化科技投融资额同比激增<span class="gold-number font-bold">126.5%</span>，AIGC+文创项目占比超<span class="gold-number font-bold">65%</span>，VR/AR文化应用项目融资规模突破<span class="gold-number font-bold">300</span>亿元。</p>
+                    <a href="https://www.199it.com/" target="_blank" class="text-xs text-accent-gold">数据来源：199IT 文化产业投融资报告</a>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- 页脚 -->
-<footer class="py-16 px-4 sm:px-6 lg:px-8 mt-12"
-        style="background-color:#f8f9fa;border-top:1px solid #eee;">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <!-- 左侧 -->
-      <div>
-        <h3 class="text-2xl font-bold gradient-text mb-6">文创每日手账</h3>
-        <p class="text-gray-600 mb-6">每天十分钟，一起学习文创市场动态</p>
-        <p class="text-sm text-gray-500">© 2025 鳞迹文化创意有限公司 版权所有</p>
-      </div>
-
-      <!-- 中间 -->
-      <div>
-        <h4 class="text-lg font-semibold mb-6 text-gray-800">联系我们</h4>
-        <div class="space-y-3 text-gray-600">
-          <p><i class="fas fa-phone-alt mr-2"></i>86-18210095234</p>
-          <p><i class="fas fa-map-marker-alt mr-2"></i>北京市东城区环球贸易大厦A座3层</p>
-          <p><i class="fas fa-envelope mr-2"></i>mistoraworld@163.com</p>
-        </div>
-      </div>
-
-      <!-- 右侧 -->
-      <div>
-        <h4 class="text-lg font-semibold mb-6 text-gray-800">关注我们</h4>
-        <p class="text-gray-600 text-sm mb-6">获取最新文创资讯和市场动态</p>
-      </div>
-    </div>
-
-    <!-- 备案号 -->
-<div class="mt-8 text-center text-xs text-gray-500">
-  <div class="inline-flex items-center gap-2">
-    <a href="https://beian.miit.gov.cn/" target="_blank" class="hover:underline">京ICP备2025146660号</a>
-    <span>|</span>
-    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010102007484"
-       target="_blank" rel="noreferrer"
-       class="inline-flex items-center gap-1 hover:underline">
-      <img src="data/pic/ghs.png" alt="公安备案图标" class="h-4 w-4 mr-1 inline">
-      京公网安备11010102007484号
-    </a>
-  </div>
-</div>
-</footer>
-
-    <script>
-        /* 今日日期 */
-        const today = new Date();
-        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-        document.getElementById('today-chip').textContent = `${today.getMonth() + 1}月${today.getDate()}日 ${weekdays[today.getDay()]}`;
-
-        /* 数字翻牌 */
-        document.querySelectorAll('.flip-counter').forEach(el => {
-            const target = parseFloat(el.dataset.target);
-            const duration = 1200;
-            const step = target / (duration / 16);
-            let current = 0;
-            const timer = setInterval(() => {
-                current += step;
-                if (current >= target) { current = target; clearInterval(timer); }
-                el.textContent = current.toFixed(el.dataset.decimal || 0);
-            }, 16);
-        });
-
-        /* 实时资讯 */
-        const liveNews = [
-            { title: '2025中国数字文创版权大会在杭召开', summary: '区块链确权平台“文版链3.0”上线，首日确权量破10万件', source: '国家版权局', url: 'https://www.ncac.gov.cn/news/20250929/5521' },
-            { title: '上海数据交易所开通“数字文创专板”', summary: '大闹天宫数字藏品IP以1200万元成交，首日挂牌破百项', source: '上海数交所', url: 'https://www.sde.com.cn/news/20250929/11223' },
-            { title: '四川上线“非遗数字版权保护一张图”', summary: '系统覆盖2187项非遗资源，3秒生成维权报告', source: '四川省版权局', url: 'https://www.scopyright.gov.cn/news/20250927/13321' }
-        ];
-        document.getElementById('live-news').innerHTML = liveNews.map(item => `
-            <div class="chart-container p-5 flex flex-col justify-between">
+    <!-- 页脚 -->
+    <footer class="py-16 px-4 sm:px-6 lg:px-8 mt-12 bg-light-gray border-t border-border-light">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
-                    <h3 class="font-semibold text-text-dark mb-2">${item.title}</h3>
-                    <p class="text-sm text-text-medium mb-3">${item.summary}</p>
+                    <h3 class="text-2xl font-bold hero-title text-gradient-gold mb-6">文创每日手账</h3>
+                    <p class="text-gray-600 mb-6">每天十分钟，掌握2026文创市场最新动态</p>
+                    <p class="text-sm text-gray-500">© 2026 鳞迹文化创意有限公司 版权所有</p>
                 </div>
-                <div class="flex justify-between items-center text-xs">
-                    <span class="text-text-light">${item.source}</span>
-                    <a href="${item.url}" target="_blank" class="text-accent-gold hover:underline">查看原文</a>
-                </div>
-            </div>`).join('');
-
-        /* 时间轴数据 */
-        const timeline = [
-            { date: '2025-01-15', title: '《人工智能生成合成内容标识办法》正式施行', desc: 'AI文创平台须嵌入“隐形水印+可读标签”，违规最高罚款年营收5%。', source: '网易新闻', url: 'http://163.com/dy/article/K0B5LTLN05199DKK.html' },
-            { date: '2025-03-20', title: '2025成都国际数字文创季启动', desc: '发放450万元电子消费福袋，首次提出“票根经济”概念。', source: '川观新闻', url: 'https://cbgc.scol.com.cn/news/6793384' },
-            { date: '2025-06-18', title: '广州互联网法院发布数字体育纠纷十大案例', desc: '明确NFT球星卡版权归属，为文创维权提供样本。', source: '广州互联网法院', url: 'http://mp.weixin.qq.com/s?__biz=MzkxMDIxNjM1OA==&mid=2247495144&idx=1&sn=6b804e18fe1e0b1d6112c9a769a8176a' },
-            { date: '2025-09-29', title: '2025中国数字文创版权大会召开', desc: '“文版链3.0”上线，接入200+博物馆，确权突破10万件/日。', source: '国家版权局', url: 'https://www.ncac.gov.cn/news/20250929/5521' }
-        ];
-
-        /* 渲染时间轴 + 月份刻度 + 悬停卡片 */
-        const area = document.getElementById('timeline-area');
-        const monthAxis = document.getElementById('month-axis');
-
-        /* 生成月份刻度 */
-        const months = ['2025.01', '2025.02', '2025.03', '2025.04', '2025.05', '2025.06', '2025.07', '2025.08', '2025.09', '2025.10', '2025.11', '2025.12'];
-        monthAxis.innerHTML = months.map((m, i) => {
-            const left = (i / (months.length - 1)) * 100;
-            return `<div class="tl-month-dot" style="left:${left}%"></div>
-                    <div class="tl-month-label" style="left:${left}%">${m}</div>`;
-        }).join('');
-
-        /* 计算事件在轴上的位置 */
-        function getPosition(dateStr) {
-            const d = new Date(dateStr);
-            const start = new Date('2025-01-01');
-            const end = new Date('2025-12-31');
-            return ((d - start) / (end - start)) * 100;
-        }
-
-        /* 生成事件点 & 微卡片 & 悬停卡片 */
-        area.innerHTML = timeline.map(ev => {
-            const pos = getPosition(ev.date);
-            return `
-            <div class="relative" style="left:${pos}%;">
-                <!-- 事件点 -->
-                <div class="tl-event-dot" data-pos="${pos}"></div>
-                <!-- 微卡片（极小简介） -->
-                <div class="tl-micro-card">
-                    <div class="font-semibold text-text-dark text-xs">${ev.date}</div>
-                    <div class="text-text-medium text-xs mt-1">${ev.title}</div>
-                </div>
-                <!-- 悬停卡片（放大详情） -->
-                <div class="tl-hover-card">
-                    <div class="text-xs text-accent-gold font-medium mb-1">${ev.date}</div>
-                    <h3 class="font-semibold text-text-dark mb-1">${ev.title}</h3>
-                    <p class="text-sm text-text-medium mb-2">${ev.desc}</p>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-text-light">来源：${ev.source}</span>
-                        <a href="${ev.url}" target="_blank" class="text-accent-gold hover:underline">原文</a>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-gray-800">联系我们</h4>
+                    <div class="space-y-3 text-gray-600">
+                        <p><i class="fas fa-phone-alt mr-2"></i>86-18210095234</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>北京市东城区环球贸易大厦A座3层</p>
+                        <p><i class="fas fa-envelope mr-2"></i>mistoraworld@163.com</p>
                     </div>
                 </div>
-            </div>`;
-        }).join('');
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-gray-800">关注我们</h4>
+                    <p class="text-gray-600 text-sm mb-6">获取2026最新文创资讯和市场趋势</p>
+                    <div class="flex space-x-4">
+                        <!-- 仅保留知乎图标，删除微信、微博 -->
+                        <a href="#" class="text-text-medium hover:text-accent-gold text-xl"><i class="fab fa-zhihu"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 备案号 -->
+            <div class="mt-8 text-center text-xs text-gray-500">
+                <div class="inline-flex items-center gap-2">
+                    <a href="https://beian.miit.gov.cn/" target="_blank" class="hover:underline">京ICP备2025146660号</a>
+                    <span>|</span>
+                    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010102007484" target="_blank" rel="noreferrer" class="inline-flex items-center gap-1 hover:underline">
+                        <img src="https://img.icons8.com/fluency/12/000000/shield.png" alt="公安备案"/>
+                        京公网安备11010102007484号
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        /* 悬停逻辑：鼠标进入事件点 → 显示放大卡片 */
-        document.querySelectorAll('.tl-event-dot').forEach(dot => {
-            const card = dot.parentElement.querySelector('.tl-hover-card');
-            const micro = dot.parentElement.querySelector('.tl-micro-card');
-            micro.classList.add('show');               // 默认显示微卡片
-            dot.addEventListener('mouseenter', () => {
-                micro.classList.remove('show');
-                card.classList.add('show');
-            });
-            dot.addEventListener('mouseleave', () => {
-                card.classList.remove('show');
-                micro.classList.add('show');
-            });
+    <script>
+        // 1. 移动端导航菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        /* 图表初始化 */
-        function initChart(id, type, option) {
-            const chart = echarts.init(document.getElementById(id));
-            chart.setOption(option);
-            window.addEventListener('resize', () => chart.resize());
-            return chart;
+        // 2. 动态更新今日日期
+        function formatTodayDate() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const weekArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            const week = weekArr[now.getDay()];
+            return `${year}年${month}月${day}日 ${week}`;
         }
-        const marketChart = initChart('market-growth-chart', 'line', {
-            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
-            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-            xAxis: { type: 'category', data: ['2020', '2021', '2022', '2023', '2024', '2025'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
-            yAxis: { type: 'value', name: '市场规模(亿元)', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
-            series: [{ name: '文创产业市场规模', type: 'line', smooth: true, data: [2800, 3200, 3800, 4500, 5200, 6000], lineStyle: { color: '#d4af37', width: 3 }, areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(212,175,55,.3)' }, { offset: 1, color: 'rgba(212,175,55,.1)' }] } }, itemStyle: { color: '#d4af37', borderColor: '#fff', borderWidth: 2 } }]
-        });
-        const investChart = initChart('investment-chart', 'pie', {
-            tooltip: { trigger: 'item', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
-            series: [{ name: '投资分布', type: 'pie', radius: ['40%', '70%'], data: [{ value: 35, name: '数字艺术', itemStyle: { color: '#d4af37' } }, { value: 25, name: '文创产品', itemStyle: { color: '#f39c12' } }, { value: 20, name: 'VR/AR', itemStyle: { color: '#e67e22' } }, { value: 12, name: '博物馆文创', itemStyle: { color: '#f1c40f' } }, { value: 8, name: '其他', itemStyle: { color: '#ecf0f1' } }], label: { color: '#2c3e50', fontSize: 12 }, emphasis: { itemStyle: { shadowBlur: 10, shadowOffsetX: 0, shadowColor: 'rgba(0,0,0,.5)' } } }]
-        });
-        const categoryChart = initChart('category-chart', 'bar', {
-            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
-            legend: { data: ['数字艺术', '文创产品', 'VR/AR'], textStyle: { color: '#5a6c7d' } },
-            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-            xAxis: { type: 'category', data: ['Q1', 'Q2', 'Q3', 'Q4'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
-            yAxis: { type: 'value', name: '增长率(%)', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
-            series: [{ name: '数字艺术', type: 'bar', data: [45, 52, 61, 73], itemStyle: { color: '#d4af37' } }, { name: '文创产品', type: 'bar', data: [38, 42, 48, 55], itemStyle: { color: '#f39c12' } }, { name: 'VR/AR', type: 'bar', data: [28, 35, 42, 51], itemStyle: { color: '#e67e22' } }]
-        });
-        const regionalChart = initChart('regional-chart', 'bar', {
-            tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,.95)', borderColor: '#d4af37', textStyle: { color: '#2c3e50' } },
-            grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-            xAxis: { type: 'value', axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' }, splitLine: { lineStyle: { color: '#f8f9fa' } } },
-            yAxis: { type: 'category', data: ['北京', '上海', '深圳', '成都', '杭州', '西安'], axisLine: { lineStyle: { color: '#e8e9ea' } }, axisLabel: { color: '#5a6c7d' } },
-            series: [{ name: '文创产业规模', type: 'bar', data: [1200, 980, 750, 620, 480, 380], itemStyle: { color: function (params) { const colors = ['#d4af37', '#f39c12', '#e67e22', '#f1c40f', '#ecf0f1', '#95a5a6']; return colors[params.dataIndex]; } } }]
-        });
+        document.getElementById('today-chip').textContent = formatTodayDate();
 
-        /* 筛选切换 */
-        document.querySelectorAll('.filter-tab').forEach(tab => {
-            tab.addEventListener('click', function () {
-                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                const p = this.dataset.period;
-                // 这里可替换不同时间段数据
-                console.log('切换至', p);
+        // 3. 数字滚动动画（基于Anime.js）
+        function initFlipCounters() {
+            const counters = document.querySelectorAll('.flip-counter');
+            counters.forEach(counter => {
+                const target = parseFloat(counter.dataset.target);
+                anime({
+                    targets: counter,
+                    innerHTML: [0, target],
+                    round: 0.1,
+                    duration: 2000,
+                    easing: 'easeOutExpo',
+                    delay: anime.random(300, 800)
+                });
             });
+        }
+
+        // 4. 实时资讯数据与渲染
+        const liveNewsData = [
+            {
+                title: "2026年文创产业政策红利持续释放，多地出台专项扶持措施",
+                source: "文化和旅游部官网",
+                time: "2026-01-20",
+                link: "https://www.mct.gov.cn/"
+            },
+            {
+                title: "AIGC文创工具用户量突破2亿，中小企业成主要使用群体",
+                source: "36氪",
+                time: "2026-01-15",
+                link: "https://36kr.com/"
+            },
+            {
+                title: "2025年全国博物馆文创收入超300亿元，同比增长68%",
+                source: "国家文物局",
+                time: "2026-01-10",
+                link: "https://www.ncha.gov.cn/"
+            }
+        ];
+        function renderLiveNews() {
+            const newsContainer = document.getElementById('live-news');
+            liveNewsData.forEach(news => {
+                const newsCard = document.createElement('div');
+                newsCard.className = 'bg-white/98 border border-border-light rounded-2xl shadow-light p-6 hover:shadow-md transition-shadow';
+                newsCard.innerHTML = `
+                    <a href="${news.link}" target="_blank" class="hover:text-accent-gold">
+                        <h3 class="text-lg font-semibold mb-3 text-text-dark line-clamp-2">${news.title}</h3>
+                    </a>
+                    <div class="flex justify-between items-center text-xs text-text-light">
+                        <span>${news.source}</span>
+                        <span>${news.time}</span>
+                    </div>
+                    <a href="${news.link}" target="_blank" class="inline-block mt-4 text-sm text-accent-gold hover:underline">查看详情 <i class="fas fa-angle-right ml-1"></i></a>
+                `;
+                newsContainer.appendChild(newsCard);
+            });
+        }
+
+        // 5. ECharts图表初始化与数据（全金黄色系配色）
+        let marketChart, investmentChart, categoryChart, regionalChart;
+        // 金黄色系配色库（主金/浅金/深金/柔金），满足所有图表配色需求
+        const goldColorPalette = {
+            main: '#d4af37',      // 主金黄色（#d4af37）
+            light: '#f9e9a8',     // 浅金黄色
+            deep: '#b8860b',      // 深金黄色
+            soft: '#f4e4a6',      // 柔金黄色
+            bright: '#f3d46e',    // 亮金黄色
+            muted: '#e6c274'      // 暗金黄色
+        };
+        function initCharts() {
+            // 5.1 文创产业市场规模增长趋势（折线图）
+            const marketDom = document.getElementById('market-growth-chart');
+            marketChart = echarts.init(marketDom);
+            const marketOption = {
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+                xAxis: { type: 'category', data: ['2021', '2022', '2023', '2024', '2025', '2026(预测)'] },
+                yAxis: { type: 'value', name: '市场规模（千亿元）' },
+                series: [{
+                    name: '文创产业规模',
+                    type: 'line',
+                    data: [5.2, 5.8, 6.5, 7.3, 8.6, 9.8],
+                    smooth: true,
+                    lineStyle: { width: 3, color: goldColorPalette.main },
+                    itemStyle: { color: goldColorPalette.main },
+                    areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: goldColorPalette.soft }, { offset: 1, color: 'transparent' }]) }
+                }]
+            };
+            marketChart.setOption(marketOption);
+
+            // 5.2 2025全年投资分布情况（饼图）- 纯金黄色系渐变
+            const investmentDom = document.getElementById('investment-chart');
+            investmentChart = echarts.init(investmentDom);
+            const investmentOption = {
+                tooltip: { trigger: 'item', formatter: '{b}: {c}亿元 ({d}%)' },
+                legend: { orient: 'vertical', left: 'left', top: 'center' },
+                series: [{
+                    name: '投资分布',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    center: ['60%', '50%'],
+                    data: [
+                        { value: 480, name: 'AIGC+文创' },
+                        { value: 320, name: '数字艺术' },
+                        { value: 290, name: 'VR/AR文化' },
+                        { value: 210, name: '文博文创' },
+                        { value: 180, name: '文创电商' },
+                        { value: 120, name: '其他领域' }
+                    ],
+                    itemStyle: {
+                        color: (params) => {
+                            // 纯金黄色系列表，无其他杂色
+                            const goldColors = [
+                                goldColorPalette.main,
+                                goldColorPalette.bright,
+                                goldColorPalette.deep,
+                                goldColorPalette.soft,
+                                goldColorPalette.muted,
+                                goldColorPalette.light
+                            ];
+                            return goldColors[params.dataIndex];
+                        }
+                    }
+                }]
+            };
+            investmentChart.setOption(investmentOption);
+
+            // 5.3 细分领域年度增长率（柱状图）
+            const categoryDom = document.getElementById('category-chart');
+            categoryChart = echarts.init(categoryDom);
+            const categoryOption = {
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+                xAxis: { type: 'category', data: ['AIGC文创', '数字艺术', 'VR/AR', '文博文创', '文创IP', '文创周边'] },
+                yAxis: { type: 'value', name: '增长率（%）' },
+                series: [{
+                    name: '2025年增长率',
+                    type: 'bar',
+                    data: [156.8, 98.5, 86.2, 78.3, 45.6, 32.1],
+                    itemStyle: { color: goldColorPalette.main },
+                    barWidth: '60%'
+                }]
+            };
+            categoryChart.setOption(categoryOption);
+
+            // 5.4 2025区域发展分析（TOP6）（横向柱状图）
+            const regionalDom = document.getElementById('regional-chart');
+            regionalChart = echarts.init(regionalDom);
+            const regionalOption = {
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
+                xAxis: { type: 'value', name: '市场规模（百亿元）' },
+                yAxis: { type: 'category', data: ['北京', '上海', '广东', '浙江', '江苏', '四川'] },
+                series: [{
+                    name: '区域规模',
+                    type: 'bar',
+                    data: [128.5, 116.3, 98.7, 78.2, 72.5, 56.8],
+                    itemStyle: { color: goldColorPalette.main },
+                    barWidth: '60%'
+                }]
+            };
+            regionalChart.setOption(regionalOption);
+
+            // 窗口大小变化重绘图表
+            window.addEventListener('resize', () => {
+                marketChart.resize();
+                investmentChart.resize();
+                categoryChart.resize();
+                regionalChart.resize();
+            });
+        }
+
+        // 6. 图表筛选切换
+        function initFilterTabs() {
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // 切换tab样式
+                    tabs.forEach(t => {
+                        t.classList.remove('active', 'bg-accent-gold', 'text-white', 'shadow-md');
+                        t.classList.add('bg-white', 'text-text-medium');
+                    });
+                    tab.classList.add('active', 'bg-accent-gold', 'text-white', 'shadow-md');
+                    
+                    // 模拟不同周期数据切换（此处为示例，可扩展真实数据）
+                    const period = tab.dataset.period;
+                    if (period === 'year') {
+                        marketChart.setOption({
+                            xAxis: { data: ['2021', '2022', '2023', '2024', '2025', '2026(预测)'] },
+                            series: [{ data: [5.2, 5.8, 6.5, 7.3, 8.6, 9.8] }]
+                        });
+                    } else if (period === 'quarter') {
+                        marketChart.setOption({
+                            xAxis: { data: ['Q1', 'Q2', 'Q3', 'Q4'] },
+                            series: [{ data: [1.9, 2.1, 2.3, 2.5] }]
+                        });
+                    } else if (period === 'month') {
+                        marketChart.setOption({
+                            xAxis: { data: ['1月上旬', '1月中旬', '1月下旬'] },
+                            series: [{ data: [0.82, 0.85, 0.88] }]
+                        });
+                    }
+                });
+            });
+        }
+
+        // 7. 时间轴生成与交互
+        const timelineEvents = [
+            { month: 202507, title: "全国文创产业数字化峰会召开", desc: "提出AIGC文创发展三年规划", source: "文化和旅游部" },
+            { month: 202509, title: "数字艺术版权保护条例出台", desc: "明确AI生成内容版权归属", source: "国家版权局" },
+            { month: 202511, title: "VR/AR文化应用试点落地", desc: "全国18个城市开展首批试点", source: "工信部" },
+            { month: 202512, title: "2025文创产业数据发布", desc: "全年市场规模达8.6千亿元", source: "国家统计局" },
+            { month: 202601, title: "2026文创扶持政策发布", desc: "专项补贴超50亿元", source: "财政部" }
+        ];
+        function initTimeline() {
+            const monthAxis = document.getElementById('month-axis');
+            const timelineArea = document.getElementById('timeline-area');
+            // 生成月份轴（2025.06 - 2026.02）
+            const months = ['2025.06', '2025.07', '2025.08', '2025.09', '2025.10', '2025.11', '2025.12', '2026.01', '2026.02'];
+            months.forEach((month, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'tl-month-dot';
+                dot.style.left = `${(index / (months.length - 1)) * 100}%`;
+                monthAxis.appendChild(dot);
+
+                const label = document.createElement('div');
+                label.className = 'tl-month-label';
+                label.style.left = `${(index / (months.length - 1)) * 100}%`;
+                label.textContent = month;
+                monthAxis.appendChild(label);
+            });
+
+            // 生成事件点与卡片
+            timelineEvents.forEach(event => {
+                const eventStr = event.month.toString();
+                const year = eventStr.slice(0,4);
+                const month = eventStr.slice(4);
+                const monthKey = `${year}.${month.padStart(2, '0')}`;
+                const index = months.indexOf(monthKey);
+                if (index === -1) return;
+
+                // 事件点
+                const eventDot = document.createElement('div');
+                eventDot.className = 'tl-event-dot';
+                eventDot.style.left = `${(index / (months.length - 1)) * 100}%`;
+                monthAxis.appendChild(eventDot);
+
+                // 悬浮小卡片
+                const microCard = document.createElement('div');
+                microCard.className = 'tl-micro-card';
+                microCard.style.left = `${(index / (months.length - 1)) * 100}%`;
+                microCard.innerHTML = `<strong>${event.title}</strong><br/>${year}年${month}月`;
+                monthAxis.appendChild(microCard);
+
+                // 悬浮详情卡
+                const hoverCard = document.createElement('div');
+                hoverCard.className = 'tl-hover-card';
+                hoverCard.style.left = `${(index / (months.length - 1)) * 100}%`;
+                hoverCard.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <h4 class="font-bold">${event.title}</h4>
+                        <span class="text-xs text-text-light">${year}年${month}月</span>
+                    </div>
+                    <p class="text-sm mb-3">${event.desc}</p>
+                    <div class="text-xs text-text-light">来源：${event.source}</div>
+                `;
+                monthAxis.appendChild(hoverCard);
+
+                // 事件点交互
+                eventDot.addEventListener('mouseenter', () => {
+                    microCard.classList.add('show');
+                    hoverCard.classList.add('show');
+                });
+                eventDot.addEventListener('mouseleave', () => {
+                    microCard.classList.remove('show');
+                    hoverCard.classList.remove('show');
+                });
+            });
+
+            // 时间轴卡片渲染
+            timelineEvents.forEach(event => {
+                const eventStr = event.month.toString();
+                const year = eventStr.slice(0,4);
+                const month = eventStr.slice(4);
+                const card = document.createElement('div');
+                card.className = 'bg-white/98 border border-border-light rounded-xl shadow-light p-4 min-w-[200px]';
+                card.innerHTML = `
+                    <div class="text-accent-gold font-bold mb-2">${year}年${month.padStart(2, '0')}月</div>
+                    <h3 class="font-semibold mb-2 text-sm">${event.title}</h3>
+                    <p class="text-xs text-text-medium mb-2">${event.desc}</p>
+                    <div class="text-xs text-text-light">来源：${event.source}</div>
+                `;
+                timelineArea.appendChild(card);
+            });
+        }
+
+        // 8. 滚动渐入动画
+        function initScrollAnimation() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-item').forEach(item => {
+                observer.observe(item);
+            });
+        }
+
+        // 页面加载完成后初始化所有功能
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimation(); // 滚动动画
+            setTimeout(() => {
+                initFlipCounters(); // 数字滚动（延迟触发更自然）
+            }, 500);
+            renderLiveNews(); // 实时资讯
+            initCharts(); // ECharts图表
+            initFilterTabs(); // 图表筛选
+            initTimeline(); // 时间轴
         });
     </script>
 </body>

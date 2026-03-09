@@ -1,91 +1,91 @@
 [
   {
     "id": 1,
-    "title": "AI浪潮下，哪些科研岗位会受到冲击",
-    "summary": "《自然》杂志研究显示，AI正冲击科研领域：编写代码、基础数据处理、计算机建模初级岗位及科学论文翻译等工作面临被取代风险，纯认知任务首当其冲。",
-    "image": "https://picsum.photos/seed/ai-research-jobs-impact-2026/1200/800",
-    "date": "2026-02-21",
+    "title": "国家统计局解读：2026年2月份CPI涨幅扩大，PPI降幅继续收窄",
+    "summary": "2月份，受春节因素影响，居民消费价格指数（CPI）环比上涨1.0%，同比上涨1.3%，扣除食品和能源价格的核心CPI同比上涨1.8%。受国际大宗商品价格上行，国内部分行业需求快速增长、宏观政策持续显效等因素影响，全国PPI环比上涨0.4%，同比下降0.9%，降幅连续收窄。",
+    "image": "https://picsum.photos/seed/cpi-ppi-stats-2026/1200/800",
+    "date": "2026-03-09",
     "readTime": "3 分钟",
-    "tags": ["AI冲击", "科研岗位", "就业变革", "自然杂志"],
+    "tags": ["CPI", "PPI", "国家统计局", "宏观经济", "春节因素"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32657958"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32731445"
   },
   {
     "id": 2,
-    "title": "最高检：文创产品版权案高发，知名IP\"哪吒\"\"泡泡玛特\"等遭侵权",
-    "summary": "2025年1-11月检察机关起诉文创产品侵犯知识产权案64件，其中\"哪吒\"案20件、\"泡泡玛特\"案13件，重点加强知名IP及非遗文化保护。",
-    "image": "https://picsum.photos/seed/ip-copyright-nezha-popmart-2026/1200/800",
-    "date": "2026-02-24",
-    "readTime": "2 分钟",
-    "tags": ["文创版权", "哪吒IP", "泡泡玛特", "知识产权保护"],
+    "title": "申观两会｜激活消费“主引擎”，内需市场如何进一步提质扩容？",
+    "summary": "幸福经济、首发经济、银发经济、数字消费、悦己消费、青春经济、宠物经济……今年全国两会，关于消费的新场景、新名词频出。能消费、敢消费、愿消费……今年的政府工作报告再次置顶“扩大内需”。从“有没有”到“好不好”，从商品消费到商品与服务并重，“文商旅体展”从五个字的联动到深度融合成一个词，当消费的“指挥棒”从物质转向体验，内需市场如何提质扩容？",
+    "image": "https://picsum.photos/seed/two-sessions-consumption-2026/1200/800",
+    "date": "2026-03-09",
+    "readTime": "4 分钟",
+    "tags": ["两会", "首发经济", "银发经济", "数字消费", "扩大内需"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32648647"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32720232"
   },
   {
     "id": 3,
-    "title": "\"马元素\"文创产品引领中国春节消费新潮流",
-    "summary": "甘肃省博物馆以\"镇馆之宝\"铜奔马为灵感，推出马年限定毛绒玩偶、西部马仔、马财神招财摆件等文创产品，吸引游客驻足消费。",
-    "image": "https://picsum.photos/seed/horse-cultural-creative-spring-festival-2026/1200/800",
-    "date": "2026-02-27",
-    "readTime": "2 分钟",
-    "tags": ["马年文创", "铜奔马", "甘肃省博物馆", "春节消费"],
-    "source": "新华社",
-    "originalUrl": "https://h.xinhuaxmt.com/vh512/share/12961196?docid=12961196&newstype=1001&d=135256f"
+    "title": "特写｜福建永定土楼“新生”记：老遗产如何活起来？",
+    "summary": "3月5日，“感知幸福中国福建行”主题参访团抵达福建永定。闽西的群山之间，一座座土楼已矗立数百年。它们曾是客家人御外聚族的“堡垒”，也是“一家即一村”的烟火人间。2008年，“福建土楼”入选世界遗产。但光环之下，隐忧浮现。一些已开发的景区常陷入同质化竞争。土楼会沦为精致的“空心”标本吗？永定用数年“活化”实践，试图破解三大难题：如何告别“千楼一面”？如何让文化从静态展示变为动态体验？如何让建筑不仅被观看，更能被感受？",
+    "image": "https://picsum.photos/seed/yongding-tulou-heritage/1200/800",
+    "date": "2026-03-09",
+    "readTime": "5 分钟",
+    "tags": ["福建土楼", "世界遗产", "文化遗产", "文旅活化", "永定"],
+    "source": "澎湃新闻",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32447874"
   },
   {
     "id": 4,
-    "title": "年货经济：传统焕新与智能赋能下的消费重构",
-    "summary": "年货经济已从刚需满足转向价值驱动，涵盖传统食品到智能科技产品，线上线下融合，展现传统与现代交织的消费新图景。",
-    "image": "https://picsum.photos/seed/new-year-goods-economy-2026/1200/800",
-    "date": "2026-02-27",
+    "title": "不止于展演：小剧场戏曲展演从“展示平台”变身“孵化源头”",
+    "summary": "日前，在中共中央宣传部等五部门联合印发《戏剧振兴三年行动计划（2026-2028年）》之际，中国小剧场戏曲展演暨第十一届“戏曲·呼吸”上海小剧场戏曲节不久前上海圆满落幕。本届展演汇聚了全国19个省市自治区的创作力量，包括昆剧、蒲剧、京剧、越剧、童子戏、淮剧、沪剧等7个剧种的13个剧目共同构成展演主体，呈现当下小剧场戏曲的总体风貌。",
+    "image": "https://picsum.photos/seed/xiaojuchang-xiqu-opera/1200/800",
+    "date": "2026-03-09",
     "readTime": "3 分钟",
-    "tags": ["年货经济", "消费升级", "传统焕新", "智能赋能"],
+    "tags": ["小剧场戏曲", "戏剧振兴", "传统文化", "上海戏曲节", "戏曲呼吸"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32649820"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32671447"
   },
   {
     "id": 5,
-    "title": "沪游双周报｜游戏IP和电竞赛事拉动新春消费",
-    "summary": "北京发布《2026年高精尖资金指南》，游戏软件智能化技改可获最高3000万元奖励，按智能化成熟度等级分档支持。",
-    "image": "https://picsum.photos/seed/game-ip-esports-spring-consumption-2026/1200/800",
-    "date": "2026-02-14",
-    "readTime": "2 分钟",
-    "tags": ["游戏IP", "电竞赛事", "高精尖资金", "智能化技改"],
+    "title": "最高检：将深化知产检察监督，加大惩治侵权假冒违法犯罪力度",
+    "summary": "3月2日，最高检召开新闻发布会。最高人民检察院知识产权检察厅副厅长刘太宗会上表示，知识产权检察厅成立后，持续深化综合履职，努力实现保护知识产权与消费者利益兼顾，服务创新发展与守护民生民利兼得。一是依法惩治侵权假冒犯罪。聚焦与生产生活紧密相关的日化用品、服装箱包、汽车配件、农资种子、教辅图书等制假售假多发领域，加大惩治力度，形成有力震慑。广东检察机关办理的一起制售假冒知名品牌香水案，非法经营数额达1.2亿元，起诉21人均获有罪判决，累计追赃挽损8200余万元，各被告人共被判处罚金5200余万元，让违法犯罪者受到严厉法律制裁。",
+    "image": "https://picsum.photos/seed/supreme-procuratorate-ip/1200/800",
+    "date": "2026-03-09",
+    "readTime": "4 分钟",
+    "tags": ["最高检", "知识产权", "侵权假冒", "检察监督", "消费者权益"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32649759"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32683255"
   },
   {
     "id": 6,
-    "title": "可爱暴击！徐州\"刘小邦\"走街串巷贺新春",
-    "summary": "徐州本土文创IP\"刘小邦\"春节期间频频亮相街头与游客互动，该公益巡演活动将持续至春节长假结束，展现汉韵新潮。",
-    "image": "https://picsum.photos/seed/xuzhou-liuxiaobang-spring-festival-2026/1200/800",
-    "date": "2026-02-27",
-    "readTime": "2 分钟",
-    "tags": ["刘小邦", "徐州文创", "IP巡演", "汉文化"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32639486"
+    "title": "政府工作报告，为什么点名“高质量数据集” | 海斌访谈",
+    "summary": "人工智能时代，高质量数据受到政策重视。2026年政府工作报告提到，要打造智能经济新形态。数据是人工智能的燃料，政府工作报告提及，要深化数据资源开发利用，健全数据要素基础制度，建设高质量数据集。“数据质量直接影响模型的表现。”五一视界（06651.HK）首席技术官鲍世强对第一财经记者表示。人工智能从生成式AI（比如文生图）向物理AI（比如人形机器人）进化，但训练物理AI所需要的强交互数据，在互联网世界难以找到。“进入物理AI，数据问题的重要程度、严峻程度更大了。”",
+    "image": "https://picsum.photos/seed/ai-dataset-quality-2026/1200/800",
+    "date": "2026-03-09",
+    "readTime": "4 分钟",
+    "tags": ["高质量数据集", "人工智能", "数据要素", "政府工作报告", "物理AI"],
+    "source": "第一财经",
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32382240"
   },
   {
     "id": 7,
-    "title": "人民日报：\"电影+\"融合发展势头正劲",
-    "summary": "2026年春节档总票房达23.92亿，《飞驰人生3》《惊蛰无声》等影片集中上映，大年初一单日场次超59.5万场刷新影史纪录。",
-    "image": "https://picsum.photos/seed/movie-plus-integration-2026/1200/800",
-    "date": "2026-02-19",
-    "readTime": "2 分钟",
-    "tags": ["春节档", "电影票房", "电影+", "新年俗"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32631752"
+    "title": "豆包手机之后，阿里千问加入“一句话点外卖”",
+    "summary": "“AI时代的未来之战”打响了。1月15日，千问App宣布全面接入淘宝、支付宝、淘宝闪购、飞猪、高德等阿里生态业务，实现点外卖、买东西、订机票等AI购物功能，并向所有用户开放测试。此外，千问APP苹果商城已更新。第一财经记者实测发现，用户可直接在页面对话千问说“帮我点一杯咖啡”，在获得淘宝授权且绑定后，千问会自动根据位置信息推荐收货地址，并首先推荐了瑞幸的美式咖啡，点击“选它”后即可跳转支付宝完成付款。",
+    "image": "https://picsum.photos/seed/qianwen-ai-shopping/1200/800",
+    "date": "2026-03-09",
+    "readTime": "3 分钟",
+    "tags": ["阿里千问", "AI购物", "点外卖", "智能助手", "阿里生态"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/103005472.html"
   },
   {
     "id": 8,
-    "title": "最高检：依法惩治侵犯商业秘密、侵犯著作权等犯罪",
-    "summary": "2025年1-11月全国检察机关共办理知识产权案件22026件，涵盖刑事、民事、行政及公益诉讼检察，强化知识产权全链条保护。",
-    "image": "https://picsum.photos/seed/supreme-prosecutor-ip-protection-2026/1200/800",
-    "date": "2026-02-24",
-    "readTime": "2 分钟",
-    "tags": ["最高检", "商业秘密", "著作权", "知识产权检察"],
+    "title": "出海企业需要合规、市场、文化适应服务",
+    "summary": "2023年后，国内掀起新的“出海潮”，中企出海蔚然成势。出海企业有的收获了市场和机遇，但有的受挫折戟，碰撞、纠纷并不少见，甚至频频上诸报端。这也使各界开始意识和反思，企业出海需要哪些社会支持？",
+    "image": "https://picsum.photos/seed/chinese-companies-global/1200/800",
+    "date": "2026-03-09",
+    "readTime": "4 分钟",
+    "tags": ["企业出海", "全球化", "合规服务", "国际市场", "跨文化"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32648917"
+    "originalUrl": "https://m.thepaper.cn/newsDetail_forward_32227206"
   },
   {
     "id": 9,
@@ -99,4 +99,5 @@
     "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32658998"
   }
 ]
+
 

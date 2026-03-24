@@ -1,103 +1,102 @@
 [
   {
     "id": 1,
-    "title": "“鉴抄”风波中，不愿“沉默”的人",
-    "summary": "今年年初，王浩在阅读杨本芬的作品《豆子芝麻茶》时，发现书中内容似曾相识。经查重软件检索后，2月24日他在个人账号发文质疑杨本芬抄袭。2月25日，有着“素人作家、60岁开始写作”标签的杨本芬回应质疑，承认“袭用别人的语句”并向读者和被冒犯的作家致歉。",
-    "image": "https://picsum.photos/seed/plagiarism-controversy-2025/1200/800",
-    "date": "2025-02-25",
-    "readTime": "3 分钟",
-    "tags": ["鉴抄", "杨本芬", "豆子芝麻茶", "抄袭争议", "素人作家"],
+    "title": "世界杯战袍亮相新天地，足球与潮流文化撞个满怀",
+    "summary": "3月20日晚，上海新天地喇格纳小学旧址举办潮流活动，阿迪达斯为阿根廷、德国、西班牙等25支国家队打造的2026世界杯客场球衣首次在中国亮相，梅西、维尔茨等球星与球衣同框引发欢呼，为观众带来体育与时尚兼容的沉浸式体验。",
+    "image": "https://picsum.photos/seed/world-cup-jerseys-shanghai-2026/1200/800",
+    "date": "2026-03-20",
+    "readTime": "2 分钟",
+    "tags": ["世界杯", "阿迪达斯", "球衣发布", "上海新天地", "潮流文化"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32747590"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32806660"
   },
   {
     "id": 2,
-    "title": "Meta收购OpenClaw专属社交网络Moltbook",
-    "summary": "OpenClaw专属社交网络Moltbook被Meta正式收购，将并入Meta超级智能实验室（MSL）。Moltbook定位为AI智能体专属社交网络，智能体可在平台发帖、评论互动。今年2月曾因AI智能体讨论哲学、创立“蜕壳教会”、打造加密货币等行为火爆出圈，被视为“AI觉醒”标志。",
-    "image": "https://picsum.photos/seed/meta-moltbook-ai-social-2025/1200/800",
-    "date": "2025-03-10",
+    "title": "北大教授张颐武：文化\"新三样\"，要流量更要质量",
+    "summary": "\"十五五\"规划纲要提出繁荣互联网条件下新大众文艺。网络文学、网络影视剧、网络游戏为代表的文化\"新三样\"已成为拉动文化消费的重要力量，2025年微短剧市场规模破千亿元。在增强中华文明传播力方面，文化\"新三样\"出海势头强劲，中国网络文学覆盖200多个国家和地区。",
+    "image": "https://picsum.photos/seed/culture-new-three-samples-2026/1200/800",
+    "date": "2026-03-20",
     "readTime": "3 分钟",
-    "tags": ["Meta", "Moltbook", "OpenClaw", "AI智能体", "社交网络", "MSL"],
+    "tags": ["文化新三样", "网络文学", "微短剧", "网络游戏", "十五五规划"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32746087"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32792704"
   },
   {
     "id": 3,
-    "title": "上海“最美书海报”合集首发，英文版同步登陆欧美书店",
-    "summary": "元宵节前后，《中国文化元素海报设计：来自上海设计师们的获奖图书海报合集》（英文版）在欧美多家书店上架。3月11日首发座谈会在上海外文书店举行，该书收录2018-2024年上海“最美书海报设计”获奖作品215幅，涵盖中国文字、文物、节日等文化元素。",
-    "image": "https://picsum.photos/seed/shanghai-book-poster-design-2025/1200/800",
-    "date": "2025-03-11",
+    "title": "动画片《布鲁伊》：看一只小狗如何治愈全球父母",
+    "summary": "澳大利亚动画片《布鲁伊》（Bluey）即将登陆央视少儿频道。这部让成年人看到自己的孩子、被无数父母奉为\"育儿宝典\"和\"赛博创可贴\"的作品，能让孩子笑得满地打滚，却让父母在深夜独自观看时泪流满面，不只是给孩子看的卡通片。",
+    "image": "https://picsum.photos/seed/bluey-cartoon-parenting-2026/1200/800",
+    "date": "2026-03-24",
     "readTime": "2 分钟",
-    "tags": ["上海", "书海报设计", "中国文化元素", "英文版", "上海外文书店"],
+    "tags": ["布鲁伊", "动画片", "育儿", "央视少儿", "澳大利亚"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32749960"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32814913"
   },
   {
     "id": 4,
-    "title": "沪游双周报｜电竞“苏超”3月火热来袭",
-    "summary": "精选上海、北京、广州、成都等城市2026年2月24日至3月8日游戏产业政策与动态。北京《未成年人网络平台服务提供者认定办法》将于2026年4月1日施行，明确平台专门服务未成年人且注册用户超1000万或月活超100万等认定标准，强化未成年人网络保护。",
-    "image": "https://picsum.photos/seed/esports-super-league-2026/1200/800",
-    "date": "2026-03-08",
-    "readTime": "4 分钟",
-    "tags": ["电竞", "苏超", "未成年人保护", "游戏产业", "政策速递"],
+    "title": "国家知识产权局：截至2024年底全国知识产权服务机构突破10万家",
+    "summary": "3月23日国新办发布会透露，知识产权服务业贯穿知识产权制度运行全链条，是生产性服务业的重要方面。近年来国家知识产权局统筹知识产权服务业发展和监管，不断推动行业扩规模、提质量、上水平，截至2024年底全国知识产权服务机构已突破10万家。",
+    "image": "https://picsum.photos/seed/intellectual-property-services-2024/1200/800",
+    "date": "2026-03-23",
+    "readTime": "2 分钟",
+    "tags": ["知识产权", "服务机构", "国家知识产权局", "生产性服务业"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32738605"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32814785"
   },
   {
     "id": 5,
-    "title": "十五五，十五问｜文旅深度融合如何“破壁”焕新",
-    "summary": "2025年10月党的二十届四中全会审议通过“十五五”规划建议，今年是中国共产党成立105周年，也是“十五五”规划开局起步之年。澎湃新闻推出《十五五 十五问》专题，围绕“国之大者”与“民生关切”，探讨文旅深度融合如何“破壁”焕新等国家发展蓝图。",
-    "image": "https://picsum.photos/seed/15th-five-year-plan-2026/1200/800",
-    "date": "2025-10-10",
-    "readTime": "5 分钟",
-    "tags": ["十五五规划", "文旅融合", "全国两会", "国之大者", "民生关切"],
+    "title": "工信部：知识产权不仅是保护创新的\"护身符\"，更是驱动发展的\"金钥匙\"",
+    "summary": "工信部科技司司长魏巍表示，为了让知识产权这把钥匙打开更多新质生产力的大门，工信部打出了一套\"组合拳\"，目标就是让好专利更快\"出生\"，让好技术更快\"落地\"。三年来持续实施知识产权推进计划，累计支持60多个项目，研究解决海外市场的技术护城河建设问题。",
+    "image": "https://picsum.photos/seed/miit-ip-protection-innovation-2026/1200/800",
+    "date": "2026-03-23",
+    "readTime": "2 分钟",
+    "tags": ["工信部", "知识产权", "新质生产力", "专利转化", "技术创新"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32698324"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32814734"
   },
   {
     "id": 6,
-    "title": "行业进入爆发期 AI漫剧下一步如何走？",
-    "summary": "3月9日，“智绘视界·漫动未来”2026AI漫剧工具与大模型大会在京举行，800余位院士专家、高校学者及企业代表共同探讨“人工智能+文化”深度融合新路径。海淀区委宣传部解读支持政策，为AI漫剧产业高质量发展提供政策保障，行业进入爆发期。",
-    "image": "https://picsum.photos/seed/ai-comic-drama-2026/1200/800",
-    "date": "2026-03-09",
-    "readTime": "3 分钟",
-    "tags": ["AI漫剧", "人工智能+", "文化融合", "海淀区", "大模型"],
+    "title": "国家知识产权局：专利转化运用难点堵点多，将深化体制机制改革",
+    "summary": "国家知识产权局副局长胡文辉指出，专利转化运用存在\"五个不\"难点堵点：\"不能转\"\"不愿转\"\"不敢转\"\"不会转\"和\"不便转\"。未来将深化体制机制改革，打通专利转化运用的最后一公里，让创新成果更好地转化为现实生产力。",
+    "image": "https://picsum.photos/seed/patent-transformation-reform-2026/1200/800",
+    "date": "2026-03-23",
+    "readTime": "2 分钟",
+    "tags": ["专利转化", "国家知识产权局", "体制机制改革", "五个不"],
     "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32740062"
+    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32814540"
   },
   {
     "id": 7,
-    "title": "微短剧出海如何从“情绪爽文”走向“文化润物”",
-    "summary": "中国微短剧正以“霸道总裁”“豪门恩怨”等高情绪题材席卷全球，引发本土化翻拍热潮。但内容同质化、创作思维受传统影视逻辑束缚、产业赋能停留在浅层广告植入等问题显现。低成本复制的“中式爽文模板”虽短期吸流，却让海外受众形成“低俗、套路化”刻板印象，不利于行业可持续发展。",
-    "image": "https://picsum.photos/seed/short-drama-overseas-2025/1200/800",
-    "date": "2025-10-02",
-    "readTime": "4 分钟",
-    "tags": ["微短剧", "出海", "文化输出", "爽文", "竖屏", "本土化"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32696852"
+    "title": "消费增长变革：从\"满足需求\"到\"创造意义\"",
+    "summary": "中国发展高层论坛2026年年会上，上海市副市长卢山分享上海故事：F1赛事票根变身城市消费\"护照\"，古埃及文明大展带动350亿元城市综合消费。\"十五五\"规划首次把提高居民消费率写入主要目标，消费作为中国经济发展的基础性作用愈加凸显。",
+    "image": "https://picsum.photos/seed/consumption-transformation-meaning-2026/1200/800",
+    "date": "2026-03-22",
+    "readTime": "3 分钟",
+    "tags": ["消费增长", "中国发展高层论坛", "十五五规划", "上海", "F1"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/103100422.html"
   },
   {
     "id": 8,
-    "title": "我们究竟该如何守护战火中的人类文化遗产",
-    "summary": "当地时间3月2日，伊朗首都德黑兰古列斯坦宫（玫瑰宫）被炮弹击中，这座近500年历史的伊朗首项世界文化遗产受损，镜厅天花板碎裂，水晶灯坠落。联合国教科文组织确认受损，战前虽有部分藏品被转移，但建筑损毁已成事实。战争给文化遗产带来灭顶之灾，引发全球对守护战火中文化遗产的深思。",
-    "image": "https://picsum.photos/seed/cultural-heritage-war-iran-2025/1200/800",
-    "date": "2025-03-02",
-    "readTime": "4 分钟",
-    "tags": ["文化遗产", "战争", "伊朗", "古列斯坦宫", "UNESCO", "文物保护"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32732085"
+    "title": "\"樱花+汉马\"双IP加持，今年武汉马拉松吸金10.15亿",
+    "summary": "2026武汉马拉松3月22日开跑，赛事产生经济效益达10.15亿元，同比增长4.10%。跑者和现场观众直接消费3.49亿元，对武汉城市的经济效益7.09亿元。42.195公里赛道串联长江大桥、黄鹤楼、东湖等核心地标，3万名跑者穿过樱花雨，实现体育、文旅、商业深度融合。",
+    "image": "https://picsum.photos/seed/wuhan-marathon-sakura-2026/1200/800",
+    "date": "2026-03-22",
+    "readTime": "2 分钟",
+    "tags": ["武汉马拉松", "樱花", "体育经济", "文旅融合", "10.15亿"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/103099159.html"
   },
   {
     "id": 9,
-    "title": "传统文化在清流的“新活法”：古村落变文旅空间，非遗豆皮销海外",
-    "summary": "福建清流保留宋代水系、明清古民居及八百年豆皮手艺。面对快速变化时代，当地探索让古老文化遗产既被保护又能融入现代生活：古村落变身文旅空间，非遗豆皮远销海外，历史与当下生活紧紧交织，为传统村落保护与发展提供新思路。",
-    "image": "https://picsum.photos/seed/qingliu-cultural-heritage-2025/1200/800",
-    "date": "2025-10-01",
-    "readTime": "3 分钟",
-    "tags": ["清流", "传统文化", "古村落", "非遗", "豆皮", "文旅融合"],
-    "source": "澎湃新闻",
-    "originalUrl": "https://www.thepaper.cn/newsDetail_forward_32712983"
+    "title": "苹果CEO库克：AI是对人能力的放大而非取代 不要惧怕要拥抱AI",
+    "summary": "3月21日，蒂姆·库克现身北京朝阳某艺术空间，观看AI技术在壁画复原等传统文化保护方面的应用。库克表示：\"现在是一个非常令人兴奋的时代，在中国变化尤其快。AI是你我这一生中最具深远意义的事物之一，是对人能力的放大而非取代。大家应该放下恐惧，先在日常生活中开始使用它。\"",
+    "image": "https://picsum.photos/seed/tim-cook-ai-beijing-2026/1200/800",
+    "date": "2026-03-21",
+    "readTime": "2 分钟",
+    "tags": ["苹果", "蒂姆·库克", "人工智能", "AI", "传统文化保护"],
+    "source": "第一财经",
+    "originalUrl": "https://www.yicai.com/news/103097806.html"
   }
 ]
-
 
